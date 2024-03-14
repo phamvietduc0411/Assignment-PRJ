@@ -32,11 +32,7 @@ d
 
 
 /*----------------------------------------------*/
-/* 2 GENERAL TYPOGRAPHY */
-/*----------------------------------------------*/
 
-/* 2.1 General Styles
-/*----------------------------------------------*/
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

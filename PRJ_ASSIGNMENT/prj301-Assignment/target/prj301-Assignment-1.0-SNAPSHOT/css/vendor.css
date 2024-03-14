@@ -1,24 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 14-03-2024, 17:11:05
-    Author     : Acer
-*/
-/*
-- Jarallax
-- Bootstrap Grid
-- Color Box
-- Stellar Nav
-- Swiper 9.3.1
-- Colorbox Lightbox
-*/
 
-/*--------------------------------------------------------------
-/** Jarallax
---------------------------------------------------------------*/
 .jarallax {
   position: relative;
   z-index: 0;
@@ -55,26 +35,6 @@ and open the template in the editor.
   padding-left: 15px;
   padding-right: 15px;
 }
-/*@media (min-width: 768px) {
-  .container {
-    width: 740px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 980px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1160px;
-  }
-}
-@media (min-width: 1600px) {
-  .container {
-    width: 1480px;
-  }
-}*/
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -626,11 +586,6 @@ and open the template in the editor.
 .cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
 #colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
 
-/* 
-    User Style:
-    Change the following styles to modify the appearance of Colorbox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
 #cboxOverlay{background:#000;}
 #colorbox{outline:0;}
 #cboxContent{margin-top:20px;background:#000;}
