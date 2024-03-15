@@ -480,3 +480,9 @@ VALUES
 (01, 4000311),
 (02, 4000310),
 (03, 4000313);
+
+-- test Query
+SELECT *
+FROM Products p INNER JOIN Category c ON p.CategoryId = c.CategoryID
+				INNER JOIN Storage s ON p.StorageId = s.StorageID
+WHERE c.CategoryID = 31001
