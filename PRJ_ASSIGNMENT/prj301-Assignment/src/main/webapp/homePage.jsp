@@ -250,7 +250,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="PageController?action=productDetails&CategoryID=31031">T-Shirt-Bershika1</a>
+                                        <a href="PageController?action=productDetails&CategoryID=31031">T-Shirt Bershika1</a>
                                     </h3>
                                     <span class="item-price text-primary">$40.00</span>
                                 </div>

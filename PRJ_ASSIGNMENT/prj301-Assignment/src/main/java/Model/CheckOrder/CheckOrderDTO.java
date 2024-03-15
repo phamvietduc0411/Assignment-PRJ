@@ -11,4 +11,24 @@ package Model.CheckOrder;
  */
 public class CheckOrderDTO {
     
+    private int ManagerId;
+    private int OrdersId;
+
+    public int getManagerId() {
+        return ManagerId;
+    }
+
+    public void setManagerId(int ManagerId) {
+        this.ManagerId = ManagerId;
+    }
+
+    public int getOrdersId() {
+        return OrdersId;
+    }
+
+    public void setOrdersId(int OrdersId) {
+        this.OrdersId = OrdersId;
+    }
+    
+    
 }

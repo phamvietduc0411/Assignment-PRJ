@@ -14,9 +14,12 @@ public class OrdersDTO {
     private int OrdersID;
     private Date OrdersDate;
     private float Price;
+    private int Quantity;
     private String Address;
     private String Status;
     private String Freight;
+    private int CustomerId;
+    private String DiscountId;
 
     public int getOrdersID() {
         return OrdersID;
@@ -42,6 +45,14 @@ public class OrdersDTO {
         this.Price = Price;
     }
 
+    public int getQuantity() {
+        return Quantity;
+    }
+
+    public void setQuantity(int Quantity) {
+        this.Quantity = Quantity;
+    }
+
     public String getAddress() {
         return Address;
     }
@@ -65,5 +76,22 @@ public class OrdersDTO {
     public void setFreight(String Freight) {
         this.Freight = Freight;
     }
+
+    public int getCustomerId() {
+        return CustomerId;
+    }
+
+    public void setCustomerId(int CustomerId) {
+        this.CustomerId = CustomerId;
+    }
+
+    public String getDiscountId() {
+        return DiscountId;
+    }
+
+    public void setDiscountId(String DiscountId) {
+        this.DiscountId = DiscountId;
+    }
+
     
 }

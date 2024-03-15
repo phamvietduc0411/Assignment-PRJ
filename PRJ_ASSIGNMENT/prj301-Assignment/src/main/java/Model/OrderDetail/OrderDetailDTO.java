@@ -12,6 +12,9 @@ package Model.OrderDetail;
 public class OrderDetailDTO {
     private float Amount;
     private int TotalQuantity;
+    private int OrdersId;
+    private int PaysId;
+    private int ProId;
 
     public float getAmount() {
         return Amount;
@@ -28,5 +31,30 @@ public class OrderDetailDTO {
     public void setTotalQuantity(int TotalQuantity) {
         this.TotalQuantity = TotalQuantity;
     }
+
+    public int getOrdersId() {
+        return OrdersId;
+    }
+
+    public void setOrdersId(int OrdersId) {
+        this.OrdersId = OrdersId;
+    }
+
+    public int getPaysId() {
+        return PaysId;
+    }
+
+    public void setPaysId(int PaysId) {
+        this.PaysId = PaysId;
+    }
+
+    public int getProId() {
+        return ProId;
+    }
+
+    public void setProId(int ProId) {
+        this.ProId = ProId;
+    }
+
     
 }

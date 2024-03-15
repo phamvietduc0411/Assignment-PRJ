@@ -5,6 +5,8 @@
  */
 package Model.Discount;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author Acer
@@ -12,7 +14,7 @@ package Model.Discount;
 public class DiscountDTO {
     private String DiscountID;
     private String DiscountName;
-    private String DiscountPersent;
+    private BigDecimal productPrice;
 
     public String getDiscountID() {
         return DiscountID;
@@ -30,12 +32,12 @@ public class DiscountDTO {
         this.DiscountName = DiscountName;
     }
 
-    public String getDiscountPersent() {
-        return DiscountPersent;
+    public BigDecimal getProductPrice() {
+        return productPrice;
     }
 
-    public void setDiscountPersent(String DiscountPersent) {
-        this.DiscountPersent = DiscountPersent;
+    public void setProductPrice(BigDecimal productPrice) {
+        this.productPrice = productPrice;
     }
-    
+
 }
