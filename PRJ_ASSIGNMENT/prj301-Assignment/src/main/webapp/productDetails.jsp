@@ -92,7 +92,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/homepage/product-item1.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika6.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -111,7 +111,7 @@
                                                            </div>
                                                            <div class="product-detail">
                                                                <h3 class="product-title">
-                                                                   <a href="single-product.html">Full sleeve cover shirt</a>
+                                                                   <a href="single-product.html">Short sleeve T-shirt with a round neck</a>
                                                                </h3>
                                                                <span class="item-price text-primary">$40.00</span>
                                                            </div>
@@ -120,7 +120,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/homepage/product-item2.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika7.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -139,7 +139,7 @@
                                                            </div>
                                                            <div class="product-detail">
                                                                <h3 class="product-title">
-                                                                   <a href="single-product.html">Volunteer Half blue</a>
+                                                                   <a href="single-product.html">Short sleeve T-shirt with print</a>
                                                                </h3>
                                                                <span class="item-price text-primary">$38.00</span>
                                                            </div>
@@ -148,7 +148,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/homepage/product-item3.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika8.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -167,7 +167,7 @@
                                                            </div>
                                                            <div class="product-detail">
                                                                <h3 class="product-title">
-                                                                   <a href="single-product.html">Double yellow shirt</a>
+                                                                   <a href="single-product.html">Gossip Girl print short sleeve T-shirt</a>
                                                                </h3>
                                                                <span class="item-price text-primary">$44.00</span>
                                                            </div>
@@ -176,7 +176,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/homepage/product-item4.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika9.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -195,7 +195,7 @@
                                                            </div>
                                                            <div class="product-detail">
                                                                <h3 class="product-title">
-                                                                   <a href="single-product.html">Long belly grey pant</a>
+                                                                   <a href="single-product.html">Short sleeve oversize T-shirt with metallic print</a>
                                                                </h3>
                                                                <span class="item-price text-primary">$33.00</span>
                                                            </div>
