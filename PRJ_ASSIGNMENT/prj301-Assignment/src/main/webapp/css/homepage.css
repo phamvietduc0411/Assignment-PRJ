@@ -1,4 +1,3 @@
-d
 :root {
     /* widths for rows and containers
      */
@@ -30,8 +29,6 @@ d
     --heading-font        : "Inter", sans-serif;
 }
 
-
-/*----------------------------------------------*/
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
