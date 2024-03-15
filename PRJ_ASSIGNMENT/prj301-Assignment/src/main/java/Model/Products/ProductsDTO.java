@@ -17,6 +17,9 @@ public class ProductsDTO {
     private String Size;
     private String Color;
     private float ProductPrice;
+    private int StorageId;
+    private int CategoryId;
+    private int BrandsId;
 
     public int getProductsID() {
         return ProductsID;
@@ -73,5 +76,29 @@ public class ProductsDTO {
     public void setProductPrice(float ProductPrice) {
         this.ProductPrice = ProductPrice;
     }
-    
+
+    public int getStorageId() {
+        return StorageId;
+    }
+
+    public void setStorageId(int StorageId) {
+        this.StorageId = StorageId;
+    }
+
+    public int getCategoryId() {
+        return CategoryId;
+    }
+
+    public void setCategoryId(int CategoryId) {
+        this.CategoryId = CategoryId;
+    }
+
+    public int getBrandsId() {
+        return BrandsId;
+    }
+
+    public void setBrandsId(int BrandsId) {
+        this.BrandsId = BrandsId;
+    }
+
 }

@@ -11,8 +11,8 @@ package Model.Customters;
  */
 public class CustomersDTO {
     private int CustomerID;
-    private String CustomUser;
-    private String CustomerPassword;
+    private String username;
+    private String password;
     private String CustomerName;
     private String PhoneNumber;
     private String Address;
@@ -27,20 +27,20 @@ public class CustomersDTO {
         this.CustomerID = CustomerID;
     }
 
-    public String getCustomUser() {
-        return CustomUser;
+    public String getUsername() {
+        return username;
     }
 
-    public void setCustomUser(String CustomUser) {
-        this.CustomUser = CustomUser;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getCustomerPassword() {
-        return CustomerPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setCustomerPassword(String CustomerPassword) {
-        this.CustomerPassword = CustomerPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getCustomerName() {
@@ -82,5 +82,6 @@ public class CustomersDTO {
     public void setEmail(String Email) {
         this.Email = Email;
     }
+
     
 }

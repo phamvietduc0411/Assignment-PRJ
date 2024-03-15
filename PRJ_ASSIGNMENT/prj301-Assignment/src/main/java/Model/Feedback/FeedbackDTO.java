@@ -16,6 +16,8 @@ public class FeedbackDTO {
     private String detail;
     private int Rating;
     private Date feedbackDate;
+    private int ProId;
+    private int CustomerId;
 
     public int getFeedbackID() {
         return FeedbackID;
@@ -48,5 +50,22 @@ public class FeedbackDTO {
     public void setFeedbackDate(Date feedbackDate) {
         this.feedbackDate = feedbackDate;
     }
+
+    public int getProId() {
+        return ProId;
+    }
+
+    public void setProId(int ProId) {
+        this.ProId = ProId;
+    }
+
+    public int getCustomerId() {
+        return CustomerId;
+    }
+
+    public void setCustomerId(int CustomerId) {
+        this.CustomerId = CustomerId;
+    }
+    
     
 }
