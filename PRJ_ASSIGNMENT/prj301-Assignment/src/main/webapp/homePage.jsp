@@ -186,7 +186,7 @@
             <div class="swiper main-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"
-                         style="background-image: url('images/homePageBG.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
+                         style="background-image: url('images/Summerbg.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
                         <div class="banner-content">
                             <div class="container">
                                 <div class="row">
@@ -204,14 +204,13 @@
                         </div>
                     </div>
                     <div class="swiper-slide"
-                         style="background-image: url('images/homepage/');background-repeat: no-repeat;background-size: cover;background-position: center;">
+                         style="background-image: url('images/Fallbg.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
                         <div class="banner-content">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h2 class="banner-title">Casual Collection</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim
-                                            pharetra hac.</p>
+                                        <h2 class="banner-title" style="color: cadetblue">Autumn Collection</h2>
+                                        <p>Welcome to Z-stalk's Autumn Collection! Explore cozy sweaters, chic outerwear, and more. Embrace the essence of fall in style with us!</p>
                                         <div class="btn-wrap">
                                             <a href="shop.html" class="btn btn-light btn-light-arrow btn-medium d-flex align-items-center"
                                                tabindex="0">Shop it now <i class="icon icon-arrow-io"></i>
@@ -418,7 +417,7 @@
                         <div class="row d-flex flex-wrap">
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products1.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika4.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -437,14 +436,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Half sleeve T-shirt</a>
+                                        <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products2.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika3.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -463,14 +462,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Stylish Grey T-shirt</a>
+                                        <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$35.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products3.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika2.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -489,14 +488,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Silk White Shirt</a>
+                                        <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$35.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products4.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Hoodie(10)-Done/HooidePull&Bear(5).jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
