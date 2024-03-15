@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+        <link rel="zstalk icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
         <link rel="stylesheet" type="text/css" media="all"
@@ -191,9 +191,8 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h2 class="banner-title">Summer Collection</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim
-                                            pharetra hac.</p>
+                                        <h2 class="banner-title" style="color: wheat">Summer Collection</h2>
+                                        <p>Welcome to Z-stalk! Discover style, comfort, and endless fashion possibilities. Step in, explore, and let your fashion journey begin. Happy shopping!</p>
                                         <div class="btn-wrap">
                                             <a href="shop.html" class="btn btn-light btn-medium d-flex align-items-center" tabindex="0">Shop it
                                                 now <i class="icon icon-arrow-io"></i>
