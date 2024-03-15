@@ -1,4 +1,8 @@
-
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 html {
   font-family: sans-serif;
@@ -256,6 +260,7 @@ h3,
 
 .w-100 {
   width: 100% !important;
+  height : 3px
 }
 
 .w-auto {
@@ -587,16 +592,7 @@ body {
   font-size: 24px;
 }
 
-.ftco-section {
-  padding: 7em 0;
-  position: relative;
-}
 
-@media (max-width: 767.98px) {
-  .ftco-section {
-    padding: 6em 0;
-  }
-}
 
 .ftco-choose .divider-one {
   height: 700px;
