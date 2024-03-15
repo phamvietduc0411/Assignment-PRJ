@@ -78,14 +78,134 @@
                             <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
                                  aria-labelledby="day-1-tab">
                                 <div class="p-4">
-                                    <h3 class="mb-4">Nike Free RN 2019 iD</h3>
-                                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came
-                                        from it would have been rewritten a thousand times and everything that was left from
-                                        its origin would be the word "and" and the Little Blind Text should turn around and
-                                        return to its own, safe country. But nothing the copy said could convince her and so
-                                        it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-                                        with Longe and Parole and dragged her into their agency, where they abused her for
-                                        their.</p>
+                                   <section id="featured-products" class="product-store padding-large">
+                                       <div class="container">
+                                           <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
+                                               <h2 class="section-title">Recommended Product</h2>
+                                               <div class="btn-wrap">
+                                                   <a href="shop.html" class="d-flex align-items-center">View all products <i
+                                                           class="icon icon icon-arrow-io"></i></a>
+                                               </div>
+                                           </div>
+                                           <div class="swiper product-swiper overflow-hidden">
+                                               <div class="swiper-wrapper">
+                                                   <div class="swiper-slide">
+                                                       <div class="product-item">
+                                                           <div class="image-holder">
+                                                               <img src="images/homepage/product-item1.jpg" alt="Books" class="product-image">
+                                                           </div>
+                                                           <div class="cart-concern">
+                                                               <div class="cart-button d-flex justify-content-between align-items-center">
+                                                                   <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                                           class="icon icon-arrow-io"></i>
+                                                                   </button>
+                                                                   <button type="button" class="view-btn tooltip
+                                                                           d-flex">
+                                                                       <i class="icon icon-screen-full"></i>
+                                                                       <span class="tooltip-text">Quick view</span>
+                                                                   </button>
+                                                                   <button type="button" class="wishlist-btn">
+                                                                       <i class="icon icon-heart"></i>
+                                                                   </button>
+                                                               </div>
+                                                           </div>
+                                                           <div class="product-detail">
+                                                               <h3 class="product-title">
+                                                                   <a href="single-product.html">Full sleeve cover shirt</a>
+                                                               </h3>
+                                                               <span class="item-price text-primary">$40.00</span>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                                   <div class="swiper-slide">
+                                                       <div class="product-item">
+                                                           <div class="image-holder">
+                                                               <img src="images/homepage/product-item2.jpg" alt="Books" class="product-image">
+                                                           </div>
+                                                           <div class="cart-concern">
+                                                               <div class="cart-button d-flex justify-content-between align-items-center">
+                                                                   <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                                           class="icon icon-arrow-io"></i>
+                                                                   </button>
+                                                                   <button type="button" class="view-btn tooltip
+                                                                           d-flex">
+                                                                       <i class="icon icon-screen-full"></i>
+                                                                       <span class="tooltip-text">Quick view</span>
+                                                                   </button>
+                                                                   <button type="button" class="wishlist-btn">
+                                                                       <i class="icon icon-heart"></i>
+                                                                   </button>
+                                                               </div>
+                                                           </div>
+                                                           <div class="product-detail">
+                                                               <h3 class="product-title">
+                                                                   <a href="single-product.html">Volunteer Half blue</a>
+                                                               </h3>
+                                                               <span class="item-price text-primary">$38.00</span>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                                   <div class="swiper-slide">
+                                                       <div class="product-item">
+                                                           <div class="image-holder">
+                                                               <img src="images/homepage/product-item3.jpg" alt="Books" class="product-image">
+                                                           </div>
+                                                           <div class="cart-concern">
+                                                               <div class="cart-button d-flex justify-content-between align-items-center">
+                                                                   <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                                           class="icon icon-arrow-io"></i>
+                                                                   </button>
+                                                                   <button type="button" class="view-btn tooltip
+                                                                           d-flex">
+                                                                       <i class="icon icon-screen-full"></i>
+                                                                       <span class="tooltip-text">Quick view</span>
+                                                                   </button>
+                                                                   <button type="button" class="wishlist-btn">
+                                                                       <i class="icon icon-heart"></i>
+                                                                   </button>
+                                                               </div>
+                                                           </div>
+                                                           <div class="product-detail">
+                                                               <h3 class="product-title">
+                                                                   <a href="single-product.html">Double yellow shirt</a>
+                                                               </h3>
+                                                               <span class="item-price text-primary">$44.00</span>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                                   <div class="swiper-slide">
+                                                       <div class="product-item">
+                                                           <div class="image-holder">
+                                                               <img src="images/homepage/product-item4.jpg" alt="Books" class="product-image">
+                                                           </div>
+                                                           <div class="cart-concern">
+                                                               <div class="cart-button d-flex justify-content-between align-items-center">
+                                                                   <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                                           class="icon icon-arrow-io"></i>
+                                                                   </button>
+                                                                   <button type="button" class="view-btn tooltip
+                                                                           d-flex">
+                                                                       <i class="icon icon-screen-full"></i>
+                                                                       <span class="tooltip-text">Quick view</span>
+                                                                   </button>
+                                                                   <button type="button" class="wishlist-btn">
+                                                                       <i class="icon icon-heart"></i>
+                                                                   </button>
+                                                               </div>
+                                                           </div>
+                                                           <div class="product-detail">
+                                                               <h3 class="product-title">
+                                                                   <a href="single-product.html">Long belly grey pant</a>
+                                                               </h3>
+                                                               <span class="item-price text-primary">$33.00</span>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="swiper-pagination"></div>
+                                       </div>
+                                   </section>
                                 </div>
                             </div>
                             <div class="row p-4">
