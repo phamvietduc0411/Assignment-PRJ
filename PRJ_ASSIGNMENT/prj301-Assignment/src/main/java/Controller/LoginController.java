@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import Model.Customters.CustomersDAO;
+import Model.Customters.CustomersDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -39,14 +41,14 @@ public class LoginController extends HttpServlet {
            
             if (action== null||action.equals("login")) {
                 
-//                CustomerDAO customerDAO = new CustomerDAO();
-//                CustomerDTO customer = customerDAO.login(userName,password);
+                CustomersDAO customerDAO = new CustomersDAO();
+                CustomersDTO customer = customerDAO.login(userName,password);
 
-//                  if (customer != null) {
-//                      HttpSession session = request.getSession(true);
-//                      session.getAttribute("customerSession",customer);
+                  if (customer != null) {
+                      HttpSession session = request.getSession(true);
+                      session.setAttribute("customerSession",customer);
                       response.sendRedirect("homePage.jsp");
-//                }
+                }
                 
             }
 

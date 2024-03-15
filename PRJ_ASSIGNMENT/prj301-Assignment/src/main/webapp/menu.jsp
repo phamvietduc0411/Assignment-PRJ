@@ -18,13 +18,8 @@
                   <ul class="menu-list">
 
                     <li class="menu-item has-sub">
-                      <a href="index.html" class="item-anchor active d-flex align-item-center" data-effect="Home">Home<i
+                      <a href="homePage.jsp" class="item-anchor active d-flex align-item-center" data-effect="Home">Home<i
                           class="icon icon-chevron-down"></i></a>
-                      <ul class="submenu">
-                        <li><a href="index.html" class="item-anchor active">Home</a></li>
-                        <li><a href="home2.html" class="item-anchor">Home v2<span class="text-primary"> (PRO)</span></a>
-                        </li>
-                      </ul>
                     </li>
 
                     <li><a href="about.html" class="item-anchor" data-effect="About">About</a></li>
@@ -90,7 +85,7 @@
                       </ul>
                     </li>
 
-                    <li><a href="contact.html" class="item-anchor" data-effect="Contact">Contact</a></li>
+                    <li><a href="cart.jsp" class="item-anchor" data-effect="Contact">Cart</a></li>
 
 <!--                    <li><a
                         href="https://templatesjungle.gumroad.com/l/ultras-free-ecommerce-clothing-store-website-template/"
