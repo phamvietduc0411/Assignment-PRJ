@@ -417,7 +417,7 @@
                         <div class="row d-flex flex-wrap">
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika4.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/T-Shirt/T-Shirt2.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -443,7 +443,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika3.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/T-Shirt/T-Shirt4.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -469,7 +469,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika2.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/T-Shirt/T-Shirt5.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -495,7 +495,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/Hoodie/HooidePull&Bear(5).jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Hoodie/Hoodie5.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -540,14 +540,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Full sleeve Jeans jacket</a>
+                                        <a href="single-product.html">Bomber Jacket With Patches</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products6.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Bomber/Bomber9.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -566,14 +566,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Grey Check Coat</a>
+                                        <a href="single-product.html">Faux Leather Bomber Jacket with Pockets</a>
                                     </h3>
                                     <div class="item-price text-primary">$30.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products7.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Hoodie/Hoodie7.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -592,14 +592,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Long Sleeve T-shirt</a>
+                                        <a href="single-product.html">Red hoodie with slogan.</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products8.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Hoodie/Hoodie3.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -625,7 +625,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products13.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Sweaters/Sweatear3.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -644,14 +644,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Orange white Nike</a>
+                                        <a href="single-product.html">New Arizona embroidered textured sweatshirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$55.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products14.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Sweaters/Sweatear2.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -670,14 +670,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Running Shoe</a>
+                                        <a href="single-product.html">San Francisco Seal Rocks sweatshirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$65.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products15.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Sweaters/Sweatear9.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -696,14 +696,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Tennis Shoe</a>
+                                        <a href="single-product.html">Pretty Ideal Beige Loose Knit Sweater Top</a>
                                     </h3>
                                     <div class="item-price text-primary">$80.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products16.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Sweaters/Sweatear6.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -722,7 +722,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Nike Brand Shoe</a>
+                                        <a href="single-product.html">Blue slogan sweatshirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$65.00</div>
                                 </div>
