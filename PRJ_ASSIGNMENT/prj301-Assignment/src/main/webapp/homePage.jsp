@@ -186,7 +186,7 @@
             <div class="swiper main-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"
-                         style="background-image: url('images/homePageBG.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
+                         style="background-image: url('images/Summerbg.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
                         <div class="banner-content">
                             <div class="container">
                                 <div class="row">
@@ -204,14 +204,13 @@
                         </div>
                     </div>
                     <div class="swiper-slide"
-                         style="background-image: url('images/homepage/');background-repeat: no-repeat;background-size: cover;background-position: center;">
+                         style="background-image: url('images/Fallbg.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
                         <div class="banner-content">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h2 class="banner-title">Casual Collection</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim
-                                            pharetra hac.</p>
+                                        <h2 class="banner-title" style="color: cadetblue">Autumn Collection</h2>
+                                        <p>Welcome to Z-stalk's Autumn Collection! Explore cozy sweaters, chic outerwear, and more. Embrace the essence of fall in style with us!</p>
                                         <div class="btn-wrap">
                                             <a href="shop.html" class="btn btn-light btn-light-arrow btn-medium d-flex align-items-center"
                                                tabindex="0">Shop it now <i class="icon icon-arrow-io"></i>
