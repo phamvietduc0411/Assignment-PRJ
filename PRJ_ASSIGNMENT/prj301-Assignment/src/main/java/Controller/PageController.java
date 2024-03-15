@@ -7,6 +7,7 @@ package Controller;
 
 import Model.Category.CategoryDAO;
 import Model.Category.CategoryDTO;
+import Model.Products.ProductsDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -34,10 +35,9 @@ public class PageController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
-            
+          
             CategoryDAO categoryDAO = new CategoryDAO();
 
-            
             if (action.equals("productDetails")) {
                 Integer CategoryID = null;
                 try {
@@ -49,6 +49,7 @@ public class PageController extends HttpServlet {
                 CategoryDTO category = null ;
                 if (CategoryID!= null) {
                     category =  categoryDAO.load(CategoryID);
+                    
                 }
                  request.setAttribute("category", category);
                  request.getRequestDispatcher("productDetails.jsp").forward(request, response);

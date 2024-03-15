@@ -20,7 +20,7 @@
                         <img src="${requestScope.category.img}" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="col-lg-6 product-details pl-md-5 ftco-animate">
-                        <h3 style="color: #000;">Nike Free RN 2019 iD</h3>
+                        <h3 style="color: #000;">${requestScope.category.categoryName}</h3>
                         <p class="price"><span>$120.00</span></p>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It
                             is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
@@ -34,7 +34,7 @@
                                     <div class="select-rap">
 
                                         <select name="" id="" class="form-control">
-                                            <option value="">Small</option>
+                                            <option value="">${requestScope.p.size}</option>
                                             <option value="">Medium</option>
                                             <option value="">Large</option>
                                             <option value="">Extra Large</option>

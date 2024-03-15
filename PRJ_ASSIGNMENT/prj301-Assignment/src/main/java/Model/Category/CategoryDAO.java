@@ -28,15 +28,13 @@ public class CategoryDAO {
 
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                
-                int categoryID = rs.getInt("CategoryID");
                 String categoryName = rs.getString("CategoryName");
                 String img = rs.getString("Img");
                 String  descriptions = rs.getString("Descriptions");
                 
                 CategoryDTO category = new CategoryDTO();
 
-                category.setCategoryID(categoryID);
+                category.setCategoryID(CategoryID);
                 category.setCategoryName(categoryName);
                 category.setImg(img);
                 category.setDescriptions(descriptions);
