@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-5 ftco-animate">
-                        <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika1.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <img src="images/shirt/T-Shirt/T-Shirt10.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="col-lg-6 product-details pl-md-5 ftco-animate">
                         <h3 style="color: #000;">Nike Free RN 2019 iD</h3>
@@ -92,7 +92,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/shirt/T-Shirt/T-Shirt-Bershika6.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt/T-Shirt6.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -120,7 +120,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/shirt/T-Shirt/T-Shirt-Bershika7.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -148,7 +148,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/shirt/T-Shirt/T-Shirt-Bershika8.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt/T-Shirt8.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -176,7 +176,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/shirt/T-Shirt/T-Shirt-Bershika9.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt/T-Shirt9.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
