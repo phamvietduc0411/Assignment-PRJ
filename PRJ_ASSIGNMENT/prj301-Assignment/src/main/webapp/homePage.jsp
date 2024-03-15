@@ -529,7 +529,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/Bomber/BomberMasiduti(1).jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Bomber/Bomber3.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
