@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -31,6 +32,23 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+//         get parameter
+           String action = request.getParameter("action");
+           String userName = request.getParameter("userName");
+           String password = request.getParameter("password");
+           
+            if (action== null||action.equals("login")) {
+                
+//                CustomerDAO customerDAO = new CustomerDAO();
+//                CustomerDTO customer = customerDAO.login(userName,password);
+
+//                  if (customer != null) {
+//                      HttpSession session = request.getSession(true);
+//                      session.getAttribute("customerSession",customer);
+                      response.sendRedirect("homePage.jsp");
+//                }
+                
+            }
 
         }
     }
