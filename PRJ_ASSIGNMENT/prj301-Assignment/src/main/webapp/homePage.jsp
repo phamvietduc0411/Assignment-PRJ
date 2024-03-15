@@ -240,26 +240,18 @@
                         <div class="swiper-slide">
                             <div class="product-item">
                                 <div class="image-holder">
-                                    <img src="images/homepage/product-item1.jpg" alt="Books" class="product-image">
+                                        <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika1.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
                                         <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
                                                 class="icon icon-arrow-io"></i>
                                         </button>
-                                        <button type="button" class="view-btn tooltip
-                                                d-flex">
-                                            <i class="icon icon-screen-full"></i>
-                                            <span class="tooltip-text">Quick view</span>
-                                        </button>
-                                        <button type="button" class="wishlist-btn">
-                                            <i class="icon icon-heart"></i>
-                                        </button>
                                     </div>
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Full sleeve cover shirt</a>
+                                        <a href="PageController?action=productDetails&CategoryID=31031">T-Shirt-Bershika1</a>
                                     </h3>
                                     <span class="item-price text-primary">$40.00</span>
                                 </div>
