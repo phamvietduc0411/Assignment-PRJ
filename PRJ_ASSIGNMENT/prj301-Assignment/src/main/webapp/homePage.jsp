@@ -186,7 +186,7 @@
             <div class="swiper main-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"
-                         style="background-image: url('images/homepage/banner1.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;">
+                         style="background-image: url('images/homePageBG.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
                         <div class="banner-content">
                             <div class="container">
                                 <div class="row">
@@ -205,7 +205,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide"
-                         style="background-image: url('images/banner2.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;">
+                         style="background-image: url('images/homepage/');background-repeat: no-repeat;background-size: cover;background-position: center;">
                         <div class="banner-content">
                             <div class="container">
                                 <div class="row">
