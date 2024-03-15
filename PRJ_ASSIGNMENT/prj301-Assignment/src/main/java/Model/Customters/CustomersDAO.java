@@ -24,7 +24,7 @@ public class CustomersDAO {
         try {
             Connection con = DBUtils.getConnection();
 
-            String sql = " SELECT  CustomerName FROM Customers WHERE CustomerUser = ? AND CustomerPassword = ?  ";
+            String sql = " SELECT  CustomerName FROM Customers WHERE username = ? AND password = ?  ";
 
             PreparedStatement stm = con.prepareStatement(sql);
 
@@ -35,7 +35,7 @@ public class CustomersDAO {
             if (rs != null) {
                 if (rs.next()) {
                     customers = new CustomersDTO();
-                    customers.setCustomUser(rs.getString("CustomerUser"));
+                    customers.setCustomUser(rs.getString("username"));
                     customers.setCustomerName(rs.getString("CustomerName"));
                 }
             }
