@@ -13,8 +13,8 @@ CREATE TABLE Brands (
 -- T?o b?ng Admin
 CREATE TABLE Manager (
     ManagerID INT NOT NULL PRIMARY KEY,
-    ManagerUsername VARCHAR(50),
-    ManagerPassword VARCHAR(50),
+    username VARCHAR(50),
+    password VARCHAR(50),
 	Managername VARCHAR(50),
 	Phone VARCHAR(20),
 	Address NVARCHAR(100),
@@ -32,8 +32,8 @@ CREATE TABLE Category (
 -- T?o b?ng Customers
 CREATE TABLE Customers (
     CustomerID INT NOT NULL PRIMARY KEY,
-    CustomerUser VARCHAR(100),
-	CustomerPassword VARCHAR(100),
+    username VARCHAR(100),
+	password VARCHAR(100),
 	CustomerName VARCHAR(50),
     PhoneNumber VARCHAR(20),
     Address NVARCHAR(255),
@@ -70,9 +70,9 @@ CREATE TABLE Products (
 	Color VARCHAR(20),
 	ProductPrice FLOAT,
 	--FOREIGN KEY
-	Storage_ID INT FOREIGN KEY REFERENCES Storage(StorageID),
-	Category_ID INT FOREIGN KEY REFERENCES Category(CategoryID),
-	Brands_ID INT FOREIGN KEY REFERENCES Brands(BrandsID),
+	StorageId INT FOREIGN KEY REFERENCES Storage(StorageID),
+	CategoryId INT FOREIGN KEY REFERENCES Category(CategoryID),
+	BrandsId INT FOREIGN KEY REFERENCES Brands(BrandsID),
 );
 
 -- T?o b?ng Order
@@ -85,48 +85,48 @@ CREATE TABLE Orders (
 	Status VARCHAR(255),
 	Freight VARCHAR(255),
 	--FOREIGN KEY
-	Customer_ID INT FOREIGN KEY REFERENCES Customers(CustomerID),
-	Discount_ID VARCHAR(20) FOREIGN KEY REFERENCES Discount(DiscountID),
+	CustomerId INT FOREIGN KEY REFERENCES Customers(CustomerID),
+	DiscountId VARCHAR(20) FOREIGN KEY REFERENCES Discount(DiscountID),
 );
 
 -- T?o b?ng Feedback
 CREATE TABLE Feedback (
 	FeedbackID INT IDENTITY(1,1) PRIMARY KEY,
-	Fb_detail NVARCHAR(255),
+	detail NVARCHAR(255),
 	Rating INT,
-	Fb_Date DATETIME,
+	feedbackDate DATETIME,
 	--FOREIGN KEY
-	Pro_ID INT FOREIGN KEY REFERENCES Products(ProductsID),
-	Customer_ID INT FOREIGN KEY REFERENCES Customers(CustomerID)
+	ProId INT FOREIGN KEY REFERENCES Products(ProductsID),
+	CustomerId INT FOREIGN KEY REFERENCES Customers(CustomerID)
 );
 
 -- T?o b?ng OrderDetail(weak)
 CREATE TABLE OrderDetail (
 	Amount FLOAT,
 	TotalQuantity INT,
-	Orders_ID INT FOREIGN KEY REFERENCES Orders(OrdersID),
-	Pays_ID INT FOREIGN KEY REFERENCES Payment(PaymentID),
-	Pro_ID INT FOREIGN KEY REFERENCES Products(ProductsID),
+	OrdersId INT FOREIGN KEY REFERENCES Orders(OrdersID),
+	PaysId INT FOREIGN KEY REFERENCES Payment(PaymentID),
+	ProId INT FOREIGN KEY REFERENCES Products(ProductsID),
 	--Ta?o kho?a chi?nh
-	PRIMARY KEY(Orders_ID, Pays_ID, Pro_ID)
+	PRIMARY KEY(OrdersId, PaysId, ProId)
 );
 
 CREATE TABLE Check_Order (
-    Manager_ID INT FOREIGN KEY REFERENCES Manager(ManagerID),
-    Orders_ID INT FOREIGN KEY REFERENCES Orders(OrdersID),
-	PRIMARY KEY (Manager_ID, Orders_ID)
+    ManagerId INT FOREIGN KEY REFERENCES Manager(ManagerID),
+    OrdersId INT FOREIGN KEY REFERENCES Orders(OrdersID),
+	PRIMARY KEY (ManagerId, OrdersId)
 );
 
 -- Insert data
 -- Thêm d? li?u vào b?ng Admins OK
-INSERT INTO Manager (ManagerID, ManagerUsername, ManagerPassword, Managername, Phone, Address, Email)
+INSERT INTO Manager (ManagerID, username, password, Managername, Phone, Address, Email)
 VALUES 
 (01, 'minh', 'minh123', 'ADMIN MINH DO', '123456789', 'Binh Thanh District', 'minhdtse172130@fpt.edu.vn'),
 (02, 'duy', 'duy123', 'ADMIN DUY TRAN', '987654321', '9 District', 'duytnse172106@fpt.edu.vn'),
 (03, 'duc', 'duc123', 'ADMIN DUC PHAM', '987654321', '9 District', 'ducpvse172131@fpt.edu.vn');
 
 -- Thêm d? li?u vào b?ng Customers OK
-INSERT INTO Customers (CustomerID, CustomerUser, CustomerPassword, CustomerName, PhoneNumber, Address, Gender, Email)
+INSERT INTO Customers (CustomerID, username, password, CustomerName, PhoneNumber, Address, Gender, Email)
 VALUES 
 (001, 'cacon', 'duy', 'Duy ca con', '111222333', '75, 265 Street, 9 District, HCM', 'Male', 'duycacon3@gmail.com'),
 (002, 'duyga', 'cacon', 'Duy Tran', '444555666', '273, Nguyen Van Linh Street, 8 District, HCM', 'Male', 'duytran11@gmail.com'),
@@ -140,53 +140,53 @@ VALUES
 -- Thêm d? li?u vào b?ng Category OK
 INSERT INTO Category (CategoryID, CategoryName, Img, Descriptions)
 VALUES 
-(31001, 'Bomber1', '"\images\shirt\Bomber(10)-done\BomberMasiduti(1).jpg"', 'Various types of shirts'),
-(31002, 'Bomber2', '"\images\shirt\Bomber(10)-done\BomberMasiduti(2).jpg"', 'Different styles of clothing'),
-(31003, 'Bomber3', '"\images\shirt\Bomber(10)-done\BomberZARA(3).jpg"', 'Various designs of t-shirts'),
-(31004, 'Bomber4', '"\images\shirt\Bomber(10)-done\BomberZARA(4).jpg"', 'Different cuts and washes of jeans'),
-(31005, 'Bomber5', '"\images\shirt\Bomber(10)-done\BomberZARA(5).jpg"', 'Various colors and designs of hoodies'),
+(31001, 'Bomber1', 'images\shirt\Bomber\Bomber1.jpg', 'Various types of shirts'),
+(31002, 'Bomber2', 'images\shirt\Bomber\Bomber2.jpg', 'Different styles of clothing'),
+(31003, 'Bomber3', 'images\shirt\Bomber\Bomber3.jpg', 'Various designs of t-shirts'),
+(31004, 'Bomber4', 'images\shirt\Bomber\Bomber4.jpg', 'Different cuts and washes of jeans'),
+(31005, 'Bomber5', 'images\shirt\Bomber\Bomber5.jpg', 'Various colors and designs of hoodies'),
 --M
-(31006, 'Bomber6', '"\images\shirt\Bomber(10)-done\BomberMango(5).jpg"', 'Different types of jackets for all seasons'),
-(31007, 'Bomber7', '"\images\shirt\Bomber(10)-done\BomberPull&Bear(2).jpg"', 'Various styles of dresses for different occasions'),
-(31008, 'Bomber8', '"\images\shirt\Bomber(10)-done\BomberPull&Bear(3).jpg"', 'Different lengths and styles of skirts'),
-(31009, 'Bomber9', '"\images\shirt\Bomber(10)-done\BomberPull&Bear(4).jpg"', 'Elegant and casual blouses for women'),
-(31010, 'Bomber10','"\images\shirt\Bomber(10)-done\BomberZARA(1).jpg"', 'Cozy sweaters for chilly weather'),
+(31006, 'Bomber6', 'images\shirt\Bomber\Bomber6.jpg', 'Different types of jackets for all seasons'),
+(31007, 'Bomber7', 'images\shirt\Bomber\Bomber7.jpg', 'Various styles of dresses for different occasions'),
+(31008, 'Bomber8', 'images\shirt\Bomber\Bomber8.jpg', 'Different lengths and styles of skirts'),
+(31009, 'Bomber9', 'images\shirt\Bomber\Bomber9.jpg', 'Elegant and casual blouses for women'),
+(31010, 'Bomber10','images\shirt\Bomber\Bomber10.jpg', 'Cozy sweaters for chilly weather'),
 --F
-(31011, 'Hoodie1', '"\images\shirt\Hoodie(10)-Done\HooideBERSHKA(1).jpg"', 'Different lengths and styles of shorts'),
-(31012, 'Hoodie2', '"\images\shirt\Hoodie(10)-Done\HooidePull&Bear(2).jpg"', 'Formal suits for men and women'),
-(31013, 'Hoodie3', '"\images\shirt\Hoodie(10)-Done\HooidePull&Bear(3).jpg"', 'Various types of trousers for everyday wear'),
-(31014, 'Hoodie4', '"\images\shirt\Hoodie(10)-Done\HooidePull&Bear(4).jpg"', 'Stylish swimwear for the beach or pool'),
-(31015, 'Hoodie5', '"\images\shirt\Hoodie(10)-Done\HooidePull&Bear(5).jpg"', 'High-performance sportswear for athletes'),
+(31011, 'Hoodie1', 'images\shirt\Hoodie\Hoodie1.jpg', 'Different lengths and styles of shorts'),
+(31012, 'Hoodie2', 'images\shirt\Hoodie\Hoodie2.jpg', 'Formal suits for men and women'),
+(31013, 'Hoodie3', 'images\shirt\Hoodie\Hoodie3.jpg', 'Various types of trousers for everyday wear'),
+(31014, 'Hoodie4', 'images\shirt\Hoodie\Hoodie4.jpg', 'Stylish swimwear for the beach or pool'),
+(31015, 'Hoodie5', 'images\shirt\Hoodie\Hoodie5.jpg', 'High-performance sportswear for athletes'),
 --M
-(31016, 'Hoodie6', '\images\shirt\Hoodie(10)-Done\hoodieChampion(4).jpg"', 'Warm and stylish outerwear options'),
-(31017, 'Hoodie7', '\images\shirt\Hoodie(10)-Done\hooidePull&Bear(1).jpg"', 'Comfortable and functional activewear'),
-(31018, 'Hoodie8', '\images\shirt\Hoodie(10)-Done\hooidePull&Bear(2).jpg"', 'Comfortable and supportive underwear options'),
-(31019, 'Hoodie9', '\images\shirt\Hoodie(10)-Done\hooidePull&Bear(3).jpg"', 'Cozy and comfortable sleepwear options'),
-(31020, 'Hoodie10', '\images\shirt\Hoodie(10)-Done\hooidePull&Bear(5).jpg"', 'Various accessories to complement your outfit'),
+(31016, 'Hoodie6', 'images\shirt\Hoodie\Hoodie6.jpg', 'Warm and stylish outerwear options'),
+(31017, 'Hoodie7', 'images\shirt\Hoodie\Hoodie7.jpg', 'Comfortable and functional activewear'),
+(31018, 'Hoodie8', 'images\shirt\Hoodie\Hoodie8.jpg', 'Comfortable and supportive underwear options'),
+(31019, 'Hoodie9', 'images\shirt\Hoodie\Hoodie9.jpg', 'Cozy and comfortable sleepwear options'),
+(31020, 'Hoodie10', 'images\shirt\Hoodie\Hoodie10.jpg', 'Various accessories to complement your outfit'),
 --F
-(31021, 'Sweaters1', '"\images\shirt\Sweaters(10)-done\SweatearBershka(2).jpg"', 'Stylish and comfortable footwear options'),
-(31022, 'Sweaters2', '"\images\shirt\Sweaters(10)-done\SweatearPull&Bear(1).jpg"', 'Elegant formalwear for special occasions'),
-(31023, 'Sweaters3', '"\images\shirt\Sweaters(10)-done\SweatearPull&Bear(3).jpg"', 'Traditional clothing from different cultures'),
-(31024, 'Sweaters4', '"\images\shirt\Sweaters(10)-done\SweatearPull&Bear(4).jpg"', 'Comfortable and stylish maternity clothing'),
-(31025, 'Sweaters5', '"\images\shirt\Sweaters(10)-done\SweatearPull&Bear(5).jpg"', 'Fashionable clothing for plus-size individuals'),
+(31021, 'Sweaters1', 'images\shirt\Sweaters\Sweatear1.jpg', 'Stylish and comfortable footwear options'),
+(31022, 'Sweaters2', 'images\shirt\Sweaters\Sweatear2.jpg', 'Elegant formalwear for special occasions'),
+(31023, 'Sweaters3', 'images\shirt\Sweaters\Sweatear3.jpg', 'Traditional clothing from different cultures'),
+(31024, 'Sweaters4', 'images\shirt\Sweaters\Sweatear4.jpg', 'Comfortable and stylish maternity clothing'),
+(31025, 'Sweaters5', 'images\shirt\Sweaters\Sweatear5.jpg', 'Fashionable clothing for plus-size individuals'),
 --M
-(31026, 'Sweaters6', '"\images\shirt\Sweaters(10)-done\SweatersPull&Bear(1).jpg"', 'Adorable outfits for your furry friends'),
-(31027, 'Sweaters7', '"\images\shirt\Sweaters(10)-done\Sweaterslulus(5).jpg"', 'Professional uniforms for various industries'),
-(31028, 'Sweaters8', '"\images\shirt\Sweaters(10)-done\Sweaterslulus(4).jpg"', 'Creative costumes for parties and events'),
-(31029, 'Sweaters9', '"\images\shirt\Sweaters(10)-done\Sweaterslulus(3).jpg"', 'Unique vintage clothing pieces'),
-(31030, 'Sweaters10', '"\images\shirt\Sweaters(10)-done\SweatersBershka(2).jpg"', 'Durable and functional workwear options'),
+(31026, 'Sweaters6', 'images\shirt\Sweaters\Sweatear6.jpg', 'Adorable outfits for your furry friends'),
+(31027, 'Sweaters7', 'images\shirt\Sweaters\Sweatear7.jpg', 'Professional uniforms for various industries'),
+(31028, 'Sweaters8', 'images\shirt\Sweaters\Sweatear8.jpg', 'Creative costumes for parties and events'),
+(31029, 'Sweaters9', 'images\shirt\Sweaters\Sweatear9.jpg', 'Unique vintage clothing pieces'),
+(31030, 'Sweaters10', 'images\shirt\Sweaters\Sweatear10.jpg', 'Durable and functional workwear options'),
 --F
-(31031, 'T-Shirt1', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika.jpg"', 'Trendy streetwear styles for urban fashionistas'),
-(31032, 'T-Shirt2', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika2.jpg"', 'Stylish outfits for parties and celebrations'),
-(31033, 'T-Shirt3', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika3.jpg"', 'Fashionable beachwear for sunny days'),
-(31034, 'T-Shirt4', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika4.jpg"', 'Elegant attire for weddings and ceremonies'),
-(31035, 'T-Shirt5', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika5.jpg"', 'Smart and relaxed business casual outfits'),
+(31031, 'T-Shirt1', 'images\shirt\T-Shirt\T-Shirt1.jpg', 'Trendy streetwear styles for urban fashionistas'),
+(31032, 'T-Shirt2', 'images\shirt\T-Shirt\T-Shirt2.jpg', 'Stylish outfits for parties and celebrations'),
+(31033, 'T-Shirt3', 'images\shirt\T-Shirt\T-Shirt3.jpg', 'Fashionable beachwear for sunny days'),
+(31034, 'T-Shirt4', 'images\shirt\T-Shirt\T-Shirt4.jpg', 'Elegant attire for weddings and ceremonies'),
+(31035, 'T-Shirt5', 'images\shirt\T-Shirt\T-Shirt5.jpg', 'Smart and relaxed business casual outfits'),
 --M
-(31036, 'T-Shirt6', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika (1).jpg"', 'Comfortable and breathable gym wear'),
-(31037, 'T-Shirt7', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika (2).jpg"', 'Relaxing loungewear for lazy days at home'),
-(31038, 'T-Shirt8', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika (3).jpg"', 'Functional clothing for outdoor adventures'),
-(31039, 'T-Shirt9', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika (4).jpg"', 'Stylish outfits for nights out on the town'),
-(31040, 'T-Shirt10', '"\images\shirt\T-Shirt(10)-done\T-Shirt-Bershika (5).jpg"', 'Sophisticated yet relaxed formal casual attire');
+(31036, 'T-Shirt6', 'images\shirt\T-Shirt\T-Shirt6.jpg', 'Comfortable and breathable gym wear'),
+(31037, 'T-Shirt7', 'images\shirt\T-Shirt\T-Shirt7.jpg', 'Relaxing loungewear for lazy days at home'),
+(31038, 'T-Shirt8', 'images\shirt\T-Shirt\T-Shirt8.jpg', 'Functional clothing for outdoor adventures'),
+(31039, 'T-Shirt9', 'images\shirt\T-Shirt\T-Shirt9.jpg', 'Stylish outfits for nights out on the town'),
+(31040, 'T-Shirt10', 'images\shirt\T-Shirt\T-Shirt10.jpg', 'Sophisticated yet relaxed formal casual attire');
 --F
 -- Thêm d? li?u vào b?ng Brands OK
 INSERT INTO Brands (BrandsID, BrandsName, Contacts, Region, Address)
@@ -247,7 +247,7 @@ VALUES
 (272, 'Payment on delivery');
 
 -- Thêm d? li?u vào b?ng Products OK
-INSERT INTO Products (ProductsID, ProductsName, Gender, Collections, Size, Color, ProductPrice, Storage_ID, Category_ID, Brands_ID)
+INSERT INTO Products (ProductsID, ProductsName, Gender, Collections, Size, Color, ProductPrice, StorageId, CategoryId, BrandsId)
 VALUES 
 (711700, 'Bomber man bomber jacket with 2 pockets Masiduti', 'Men', 'Summer ', 'S', 'Brownish-Green', 5.00, 0111, 31001, 100),
 (711701, 'Bomber man bomber jacket with 2 pockets Masiduti', 'Men', 'Summer ', 'M', 'Brownish-Green', 5.00, 0112, 31001, 100),
@@ -435,7 +435,7 @@ VALUES
 (711844, 'T-shirt-Bershika9', 'Female', 'Winter ', 'XXL', 'Black', 25.00, 0255, 31040, 104);
 --40 Product
 -- Thêm d? li?u vào b?ng Orders OK
-INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, Customer_ID, Discount_ID)
+INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId, DiscountId)
 VALUES 
 (4000301, '2024-03-14', 10.00, 2, '75, 265 Street, 9 District, HCM', 'Pending', 'Shopee Express', 001, 'DISC0010'),
 (4000302, '2024-03-15', 25.00, 1, '273, Man Thien Street, 9 District, HCM', 'Completed', 'J&T Express', 008, 'DISC0025'),
@@ -449,7 +449,7 @@ VALUES
 (4000328, '2024-03-15', 50.00, 1, '75, 265 Street, 9 District, HCM', 'Completed', 'J&T Express', 004, 'DISC0005');
 
 -- Thêm d? li?u vào b?ng OrderDetail OK
-INSERT INTO OrderDetail (Amount, TotalQuantity, Orders_ID, Pays_ID, Pro_ID)
+INSERT INTO OrderDetail (Amount, TotalQuantity, OrdersId, PaysId, ProId)
 VALUES 
 (10.00, 2, 4000301, 111, 711748),
 (25.00, 1, 4000302, 272, 711831),
@@ -463,7 +463,7 @@ VALUES
 (50.00, 1, 4000328, 272, 711808);
 
 -- Thêm d? li?u vào b?ng Feedback OK
-INSERT INTO Feedback (Fb_detail, Rating, Fb_Date, Pro_ID, Customer_ID)
+INSERT INTO Feedback (detail, Rating, feedbackDate, ProId, CustomerId)
 VALUES 
 ('Great product!', 5, '2024-02-14', 711808, 001),
 ('Excellent service!', 4, '2024-02-15', 711748, 008),
@@ -473,7 +473,7 @@ VALUES
 ('Great product!', 4, '2024-01-03', 711831, 003);
 
 -- Thêm d? li?u vào b?ng Check_Order OK
-INSERT INTO Check_Order (Manager_ID, Orders_ID)
+INSERT INTO Check_Order (ManagerId, OrdersId)
 VALUES 
 (01, 4000301),
 (02, 4000303),
