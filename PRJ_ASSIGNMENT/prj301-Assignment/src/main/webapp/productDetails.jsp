@@ -92,7 +92,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika6.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt/T-Shirt-Bershika6.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -120,7 +120,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika7.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt/T-Shirt-Bershika7.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -148,7 +148,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika8.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt/T-Shirt-Bershika8.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
@@ -176,7 +176,7 @@
                                                    <div class="swiper-slide">
                                                        <div class="product-item">
                                                            <div class="image-holder">
-                                                               <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika9.jpg" alt="Books" class="product-image">
+                                                               <img src="images/shirt/T-Shirt/T-Shirt-Bershika9.jpg" alt="Books" class="product-image">
                                                            </div>
                                                            <div class="cart-concern">
                                                                <div class="cart-button d-flex justify-content-between align-items-center">
