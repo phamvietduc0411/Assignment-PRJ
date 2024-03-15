@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-5 ftco-animate">
-                        <img src="images/homepage/product-item2.jpg" class="img-fluid" alt="Colorlib Template"></a>
+                        <img src="images/shirt/T-Shirt(10)-done/T-Shirt-Bershika1.jpg" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="col-lg-6 product-details pl-md-5 ftco-animate">
                         <h3 style="color: #000;">Nike Free RN 2019 iD</h3>
