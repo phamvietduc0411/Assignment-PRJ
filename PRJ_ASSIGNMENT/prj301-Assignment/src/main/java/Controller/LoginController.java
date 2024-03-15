@@ -47,7 +47,7 @@ public class LoginController extends HttpServlet {
                   if (customer != null) {
                       HttpSession session = request.getSession(true);
                       session.setAttribute("customerSession",customer);
-                      response.sendRedirect("homePage.jsp");
+                      response.sendRedirect("./homePage.jsp");
                 }
                 
             }

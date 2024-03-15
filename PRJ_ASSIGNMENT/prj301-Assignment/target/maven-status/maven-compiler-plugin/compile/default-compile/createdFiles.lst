@@ -1,1 +1,17 @@
+Model\Payment\PaymentDTO.class
+Model\Customters\CustomersDAO.class
+Model\Feedback\FeedbackDTO.class
+Model\Storage\StrongeDTO.class
+Model\OrderDetail\OrderDetailDTO.class
+Model\Category\CategoryDAO.class
+Model\Products\ProductsDTO.class
+Model\Category\CategoryDTO.class
+Model\Orders\OrdersDTO.class
+Model\Discount\DiscountDTO.class
+Model\Brands\BrandsDTO.class
+Model\CheckOrder\CheckOrderDTO.class
+Controller\PageController.class
 prj301demo\utils\DBUtils.class
+Model\Admin\ManagerDTO.class
+Controller\LoginController.class
+Model\Customters\CustomersDTO.class
