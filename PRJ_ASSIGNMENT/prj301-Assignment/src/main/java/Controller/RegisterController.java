@@ -39,31 +39,7 @@ public class RegisterController extends HttpServlet {
         boolean error = false;
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
-            String username = request.getParameter("username");
-            String CustomerName = request.getParameter("CustomerName");
-            String Email = request.getParameter("email");
-            String Password = request.getParameter("password");
-            String PhoneNumber = request.getParameter("PhoneNumber");
-            String Address = request.getParameter("Address");
-            String Gender = request.getParameter("Gender");
-            CustomersDTO customner = null;
             
-            if (action == null || action.equals("register")) {
-
-                CustomersDAO dao = new CustomersDAO();
-//                CustomersDTO dto = dao.insert(customner);
-//                if (dto != null) {
-//                    HttpSession session = request.getSession(true);
-//                    session.setAttribute("customerSession", dto);
-//                    response.sendRedirect("./login.jsp");
-//                }else {
-//                    request.setAttribute("error", "Fail");
-//                    RequestDispatcher rd = request.getRequestDispatcher("signUp.html");
-//                    rd.forward(request, response);
-                
-
-            }
-
         }
     }
 

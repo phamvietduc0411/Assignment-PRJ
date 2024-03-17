@@ -71,7 +71,7 @@ public class CustomersDAO {
             con.close();
             return customner.getCustomerID();
         } catch (SQLException ex) {
-            System.out.println("Insert Student error!" + ex.getMessage());
+            System.out.println("Insert Customner error!" + ex.getMessage());
             ex.printStackTrace();
         }
         return null;
