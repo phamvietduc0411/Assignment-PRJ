@@ -9,18 +9,16 @@ import Model.Customters.CustomersDAO;
 import Model.Customters.CustomersDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Acer
+ * @author ADMIN
  */
-public class RegisterController extends HttpServlet {
+public class SignupController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,12 +32,22 @@ public class RegisterController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String CustomerName = request.getParameter("CustomerName");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String PhoneNumber = request.getParameter("PhoneNumber");
+        String Address = request.getParameter("Address");
+        String email = request.getParameter("email");
+        String Gender = request.getParameter("Gender");
         
-        
-        boolean error = false;
-        try (PrintWriter out = response.getWriter()) {
-            String action = request.getParameter("action");
-            
+        CustomersDAO cusDAO = new CustomersDAO();
+        CustomersDTO newUser = cusDAO.checkUser(username);
+        if(newUser == null){
+            cusDAO.insert(newUser);
+            response.sendRedirect("homePage.jsp");
+        } else {
+            request.setAttribute("error", "User name is exit!");
+            response.sendRedirect("signUp.jsp");
         }
     }
 

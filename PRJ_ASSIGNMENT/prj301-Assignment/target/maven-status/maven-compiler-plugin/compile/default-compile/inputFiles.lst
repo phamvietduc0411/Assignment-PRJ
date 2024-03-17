@@ -3,7 +3,6 @@ D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\prj301demo\utils\DBUtils.java
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\LoginController.java
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CheckOrder\CheckOrderDTO.java
-D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\RegisterController.java
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDAO.java
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDAO.java
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Orders\OrdersDTO.java
@@ -16,4 +15,5 @@ D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDTO.java
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Discount\DiscountDTO.java
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Storage\StrongeDTO.java
+D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\SignupController.java
 D:\SE1849 - PRJ301\ASM\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Category\CategoryDTO.java

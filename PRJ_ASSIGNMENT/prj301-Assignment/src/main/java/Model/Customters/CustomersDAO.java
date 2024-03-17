@@ -50,7 +50,7 @@ public class CustomersDAO {
         return customers;
     }
     
-    public Integer insert(CustomersDTO customner) {
+    public void insert(CustomersDTO customner) {
         String sql = "INSERT INTO Customers (CustomerID, username, password, CustomerName, PhoneNumber, Address, Gender, Email) "
                 + " VALUES (?, ?, ?, ?, ?, ?, ?, ?) ";
         try {
@@ -69,11 +69,35 @@ public class CustomersDAO {
 
             ps.executeUpdate();
             con.close();
-            return customner.getCustomerID();
+
         } catch (SQLException ex) {
             System.out.println("Insert Customner error!" + ex.getMessage());
             ex.printStackTrace();
         }
-        return null;
+
+    }
+    
+    public CustomersDTO checkUser(String username) {
+        
+        CustomersDTO customer = null;
+        try {
+            Connection con = DBUtils.getConnection();
+
+            String sql = " SELECT username FROM Customers WHERE username = ? ";
+
+            PreparedStatement stm = con.prepareStatement(sql);
+            stm.setString(1, username);
+
+            ResultSet rs = stm.executeQuery();
+            while(rs.next()){
+                rs.getString(1);
+            }
+            con.close();
+            return customer;
+        } catch (Exception e) {
+            System.out.println("Error in SQL WHEN ADMIN LOGIN: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return customer;
     }
 }

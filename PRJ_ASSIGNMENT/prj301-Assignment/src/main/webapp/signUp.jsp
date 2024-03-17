@@ -23,7 +23,7 @@
                         <div class="signup-form">
                             
                             <h2 class="form-title">Sign up</h2>
-                            <form method="Get" class="register-form" id="register-form" action="RegisterController">
+                            <form method="Get" class="register-form" id="register-form" action="SignupController">
                                 <!--Fullname-->
                                 <div class="form-group">
                                     <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -68,8 +68,9 @@
                                     <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                                     <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                                 </div>
+                                <h3>${error}</h3>
                                 <div class="form-group form-button">
-                                    <input type="submit" name="action" id="signup" class="form-submit" value="Register"/>
+                                    <input type="submit" name="action" id="signup" class="form-submit" value="Sign up"/>
                                 </div>
                             </form>
                         </div>
