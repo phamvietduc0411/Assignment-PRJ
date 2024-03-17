@@ -39,29 +39,32 @@ public class RegisterController extends HttpServlet {
         boolean error = false;
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
-            String username = request.getParameter("username");
-            String CustomerName = request.getParameter("CustomerName");
-            String Email = request.getParameter("email");
-            String Password = request.getParameter("password");
-            String PhoneNumber = request.getParameter("PhoneNumber");
-            String Address = request.getParameter("Address");
-            String Gender = request.getParameter("Gender");
-            CustomersDTO customner = null;
+            CustomersDAO cusDAO = new CustomersDAO();
             
-            if (action == null || action.equals("register")) {
+            if (action == null || action.equals("Register")) {
+                CustomersDTO customer = new CustomersDTO();
 
-                CustomersDAO dao = new CustomersDAO();
-                CustomersDTO dto = dao.insert(customner);
-                if (dto != null) {
-                    HttpSession session = request.getSession(true);
-                    session.setAttribute("customerSession", dto);
-                    response.sendRedirect("./login.jsp");
-                }else {
-                    request.setAttribute("error", "Fail");
-                    RequestDispatcher rd = request.getRequestDispatcher("signUp.html");
-                    rd.forward(request, response);
-                }
+                String username = request.getParameter("username");
+                String CustomerName = request.getParameter("CustomerName");
+                String Email = request.getParameter("email");
+                String Password = request.getParameter("password");
+                String PhoneNumber = request.getParameter("PhoneNumber");
+                String Address = request.getParameter("Address");
+                String Gender = request.getParameter("Gender");
 
+                customer.setUsername(username);
+                customer.setPassword(Password);
+                customer.setCustomerName(CustomerName);
+                customer.setPhoneNumber(PhoneNumber);
+                customer.setAddress(Address);
+                customer.setGender(Gender);
+                customer.setEmail(Email);
+
+                cusDAO.insert(customer);
+
+                request.setAttribute("customer", customer);
+                RequestDispatcher rd = request.getRequestDispatcher("homePage.jsp");
+                rd.forward(request, response);
             }
 
         }

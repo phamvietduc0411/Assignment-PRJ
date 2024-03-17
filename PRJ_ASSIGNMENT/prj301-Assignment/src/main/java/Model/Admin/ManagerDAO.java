@@ -22,7 +22,7 @@ public class ManagerDAO {
         try {
             Connection con = DBUtils.getConnection();
 
-            String sql = " SELECT ManagerID , Managername FROM Manager WHERE username = ? AND password = ?  ";
+            String sql = " SELECT ManagerID , Managername FROM Manager WHERE username = ? AND password = ? ";
 
             PreparedStatement stm = con.prepareStatement(sql);
 
@@ -38,7 +38,7 @@ public class ManagerDAO {
                     manager.setManagername("Managername");
                 }
             }
-
+            con.close();
         } catch (Exception e) {
             System.out.println("Error in SQL WHEN ADMIN LOGIN" + e.getMessage());
             e.printStackTrace();

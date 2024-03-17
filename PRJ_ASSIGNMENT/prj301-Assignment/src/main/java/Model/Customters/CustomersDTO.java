@@ -20,7 +20,7 @@ public class CustomersDTO {
     private String Email;
 
     public int getCustomerID() {
-        return CustomerID;
+        return CustomerID++;
     }
 
     public void setCustomerID(int CustomerID) {
