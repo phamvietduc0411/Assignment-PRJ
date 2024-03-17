@@ -278,7 +278,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Volunteer Half blue</a>
+                                        <a href="single-product.html">Volunteer Half blu</a>
                                     </h3>
                                     <span class="item-price text-primary">$38.00</span>
                                 </div>
