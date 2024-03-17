@@ -421,7 +421,7 @@
                         <div class="row d-flex flex-wrap">
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika4.jpg" alt="Books" class="product-image">
+                                    
                                     <img src="images/shirt/T-Shirt/T-Shirt2.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
@@ -448,8 +448,8 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika3.jpg" alt="Books" class="product-image">
-                                    <img src="images/shirt/T-Shirt/T-Shirt4.jpg" alt="Books" class="product-image">
+                                    
+                                    <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -468,14 +468,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
+                                        <a href="single-product.html">Short sleeve T-shirt with print</a>
                                     </h3>
                                     <div class="item-price text-primary">$35.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika2.jpg" alt="Books" class="product-image">
+                                    
                                     <img src="images/shirt/T-Shirt/T-Shirt5.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
@@ -502,7 +502,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/Hoodie/Hoodie5.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/T-Shirt/T-Shirt8.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -521,7 +521,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Grunge Hoodie</a>
+                                        <a href="single-product.html">Gossip Girl print short sleeve T-shirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$30.00</div>
                                 </div>
