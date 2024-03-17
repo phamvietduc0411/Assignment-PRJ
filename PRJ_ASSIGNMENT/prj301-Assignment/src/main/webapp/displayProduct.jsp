@@ -2759,13 +2759,9 @@ and open the template in the editor.
             </div>
           </div>
         </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
-      <!-- ============================================-->
+      </section><
 
-
-
-
-      </section><!-- <section> close ============================-->
+      </section>
 
 
     </main>
