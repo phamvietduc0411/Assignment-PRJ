@@ -35,7 +35,7 @@ public class CustomersDAO {
             if (rs != null) {
                 if (rs.next()) {
                     customers = new CustomersDTO();
-                    customers.setCustomUser(rs.getString("username"));
+                    customers.setUsername(rs.getString("username"));
                     customers.setCustomerName(rs.getString("CustomerName"));
                 }
             }

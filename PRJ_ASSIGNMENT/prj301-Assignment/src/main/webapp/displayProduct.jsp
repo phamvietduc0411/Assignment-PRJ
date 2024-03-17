@@ -33,40 +33,11 @@ and open the template in the editor.
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="css/theme.min.css" rel="stylesheet" />
+    <link href="images/shirt/"
   </head>
 
   <body>
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand d-inline-flex" href="index.html"><img class="d-inline-block" src="assets/img/gallery/logo.png" alt="logo" /><span class="text-1000 fs-0 fw-bold ms-2">Majestic</span></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item px-2"><a class="nav-link fw-medium active" aria-current="page" href="#categoryWomen">Women</a></li>
-              <li class="nav-item px-2"><a class="nav-link fw-medium" href="#header">Men</a></li>
-              <li class="nav-item px-2"><a class="nav-link fw-medium" href="#collection">Collection</a></li>
-              <li class="nav-item px-2"><a class="nav-link fw-medium" href="#outlet">Outlet</a></li>
-            </ul>
-            <form class="d-flex"><a class="text-1000" href="#!"><svg class="feather feather-phone me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg></a><a class="text-1000" href="#!"> <svg class="feather feather-shopping-cart me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="21" r="1"></circle>
-                  <circle cx="20" cy="21" r="1"></circle>
-                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg></a><a class="text-1000" href="#!"> <svg class="feather feather-search me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg></a><a class="text-1000" href="#!"> <svg class="feather feather-user me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
-                </svg></a><a class="text-1000" href="#!"> <svg class="feather feather-heart me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg></a></form>
-          </div>
-        </div>
-      </nav>
+ <jsp:include page="/menu.jsp" flush="true" />
       <section class="py-11 bg-light-gradient border-bottom border-white border-5">
       </section>
 
@@ -76,13 +47,13 @@ and open the template in the editor.
         <div class="container">
           <div class="row g-0">
             <div class="col-md-6">
-              <div class="card card-span h-100 text-white"> <img class="img-fluid" src="assets/img/gallery/her.png" width="790" alt="..." />
-                <div class="card-img-overlay d-flex flex-center"> <a class="btn btn-lg btn-light" href="#!">For Her</a></div>
+                <div class="card card-span h-100 text-white"> <img class="img-fluid" src="images/homepage/cat-item1.jpg" width="790" alt="..." />
+                <div class="card-img-overlay d-flex flex-center"> <a class="btn btn-lg btn-light" href="#nav-men-tab">For Him</a></div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card card-span h-100 text-white"> <img class="img-fluid" src="assets/img/gallery/him.png" width="790" alt="..." />
-                <div class="card-img-overlay d-flex flex-center"> <a class="btn btn-lg btn-light" href="#!">For Him </a></div>
+                <div class="card card-span h-100 text-white"> <img class="img-fluid" src="images/homepage/cat-item2.jpg" width="790" alt="..." />
+                <div class="card-img-overlay d-flex flex-center"> <a class="btn btn-lg btn-light" href="#nav-women-tab">For Her </a></div>
               </div>
             </div>
           </div>
@@ -92,8 +63,6 @@ and open the template in the editor.
 
 
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
       <section class="py-0">
         <div class="container">
           <div class="row h-100">
@@ -106,7 +75,7 @@ and open the template in the editor.
                   <div class="carousel-item active" data-bs-interval="10000">
                     <div class="row h-100 align-items-center g-2">
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/flat-hill.png" alt="..." />
+                          <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Hoodie/Hoodie6.jpg" alt="." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Flat Hill Slingback</h5>
@@ -115,7 +84,7 @@ and open the template in the editor.
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/blue-ring.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Hoodie/Hoodie2.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Ocean Blue Ring</h5>
@@ -124,7 +93,7 @@ and open the template in the editor.
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/wallet.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Hoodie/Hoodie3.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Brown Leathered Wallet</h5>
@@ -133,7 +102,7 @@ and open the template in the editor.
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/wrist-watch.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Hoodie/Hoodie4.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Silverside Wristwatch</h5>
@@ -146,7 +115,7 @@ and open the template in the editor.
                   <div class="carousel-item" data-bs-interval="5000">
                     <div class="row h-100 align-items-center g-2">
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/flat-hill.png" alt="..." />
+                          <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Bomber/Bomber10.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Flat Hill Slingback</h5>
@@ -155,7 +124,7 @@ and open the template in the editor.
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/blue-ring.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Bomber/Bomber9.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Ocean Blue Ring</h5>
@@ -164,7 +133,7 @@ and open the template in the editor.
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/wallet.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Bomber/Bomber3.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Brown Leathered Wallet</h5>
@@ -173,7 +142,7 @@ and open the template in the editor.
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/wrist-watch.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Bomber/Bomber4.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Silverside Wristwatch</h5>
@@ -186,7 +155,7 @@ and open the template in the editor.
                   <div class="carousel-item" data-bs-interval="3000">
                     <div class="row h-100 align-items-center g-2">
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/flat-hill.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Bomber/Bomber1.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Flat Hill Slingback</h5>
@@ -195,7 +164,7 @@ and open the template in the editor.
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/blue-ring.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Bomber/Bomber2.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Ocean Blue Ring</h5>
@@ -204,7 +173,7 @@ and open the template in the editor.
                         </div>
                       </div>
                       <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/wallet.png" alt="..." />
+                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="images/shirt/Bomber/Bomber8.jpg" alt="..." />
                           <div class="card-img-overlay ps-0"> </div>
                           <div class="card-body ps-0 bg-200">
                             <h5 class="fw-bold text-1000 text-truncate">Brown Leathered Wallet</h5>
@@ -271,16 +240,6 @@ and open the template in the editor.
           </div>
         </div><!-- end of .container-->
       </section><!-- <section> close ============================-->
-      <!-- ============================================-->
-
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section>
-
-      </section><!-- <section> close ============================-->
-      <!-- ============================================-->
 
       <section class="py-0">
         <div class="container">
@@ -2800,128 +2759,13 @@ and open the template in the editor.
             </div>
           </div>
         </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
-      <!-- ============================================-->
+      </section><
+
+      </section>
 
 
+    </main>
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0 pb-8">
-        <div class="container-fluid container-lg">
-          <div class="row h-100 g-2 justify-content-center">
-            <div class="col-sm-9 col-md-4 mb-3 mb-md-0 h-100">
-              <div class="card card-span text-white h-100"><img class="img-card h-100" src="assets/img/gallery/shoes-blog-1.png" alt="..." />
-                <div class="card-body px-xl-5 px-md-3 pt-0 pb-7">
-                  <div class="d-flex justify-content-between align-items-center bg-100 mt-n5 me-auto"><img src="assets/img/gallery/author-1.png" width="60" alt="..." />
-                    <div class="d-flex flex-1 justify-content-around"> <span class="text-900 text-center"><i data-feather="eye"> </i><span class="text-900 ms-2">35</span></span><span class="text-900 text-center"><i data-feather="heart"> </i><span class="text-900 ms-2">23</span></span><span class="text-900 text-center"><i data-feather="corner-up-right"> </i><span class="text-900 ms-2">14</span></span></div>
-                  </div>
-                  <h6 class="text-900 mt-3">Kelly Hudson . <span class="fw-normal">Fashion actiKelly Hudson . </span></h6>
-                  <h3 class="fw-bold text-1000 mt-5 text-truncate">What do your shoes say about you?</h3>
-                  <p class="text-900 mt-3">Can you really judge a person by their shoes? Well, nobody should judge, but yes it’s true that shoes do say a lot about a person. Shoes matter in making a first impression to the strangers we have to meet everyday...</p><a class="btn btn-lg text-900 fs-1 px-0 hvr-icon-forward" href="#!" role="button">Read more<svg class="bi bi-arrow-right-short hover-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"> </path>
-                    </svg></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-9 col-md-4 mb-3 mb-md-0 h-100">
-              <div class="card card-span text-white h-100"><img class="img-card h-100" src="assets/img/gallery/fashion-blog-2.png" alt="..." />
-                <div class="card-body px-xl-5 px-md-3 pt-0 pb-7">
-                  <div class="d-flex justify-content-between align-items-center bg-100 mt-n5 me-auto"><img src="assets/img/gallery/author-2.png" width="60" alt="..." />
-                    <div class="d-flex flex-1 justify-content-around"> <span class="text-900 text-center"><i data-feather="eye"> </i><span class="text-900 ms-2">35</span></span><span class="text-900 text-center"><i data-feather="heart"> </i><span class="text-900 ms-2">23</span></span><span class="text-900 text-center"><i data-feather="corner-up-right"> </i><span class="text-900 ms-2">14</span></span></div>
-                  </div>
-                  <h6 class="text-900 mt-3">Rotondwa Johnny . <span class="fw-normal">Fashion activist </span></h6>
-                  <h3 class="fw-bold text-1000 mt-5 text-truncate">Fashion Weekened to hit the theatres</h3>
-                  <p class="text-900 mt-3">A bangning catwalk show, an inspiring shoe exhibition, a nostalgic pop-up museum, and the finale of the Bata Young Designers’ Challange- our Fashion weekend 2021 at the historuc Zofin Palace in Pargue...</p><a class="btn btn-lg text-900 fs-1 px-0 hvr-icon-forward" href="#!" role="button">Read more<svg class="bi bi-arrow-right-short hover-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"> </path>
-                    </svg></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-9 col-md-4 mb-3 mb-md-0 h-100">
-              <div class="card card-span text-white h-100"><img class="img-card h-100" src="assets/img/gallery/spring-dress-blog-3.png" alt="..." />
-                <div class="card-body px-xl-5 px-md-3 pt-0 pb-7">
-                  <div class="d-flex justify-content-between align-items-center bg-100 mt-n5 me-auto"><img src="assets/img/gallery/author-3.png" width="60" alt="..." />
-                    <div class="d-flex flex-1 justify-content-around"> <span class="text-900 text-center"><i data-feather="eye"> </i><span class="text-900 ms-2">35</span></span><span class="text-900 text-center"><i data-feather="heart"> </i><span class="text-900 ms-2">23</span></span><span class="text-900 text-center"><i data-feather="corner-up-right"> </i><span class="text-900 ms-2">14</span></span></div>
-                  </div>
-                  <h6 class="text-900 mt-3">Martin . <span class="fw-normal">Fashion activist </span></h6>
-                  <h3 class="fw-bold text-1000 mt-5 text-truncate">Spring dress try-on haul at the stores begins</h3>
-                  <p class="text-900 mt-3">Every spring I start going through dress withdrawals and get so excited for the bright colors and patterns of a new season! I ordered some of the prettiest spring dresses and wanted to share some of...</p><a class="btn btn-lg text-900 fs-1 px-0 hvr-icon-forward" href="#!" role="button">Read more<svg class="bi bi-arrow-right-short hover-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"> </path>
-                    </svg></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
-      <!-- ============================================-->
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0 pt-7">
-        <div class="container">
-          <div class="row">
-            <div class="col-6 col-lg-2 mb-3">
-              <h5 class="lh-lg fw-bold text-1000">Company Info</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">About Us</a></li>
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Affiliate</a></li>
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Fashion Blogger</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-lg-2 mb-3">
-              <h5 class="lh-lg fw-bold text-1000">Help &amp; Support</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Shipping Info</a></li>
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Refunds</a></li>
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">How to Order</a></li>
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">How to Track</a></li>
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Size Guides</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-lg-2 mb-3">
-              <h5 class="lh-lg fw-bold text-1000">Customer Care</h5>
-              <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Contact Us</a></li>
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Payment Methods</a></li>
-                <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Bonus Point</a></li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-lg-auto ms-auto">
-              <h5 class="lh-lg fw-bold text-1000">Signup For The Latest News</h5>
-              <div class="row input-group-icon mb-5">
-                <div class="col-12"><input class="form-control input-box" type="email" placeholder="Enter Email" aria-label="email" /><svg class="bi bi-arrow-right-short input-box-icon" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#424242" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"> </path>
-                  </svg></div>
-              </div>
-              <p class="text-800"><svg class="feather feather-phone me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg><span class="text-800">+3930219390</span></p>
-              <p class="text-800"><svg class="feather feather-mail me-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg><span class="text-800">something@gmail.com</span></p>
-            </div>
-          </div>
-          <div class="border-bottom border-3"></div>
-          <div class="row flex-center my-3">
-            <div class="col-md-6 order-1 order-md-0">
-              <p class="my-2 text-1000 text-center text-md-start"> Made with&nbsp;<svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#EB6453" viewBox="0 0 16 16">
-                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;by&nbsp;<a class="text-800" href="https://themewagon.com/" target="_blank">ThemeWagon </a></p>
-            </div>
-            <div class="col-md-6">
-              <div class="text-center text-md-end"><a href="#!"><span class="me-4" data-feather="facebook"></span></a><a href="#!"> <span class="me-4" data-feather="instagram"></span></a><a href="#!"> <span class="me-4" data-feather="youtube"></span></a><a href="#!"> <span class="me-4" data-feather="twitter"></span></a></div>
-            </div>
-          </div>
-        </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
-      <!-- ============================================-->
-
-    </main><!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
 
 
 
