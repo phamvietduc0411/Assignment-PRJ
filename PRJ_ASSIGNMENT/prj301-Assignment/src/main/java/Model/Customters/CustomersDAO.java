@@ -8,6 +8,7 @@ package Model.Customters;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import prj301demo.utils.DBUtils;
 
@@ -49,44 +50,30 @@ public class CustomersDAO {
         return customers;
     }
     
-    public CustomersDTO createAccount(String username, String CustomerName, String Email, String password,  String PhoneNumber, String Address, String Gender ) {
-
-        CustomersDTO customer = null;
-
+    public Integer insert(CustomersDTO customner) {
+        String sql = "INSERT INTO Customers (CustomerID, username, password, CustomerName, PhoneNumber, Address, Gender, Email) "
+                + " VALUES (?, ?, ?, ?, ?, ?, ?, ?) ";
         try {
-            Connection con = DBUtils.getConnection();
 
-            String sql = "INSERT INTO Customer (username, CustomerName, Email, password, PhoneNumber, Address, Gender ) "
-                    + "VALUES (?, ?, ?, ?, ?, ?, ?) ";
-            PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setString(1, username);
-            stmt.setString(2, CustomerName);
-            stmt.setString(3, Email);
-            stmt.setString(4, password);
-            stmt.setString(5, PhoneNumber);
-            stmt.setString(6, Address);
-            stmt.setString(7, Gender);
-            
-            
-            ResultSet rs = stmt.executeQuery();
-            if(rs != null){
-               if(rs.next()){
-                   customer = new CustomersDTO();
-                   customer.setUsername("username");
-                   customer.setCustomerName("CustomerName");
-                   customer.setEmail("Email");
-                   customer.setPassword("password");
-                   customer.setPhoneNumber("PhoneNumber");
-                   customer.setAddress("Address");
-                   customer.setGender("Gender");
-               }
-            }
+            Connection con = DBUtils.getConnection();
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setInt(1, customner.getCustomerID());
+            ps.setString(2, customner.getUsername());
+            ps.setString(3, customner.getPassword());
+            ps.setString(4, customner.getCustomerName());
+            ps.setString(5, customner.getPhoneNumber());
+            ps.setString(6, customner.getAddress());
+            ps.setString(7, customner.getGender());
+            ps.setString(8, customner.getEmail());
+
+            ps.executeUpdate();
             con.close();
-                
-        } catch (Exception e) {
-            System.out.println("Error in SQL query WHEN Register. Details:");    
-            e.printStackTrace();
+            return customner.getCustomerID();
+        } catch (SQLException ex) {
+            System.out.println("Insert Student error!" + ex.getMessage());
+            ex.printStackTrace();
         }
-        return customer;
+        return null;
     }
 }
