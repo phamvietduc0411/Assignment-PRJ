@@ -24,7 +24,6 @@ public class ManagerDAO {
 
             String sql = " SELECT ManagerID , Managername FROM Manager WHERE username = ? AND password = ? ";
 
-            String sql = "SELECT ManagerID, Managername FROM Manager WHERE username = ? AND password = ?";
             PreparedStatement stm = con.prepareStatement(sql);
             stm.setString(1, username);
             stm.setString(2, password);
