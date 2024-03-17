@@ -11,6 +11,7 @@ import Model.Customters.CustomersDAO;
 import Model.Customters.CustomersDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -41,27 +42,34 @@ public class LoginController extends HttpServlet {
             String username = request.getParameter("userName");
             String password = request.getParameter("password");
 
-            if ( action==null||action.equals("login")) {
-                ManagerDAO managerDAO = new ManagerDAO();
-                ManagerDTO manager = managerDAO.login(username, password);
-                if (manager != null) {
-                    HttpSession session = request.getSession(true);
-                    session.setAttribute("manager", manager);
-                    response.sendRedirect("./admin.jsp");
-                } else {
-                    CustomersDAO customerDAO = new CustomersDAO();
-                    CustomersDTO customer = customerDAO.login(username, password);
+            if (action == null || action.equals("login")) {
+//                ManagerDAO managerDAO = new ManagerDAO();
+//                ManagerDTO manager = managerDAO.login(username, password);
 
+                CustomersDAO customerDAO = new CustomersDAO();
+                CustomersDTO customer = customerDAO.login(username, password);
+//                if (manager != null) {
+//                    HttpSession session = request.getSession(true);
+//                    session.setAttribute("manager", manager);
+//                    response.sendRedirect("./admin.jsp");
+//                } else 
                     if (customer != null) {
                         HttpSession session = request.getSession(true);
                         session.setAttribute("customerSession", customer);
                         response.sendRedirect("./homePage.jsp");
-                    
+
+                    }
+                else{
+                 request.setAttribute("error", "Username or password is incorrect");
+                    RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                    rd.forward(request, response);
                 }
 
+                
+
             }
-        
-    }}}
+        }
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

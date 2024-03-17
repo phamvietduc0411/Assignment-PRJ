@@ -24,6 +24,8 @@
                     <div class="signin-form">
                         <h2 class="form-title">Sign up</h2>
                         
+
+                        
                         
                         <form action="./login" method="get" class="register-form" id="login-form">
                             <div class="form-group">
@@ -47,7 +49,14 @@
                 </div>
             </div>
         </section>
+        
 
     </div> 
+    
+                            <%String error = (String)request.getParameter("error"); %>
+                        <% if (error!=null) {%>
+                            <h2 class="form-title"><%= error %></h2>
+   
+                        <%}%>
 </body>
 </html>
