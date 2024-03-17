@@ -7,9 +7,11 @@ package Controller;
 
 import Model.Category.CategoryDAO;
 import Model.Category.CategoryDTO;
+import Model.Products.ProductsDAO;
 import Model.Products.ProductsDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,6 +37,7 @@ public class PageController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
+            System.out.println("--dfasdfsdf-"+action);
           
             CategoryDAO categoryDAO = new CategoryDAO();
 
@@ -53,6 +56,14 @@ public class PageController extends HttpServlet {
                 }
                  request.setAttribute("category", category);
                  request.getRequestDispatcher("productDetails.jsp").forward(request, response);
+            }
+             if (action.equals("view")) {
+                ProductsDAO productDAO = new ProductsDAO();
+               List<ProductsDTO> list = productDAO.viewAllProduct();
+                 System.out.println(""+list.size());
+                request.setAttribute("productlist", list);
+//                request.getRequestDispatcher("adminDisplayProducts.jsp").forward(request, response);
+response.sendRedirect("adminDisplayProducts.jsp");
             }
         }
     }
