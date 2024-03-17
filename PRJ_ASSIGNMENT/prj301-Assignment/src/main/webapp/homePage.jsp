@@ -707,7 +707,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Orange white Nike</a>
+                                        <a href="single-product.html">Boxy fit hoodie with cowboy detail</a>
                                     </h3>
                                     <div class="item-price text-primary">$55.00</div>
                                 </div>
@@ -733,7 +733,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Running Shoe</a>
+                                        <a href="single-product.html">Anime hoodie</a>
                                     </h3>
                                     <div class="item-price text-primary">$65.00</div>
                                 </div>
@@ -785,7 +785,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Nike Brand Shoe</a>
+                                        <a href="single-product.html">Striped sweatshirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$65.00</div>
                                 </div>
@@ -867,14 +867,14 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Ghee Half T-shirt</a>
+                                        <a href="single-product.html">Round neck sweater</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt5.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/T-Shirt/T-Shirt6.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -893,7 +893,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Long Sleeve T-shirt</a>
+                                        <a href="single-product.html">Short sleeve T-shirt with a round neck</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
@@ -923,7 +923,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Half sleeve T-shirt</a>
+                                        <a href="single-product.html">Patch Bomber Jacket</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
@@ -949,7 +949,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Grunge Hoodie</a>
+                                        <a href="single-product.html">Patch Bomber Jacket</a>
                                     </h3>
                                     <div class="item-price text-primary">$30.00</div>
                                 </div>
@@ -975,7 +975,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Long Sleeve T-shirt</a>
+                                        <a href="single-product.html">Washed Effect Bomber Jacket</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
@@ -1001,7 +1001,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Stylish Grey Pant</a>
+                                        <a href="single-product.html">Soft Bomber Jacket</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
@@ -1031,7 +1031,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">White Hoodie</a>
+                                        <a href="single-product.html">Reverse Weave Hoodie</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
@@ -1057,7 +1057,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Navy Blue Hoodie</a>
+                                        <a href="single-product.html">Heavy quality oversize hoodie</a>
                                     </h3>
                                     <div class="item-price text-primary">$45.00</div>
                                 </div>
@@ -1083,7 +1083,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Dark Green Hoodie</a>
+                                        <a href="single-product.html">Hoodie with slogan</a>
                                     </h3>
                                     <div class="item-price text-primary">$35.00</div>
                                 </div>
@@ -1113,7 +1113,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Silk White Shirt</a>
+                                        <a href="single-product.html">P&B Black Label round neck sweatshirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$ 35.00</div>
                                 </div>
@@ -1139,7 +1139,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Grunge Hoodie</a>
+                                        <a href="single-product.html">Blue slogan sweatshirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$ 30.00</div>
                                 </div>
@@ -1165,7 +1165,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Grey Check Coat</a>
+                                        <a href="single-product.html">New Arizona embroidered textured sweatshirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$ 30.00</div>
                                 </div>
@@ -1191,7 +1191,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Long Sleeve T-shirt</a>
+                                        <a href="single-product.html">San Francisco Seal Rocks Sweatshirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$ 40.00</div>
                                 </div>
@@ -1221,7 +1221,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Full Sleeve Jeans Jacket</a>
+                                        <a href="single-product.html">Wide-leg jogger trousers with pockets</a>
                                     </h3>
                                     <div class="item-price text-primary">$40.00</div>
                                 </div>
@@ -1247,7 +1247,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Stylish Grey Coat</a>
+                                        <a href="single-product.html">Wide-leg jogger baggy with pockett</a>
                                     </h3>
                                     <div class="item-price text-primary">$35.00</div>
                                 </div>
@@ -1273,7 +1273,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Grey Check Coat</a>
+                                        <a href="single-product.html">Wide-leg jogger baggy with pockett</a>
                                     </h3>
                                     <div class="item-price text-primary">$35.00</div>
                                 </div>
@@ -1303,7 +1303,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Stylish Women Bag</a>
+                                        <a href="single-product.html">Tracksuit jogger Bermuda shorts</a>
                                     </h3>
                                     <div class="item-price text-primary">$35.00</div>
                                 </div>
@@ -1329,7 +1329,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Stylish Gadgets</a>
+                                        <a href="single-product.html">Tracksuit jogger Bermuda shorts</a>
                                     </h3>
                                     <div class="item-price text-primary">$30.00</div>
                                 </div>
