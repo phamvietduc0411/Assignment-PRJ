@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <p>Login user: ${sessionScope.usersession.username}</p>
+        <p>Login user: ${sessionScope.manager.managerID}</p>
 
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
@@ -37,51 +37,74 @@
                             <!-- Page body start -->
                             <div class="page-body">
                                 <div class="row">
+
+
                                     <div class="col-md-6">
                                         <div class="card">
                                             <div class="card-header">
                                                 <h5>Add product</h5>
-                                                <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
                                             </div>
                                             <div class="card-block">
                                                 <form class="form-material">
                                                     <div class="form-group form-default">
                                                         <input type="text" name="footer-email" class="form-control">
                                                         <span class="form-bar"></span>
-                                                        <label class="float-label">Username</label>
+                                                        <label class="float-label">ProductID</label>
                                                     </div>
                                                     <div class="form-group form-default">
                                                         <input type="text" name="footer-email" class="form-control">
                                                         <span class="form-bar"></span>
-                                                        <label class="float-label">Email (exa@gmail.com)</label>
+                                                        <label class="float-label">ProductName</label>
                                                     </div>
+                                                    <div class="form-group form-default">
+                                                        <input type="text" name="footer-email" class="form-control">
+                                                        <span class="form-bar"></span>
+                                                        <label class="float-label">Gender</label>
+                                                    </div>
+                                                    <div class="form-group form-default">
+                                                        <input type="text" name="footer-email" class="form-control">
+                                                        <span class="form-bar"></span>
+                                                        <label class="float-label">Collections</label>
+                                                    </div>
+
                                                     <div class="form-group form-default">
                                                         <input type="password" name="footer-email" class="form-control">
                                                         <span class="form-bar"></span>
-                                                        <label class="float-label">Password</label>
+                                                        <label class="float-label">Size</label>
                                                     </div>
                                                     <div class="form-group form-default">
                                                         <input type="text" name="footer-email" class="form-control">
                                                         <span class="form-bar"></span>
-                                                        <label class="float-label">Predefine value</label>
-                                                    </div>
+                                                        <label class="float-label">ProductPrice</label>
+                                                    </div> 
                                                     <div class="form-group form-default">
                                                         <input type="text" name="footer-email" class="form-control"
                                                                disabled>
                                                         <span class="form-bar"></span>
-                                                        <label class="float-label">Disabled</label>
+                                                        <label class="float-label">AvailableQuantity</label>
                                                     </div>
                                                     <div class="form-group form-default">
                                                         <input type="text" name="footer-email" class="form-control"
                                                                maxlength="6">
                                                         <span class="form-bar"></span>
-                                                        <label class="float-label">Max length 6 char</label>
+                                                        <label class="float-label">StorageID</label>
                                                     </div>
                                                     <div class="form-group form-default">
                                                         <textarea class="form-control"></textarea>
                                                         <span class="form-bar"></span>
-                                                        <label class="float-label">Text area Input</label>
+                                                        <label class="float-label">CategoryName</label>
                                                     </div>
+                                                    <div class="form-group form-default">
+                                                        <textarea class="form-control"></textarea>
+                                                        <span class="form-bar"></span>
+                                                        <label class="float-label">Img</label>
+                                                    </div>
+                                                    <div class="form-group form-default">
+                                                        <textarea class="form-control"></textarea>
+                                                        <span class="form-bar"></span>
+                                                        <label class="float-label">Descriptions</label>
+                                                    </div>
+                                                    <input  class="form-submit" type="submit" value="save">
                                                 </form>
                                             </div>
                                         </div>
@@ -89,9 +112,10 @@
                                     <div class="col-md-6">
                                         <div class="card">
                                             <div class="card-header">
-                                                <h5>Material Form Inputs With Static Label</h5>
-                                                <!--<span>Add class of <code>.form-control</code> with <code>&lt;input&gt;</code> tag</span>-->
+                                                <h5>View All Product</h5>
+
                                             </div>
+
                                             <div class="card-block">
                                                 <form class="form-material">
                                                     <div class="form-group form-default form-static-label">
@@ -246,8 +270,8 @@
                                                                     <th>address</th>
                                                                     <th>status</th>
                                                                     <th>freight</th>
-                                                                    
-                                                                    
+
+
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
