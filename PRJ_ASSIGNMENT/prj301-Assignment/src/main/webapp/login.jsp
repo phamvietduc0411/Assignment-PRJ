@@ -19,10 +19,17 @@
                     <div class="signin-image">
                         <figure><img src="images/logo.png" alt="sing up image"></figure>
                         <a href="#" class="display-flex-center signup-image-link">Create an account</a>
+                                                    <%String error = (String)request.getParameter("error"); %>
+                        <% if (error!=null) {%>
+                            <h2 class="form-title"><%= error %></h2>
+   
+                        <%}%>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Sign up</h2>
+                        
+
                         
                         
                         <form action="./login" method="get" class="register-form" id="login-form">
@@ -47,7 +54,9 @@
                 </div>
             </div>
         </section>
+        
 
     </div> 
+   
 </body>
 </html>
