@@ -417,10 +417,7 @@
                         <div class="row d-flex flex-wrap">
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-<<<<<<< HEAD
-=======
-                                    
->>>>>>> bd39d30a9cffdc8c289d326c18184c80b752a6cb
+
                                     <img src="images/shirt/T-Shirt/T-Shirt2.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
@@ -447,12 +444,12 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-<<<<<<< HEAD
+
                                     <img src="images/shirt/T-Shirt/T-Shirt4.jpg" alt="Books" class="product-image">
-=======
+
                                     
                                     <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
->>>>>>> bd39d30a9cffdc8c289d326c18184c80b752a6cb
+
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
