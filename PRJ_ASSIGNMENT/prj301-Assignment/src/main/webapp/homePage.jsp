@@ -1114,7 +1114,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/Hoodie/Hoodie9.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Hoodie/hoodie9.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -1144,7 +1144,7 @@
                         <div class="row d-flex flex-wrap">
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/g-products3.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Sweaters/Sweatear5.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -1170,7 +1170,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products4.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Sweaters/Sweatear6.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -1196,7 +1196,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products6.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Sweaters/Sweatear3.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -1222,7 +1222,7 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/homepage/selling-products7.jpg" alt="Books" class="product-image">
+                                    <img src="images/shirt/Sweaters/Sweatear2.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
