@@ -160,7 +160,7 @@
                                             <li><a href="cart.jsp" class="item-anchor" data-effect="Contact">Cart</a></li>
 
                                             <li><a
-                                                    href="https://templatesjungle.gumroad.com/l/ultras-free-ecommerce-clothing-store-website-template/"
+                                                    href=""
                                                     class="item-anchor" data-effect="Contact" target="_blank"> <b>GET PRO</b> </a></li>
 
 
@@ -230,7 +230,7 @@
                 <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
                     <h2 class="section-title">Featured Products</h2>
                     <div class="btn-wrap">
-                        <a href="shop.html" class="d-flex align-items-center">View all products <i
+                        <a href="displayProduct.jsp" class="d-flex align-items-center">View all products <i
                                 class="icon icon icon-arrow-io"></i></a>
                     </div>
                 </div>
@@ -250,11 +250,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-<<<<<<< HEAD
                                         <a href="PageController?action=productDetails&CategoryID=31031&size=M">T-Shirt-Bershika1</a>
-=======
-                                        <a href="PageController?action=productDetails&CategoryID=31031">T-Shirt Bershika1</a>
->>>>>>> 3275d5b54193a740ef5d46d271ed4e7e6c065d7d
                                     </h3>
                                     <span class="item-price text-primary">$40.00</span>
                                 </div>
@@ -421,7 +417,6 @@
                         <div class="row d-flex flex-wrap">
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika4.jpg" alt="Books" class="product-image">
                                     <img src="images/shirt/T-Shirt/T-Shirt2.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
@@ -448,7 +443,6 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika3.jpg" alt="Books" class="product-image">
                                     <img src="images/shirt/T-Shirt/T-Shirt4.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
@@ -475,7 +469,6 @@
                             </div>
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt-Bershika2.jpg" alt="Books" class="product-image">
                                     <img src="images/shirt/T-Shirt/T-Shirt5.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">

@@ -1,5 +1,4 @@
 Model\Payment\PaymentDTO.class
-Model\Customters\CustomersDAO.class
 Model\Feedback\FeedbackDTO.class
 Model\Storage\StrongeDTO.class
 Model\OrderDetail\OrderDetailDTO.class
