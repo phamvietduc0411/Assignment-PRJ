@@ -41,7 +41,7 @@ public class LoginController extends HttpServlet {
             String username = request.getParameter("userName");
             String password = request.getParameter("password");
 
-            if (action == null || action.equals("login")) {
+            if ( action==null||action.equals("login")) {
                 ManagerDAO managerDAO = new ManagerDAO();
                 ManagerDTO manager = managerDAO.login(username, password);
                 if (manager != null) {
@@ -56,12 +56,12 @@ public class LoginController extends HttpServlet {
                         HttpSession session = request.getSession(true);
                         session.setAttribute("customerSession", customer);
                         response.sendRedirect("./homePage.jsp");
-                    }
+                    
                 }
 
             }
-        }
-    }
+        
+    }}}
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

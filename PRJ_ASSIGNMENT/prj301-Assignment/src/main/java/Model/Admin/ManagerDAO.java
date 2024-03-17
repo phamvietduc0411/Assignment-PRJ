@@ -22,27 +22,25 @@ public class ManagerDAO {
         try {
             Connection con = DBUtils.getConnection();
 
-            String sql = " SELECT ManagerID , Managername FROM Manager WHERE username = ? AND password = ?  ";
-
+            String sql = "SELECT ManagerID, Managername FROM Manager WHERE username = ? AND password = ?";
             PreparedStatement stm = con.prepareStatement(sql);
-
             stm.setString(1, username);
             stm.setString(2, password);
 
             ResultSet rs = stm.executeQuery();
 
-            if (rs != null) {
+            if (rs.next()) {
                 manager = new ManagerDTO();
-                if (rs.next()) {
-                    manager.setManagerID(rs.getInt("ManagerID"));
-                    manager.setManagername("Managername");
-                }
+                manager.setManagerID(rs.getInt("ManagerID"));
+                manager.setManagername(rs.getString("Managername"));
             }
 
+            con.close();
         } catch (Exception e) {
-            System.out.println("Error in SQL WHEN ADMIN LOGIN" + e.getMessage());
+            System.out.println("Error in SQL WHEN ADMIN LOGIN: " + e.getMessage());
             e.printStackTrace();
         }
         return manager;
     }
+    
 }

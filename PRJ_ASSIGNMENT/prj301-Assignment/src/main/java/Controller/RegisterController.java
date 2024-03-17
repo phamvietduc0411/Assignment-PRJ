@@ -51,16 +51,16 @@ public class RegisterController extends HttpServlet {
             if (action == null || action.equals("register")) {
 
                 CustomersDAO dao = new CustomersDAO();
-                CustomersDTO dto = dao.insert(customner);
-                if (dto != null) {
-                    HttpSession session = request.getSession(true);
-                    session.setAttribute("customerSession", dto);
-                    response.sendRedirect("./login.jsp");
-                }else {
-                    request.setAttribute("error", "Fail");
-                    RequestDispatcher rd = request.getRequestDispatcher("signUp.html");
-                    rd.forward(request, response);
-                }
+//                CustomersDTO dto = dao.insert(customner);
+//                if (dto != null) {
+//                    HttpSession session = request.getSession(true);
+//                    session.setAttribute("customerSession", dto);
+//                    response.sendRedirect("./login.jsp");
+//                }else {
+//                    request.setAttribute("error", "Fail");
+//                    RequestDispatcher rd = request.getRequestDispatcher("signUp.html");
+//                    rd.forward(request, response);
+                
 
             }
 
