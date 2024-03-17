@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import Model.Admin.ManagerDAO;
+import Model.Admin.ManagerDTO;
 import Model.Customters.CustomersDAO;
 import Model.Customters.CustomersDTO;
 import java.io.IOException;
@@ -35,21 +37,28 @@ public class LoginController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 //         get parameter
-           String action = request.getParameter("action");
-           String userName = request.getParameter("userName");
-           String password = request.getParameter("password");
-           
-            if (action== null||action.equals("login")) {
-                
-                CustomersDAO customerDAO = new CustomersDAO();
-                CustomersDTO customer = customerDAO.login(userName,password);
+            String action = request.getParameter("action");
+            String username = request.getParameter("userName");
+            String password = request.getParameter("password");
 
-                  if (customer != null) {
-                      HttpSession session = request.getSession(true);
-                      session.setAttribute("customerSession",customer);
-                      response.sendRedirect("./homePage.jsp");
+            if (action == null || action.equals("login")) {
+                ManagerDAO managerDAO = new ManagerDAO();
+                ManagerDTO manager = managerDAO.login(username, password);
+                if (manager != null) {
+                    HttpSession session = request.getSession(true);
+                    session.setAttribute("manager", manager);
+                    response.sendRedirect("./admin.jsp");
+                } else {
+                    CustomersDAO customerDAO = new CustomersDAO();
+                    CustomersDTO customer = customerDAO.login(username, password);
+
+                    if (customer != null) {
+                        HttpSession session = request.getSession(true);
+                        session.setAttribute("customerSession", customer);
+                        response.sendRedirect("./homePage.jsp");
+                    }
                 }
-                
+
             }
         }
     }
