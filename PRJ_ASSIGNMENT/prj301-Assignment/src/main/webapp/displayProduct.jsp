@@ -236,8 +236,7 @@ and open the template in the editor.
                 </div>
               </div>
             </div>
-            <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-          </div>
+
         </div><!-- end of .container-->
       </section><!-- <section> close ============================-->
 
@@ -771,8 +770,6 @@ and open the template in the editor.
                             <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryWTshirt" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryWTshirt" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
                           </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
                       <div class="tab-pane fade" id="pills-wshoes" role="tabpanel" aria-labelledby="pills-wshoes-tab">
                         <div class="carousel slide" id="carouselCategoryWShoes" data-bs-touch="false" data-bs-interval="false">
                           <div class="carousel-inner">
@@ -2751,8 +2748,7 @@ and open the template in the editor.
               <div class="bg-300 p-4 h-100 d-flex flex-column justify-content-center">
                 <h1 class="fw-semi-bold lh-sm fs-4 fs-lg-5 fs-xl-6">Dress Sharp Everyday</h1>
                 <p class="mb-5 fs-1">We have the premium set of formal wears for to make you look confident and comfortable at your job.</p>
-                <div class="d-grid gap-2 d-md-block"><a class="btn btn-lg btn-dark" href="#!" role="button">Explore Collection</a></div>
-              </div>
+
             </div>
             <div class="col-md-6">
               <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/sharp-dress.png" alt="..." /><a class="stretched-link" href="#!"></a></div>
