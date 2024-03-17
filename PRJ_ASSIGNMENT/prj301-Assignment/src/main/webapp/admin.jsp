@@ -22,6 +22,8 @@
     <body>
         <p>Login user: ${sessionScope.manager.managerID}</p>
 
+
+
         <div class="pcoded-main-container">
             <div class="pcoded-wrapper">
                 <nav class="pcoded-navbar">
@@ -37,275 +39,211 @@
                             <!-- Page body start -->
                             <div class="page-body">
                                 <div class="row">
-
-
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="card">
                                             <div class="card-header">
-                                                <h5>Add product</h5>
-                                            </div>
-                                            <div class="card-block">
-                                                <form class="form-material">
-                                                    <div class="form-group form-default">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">ProductID</label>
-                                                    </div>
-                                                    <div class="form-group form-default">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">ProductName</label>
-                                                    </div>
-                                                    <div class="form-group form-default">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Gender</label>
-                                                    </div>
-                                                    <div class="form-group form-default">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Collections</label>
-                                                    </div>
 
-                                                    <div class="form-group form-default">
-                                                        <input type="password" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Size</label>
-                                                    </div>
-                                                    <div class="form-group form-default">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">ProductPrice</label>
-                                                    </div> 
-                                                    <div class="form-group form-default">
-                                                        <input type="text" name="footer-email" class="form-control"
-                                                               disabled>
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">AvailableQuantity</label>
-                                                    </div>
-                                                    <div class="form-group form-default">
-                                                        <input type="text" name="footer-email" class="form-control"
-                                                               maxlength="6">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">StorageID</label>
-                                                    </div>
-                                                    <div class="form-group form-default">
-                                                        <textarea class="form-control"></textarea>
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">CategoryName</label>
-                                                    </div>
-                                                    <div class="form-group form-default">
-                                                        <textarea class="form-control"></textarea>
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Img</label>
-                                                    </div>
-                                                    <div class="form-group form-default">
-                                                        <textarea class="form-control"></textarea>
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Descriptions</label>
-                                                    </div>
-                                                    <input  class="form-submit" type="submit" value="save">
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h5>View All Product</h5>
-
-                                            </div>
-
-                                            <div class="card-block">
-                                                <form class="form-material">
-                                                    <div class="form-group form-default form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control"
-                                                               placeholder="Enter User Name">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Username</label>
-                                                    </div>
-                                                    <div class="form-group form-default form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control"
-                                                               placeholder="Enter Email">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Email (exa@gmail.com)</label>
-                                                    </div>
-                                                    <div class="form-group form-default form-static-label">
-                                                        <input type="password" name="footer-email" class="form-control"
-                                                               placeholder="Enter Password">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Password</label>
-                                                    </div>
-                                                    <div class="form-group form-default form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control"
-                                                               placeholder="Pre define value" value="My value">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Predefine value</label>
-                                                    </div>
-                                                    <div class="form-group form-default form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control"
-                                                               placeholder="disabled Input" disabled>
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Disabled</label>
-                                                    </div>
-                                                    <div class="form-group form-default form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control"
-                                                               maxlength="6" placeholder="Enter only 6 char">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Max length 6 char</label>
-                                                    </div>
-                                                    <div class="form-group form-default form-static-label">
-                                                        <textarea class="form-control">Enter Text hear</textarea>
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">Text area Input</label>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h5>List Product</h5>
-                                            </div>
-                                            <div class="card-block">
-                                                <form class="form-material">
-                                                    <div class="form-group form-default">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-default</label>
-                                                    </div>
-                                                    <div class="form-group form-primary">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-primary</label>
-                                                    </div>
-                                                    <div class="form-group form-success">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-success</label>
-                                                    </div>
-                                                    <div class="form-group form-danger">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-danger</label>
-                                                    </div>
-                                                    <div class="form-group form-warning">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-warning</label>
-                                                    </div>
-                                                    <div class="form-group form-info">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-info</label>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h5>Colored Input With Static Label</h5>
-                                            </div>
-                                            <div class="card-block">
-                                                <form class="form-material">
-                                                    <div class="form-group form-default form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-default</label>
-                                                    </div>
-                                                    <div class="form-group form-primary form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-primary</label>
-                                                    </div>
-                                                    <div class="form-group form-success form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-success</label>
-                                                    </div>
-                                                    <div class="form-group form-danger form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-danger</label>
-                                                    </div>
-                                                    <div class="form-group form-warning form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-warning</label>
-                                                    </div>
-                                                    <div class="form-group form-info form-static-label">
-                                                        <input type="text" name="footer-email" class="form-control">
-                                                        <span class="form-bar"></span>
-                                                        <label class="float-label">form-info</label>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <!-- Basic Form Inputs card start -->
-                                        <div class="card">
-                                            <div class="card-header">
                                                 <h5>Check Order</h5>
+
                                             </div>
-                                            <div class="card-block">
-                                                <form>
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-2 col-form-label">Simple Input</label>
-
-                                                        <table>
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>orderID</th>
-                                                                    <th>orderdate</th>
-                                                                    <th>price</th>
-                                                                    <th>quantity</th>
-                                                                    <th>address</th>
-                                                                    <th>status</th>
-                                                                    <th>freight</th>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>orderID</th>
+                                                        <th>orderdate</th>
+                                                        <th>price</th>
+                                                        <th>quantity</th>
+                                                        <th>address</th>
+                                                        <th>status</th>
+                                                        <th>freight</th>
 
 
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <!-- Rows for data will go here -->
-                                                            </tbody>
-                                                        </table>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Rows for data will go here -->
+                                                </tbody>
+                                            </table>
+                                        </div> 
+                                        <div class="row">
 
-                                                        <div class="col-sm-10">
-                                                            <input type="text" class="form-control">
-                                                        </div>
+
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Add product</h5>
                                                     </div>
+                                                    <div class="card-block">
+                                                        <form class="form-material">
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">ProductID</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">ProductName</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Gender</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Collections</label>
+                                                            </div>
 
+                                                            <div class="form-group form-default">
+                                                                <input type="password" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Size</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">ProductPrice</label>
+                                                            </div> 
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="footer-email" class="form-control"
+                                                                       disabled>
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">AvailableQuantity</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="footer-email" class="form-control"
+                                                                       maxlength="6">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">StorageID</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <textarea class="form-control"></textarea>
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">CategoryName</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <textarea class="form-control"></textarea>
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Img</label>
+                                                            </div>
+                                                            <div class="form-group form-default">
+                                                                <textarea class="form-control"></textarea>
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">Descriptions</label>
+                                                            </div>
+                                                            <input  class="form-submit" type="submit" value="save">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>ADD Admin</h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <form class="form-material">
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-default</label>
+                                                            </div>
+                                                            <div class="form-group form-primary">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-primary</label>
+                                                            </div>
+                                                            <div class="form-group form-success">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-success</label>
+                                                            </div>
+                                                            <div class="form-group form-danger">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-danger</label>
+                                                            </div>
+                                                            <div class="form-group form-warning">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-warning</label>
+                                                            </div>
+                                                            <div class="form-group form-info">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-info</label>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Colored Input With Static Label</h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <form class="form-material">
+                                                            <div class="form-group form-default form-static-label">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-default</label>
+                                                            </div>
+                                                            <div class="form-group form-primary form-static-label">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-primary</label>
+                                                            </div>
+                                                            <div class="form-group form-success form-static-label">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-success</label>
+                                                            </div>
+                                                            <div class="form-group form-danger form-static-label">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-danger</label>
+                                                            </div>
+                                                            <div class="form-group form-warning form-static-label">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-warning</label>
+                                                            </div>
+                                                            <div class="form-group form-info form-static-label">
+                                                                <input type="text" name="footer-email" class="form-control">
+                                                                <span class="form-bar"></span>
+                                                                <label class="float-label">form-info</label>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Basic Form Inputs card end -->
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                
+                                                <a href="PageController?action=view"><h5>View All Product</h5></a>
 
                                             </div>
-                                            </form>
-                                        </div>
-                                    </div>
 
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Basic Form Inputs card end -->
+                            <!-- Page body end -->
                         </div>
-                    </div>
-                </div>
-                <!-- Page body end -->
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
+                      
 
+                        </body>
 
-
-</body>
-
-</html>
+                        </html>

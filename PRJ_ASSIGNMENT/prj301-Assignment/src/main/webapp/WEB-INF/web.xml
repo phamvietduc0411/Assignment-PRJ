@@ -21,8 +21,10 @@
         <url-pattern>/PageController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+
         <servlet-name>RegisterController</servlet-name>
         <url-pattern>/Register</url-pattern>
+
     </servlet-mapping>
     <session-config>
         <session-timeout>
