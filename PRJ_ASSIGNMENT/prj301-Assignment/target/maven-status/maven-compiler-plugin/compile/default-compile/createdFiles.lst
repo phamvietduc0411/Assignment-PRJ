@@ -13,7 +13,6 @@ Model\CheckOrder\CheckOrderDTO.class
 Controller\PageController.class
 prj301demo\utils\DBUtils.class
 Model\Admin\ManagerDTO.class
-Controller\AdminController.class
 Controller\LoginController.class
 Model\Admin\ManagerDAO.class
 Model\Customters\CustomersDTO.class

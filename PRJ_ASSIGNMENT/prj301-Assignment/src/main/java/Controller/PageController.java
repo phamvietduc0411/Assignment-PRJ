@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -37,7 +37,7 @@ public class PageController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
-            System.out.println("--dfasdfsdf-"+action);
+           
           
             CategoryDAO categoryDAO = new CategoryDAO();
 
@@ -62,8 +62,8 @@ public class PageController extends HttpServlet {
                List<ProductsDTO> list = productDAO.viewAllProduct();
                  System.out.println(""+list.size());
                 request.setAttribute("productlist", list);
-//                request.getRequestDispatcher("adminDisplayProducts.jsp").forward(request, response);
-response.sendRedirect("adminDisplayProducts.jsp");
+                request.getRequestDispatcher("./adminDisplayProducts.jsp").forward(request, response);
+//response.sendRedirect("adminDisplayProducts.jsp");
             }
         }
     }
