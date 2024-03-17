@@ -25,7 +25,7 @@ public class CustomersDAO {
         try {
             Connection con = DBUtils.getConnection();
 
-            String sql = " SELECT  CustomerName FROM Customers WHERE username = ? AND password = ?  ";
+            String sql = " SELECT  CustomerName , username FROM Customers WHERE username = ? AND password = ?  ";
 
             PreparedStatement stm = con.prepareStatement(sql);
 

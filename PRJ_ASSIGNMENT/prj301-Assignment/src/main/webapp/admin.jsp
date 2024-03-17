@@ -231,7 +231,7 @@
                                         <div class="card">
                                             <div class="card-header">
                                                 
-                                                <a href="./PageController?action=view"><h5>View All Product</h5></a>
+                                                <a href="PageController?action=view"><h5>View All Product</h5></a>
 
                                             </div>
 

@@ -44,6 +44,7 @@ public class RegisterController extends HttpServlet {
             if (action == null || action.equals("Register")) {
                 CustomersDTO customer = new CustomersDTO();
 
+<<<<<<< HEAD
                 String username = request.getParameter("username");
                 String CustomerName = request.getParameter("CustomerName");
                 String Email = request.getParameter("email");
@@ -51,6 +52,19 @@ public class RegisterController extends HttpServlet {
                 String PhoneNumber = request.getParameter("PhoneNumber");
                 String Address = request.getParameter("Address");
                 String Gender = request.getParameter("Gender");
+=======
+                CustomersDAO dao = new CustomersDAO();
+//                CustomersDTO dto = dao.insert(customner);
+//                if (dto != null) {
+//                    HttpSession session = request.getSession(true);
+//                    session.setAttribute("customerSession", dto);
+//                    response.sendRedirect("./login.jsp");
+//                }else {
+//                    request.setAttribute("error", "Fail");
+//                    RequestDispatcher rd = request.getRequestDispatcher("signUp.html");
+//                    rd.forward(request, response);
+                
+>>>>>>> 2e87345f2778c617330694b71a8902036b2a0082
 
                 customer.setUsername(username);
                 customer.setPassword(Password);
