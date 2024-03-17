@@ -62,8 +62,8 @@ public class PageController extends HttpServlet {
                List<ProductsDTO> list = productDAO.viewAllProduct();
                  System.out.println(""+list.size());
                 request.setAttribute("productlist", list);
-                request.getRequestDispatcher("./adminDisplayProducts.jsp").forward(request, response);
-//response.sendRedirect("adminDisplayProducts.jsp");
+//                request.getRequestDispatcher("./adminDisplayProducts.jsp").forward(request, response);
+response.sendRedirect("adminDisplayProducts.jsp");
             }
         }
     }

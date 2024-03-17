@@ -46,13 +46,12 @@ public class RegisterController extends HttpServlet {
             String PhoneNumber = request.getParameter("PhoneNumber");
             String Address = request.getParameter("Address");
             String Gender = request.getParameter("Gender");
-            
+            CustomersDTO customner = null;
             
             if (action == null || action.equals("register")) {
 
                 CustomersDAO dao = new CustomersDAO();
-                CustomersDTO dto = dao.createAccount(username, CustomerName, Email, Password, PhoneNumber, Address, Gender);
-
+                CustomersDTO dto = dao.insert(customner);
                 if (dto != null) {
                     HttpSession session = request.getSession(true);
                     session.setAttribute("customerSession", dto);
