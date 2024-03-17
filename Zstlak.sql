@@ -56,8 +56,7 @@ CREATE TABLE Payment (
 CREATE TABLE Products (
 	ProductsID INT NOT NULL PRIMARY KEY,
 	ProductsName NVARCHAR(150),
-	Men NVARCHAR(30),
-	Woman NVARCHAR(30),
+	Gender NVARCHAR(30),
 	Size VARCHAR(10),
 	Color VARCHAR(20),
 	ProductPrice FLOAT,
