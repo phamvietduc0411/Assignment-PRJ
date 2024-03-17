@@ -39,48 +39,7 @@ public class RegisterController extends HttpServlet {
         boolean error = false;
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
-            CustomersDAO cusDAO = new CustomersDAO();
             
-            if (action == null || action.equals("Register")) {
-                CustomersDTO customer = new CustomersDTO();
-
-<<<<<<< HEAD
-                String username = request.getParameter("username");
-                String CustomerName = request.getParameter("CustomerName");
-                String Email = request.getParameter("email");
-                String Password = request.getParameter("password");
-                String PhoneNumber = request.getParameter("PhoneNumber");
-                String Address = request.getParameter("Address");
-                String Gender = request.getParameter("Gender");
-=======
-                CustomersDAO dao = new CustomersDAO();
-//                CustomersDTO dto = dao.insert(customner);
-//                if (dto != null) {
-//                    HttpSession session = request.getSession(true);
-//                    session.setAttribute("customerSession", dto);
-//                    response.sendRedirect("./login.jsp");
-//                }else {
-//                    request.setAttribute("error", "Fail");
-//                    RequestDispatcher rd = request.getRequestDispatcher("signUp.html");
-//                    rd.forward(request, response);
-                
->>>>>>> 2e87345f2778c617330694b71a8902036b2a0082
-
-                customer.setUsername(username);
-                customer.setPassword(Password);
-                customer.setCustomerName(CustomerName);
-                customer.setPhoneNumber(PhoneNumber);
-                customer.setAddress(Address);
-                customer.setGender(Gender);
-                customer.setEmail(Email);
-
-                cusDAO.insert(customer);
-
-                request.setAttribute("customer", customer);
-                RequestDispatcher rd = request.getRequestDispatcher("homePage.jsp");
-                rd.forward(request, response);
-            }
-
         }
     }
 
