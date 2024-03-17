@@ -445,9 +445,7 @@
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
 
-                                    <img src="images/shirt/T-Shirt/T-Shirt4.jpg" alt="Books" class="product-image">
-
-                                    
+                  
                                     <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
 
                                 </div>
@@ -469,7 +467,6 @@
                                 <div class="product-detail">
                                     <h3 class="product-title">
                                         <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
-                                        <a href="single-product.html">Short sleeve T-shirt with print</a>
                                     </h3>
                                     <div class="item-price text-primary">$25.00</div>
                                 </div>
@@ -507,7 +504,6 @@
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
                                     <img src="images/shirt/Hoodie/Hoodie5.jpg" alt="Books" class="product-image">
-                                    <img src="images/shirt/T-Shirt/T-Shirt8.jpg" alt="Books" class="product-image">
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
@@ -526,7 +522,7 @@
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title">
-                                        <a href="single-product.html">Grunge Hoodie</a>
+
                                         <a href="single-product.html">Gossip Girl print short sleeve T-shirt</a>
                                     </h3>
                                     <div class="item-price text-primary">$25.00</div>
@@ -1409,28 +1405,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="swiper testimonial-swiper overflow-hidden">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-detail">
-                                            <p>“Dignissim massa diam elementum habitant fames. Id nullam pellentesque nisi, eget cursus dictumst
-                                                pharetra, sit. Pulvinar laoreet id porttitor egestas dui urna. Porttitor nibh magna dolor ultrices
-                                                iaculis sit iaculis.”</p>
-                                            <div class="author-detail">
-                                                <div class="name">By Maggie Rio</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-detail">
-                                            <p>“Dignissim massa diam elementum habitant fames. Id nullam pellentesque nisi, eget cursus dictumst
-                                                pharetra, sit. Pulvinar laoreet id porttitor egestas dui urna. Porttitor nibh magna dolor ultrices
-                                                iaculis sit iaculis.”</p>
-                                            <div class="author-detail">
-                                                <div class="name">By John Smith</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <img src="images/Slogan.jpg"
                             </div>
                             <div class="swiper-arrows">
                                 <button class="prev-button">
@@ -1641,138 +1616,8 @@
         </section>
 
         <hr>
-        <section id="latest-blog" class="padding-large">
-            <div class="container">
-                <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
-                    <h2 class="section-title">our Journal</h2>
-                    <div class="btn-wrap align-right">
-                        <a href="blog.html" class="d-flex align-items-center">Read All Articles <i
-                                class="icon icon icon-arrow-io"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="row d-flex flex-wrap">
-                    <article class="col-md-4 post-item">
-                        <div class="image-holder zoom-effect">
-                            <a href="single-post.html">
-                                <img src="images/homepage/post-img1.jpg" alt="post" class="post-image">
-                            </a>
-                        </div>
-                        <div class="post-content d-flex">
-                            <div class="meta-date">
-                                <div class="meta-day text-primary">22</div>
-                                <div class="meta-month">Aug-2021</div>
-                            </div>
-                            <div class="post-header">
-                                <h3 class="post-title">
-                                    <a href="single-post.html">top 10 casual look ideas to dress up your kids</a>
-                                </h3>
-                                <a href="blog.html" class="blog-categories">Fashion</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-md-4 post-item">
-                        <div class="image-holder zoom-effect">
-                            <a href="single-post.html">
-                                <img src="images/homepage/post-img2.jpg" alt="post" class="post-image">
-                            </a>
-                        </div>
-                        <div class="post-content d-flex">
-                            <div class="meta-date">
-                                <div class="meta-day text-primary">25</div>
-                                <div class="meta-month">Aug-2021</div>
-                            </div>
-                            <div class="post-header">
-                                <h3 class="post-title">
-                                    <a href="single-post.html">Latest trends of wearing street wears supremely</a>
-                                </h3>
-                                <a href="blog.html" class="blog-categories">Trending</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-md-4 post-item">
-                        <div class="image-holder zoom-effect">
-                            <a href="single-post.html">
-                                <img src="images/homepage/post-img3.jpg" alt="post" class="post-image">
-                            </a>
-                        </div>
-                        <div class="post-content d-flex">
-                            <div class="meta-date">
-                                <div class="meta-day text-primary">28</div>
-                                <div class="meta-month">Aug-2021</div>
-                            </div>
-                            <div class="post-header">
-                                <h3 class="post-title">
-                                    <a href="single-post.html">types of comfortable clothes ideas for women</a>
-                                </h3>
-                                <a href="blog.html" class="blog-categories">Inspiration</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
 
-        <section id="brand-collection" class="padding-medium bg-light-grey">
-            <div class="container">
-                <div class="d-flex flex-wrap justify-content-between">
-                    <img src="images/homepage/brand1.png" alt="phone" class="brand-image">
-                    <img src="images/homepage/brand2.png" alt="phone" class="brand-image">
-                    <img src="images/homepage/brand3.png" alt="phone" class="brand-image">
-                    <img src="images/homepage/brand4.png" alt="phone" class="brand-image">
-                    <img src="images/homepage/brand5.png" alt="phone" class="brand-image">
-                </div>
-            </div>
-        </section>
-
-        <section id="instagram" class="padding-large">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Follow our instagram</h2>
-                </div>
-                <p>Our official Instagram account <a href="#">@ultras</a> or <a href="#">#ultras_clothing</a>
-                </p>
-                <div class="row d-flex flex-wrap justify-content-between">
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <figure class="zoom-effect">
-                            <img src="images/homepage/insta-image1.jpg" alt="instagram" class="insta-image">
-                            <i class="icon icon-instagram"></i>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <figure class="zoom-effect">
-                            <img src="images/homepage/insta-image2.jpg" alt="instagram" class="insta-image">
-                            <i class="icon icon-instagram"></i>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <figure class="zoom-effect">
-                            <img src="images/homepage/insta-image3.jpg" alt="instagram" class="insta-image">
-                            <i class="icon icon-instagram"></i>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <figure class="zoom-effect">
-                            <img src="images/homepage/insta-image4.jpg" alt="instagram" class="insta-image">
-                            <i class="icon icon-instagram"></i>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <figure class="zoom-effect">
-                            <img src="images/homepage/insta-image5.jpg" alt="instagram" class="insta-image">
-                            <i class="icon icon-instagram"></i>
-                        </figure>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-6">
-                        <figure class="zoom-effect">
-                            <img src="images/homepage/insta-image6.jpg" alt="instagram" class="insta-image">
-                            <i class="icon icon-instagram"></i>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <section id="shipping-information">
             <hr>
             <div class="container">
