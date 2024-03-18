@@ -16,18 +16,12 @@
             <div class="container">
                 <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
                     <h2 class="section-title">Product you looking for</h2>
-                    <div class="btn-wrap">
-                        <a href="displayProduct.jsp" class="d-flex align-items-center">View all products <i
-                                class="icon icon icon-arrow-io"></i></a>
-                    </div>
+
                 </div>
                 <div class="swiper product-swiper overflow-hidden">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="product-item">
-                                <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt1.jpg" alt="Books" class="product-image">
-                                </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
                                         <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
