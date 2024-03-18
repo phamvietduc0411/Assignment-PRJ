@@ -1550,20 +1550,7 @@ blockquote cite {
 
 /** Search Popup
 --------------------------------------------------------------*/
-.search-popup {
-  background-color: #fff;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 9999;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  transition: opacity 0.3s 0s, visibility 0s 0.3s;
-}
+
 .search-popup.is-visible {
   opacity: 1;
   visibility: visible;
@@ -1573,25 +1560,7 @@ blockquote cite {
   -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0s;
 }
-.search-popup-container {
-  background-color: transparent;
-  position: relative;
-  top: 50%;
-  margin: 0 auto;
-  padding: 0;
-  width: 90%;
-  max-width: 800px;
-  text-align: center;
-  box-shadow: none;
-  cursor: default;
-  -webkit-transform: translateY(-40px);
-  transform: translateY(-40px);
-  -webkit-backface-visibility: hidden;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
+
 .is-visible .search-popup-container {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
