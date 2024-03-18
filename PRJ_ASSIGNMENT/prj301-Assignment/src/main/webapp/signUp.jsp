@@ -24,36 +24,31 @@
                             
                             <h2 class="form-title">Sign up</h2>
                             <form method="Get" class="register-form" id="register-form" action="SignupController">
-                                <!--Fullname-->
-                                <div class="form-group">
-                                    <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="CustomerName" id="name" placeholder="Full Name"/>
-                                </div>
                                 <!--UserName-->
                                 <div class="form-group">
                                     <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="username" id="username" placeholder="User Name"/>
+                                    <input type="text" name="username" id="username" placeholder="User Name" required>
                                 </div>
                                 <!--Password-->
                                 <div class="form-group">
                                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="password" id="pass" placeholder="Password"/>
+                                    <input type="password" name="password" id="pass" placeholder="Password" required>
                                 </div>    
+                                <!--Fullname-->
+                                <div class="form-group">
+                                    <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input type="text" name="CustomerName" id="name" placeholder="Full Name" required>
+                                </div>
                                 <!--Phone Number-->
                                 <div class="form-group">
                                     <label for="PhoneNumber"><i class="zmdi zmdi-account-box-phone material-icons-name"></i></label>
-                                    <input type="text" name="PhoneNumber" id="PhoneNumber" placeholder="Phone Number"/>
+                                    <input type="text" name="PhoneNumber" id="PhoneNumber" placeholder="Phone Number" required>
                                 </div>
                                 <!--Address-->
                                 <div class="form-group">
                                     <label for="Address"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="Address" id="Address" placeholder="Address"/>
+                                    <input type="text" name="Address" id="Address" placeholder="Address" required>
                                 </div>
-                                <!--Email-->
-                                <div class="form-group">
-                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                    <input type="email" name="email" id="email" placeholder="Your Email"/>
-                                </div>  
                                 <!--Gender-->
                                 <div class="form-group">
                                     <label for="Male"><i class="zmdi zmdi-male-alt material-icons"> Male</i></label>
@@ -63,6 +58,11 @@
                                     <label for="Female"><i class="zmdi zmdi-female material-icons"> Female</i></label>
                                     <input type="radio" name="Gender" id="Female" value="Female"/>
                                 </div>
+                                <!--Email-->
+                                <div class="form-group">
+                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="Email" id="email" placeholder="Your Email" required>
+                                </div>  
                                 <!--Terms of service-->
                                 <div class="form-group">
                                     <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
@@ -70,13 +70,14 @@
                                 </div>
                                 <h3>${error}</h3>
                                 <div class="form-group form-button">
-                                    <input type="submit" name="action" id="signup" class="form-submit" value="Sign up"/>
+                                    <input name="action" value="signup" type="hidden">
+                                    <input type="submit" id="signup" class="form-submit" value="Sign up"/>
                                 </div>
                             </form>
                         </div>
                         <div class="signup-image">
                             <figure><img src="images/logo.png" alt="singup image"></figure>
-                            <a href="#" class="signup-image-link">I am already member</a>
+                            <a href="login.jsp" class="signup-image-link">Back to Login</a>
                         </div>
                     </div>
                 </div>

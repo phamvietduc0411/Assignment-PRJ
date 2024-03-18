@@ -23,10 +23,10 @@ CREATE TABLE Category (
 
 -- T?o b?ng Customers
 CREATE TABLE Customers (
-    CustomerID INT NOT NULL PRIMARY KEY,
+    CustomerID INT NOT NULL PRIMARY KEY IDENTITY(1,1),
     username VARCHAR(100),
 	password VARCHAR(100),
-	CustomerName VARCHAR(50),
+	CustomerName NVARCHAR(50),
     PhoneNumber VARCHAR(20),
     Address NVARCHAR(255),
     Gender VARCHAR(10),
@@ -131,16 +131,16 @@ VALUES
 (03, 'duc', 'duc123', 'ADMIN DUC PHAM', '987654321', '9 District', 'ducpvse172131@fpt.edu.vn');
 
 -- Thêm d? li?u vào b?ng Customers OK
-INSERT INTO Customers (CustomerID, username, password, CustomerName, PhoneNumber, Address, Gender, Email)
+INSERT INTO Customers (username, password, CustomerName, PhoneNumber, Address, Gender, Email)
 VALUES 
-(001, 'cacon', 'duy', 'Duy ca con', '111222333', '75, 265 Street, 9 District, HCM', 'Male', 'duycacon3@gmail.com'),
-(002, 'duyga', 'cacon', 'Duy Tran', '444555666', '273, Nguyen Van Linh Street, 8 District, HCM', 'Male', 'duytran11@gmail.com'),
-(003, 'mink', 'minh', 'Minh Mink', '111222333', '31, Tran Quy Cap Street, Binh Thanh District, HCM', 'Male', 'minkcute2@gmail.com'),
-(004, 'youngboiz', 'duc', 'Young boiz Duc', '444555666', '75, 265 Street, 9 District, HCM', 'Male', 'youngboizseetinh12@gmail.com'),
-(005, 'duc123', 'duc', 'Duc Duc', '111222333', '72, Pham Hung Streer, 8 District, HCM', 'Male', 'ducpham25@gmail.com'),
-(006, 'duy234', 'duy', 'Duy Duy', '444555666', '10, Ong Ren ward, Can Duoc District, Long An City', 'Male', 'duytn87889@gmail.com'),
-(007, 'trinh', 'trinh', 'Nico Lan Trinh', '111222333', '12, Nguyen Thoi Street, Nguyen An Ninh ward, Vung Tau City', 'Female', 'trinhhotgirl3@gmail.com'),
-(008, 'ly246', 'lyly', 'Angela Ly', '444555666', '273, Man Thien Street, 9 District, HCM', 'Female', 'lylycute22@gmail.com');
+('cacon', 'duy', 'Duy ca con', '111222333', '75, 265 Street, 9 District, HCM', 'Male', 'duycacon3@gmail.com'),
+('duyga', 'cacon', 'Duy Tran', '444555666', '273, Nguyen Van Linh Street, 8 District, HCM', 'Male', 'duytran11@gmail.com'),
+('mink', 'minh', 'Minh Mink', '111222333', '31, Tran Quy Cap Street, Binh Thanh District, HCM', 'Male', 'minkcute2@gmail.com'),
+('youngboiz', 'duc', 'Young boiz Duc', '444555666', '75, 265 Street, 9 District, HCM', 'Male', 'youngboizseetinh12@gmail.com'),
+('duc123', 'duc', 'Duc Duc', '111222333', '72, Pham Hung Streer, 8 District, HCM', 'Male', 'ducpham25@gmail.com'),
+('duy234', 'duy', 'Duy Duy', '444555666', '10, Ong Ren ward, Can Duoc District, Long An City', 'Male', 'duytn87889@gmail.com'),
+('trinh', 'trinh', 'Nico Lan Trinh', '111222333', '12, Nguyen Thoi Street, Nguyen An Ninh ward, Vung Tau City', 'Female', 'trinhhotgirl3@gmail.com'),
+('ly246', 'lyly', 'Angela Ly', '444555666', '273, Man Thien Street, 9 District, HCM', 'Female', 'lylycute22@gmail.com');
 
 -- Thêm d? li?u vào b?ng Category OK
 INSERT INTO Category (CategoryID, CategoryName, Collections, Descriptions)

@@ -50,54 +50,22 @@ public class CustomersDAO {
         return customers;
     }
     
-    public void insert(CustomersDTO customner) {
-        String sql = "INSERT INTO Customers (CustomerID, username, password, CustomerName, PhoneNumber, Address, Gender, Email) "
-                + " VALUES (?, ?, ?, ?, ?, ?, ?, ?) ";
-        try {
-
-            Connection con = DBUtils.getConnection();
-            PreparedStatement ps = con.prepareStatement(sql);
-
-            ps.setInt(1, customner.getCustomerID());
-            ps.setString(2, customner.getUsername());
-            ps.setString(3, customner.getPassword());
-            ps.setString(4, customner.getCustomerName());
-            ps.setString(5, customner.getPhoneNumber());
-            ps.setString(6, customner.getAddress());
-            ps.setString(7, customner.getGender());
-            ps.setString(8, customner.getEmail());
-
-            ps.executeUpdate();
-            con.close();
-
-        } catch (SQLException ex) {
-            System.out.println("Insert Customner error!" + ex.getMessage());
-            ex.printStackTrace();
-        }
-
-    }
-    
-    public CustomersDTO checkUser(String username) {
+    public static void addUser(CustomersDTO customer) throws SQLException {
+        String sql = "INSERT INTO Customers (username, password, CustomerName, PhoneNumber, Address, Gender, Email) " +
+                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
         
-        CustomersDTO customer = null;
-        try {
-            Connection con = DBUtils.getConnection();
+        try (Connection conn = DBUtils.getConnection();
+             PreparedStatement statement = conn.prepareStatement(sql)) {
+            statement.setString(1, customer.getUsername());
+            statement.setString(2, customer.getPassword());
+            statement.setString(3, customer.getCustomerName());
+            statement.setString(4, customer.getPhoneNumber());
+            statement.setString(5, customer.getAddress());
+            statement.setString(6, customer.getGender());
+            statement.setString(7, customer.getEmail());
 
-            String sql = " SELECT username FROM Customers WHERE username = ? ";
-
-            PreparedStatement stm = con.prepareStatement(sql);
-            stm.setString(1, username);
-
-            ResultSet rs = stm.executeQuery();
-            while(rs.next()){
-                rs.getString(1);
-            }
-            con.close();
-            return customer;
-        } catch (Exception e) {
-            System.out.println("Error in SQL WHEN ADMIN LOGIN: " + e.getMessage());
-            e.printStackTrace();
+            statement.executeUpdate();
         }
-        return customer;
     }
+
 }
