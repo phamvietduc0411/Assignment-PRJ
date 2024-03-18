@@ -102,7 +102,7 @@
                                             </li>
 
                                             <li class="menu-item has-sub">
-                                                <a href="#" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
+                                                <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
                                                         class="icon icon-chevron-down"></i></a>
                                                 
                                             </li>
