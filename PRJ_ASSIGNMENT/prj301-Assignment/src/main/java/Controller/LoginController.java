@@ -44,6 +44,7 @@ public class LoginController extends HttpServlet {
             String action = request.getParameter("option");
             String username = request.getParameter("userName");
             String password = request.getParameter("password");
+            
             if (action.equals("login")) {
                 ManagerDAO managerDAO = new ManagerDAO();
                 ManagerDTO manager = managerDAO.login(username, password);
@@ -51,31 +52,24 @@ public class LoginController extends HttpServlet {
                 CustomersDAO customerDAO = new CustomersDAO();
                 CustomersDTO customer = customerDAO.login(username, password);
                 if (manager != null) {
-                         ProductsDAO productDAO = new ProductsDAO();
-               List<ProductsDTO> list = productDAO.viewAllProduct();
-               
-                    
-                request.setAttribute("productlist", list);
+                    ProductsDAO productDAO = new ProductsDAO();
+                    List<ProductsDTO> list = productDAO.viewAllProduct();
+
+                    request.setAttribute("productlist", list);
                     HttpSession session = request.getSession(true);
                     session.setAttribute("manager", manager);
-//                    response.sendRedirect("./admin.jsp");
-                      RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
+                    RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
                     rd.forward(request, response);
-                } else 
-                    if (customer != null) {
-                        HttpSession session = request.getSession(true);
-                        session.setAttribute("customerSession", customer);
-                        response.sendRedirect("./homePage.jsp");
+                } else if (customer != null) {
+                    HttpSession session = request.getSession(true);
+                    session.setAttribute("customerSession", customer);
+                    response.sendRedirect("./homePage.jsp");
 
-                    }
-                else{
-                 request.setAttribute("error", "Username or password is incorrect");
-                        System.out.println("eeeeeeeeeeeeeeee"+request.getAttribute("error"));
+                } else {
+                    request.setAttribute("error", "Username or password is incorrect");
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
                 }
-
-                
 
             }
         }

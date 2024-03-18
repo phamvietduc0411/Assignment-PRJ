@@ -32,9 +32,9 @@ public class ProductsDAO {
             ResultSet rs = stm.executeQuery();
             
             if (rs!= null) {
-                product = new ProductsDTO();
+               
                 while (rs.next()) {
-                   
+                    product = new ProductsDTO();
                     product.setProductsID(rs.getInt("ProductsID"));
                     product.setProductsName(rs.getString("ProductsName"));
                     product.setGender(rs.getString("Gender"));

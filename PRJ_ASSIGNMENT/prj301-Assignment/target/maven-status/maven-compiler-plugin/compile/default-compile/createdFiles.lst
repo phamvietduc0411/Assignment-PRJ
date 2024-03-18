@@ -2,10 +2,10 @@ Model\Payment\PaymentDTO.class
 Model\Customters\CustomersDAO.class
 Model\Feedback\FeedbackDTO.class
 Model\Storage\StrongeDTO.class
-Controller\RegisterController.class
 Model\OrderDetail\OrderDetailDTO.class
 Model\Category\CategoryDAO.class
 Model\Products\ProductsDAO.class
+Controller\SignupController.class
 Model\Products\ProductsDTO.class
 Model\Category\CategoryDTO.class
 Model\Orders\OrdersDTO.class
