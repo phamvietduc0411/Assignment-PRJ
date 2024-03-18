@@ -27,9 +27,10 @@
                     <div class="signin-form">
                         <h2 class="form-title">Sign up</h2>
                         
-                     <%String error = (String)request.getParameter("error"); %>
+                     <%String error = (String)request.getAttribute("error");%>
+                     
                         <% if (error!=null) {%>
-                            <h2><%= error %></h2>
+                        <h4 style="color: red"><%= error %></h4>
    
                         <%}%>
                         
