@@ -32,7 +32,7 @@
         
         
         <header id="header">
-            <form action="PageController" method="POST">
+            <form action="PageController" method="GET">
                 <input name="action" value="search" hidden>
                 <input type="text" name="searching" value="${resultSearching}">
                 <button type="submit" value="Search">Search</button>
