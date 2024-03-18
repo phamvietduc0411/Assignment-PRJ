@@ -27,72 +27,29 @@
                     <li class="menu-item has-sub">
                       <a href="#" class="item-anchor d-flex align-item-center" data-effect="Shop">Shop<i
                           class="icon icon-chevron-down"></i></a>
-                      <ul class="submenu">
-                        <li><a href="shop.html" class="item-anchor">Shop<span class="text-primary"> (PRO)</span></a>
-                        </li>
-                        <li><a href="shop-slider.html" class="item-anchor">Shop slider<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="shop-grid.html" class="item-anchor">Shop grid<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="shop-list.html" class="item-anchor">Shop list<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="single-product.html" class="item-anchor">Single product<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="cart.html" class="item-anchor">Cart<span class="text-primary"> (PRO)</span></a>
-                        </li>
-                        <li><a href="wishlist.html" class="item-anchor">Wishlist<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="checkout.html" class="item-anchor">Checkout<span class="text-primary">
-                              (PRO)</span></a></li>
-                      </ul>
+
                     </li>
 
                     <li class="menu-item has-sub">
                       <a href="#" class="item-anchor d-flex align-item-center" data-effect="Pages">Pages<i
                           class="icon icon-chevron-down"></i></a>
-                      <ul class="submenu">
-                        <li><a href="coming-soon.html" class="item-anchor">Coming soon<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="login.html" class="item-anchor">Login<span class="text-primary"> (PRO)</span></a>
-                        </li>
-                        <li><a href="about.html" class="item-anchor">About<span class="text-primary"> (PRO)</span></a>
-                        </li>
-                        <li><a href="contact.html" class="item-anchor">Contact<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="faqs.html" class="item-anchor">FAQs<span class="text-primary"> (PRO)</span></a>
-                        </li>
-                        <li><a href="styles.html" class="item-anchor">Styles<span class="text-primary"> (PRO)</span></a>
-                        </li>
-                        <li><a href="thank-you.html" class="item-anchor">Thankyou<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="error.html" class="item-anchor">Error page<span class="text-primary">
-                              (PRO)</span></a></li>
-                      </ul>
+                      
                     </li>
 
                     <li class="menu-item has-sub">
                       <a href="#" class="item-anchor d-flex align-item-center" data-effect="Blog">Blog<i
                           class="icon icon-chevron-down"></i></a>
-                      <ul class="submenu">
-                        <li><a href="blog.html" class="item-anchor">Blog<span class="text-primary"> (PRO)</span></a>
-                        </li>
-                        <li><a href="blog-sidebar.html" class="item-anchor">Blog with sidebar<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="blog-masonry.html" class="item-anchor">Blog masonry<span class="text-primary">
-                              (PRO)</span></a></li>
-                        <li><a href="single-post.html" class="item-anchor">Single post<span class="text-primary">
-                              (PRO)</span></a></li>
-                      </ul>
+                      
                     </li>
 
                     <li><a href="cart.jsp" class="item-anchor" data-effect="Contact">Cart</a></li>
 
-<!--                    <li><a
+                    <li><a
                         href="https://templatesjungle.gumroad.com/l/ultras-free-ecommerce-clothing-store-website-template/"
                         class="item-anchor" data-effect="Contact" target="_blank"> <b>GET PRO</b> </a></li>
 
 
-                  </ul>-->
+                  </ul>
                 </div>
 
               </div>

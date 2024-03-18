@@ -1,2394 +1,1569 @@
-<%@page import="java.util.Map"%>
-<%@page import="java.util.List"%>
+
 <%@page import="java.util.List"%>
 <%@page import="Model.Products.ProductsDTO"%>
-<%@page import="java.lang.String"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<html lang="en">
 
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+    <head>
+        <title>COLLECTION</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="zstalk icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
+        <link rel="stylesheet" type="text/css" media="all"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor.css">
+        <link rel="stylesheet" type="text/css" href="css/homepage.css">
+        <!--        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+                      rel="stylesheet">-->
+        <!-- script
+          ================================================== -->
+        <script src="js/modernizr.js"></script>
+    </head>
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>Collection</title>
-
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="css/theme.min.css" rel="stylesheet" />
-    <link href="images/shirt/"
-  </head>
-
-  <body>
- <jsp:include page="/menu.jsp" flush="true" />
-      <section class="py-11 bg-light-gradient border-bottom border-white border-5">
-      </section>
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0" id="header" style="margin-top: -23rem !important;">
-        <div class="container">
-          <div class="row g-0">
-            <div class="col-md-6">
-                <div class="card card-span h-100 text-white"> <img class="img-fluid" src="images/homepage/cat-item1.jpg" width="790" alt="..." />
-                <div class="card-img-overlay d-flex flex-center"> <a class="btn btn-lg btn-light" href="#nav-men-tab">For Him</a></div>
-              </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-span h-100 text-white"> <img class="img-fluid" src="images/homepage/cat-item2.jpg" width="790" alt="..." />
-                <div class="card-img-overlay d-flex flex-center"> <a class="btn btn-lg btn-light" href="#nav-women-tab">For Her </a></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
-      <!-- ============================================-->
-
-<section class="py-0" id="header" >
-        <div class="container">
-          <div class="row g-0">
-            <div class="col-md-6">
-                <div class="card card-span h-100 text-white"> <img class="img-fluid" src="images/homepage/cat-item1.jpg" width="790" alt="..." />
-                <div class="card-img-overlay d-flex flex-center"> <a class="btn btn-lg btn-light" href="#nav-men-tab">For Him</a></div>
-              </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-span h-100 text-white"> <img class="img-fluid" src="images/homepage/cat-item2.jpg" width="790" alt="..." />
-                <div class="card-img-overlay d-flex flex-center"> <a class="btn btn-lg btn-light" href="#nav-women-tab">For Her </a></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- end of .container-->
-      </section>
-      
+    <body>
+        <jsp:include page="/menu.jsp" flush="true" />
+        <div class="preloader-wrapper">
+            <div class="preloader">
+            </div>            
+        </div>
 
 
+        <section id="billboard" class="overflow-hidden">
 
-      
-      <section id="categoryWomen">
-        <div class="container">
-          <div class="row h-100">
-            <div class="col-lg-7 mx-auto text-center mb-6">
-              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Shop By Category</h5>
-            </div>
-            <div class="col-12">
-              <nav>
-                <div class="nav nav-tabs majestic-tabs mb-4 justify-content-center" id="nav-tab" role="tablist"><button class="nav-link active" id="nav-women-tab" data-bs-toggle="tab" data-bs-target="#nav-women" type="button" role="tab" aria-controls="nav-women" aria-selected="true">For Women</button><button class="nav-link" id="nav-men-tab" data-bs-toggle="tab" data-bs-target="#nav-men" type="button" role="tab" aria-controls="nav-men" aria-selected="false">For Men</button></div>
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-women" role="tabpanel" aria-labelledby="nav-women-tab">
-                    <ul class="nav nav-pills justify-content-center mb-5" id="pills-tab-women" role="tablist">
-                      <li class="nav-item" role="presentation"><button class="nav-link active" id="pills-wtshirt-tab" data-bs-toggle="pill" data-bs-target="#pills-wtshirt" type="button" role="tab" aria-controls="pills-wtshirt" aria-selected="true">T-Shirt</button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-dresses-tab" data-bs-toggle="pill" data-bs-target="#pills-dresses" type="button" role="tab" aria-controls="pills-dresses" aria-selected="false">Shirt</button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-wshoes-tab" data-bs-toggle="pill" data-bs-target="#pills-wshoes" type="button" role="tab" aria-controls="pills-wshoes" aria-selected="false">Shoes</button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-wwatch-tab" data-bs-toggle="pill" data-bs-target="#pills-wwatch" type="button" role="tab" aria-controls="pills-wwatch" aria-selected="false">Watch </button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-wsunglasses-tab" data-bs-toggle="pill" data-bs-target="#pills-wsunglasses" type="button" role="tab" aria-controls="pills-wsunglasses" aria-selected="false">Sunglasses </button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-wbagpacks-tab" data-bs-toggle="pill" data-bs-target="#pills-wbagpacks" type="button" role="tab" aria-controls="pills-wbagpacks" aria-selected="false">Bagpacks </button></li>
-                    </ul>
-                    <div class="tab-content" id="pills-tabContentWomen">
-                      <div class="tab-pane fade" id="pills-dresses" role="tabpanel" aria-labelledby="pills-dresses-tab">
-                        <div class="carousel slide" id="carouselCategoryDresses" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
+            <button class="button-prev">
+                <i class="icon icon-chevron-left"></i>
+            </button>
+            <button class="button-next">
+                <i class="icon icon-chevron-right"></i>
+            </button>
+            <div class="swiper main-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                         style="background-image: url('images/Summerbg.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
+                        <div class="banner-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2 class="banner-title" style="color: wheat">Summer Collection</h2>
+                                        <p>Welcome to Z-stalk! Discover style, comfort, and endless fashion possibilities. Step in, explore, and let your fashion journey begin. Happy shopping!</p>
+                                        <div class="btn-wrap">
+                                            <a href="shop.html" class="btn btn-light btn-medium d-flex align-items-center" tabindex="0">Shop it
+                                                now <i class="icon icon-arrow-io"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                  
-
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Gray Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Gray Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Gray Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Gray Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryDresses" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryDresses" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade show active" id="pills-wtshirt" role="tabpanel" aria-labelledby="pills-wtshirt-tab">
-                        <div class="carousel slide" id="carouselCategoryWTshirt" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/red-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Red T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/pink-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Pink T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/orange-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Orange T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/purple-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Purple T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/red-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Red T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/pink-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Pink T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/orange-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Orange T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/purple-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Purple T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/red-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Red T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/pink-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Pink T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/orange-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Orange T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/purple-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Purple T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/red-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Red T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/pink-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Pink T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/orange-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Orange T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/purple-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Purple T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryWTshirt" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryWTshirt" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                      <div class="tab-pane fade" id="pills-wshoes" role="tabpanel" aria-labelledby="pills-wshoes-tab">
-                        <div class="carousel slide" id="carouselCategoryWShoes" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryWShoes" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryWShoes" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade" id="pills-wwatch" role="tabpanel" aria-labelledby="pills-wwatch-tab">
-                        <div class="carousel slide" id="carouselCategoryWwatch" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryWwatch" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryWwatch" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade" id="pills-wsunglasses" role="tabpanel" aria-labelledby="pills-wsunglasses-tab">
-                        <div class="carousel slide" id="carouselCategoryWSunglasses" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryWSunglasses" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryWSunglasses" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade" id="pills-wbagpacks" role="tabpanel" aria-labelledby="pills-wbagpacks-tab">
-                        <div class="carousel slide" id="carouselCategoryWBagpacks" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-1.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-2.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-3.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-4.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryWBagpacks" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryWBagpacks" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="tab-pane fade" id="nav-men" role="tabpanel" aria-labelledby="nav-men-tab">
-                    <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab-men" role="tablist">
-                      <li class="nav-item" role="presentation"><button class="nav-link active" id="pills-tshirt-tab" data-bs-toggle="pill" data-bs-target="#pills-tshirt" type="button" role="tab" aria-controls="pills-tshirt" aria-selected="true">T-Shirt</button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-shirt-tab" data-bs-toggle="pill" data-bs-target="#pills-shirt" type="button" role="tab" aria-controls="pills-shirt" aria-selected="false">Shirt</button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-shoes-tab" data-bs-toggle="pill" data-bs-target="#pills-shoes" type="button" role="tab" aria-controls="pills-shoes" aria-selected="false">Shoes</button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-watch-tab" data-bs-toggle="pill" data-bs-target="#pills-watch" type="button" role="tab" aria-controls="pills-watch" aria-selected="false">Watch </button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-sunglasses-tab" data-bs-toggle="pill" data-bs-target="#pills-sunglasses" type="button" role="tab" aria-controls="pills-sunglasses" aria-selected="false">Sunglasses </button></li>
-                      <li class="nav-item" role="presentation"><button class="nav-link" id="pills-bagpacks-tab" data-bs-toggle="pill" data-bs-target="#pills-bagpacks" type="button" role="tab" aria-controls="pills-bagpacks" aria-selected="false">Bagpacks </button></li>
-                    </ul>
-                    <div class="tab-content" id="pills-tabContentMen">
-                      <div class="tab-pane fade show active" id="pills-tshirt" role="tabpanel" aria-labelledby="pills-tshirt-tab">
-                        <div class="carousel slide" id="carouselCategoryTshirt" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/white-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
+                    <div class="swiper-slide"
+                         style="background-image: url('images/Fallbg.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
+                        <div class="banner-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2 class="banner-title" style="color: cadetblue">Autumn Collection</h2>
+                                        <p>Welcome to Z-stalk's Autumn Collection! Explore cozy sweaters, chic outerwear, and more. Embrace the essence of fall in style with us!</p>
+                                        <div class="btn-wrap">
+                                            <a href="shop.html" class="btn btn-light btn-light-arrow btn-medium d-flex align-items-center"
+                                               tabindex="0">Shop it now <i class="icon icon-arrow-io"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sky-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sky T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/yellow-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Yellow T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/black-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/white-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sky-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sky T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/yellow-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Yellow T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/black-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/white-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sky-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sky T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/yellow-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Yellow T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/black-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/white-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sky-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sky T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/yellow-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Yellow T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/black-tshirt.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black T-Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryTshirt" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryTshirt" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade" id="pills-shirt" role="tabpanel" aria-labelledby="pills-shirt-tab">
-                        <div class="carousel slide" id="carouselCategoryShirt" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Gray Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Gray Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Gray Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Gray Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">White Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Black Shirt</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryShirt" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryShirt" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade" id="pills-shoes" role="tabpanel" aria-labelledby="pills-shoes-tab">
-                        <div class="carousel slide" id="carouselCategoryShoes" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$200</span><span class="text-primary">$175</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shoe-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Shoe</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryShoes" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryShoes" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade" id="pills-watch" role="tabpanel" aria-labelledby="pills-watch-tab">
-                        <div class="carousel slide" id="carouselCategoryWatch" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/watch-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Watch</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryWatch" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryWatch" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade" id="pills-sunglasses" role="tabpanel" aria-labelledby="pills-sunglasses-tab">
-                        <div class="carousel slide" id="carouselCategorySunglasses" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/sunglass-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Sunglass</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategorySunglasses" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategorySunglasses" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
-                      <div class="tab-pane fade" id="pills-bagpacks" role="tabpanel" aria-labelledby="pills-bagpacks-tab">
-                        <div class="carousel slide" id="carouselCategoryBagpacks" data-bs-touch="false" data-bs-interval="false">
-                          <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="carousel-item">
-                              <div class="row h-100 align-items-center g-2">
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-5.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-6.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-7.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
-                                  <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/bagpacks-8.png" alt="..." />
-                                    <div class="card-img-overlay ps-0"> </div>
-                                    <div class="card-body ps-0 bg-200">
-                                      <h5 class="fw-bold text-1000 text-truncate">Bagpacks</h5>
-                                      <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$500</span><span class="text-primary">$275</span></div>
-                                    </div><a class="stretched-link" href="#"></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselCategoryBagpacks" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselCategoryBagpacks" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                          </div>
-                        </div>
-                        <div class="col-12 d-flex justify-content-center mt-5"> <a class="btn btn-lg btn-dark" href="#!">View All </a></div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </nav>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-<!--      <section class="py-0" id="collection">
-        <div class="container">
-          <div class="row h-100 gx-2">
-            <div class="col-md-6">
-              <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/urban.png" alt="..." />
-                <div class="card-img-overlay bg-dark-gradient">
-                  <div class="p-5 p-md-2 p-xl-5">
-                    <h1 class="fs-md-4 fs-lg-7 text-light">Urban Stories </h1>
-                    <h5 class="fs-2 text-light">collection</h5>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/country.png" alt="..." />
-                <div class="card-img-overlay bg-dark-gradient">
-                  <div class="p-5 p-md-2 p-xl-5 d-flex flex-column flex-end-center align-items-baseline h-100">
-                    <h1 class="fs-md-4 fs-lg-7 text-light">Urban Stories </h1>
-                    <h5 class="fs-2 text-light">collection</h5>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> <section> close ============================-->
-      <!-- ============================================-->
+        <!--END OF COLLECTION-->
 
-      <section>
-        <div class="container">
-          <div class="row h-100">
-            <div class="col-lg-7 mx-auto text-center mb-6">
-              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Best Sellers</h5>
-            </div>
-            <div class="col-12">
-              <div class="carousel slide" id="carouselBestSellers" data-bs-touch="false" data-bs-interval="false">
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/handbag.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Marie Claire Handbag</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$399</span><span class="text-danger">$365</span></div>
-                          </div><a class="stretched-link" href="#"></a>
+
+
+
+
+
+
+        <section id="featured-products" class="product-store padding-large">
+            <div class="container">
+                <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
+                    <h2 class="section-title">SUMMER COLLECTION</h2>
+                </div><%
+                        List<ProductsDTO> menCollectionSummer = (List<ProductsDTO>) request.getAttribute("menCollectionSummer");
+
+                        for (ProductsDTO products : menCollectionSummer) {
+                            System.out.println(""+ products.getImg());
+
+                    %>
+                    <div class="product-item col-lg-3 col-md-4 col-sm-4">
+                        
+                        <div class="image-holder">
+
+
+                            <img src="<%= products.getImg() %>" alt="Books" class="product-image" style="height: 400px; width: 500px; ">
+
                         </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/earrings.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Red Gem Earrings</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$489</span><span class="text-danger">$466</span></div>
-                          </div><a class="stretched-link" href="#"></a>
+                        <div class="cart-concern">
+                            <div class="cart-button d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                        class="icon icon-arrow-io"></i>
+                                </button>
+                                <button type="button" class="view-btn tooltip
+                                        d-flex">
+                                    <i class="icon icon-screen-full"></i>
+                                    <span class="tooltip-text">Quick view</span>
+                                </button>
+                                <button type="button" class="wishlist-btn">
+                                    <i class="icon icon-heart"></i>
+                                </button>
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/lathered-wristwatch.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Black Leathered Wristwatch</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$799</span><span class="text-danger">$745</span></div>
-                          </div><a class="stretched-link" href="#"></a>
+                        <div class="product-detail">
+                            <h3 class="product-title">
+                                <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
+                            </h3>
+                            <div class="item-price text-primary">$25.00</div>
                         </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/tie.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Red-White Stripped Tie</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$299</span><span class="text-danger">$243</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="5000">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/handbag.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Marie Claire Handbag</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$399</span><span class="text-danger">$365</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/earrings.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Red Gem Earrings</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$489</span><span class="text-danger">$466</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/lathered-wristwatch.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Black Leathered Wristwatch</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$799</span><span class="text-danger">$745</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/tie.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Red-White Stripped Tie</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$299</span><span class="text-danger">$243</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="3000">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/handbag.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Marie Claire Handbag</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$399</span><span class="text-danger">$365</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/earrings.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Red Gem Earrings</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$489</span><span class="text-danger">$466</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/lathered-wristwatch.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Black Leathered Wristwatch</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$799</span><span class="text-danger">$745</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/tie.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Red-White Stripped Tie</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$299</span><span class="text-danger">$243</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="row h-100 align-items-center g-2">
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/handbag.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Marie Claire Handbag</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$399</span><span class="text-danger">$365</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/earrings.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Red Gem Earrings</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$489</span><span class="text-danger">$466</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/lathered-wristwatch.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Black Leathered Wristwatch</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$799</span><span class="text-danger">$745</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                      <div class="col-md-3 mb-3 mb-md-0 h-100">
-                        <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/tie.png" alt="..." />
-                          <div class="card-img-overlay ps-0"> </div>
-                          <div class="card-body ps-0 bg-200">
-                            <h5 class="fw-bold text-1000 text-truncate">Red-White Stripped Tie</h5>
-                            <div class="fw-bold"><span class="text-600 me-2 text-decoration-line-through">$299</span><span class="text-danger">$243</span></div>
-                          </div><a class="stretched-link" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row"><button class="carousel-control-prev" type="button" data-bs-target="#carouselBestSellers" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button><button class="carousel-control-next" type="button" data-bs-target="#carouselBestSellers" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next </span></button></div>
-                </div>
-              </div>
+                            <% }%> 
             </div>
-          </div>
-        </div>
-      </section>
+                    
+                    </section>
+
+                    <section id="latest-collection">
+                        <div class="container">
+                            <div class="product-collection row">
+                                <div class="col-lg-7 col-md-12 left-content">
+                                    <div class="collection-item">
+                                        <div class="products-thumb">
+                                            <img src="images/homepage/collection-item1.jpg" alt="collection item" class="large-image image-rounded">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
+                                            <div class="categories">casual collection</div>
+                                            <h3 class="item-title">street wear.</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</p>
+                                            <div class="btn-wrap">
+                                                <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12 right-content flex-wrap">
+                                    <div class="collection-item top-item">
+                                        <div class="products-thumb">
+                                            <img src="images/homepage/collection-item2.jpg" alt="collection item" class="small-image image-rounded">
+                                        </div>
+                                        <div class="col-md-6 product-entry">
+                                            <div class="categories">Basic Collection</div>
+                                            <h3 class="item-title">Basic shoes.</h3>
+                                            <div class="btn-wrap">
+                                                <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collection-item bottom-item">
+                                        <div class="products-thumb">
+                                            <img src="images/homepage/collection-item3.jpg" alt="collection item" class="small-image image-rounded">
+                                        </div>
+                                        <div class="col-md-6 product-entry">
+                                            <div class="categories">Best Selling Product</div>
+                                            <h3 class="item-title">woolen hat.</h3>
+                                            <div class="btn-wrap">
+                                                <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="selling-products" class="product-store bg-light-grey padding-large">
+                        <div class="container">
+                            <div class="section-header">
+                                <h2 class="section-title">Best selling products</h2>
+                            </div>
+                            <ul class="tabs list-unstyled">
+                                <li data-tab-target="#all" class="active tab">All</li>
+                                <li data-tab-target="#shoes" class="tab">Men</li>
+                                <li data-tab-target="#tshirts" class="tab">Woman</li>
+                                <li data-tab-target="#pants" class="tab">Jackets</li>
+                                <li data-tab-target="#hoodie" class="tab">Hoodie</li>
+                                <li data-tab-target="#outer" class="tab">Sweater</li>
+                                <li data-tab-target="#jackets" class="tab">Pants</li>
+                                <li data-tab-target="#accessories" class="tab">Short</li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="all" data-tab-content class="active">
+                                    <div class="row d-flex flex-wrap">
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+
+                                                <img src="images/shirt/T-Shirt/T-Shirt2.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$50.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
 
 
+                                                <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
 
-<%
-        List<ProductsDTO> menCollectionSummer = (List<ProductsDTO>)request.getAttribute("menCollectionSummer");
-                
-               for (ProductsDTO products : menCollectionSummer) {
-                                                 System.out.println("eeee" + products.getProductsID());
-                                                %>
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$25.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/T-Shirt/T-Shirt5.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$50.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Hoodie/Hoodie5.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
 
-                                                <tr>
-                                                    <td><%= products.getProductsID()%></td>
-                                                    <td><%= products.getProductsName()%></td>
-                                                    <td><%= products.getGender()%></td>
-                                                    <td><%= products.getSize()%></td>
-                                                    <td><%= products.getProductPrice()%></td>
+                                                    <a href="single-product.html">Gossip Girl print short sleeve T-shirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$25.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Bomber/Bomber3.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Bomber Jacket With Patches</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$20.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Bomber/Bomber9.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Faux Leather Bomber Jacket with Pockets</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$20.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Hoodie/Hoodie7.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Red hoodie with slogan.</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$25.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Bomber/Bomber5.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Washed Effect Bomber Jacket</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$20.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear3.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">New Arizona embroidered textured sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$30.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear2.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">San Francisco Seal Rocks sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$30.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear9.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Pretty Ideal Beige Loose Knit Sweater Top</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$30.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear6.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Blue slogan sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$30.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="shoes" data-tab-content>
+                                    <div class="row d-flex flex-wrap">
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Hoodie/Hoodie2.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Boxy fit hoodie with cowboy detail</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$55.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Hoodie/Hoodie3.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Anime hoodie</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$65.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear2.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">San Francisco Seal Rocks Sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$80.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear5.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Striped sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$65.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tshirts" data-tab-content>
+                                    <div class="row d-flex flex-wrap">
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Short Sleeve T-Shirt With Print</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$35.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/T-Shirt/T-Shirt9.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Short Sleeve Oversize T-Shirt With Metallic Print</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$30.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear10.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Round neck sweater</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$40.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/T-Shirt/T-Shirt6.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Short sleeve T-shirt with a round neck</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$40.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pants" data-tab-content>
+                                    <div class="row d-flex flex-wrap">
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Bomber/Bomber3.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Patch Bomber Jacket</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$40.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Bomber/Bomber4.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Patch Bomber Jacket</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$30.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Bomber/Bomber5.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Washed Effect Bomber Jacket</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$40.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Bomber/Bomber10.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Soft Bomber Jacket</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$40.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="hoodie" data-tab-content>
+                                    <div class="row d-flex flex-wrap">
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Hoodie/Hoodie6.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Reverse Weave Hoodie</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$40.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Hoodie/Hoodie4.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Heavy quality oversize hoodie</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$45.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Hoodie/Hoodie9.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Hoodie with slogan</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$35.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="outer" data-tab-content>
+                                    <div class="row d-flex flex-wrap">
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear5.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">P&B Black Label round neck sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$ 35.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear6.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Blue slogan sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$ 30.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear3.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">New Arizona embroidered textured sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$ 30.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/shirt/Sweaters/Sweatear2.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">San Francisco Seal Rocks Sweatshirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$ 40.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="jackets" data-tab-content>
+                                    <div class="row d-flex flex-wrap">
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/paint/baggy/baggy4.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Wide-leg jogger trousers with pockets</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$40.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/paint/baggy/baggy2.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Wide-leg jogger baggy with pockett</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$35.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/paint/baggy/baggy3.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Wide-leg jogger baggy with pockett</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$35.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="accessories" data-tab-content>
+                                    <div class="row d-flex flex-wrap">
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/paint/Short/short3.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Tracksuit jogger Bermuda shorts</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$35.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                            <div class="image-holder">
+                                                <img src="images/paint/Short/short4.jpg" alt="Books" class="product-image">
+                                            </div>
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Tracksuit jogger Bermuda shorts</a>
+                                                </h3>
+                                                <div class="item-price text-primary">$30.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="testimonials" class="padding-large no-padding-bottom">
+                        <div class="container">
+                            <div class="reviews-content">
+                                <div class="row d-flex flex-wrap">
+                                    <div class="col-md-2">
+                                        <div class="review-icon">
+                                            <i class="icon icon-right-quote"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="swiper testimonial-swiper overflow-hidden">
+                                            <img src="images/Slogan.jpg"
+                                        </div>
+                                        <div class="swiper-arrows">
+                                            <button class="prev-button">
+                                                <i class="icon icon-arrow-left"></i>
+                                            </button>
+                                            <button class="next-button">
+                                                <i class="icon icon-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="flash-sales" class="product-store padding-large">
+
+                        <div class="container">
+                            <div class="section-header">
+                                <h2 class="section-title">Flash sales</h2>
+                            </div>
+                            <div class="swiper product-swiper flash-sales overflow-hidden">
+
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <img src="images/homepage/selling-products9.jpg" alt="Books" class="product-image">
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="discount">10% Off</div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Full sleeve cover shirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">
+                                                    <del class="prev-price">$50.00</del>$40.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <img src="images/homepage/selling-products10.jpg" alt="Books" class="product-image">
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="discount">10% Off</div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Long Sleeve T-shirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">
+                                                    <del class="prev-price">$50.00</del>$40.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <img src="images/homepage/selling-products11.jpg" alt="Books" class="product-image">
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="discount">10% Off</div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Grey Check Coat</a>
+                                                </h3>
+                                                <div class="item-price text-primary">
+                                                    <del class="prev-price">$55.00</del>$45.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <img src="images/homepage/selling-products12.jpg" alt="Books" class="product-image">
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="discount">10% Off</div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Silk White Shirt</a>
+                                                </h3>
+                                                <div class="item-price text-primary">
+                                                    <del class="prev-price">$45.00</del>$35.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <img src="images/homepage/selling-products8.jpg" alt="Books" class="product-image">
+                                            <div class="cart-concern">
+                                                <div class="cart-button d-flex justify-content-between align-items-center">
+                                                    <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                            class="icon icon-arrow-io"></i>
+                                                    </button>
+                                                    <button type="button" class="view-btn tooltip
+                                                            d-flex">
+                                                        <i class="icon icon-screen-full"></i>
+                                                        <span class="tooltip-text">Quick view</span>
+                                                    </button>
+                                                    <button type="button" class="wishlist-btn">
+                                                        <i class="icon icon-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="discount">10% Off</div>
+                                            <div class="product-detail">
+                                                <h3 class="product-title">
+                                                    <a href="single-product.html">Blue Jeans pant</a>
+                                                </h3>
+                                                <div class="item-price text-primary">
+                                                    <del class="prev-price">$45.00</del>$35.00
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="shoppify-section-banner">
+                        <div class="container">
+                            <div class="product-collection">
+                                <div class="left-content collection-item">
+                                    <div class="products-thumb">
+                                        <img src="images/homepage/model.jpg" alt="collection item" class="large-image image-rounded">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 product-entry">
+                                        <div class="categories">Denim collection</div>
+                                        <h3 class="item-title">The casual selection.</h3>
+                                        <p>Vel non viverra ligula odio ornare turpis mauris. Odio aliquam, tincidunt ut vitae elit risus. Tempor
+                                            egestas condimentum et ac rutrum dui, odio.</p>
+                                        <div class="btn-wrap">
+                                            <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="quotation" class="align-center padding-large">
+                        <div class="inner-content">
+                            <h2 class="section-title divider">Quote of the day</h2>
+                            <blockquote>
+                                <q>It's true, I don't like the whole cutoff-shorts-and-T-shirt look, but I think you can look fantastic in
+                                    casual clothes.</q>
+                                <div class="author-name">- Dr. Seuss</div>
+                            </blockquote>
+                        </div>
+                    </section>
+
+                    <hr>
 
 
+                    <section id="shipping-information">
+                        <hr>
+                        <div class="container">
+                            <div class="row d-flex flex-wrap align-items-center justify-content-between">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="icon-box">
+                                        <i class="icon icon-truck"></i>
+                                        <h4 class="block-title">
+                                            <strong>Free shipping</strong> Over $200
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="icon-box">
+                                        <i class="icon icon-return"></i>
+                                        <h4 class="block-title">
+                                            <strong>Money back</strong> Return within 7 days
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="icon-box">
+                                        <i class="icon icon-tags1"></i>
+                                        <h4 class="block-title">
+                                            <strong>Buy 4 get 5th</strong> 50% off
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="icon-box">
+                                        <i class="icon icon-help_outline"></i>
+                                        <h4 class="block-title">
+                                            <strong>Any questions?</strong> experts are ready
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </section>
 
-                                                </tr>
-                                                <% }%> 
-  
+                    <footer id="footer">
+                        <div class="container">
+                            <div class="footer-menu-list">
+                                <div class="row d-flex flex-wrap justify-content-between">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="footer-menu">
+                                            <h5 class="widget-title">Ultras</h5>
+                                            <ul class="menu-list list-unstyled">
+                                                <li class="menu-item">
+                                                    <a href="about.html">About us</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Conditions </a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="blog.html">Our Journals</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Careers</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Affiliate Programme</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Ultras Press</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="footer-menu">
+                                            <h5 class="widget-title">Customer Service</h5>
+                                            <ul class="menu-list list-unstyled">
+                                                <li class="menu-item">
+                                                    <a href="faqs.html">FAQ</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="contact.html">Contact</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Privacy Policy</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Returns & Refunds</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Cookie Guidelines</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#">Delivery Information</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="footer-menu">
+                                            <h5 class="widget-title">Contact Us</h5>
+                                            <p>Do you have any questions or suggestions? <a href="#" class="email">ourservices@ultras.com</a>
+                                            </p>
+                                            <p>Do you need assistance? Give us a call. <br>
+                                                <strong>+57 444 11 00 35</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="footer-menu">
+                                            <h5 class="widget-title">Forever 2018</h5>
+                                            <p>Cras mattis sit ornare in metus eu amet adipiscing enim. Ullamcorper in orci, ultrices integer eget
+                                                arcu. Consectetur leo dignissim lacus, lacus sagittis dictumst.</p>
+                                            <div class="social-links">
+                                                <ul class="d-flex list-unstyled">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="icon icon-facebook"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="icon icon-twitter"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="icon icon-youtube-play"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="icon icon-behance-square"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </footer>
 
+                    <div id="footer-bottom">
+                        <div class="container">
+                            <div class="d-flex align-items-center flex-wrap justify-content-between">
+                                <div class="copyright">
+                                    <p>Freebies by <a href="https://templatesjungle.com/">Templates Jungle</a>
+                                    </p>
+                                </div>
+                                <div class="payment-method">
+                                    <p>Payment options :</p>
+                                    <div class="card-wrap">
+                                        <img src="images/homepage/visa-icon.jpg" alt="visa">
+                                        <img src="images/homepage/mastercard.png" alt="mastercard">
+                                        <img src="images/homepage/american-express.jpg" alt="american-express">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <script src="js/jquery-1.11.0.min.js"></script>
+                    <script src="js/plugins.js"></script>
+                    <script src="js/script.js"></script>
+                    </body>
 
-
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <!-- ===============================================-->
-    <script src="js/popper.min.js"></script>
-    <script src="js/displayProduct.js"></script>
-    <script src="js/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="js/feather.min.js"></script>
-    <script>
-      feather.replace();
-    </script>
-    <script src="assets/js/theme.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-  </body>
-
-</html>
+                    </html>

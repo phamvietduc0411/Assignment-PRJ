@@ -68,7 +68,7 @@ public class ProductsDAO {
                 String sql = " SELECT ProductsID , ProductsName , Gender , Size ,Color ,ProductPrice , Img "
                         + "FROM Products "
                         + "INNER JOIN Category ON Products.CategoryId = Category.CategoryID "
-                        + "WHERE Collections = ? AND Gender = ? ";
+                        + "WHERE Collections = ? AND Gender = ?  AND Size = 'M' ";
 
                 PreparedStatement stm = con.prepareStatement(sql);
 
@@ -136,3 +136,15 @@ public class ProductsDAO {
 
     }
 }
+
+
+//    <tr>
+//        <td><%= products.getProductsID()%></td>
+//        <td><%= products.getProductsName()%></td>
+//        <td><%= products.getGender()%></td>
+//        <td><%= products.getSize()%></td>
+//        <td><%= products.getProductPrice()%></td>
+//
+//
+//
+//    </tr>
