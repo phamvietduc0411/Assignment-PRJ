@@ -83,7 +83,16 @@ public class PageController extends HttpServlet {
 //                request.setAttribute("womenCollectionSpring", womenCollectionSpring);
 
                 request.getRequestDispatcher("collection.jsp").forward(request, response);
+            } else if (action != null && action.equals("search")) {
+                String searching = request.getParameter("searching");
+
+                ProductsDAO productsDAO = new ProductsDAO();
+                List<ProductsDTO> productsList = productsDAO.SearchProByName(searching);
+                request.setAttribute("productsList", productsList);
+                request.setAttribute("resultSearching", searching);
+                request.getRequestDispatcher("searchingproducts.jsp").forward(request, response);
             }
+                
         }
     }
 

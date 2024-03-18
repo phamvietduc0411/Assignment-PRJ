@@ -32,10 +32,11 @@
         
         
         <header id="header">
-            <div class="search-container" action="">
-                <input type="text"  name="Search" id="searchInput" placeholder="Search...">
-                <input type="submit" name="action" value="SEARCH">
-            </div>
+            <form action="PageController" method="POST">
+                <input name="action" value="search" hidden>
+                <input type="text" name="searching" value="${resultSearching}">
+                <button type="submit" value="Search">Search</button>
+            </form>
             <div id="header-wrap">
                 
                 <nav class="primary-nav padding-small">
