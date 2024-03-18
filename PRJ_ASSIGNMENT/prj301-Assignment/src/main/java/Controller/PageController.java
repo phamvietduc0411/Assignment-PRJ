@@ -1,4 +1,4 @@
- /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -37,29 +37,34 @@ public class PageController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
-           
-        
-            CategoryDAO categoryDAO = new CategoryDAO();
 
+//            CategoryDAO categoryDAO = new CategoryDAO();
             if (action.equals("productDetails")) {
+                CategoryDAO categoryDAO = new CategoryDAO();
+// can sua lai
                 Integer CategoryID = null;
                 try {
-                    CategoryID= Integer.parseInt(request.getParameter("CategoryID"));
+                    CategoryID = Integer.parseInt(request.getParameter("CategoryID"));
                 } catch (NumberFormatException ex) {
                     log("Parameter id has wrong format.");
                 }
-                
-                CategoryDTO category = null ;
-                if (CategoryID!= null) {
-                    category =  categoryDAO.load(CategoryID);
-                    
+
+                CategoryDTO category = null;
+                if (CategoryID != null) {
+                    category = categoryDAO.load(CategoryID);
+
                 }
-                 request.setAttribute("category", category);
-                 request.getRequestDispatcher("productDetails.jsp").forward(request, response);
-            }
-            
-            else if(action.equals("collection")){
-            request.getRequestDispatcher("collection.jsp").forward(request, response);
+                request.setAttribute("category", category);
+                request.getRequestDispatcher("productDetails.jsp").forward(request, response);
+            } else if (action.equals("collection")) {
+
+                ProductsDAO productDAO = new ProductsDAO();
+                List<ProductsDTO> collectionSummer = productDAO.collection("Summer", "Men");
+                List<ProductsDTO> collectionAutumn = productDAO.collection("Autumn", "Men");
+                List<ProductsDTO> collectionSpring = productDAO.collection("Spring", "Men");
+                List<ProductsDTO> collectionWinter = productDAO.collection("Winter", "Men");
+
+                request.getRequestDispatcher("collection.jsp").forward(request, response);
             }
         }
     }

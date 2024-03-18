@@ -56,12 +56,44 @@ public class ProductsDAO {
         return list;
     }
 
-    public List<ProductsDTO> collection(String nameCollection) {
+    public List<ProductsDTO> collection(String nameCollection, String gender) {
         List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
         ProductsDTO collection = null;
         try {
+            Connection con = DBUtils.getConnection();
+
+            String sql = " SELECT ProductsID , ProductsName , Gender , Size ,Color ,ProductPrice , Img "
+                    + "FROM Products "
+                    + "INNER JOIN Category ON Products.CategoryId = Category.CategoryID "
+                    + "WHERE Collections = ? AND Gender = ? ";
+
+            PreparedStatement stm = con.prepareStatement(sql);
+
+            stm.setString(1, nameCollection);
+            stm.setString(2, gender);
+
+            ResultSet rs = stm.executeQuery();
             
+            if (rs!= null) {
+                while (rs.next()) {
+                    collection = new ProductsDTO();
+                    
+                    collection.setProductsID(rs.getInt("ProductsID"));
+                    collection.setProductsName(rs.getString("ProductsName"));
+                    collection.setGender(rs.getString("Gender"));
+                    collection.setSize(rs.getString("Size"));
+                    collection.setColor(rs.getString("Color"));
+                    collection.setProductPrice(rs.getFloat("ProductPrice"));
+                    collection.setImg(rs.getString("Img"));
+                    
+                    listCollection.add(collection);
+                }
+            }
+            
+            con.close();
         } catch (Exception e) {
+            System.out.println("ERROR  SQL WHEN QUERY COLLECTION" +  e.getMessage());
+            e.printStackTrace();
         }
         return listCollection;
     }

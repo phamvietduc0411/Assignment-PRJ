@@ -12,7 +12,7 @@ package Model.Category;
 public class CategoryDTO {
     private int CategoryID;
     private String CategoryName;
-    private String Img;
+    private String Collections;
     private String Descriptions;
 
     public int getCategoryID() {
@@ -31,12 +31,12 @@ public class CategoryDTO {
         this.CategoryName = CategoryName;
     }
 
-    public String getImg() {
-        return Img;
+    public String getCollections() {
+        return Collections;
     }
 
-    public void setImg(String Img) {
-        this.Img = Img;
+    public void setCollections(String Collections) {
+        this.Collections = Collections;
     }
 
     public String getDescriptions() {
@@ -46,5 +46,7 @@ public class CategoryDTO {
     public void setDescriptions(String Descriptions) {
         this.Descriptions = Descriptions;
     }
+
+    
     
 }

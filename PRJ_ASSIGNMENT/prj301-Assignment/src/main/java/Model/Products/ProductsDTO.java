@@ -10,16 +10,15 @@ package Model.Products;
  * @author Acer
  */
 public class ProductsDTO {
-    private int ProductsID;
-    private String ProductsName;
-    private String Gender;
-    private String Collections;
-    private String Size;
-    private String Color;
-    private float ProductPrice;
-    private int StorageId;
-    private int CategoryId;
-    private int BrandsId;
+   private int ProductsID ;
+   private String ProductsName ;
+   private String Gender ;
+   private String Size;
+   private String Color;
+   private float ProductPrice;
+   private String Img ;
+   private int StorageId ;
+   private int CategoryId;
 
     public int getProductsID() {
         return ProductsID;
@@ -43,14 +42,6 @@ public class ProductsDTO {
 
     public void setGender(String Gender) {
         this.Gender = Gender;
-    }
-
-    public String getCollections() {
-        return Collections;
-    }
-
-    public void setCollections(String Collections) {
-        this.Collections = Collections;
     }
 
     public String getSize() {
@@ -77,6 +68,14 @@ public class ProductsDTO {
         this.ProductPrice = ProductPrice;
     }
 
+    public String getImg() {
+        return Img;
+    }
+
+    public void setImg(String Img) {
+        this.Img = Img;
+    }
+
     public int getStorageId() {
         return StorageId;
     }
@@ -91,14 +90,6 @@ public class ProductsDTO {
 
     public void setCategoryId(int CategoryId) {
         this.CategoryId = CategoryId;
-    }
-
-    public int getBrandsId() {
-        return BrandsId;
-    }
-
-    public void setBrandsId(int BrandsId) {
-        this.BrandsId = BrandsId;
     }
 
 }
