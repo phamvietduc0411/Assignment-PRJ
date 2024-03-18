@@ -63,24 +63,24 @@ public class PageController extends HttpServlet {
 
                 ProductsDAO productDAO = new ProductsDAO();
                 List<ProductsDTO> menCollectionSummer = productDAO.collection("Summer", "Men");
-//                List<ProductsDTO> menCollectionAutumn = productDAO.collection("Autumn", "Men");
-//                List<ProductsDTO> menCollectionSpring = productDAO.collection("Spring", "Men");
-//                List<ProductsDTO> menCollectionWinter = productDAO.collection("Winter", "Men");
+                List<ProductsDTO> menCollectionAutumn = productDAO.collection("Autumn", "Men");
+                List<ProductsDTO> menCollectionSpring = productDAO.collection("Spring", "Men");
+                List<ProductsDTO> menCollectionWinter = productDAO.collection("Winter", "Men");
 
                 List<ProductsDTO> womenCollectionSummer = productDAO.collection("Summer", "Women");
-//                List<ProductsDTO>womenCollectionAutumn = productDAO.collection("Autumn", "Women");
-//                List<ProductsDTO> womenCollectionSpring = productDAO.collection("Spring", "Women");
-//                List<ProductsDTO> womenCollectionWinter = productDAO.collection("Winter", "Women");
+                List<ProductsDTO>womenCollectionAutumn = productDAO.collection("Autumn", "Women");
+                List<ProductsDTO> womenCollectionSpring = productDAO.collection("Spring", "Women");
+                List<ProductsDTO> womenCollectionWinter = productDAO.collection("Winter", "Women");
                 
                 request.setAttribute("menCollectionSummer", menCollectionSummer);
-//                request.setAttribute("menCollectionAutumn", menCollectionAutumn);
-//                request.setAttribute("menCollectionSpring", menCollectionSpring);
-//                request.setAttribute("menCollectionWinter", menCollectionWinter);
+                request.setAttribute("menCollectionAutumn", menCollectionAutumn);
+                request.setAttribute("menCollectionSpring", menCollectionSpring);
+                request.setAttribute("menCollectionWinter", menCollectionWinter);
 //                
                 request.setAttribute("womenCollectionSummer", womenCollectionSummer);
-//                request.setAttribute("womenCollectionAutumn", womenCollectionAutumn);
-//                request.setAttribute("womenCollectionSpring", womenCollectionSpring);
-//                request.setAttribute("womenCollectionSpring", womenCollectionSpring);
+                request.setAttribute("womenCollectionAutumn", womenCollectionAutumn);
+                request.setAttribute("womenCollectionSpring", womenCollectionSpring);
+                request.setAttribute("womenCollectionWinter", womenCollectionWinter);
 
                 request.getRequestDispatcher("collection.jsp").forward(request, response);
             } else if (action != null && action.equals("search")) {

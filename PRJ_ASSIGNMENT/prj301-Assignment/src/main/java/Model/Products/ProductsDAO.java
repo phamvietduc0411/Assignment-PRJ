@@ -136,15 +136,3 @@ public class ProductsDAO {
 
     }
 }
-
-
-//    <tr>
-//        <td><%= products.getProductsID()%></td>
-//        <td><%= products.getProductsName()%></td>
-//        <td><%= products.getGender()%></td>
-//        <td><%= products.getSize()%></td>
-//        <td><%= products.getProductPrice()%></td>
-//
-//
-//
-//    </tr>
