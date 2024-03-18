@@ -1,136 +1,101 @@
-<%-- 
-    Document   : searchingproducts
-    Created on : 18-03-2024, 23:19:51
-    Author     : Acer
---%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.List"%>
+<%@page import="Model.Products.ProductsDTO"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Searching Product</title>
+        <title>COLLECTION</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="zstalk icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
+        <link rel="stylesheet" type="text/css" media="all"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor.css">
+        <link rel="stylesheet" type="text/css" href="css/homepage.css">
+        <!--        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+                      rel="stylesheet">-->
+        <!-- script
+          ================================================== -->
+        <script src="js/modernizr.js"></script>
     </head>
+
     <body>
+        <jsp:include page="/menu.jsp" flush="true" />
+        <div class="preloader-wrapper">
+            <div class="preloader">
+            </div>            
+        </div>
+
+
         <section id="featured-products" class="product-store padding-large">
             <div class="container">
                 <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
-                    <h2 class="section-title">Product you looking for</h2>
-                    <div class="btn-wrap">
-                        <a href="displayProduct.jsp" class="d-flex align-items-center">View all products <i
-                                class="icon icon icon-arrow-io"></i></a>
-                    </div>
+                    <h2 class="section-title">Product You looking for</h2>
                 </div>
-                <div class="swiper product-swiper overflow-hidden">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="product-item">
-                                <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt1.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="PageController?action=productDetails&CategoryID=31031&size=M">T-Shirt-Bershika1</a>
-                                    </h3>
-                                    <span class="item-price text-primary">$40.00</span>
-                                </div>
+                    <div class="product-item col-lg-3 col-md-4 col-sm-4">
+                        
+                        <div class="image-holder">
+
+
+                            <img src="" alt="Books" class="product-image" style="height: 400px; width: 500px; ">
+
+                        </div>
+                        <div class="cart-concern">
+                            <div class="cart-button d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                        class="icon icon-arrow-io"></i>
+                                </button>
+                                <button type="button" class="view-btn tooltip
+                                        d-flex">
+                                    <i class="icon icon-screen-full"></i>
+                                    <span class="tooltip-text">Quick view</span>
+                                </button>
+                                <button type="button" class="wishlist-btn">
+                                    <i class="icon icon-heart"></i>
+                                </button>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="product-item">
-                                <div class="image-holder">
-                                    <img src="images/homepage/product-item2.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-                                        <button type="button" class="view-btn tooltip
-                                                d-flex">
-                                            <i class="icon icon-screen-full"></i>
-                                            <span class="tooltip-text">Quick view</span>
-                                        </button>
-                                        <button type="button" class="wishlist-btn">
-                                            <i class="icon icon-heart"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Volunteer Half blu</a>
-                                    </h3>
-                                    <span class="item-price text-primary">$38.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-item">
-                                <div class="image-holder">
-                                    <img src="images/homepage/product-item3.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-                                        <button type="button" class="view-btn tooltip
-                                                d-flex">
-                                            <i class="icon icon-screen-full"></i>
-                                            <span class="tooltip-text">Quick view</span>
-                                        </button>
-                                        <button type="button" class="wishlist-btn">
-                                            <i class="icon icon-heart"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Double yellow shirt</a>
-                                    </h3>
-                                    <span class="item-price text-primary">$44.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-item">
-                                <div class="image-holder">
-                                    <img src="images/homepage/product-item4.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-                                        <button type="button" class="view-btn tooltip
-                                                d-flex">
-                                            <i class="icon icon-screen-full"></i>
-                                            <span class="tooltip-text">Quick view</span>
-                                        </button>
-                                        <button type="button" class="wishlist-btn">
-                                            <i class="icon icon-heart"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Long belly grey pant</a>
-                                    </h3>
-                                    <span class="item-price text-primary">$33.00</span>
-                                </div>
-                            </div>
+                        <div class="product-detail">
+                            <h3 class="product-title">
+                                <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
+                            </h3>
+                            <div class="item-price text-primary">$25.00</div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-pagination"></div>
+                            
             </div>
-        </section>
-    </body>
-</html>
+                    
+                    </section>
+
+                   
+
+                    <div id="footer-bottom">
+                        <div class="container">
+                            <div class="d-flex align-items-center flex-wrap justify-content-between">
+                                <div class="copyright">
+                                    <p>Freebies by <a href="https://templatesjungle.com/">Templates Jungle</a>
+                                    </p>
+                                </div>
+                                <div class="payment-method">
+                                    <p>Payment options :</p>
+                                    <div class="card-wrap">
+                                        <img src="images/homepage/visa-icon.jpg" alt="visa">
+                                        <img src="images/homepage/mastercard.png" alt="mastercard">
+                                        <img src="images/homepage/american-express.jpg" alt="american-express">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="js/jquery-1.11.0.min.js"></script>
+                    <script src="js/plugins.js"></script>
+                    <script src="js/script.js"></script>
+                    </body>
+
+                    </html>
