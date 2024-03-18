@@ -36,7 +36,7 @@ public class CategoryDAO {
 
                 category.setCategoryID(CategoryID);
                 category.setCategoryName(categoryName);
-                category.setImg(img);
+//                category.set phai sua lai
                 category.setDescriptions(descriptions);
                 
                 return category;

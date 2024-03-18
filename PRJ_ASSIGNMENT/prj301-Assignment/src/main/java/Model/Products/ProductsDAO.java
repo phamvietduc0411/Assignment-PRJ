@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import prj301demo.utils.DBUtils;
 import Model.Products.ProductsDTO;
+
 /**
  *
  * @author HP
@@ -57,48 +58,71 @@ public class ProductsDAO {
         return list;
     }
 
-    public List<ProductsDTO> collection(String nameCollection) {
-        List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
-        ProductsDTO collection = null;
+    public List<ProductsDTO> collection(String nameCollection, String gender) {
+        {
+            List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
+            ProductsDTO collection = null;
+            try {
+                Connection con = DBUtils.getConnection();
+
+                String sql = " SELECT ProductsID , ProductsName , Gender , Size ,Color ,ProductPrice , Img "
+                        + "FROM Products "
+                        + "INNER JOIN Category ON Products.CategoryId = Category.CategoryID "
+                        + "WHERE Collections = ? AND Gender = ? ";
+
+                PreparedStatement stm = con.prepareStatement(sql);
+
+                stm.setString(1, nameCollection);
+                stm.setString(2, gender);
+
+                ResultSet rs = stm.executeQuery();
+
+                if (rs != null) {
+                    while (rs.next()) {
+                        collection = new ProductsDTO();
+                    }
+                }
+
+                    return listCollection;
+                }                    catch (Exception e) {
+        }
+            }
+        return null;
+        }
+    
+
+    
+
+    public List<ProductsDTO> SearchProByName(String ProductsName) {
+
         try {
-            
+            Connection con = null;
+            PreparedStatement stm = null;
+            ResultSet rs = null;
+            List<ProductsDTO> result = null;
+            con = DBUtils.getConnection();
+            String sql = "SELECT ProductsID, ProductsName, Gender, Size, Color, ProductPrice, Img "
+                    + "FROM Products "
+                    + "WHERE ProductsName LIKE ?";
+            stm = con.prepareStatement(sql);
+            stm.setString(1, "%" + ProductsName + "%");
+            rs = stm.executeQuery();
+            while (rs.next()) {
+                if (result == null) {
+                    result = new ArrayList<ProductsDTO>();
+                }
+                ProductsDTO dto = new ProductsDTO();
+                dto.setProductsID(rs.getInt("ProductsID"));
+                dto.setProductsName("ProductsName");
+                dto.setGender("Gender");
+                dto.setSize("Size");
+                dto.setColor("Color");
+                dto.setProductPrice(rs.getFloat("ProductPrice"));
+
+            }
         } catch (Exception e) {
         }
-        return listCollection;
-    }
-    public List<ProductsDTO> SearchProByName(String ProductsName) throws SQLException {
-        Connection con = null;
-        PreparedStatement stm = null;
-        ResultSet rs = null;
-        List<ProductsDTO> result = null;
+        return null;
 
-        try {
-            con = DBUtils.getConnection();
-            if (con != null) {
-                String sql = "SELECT ProductsID, ProductsName, Gender, Size, Color, ProductPrice, Img "
-                        + "FROM Products "
-                        + "WHERE ProductsName LIKE ?";
-                stm = con.prepareStatement(sql);
-                stm.setString(1, "%" + ProductsName + "%");
-                rs = stm.executeQuery();
-                while(rs.next()){
-                    if(result == null){
-                        result = new ArrayList<ProductsDTO>();
-                    }
-                    ProductsDTO dto = new ProductsDTO();
-                    dto.setProductsID(rs.getInt("ProductsID"));
-                    dto.setProductsName("ProductsName");
-                    dto.setGender("Gender");
-                    dto.setSize("Size");
-                    dto.setColor("Color");
-                    dto.setProductPrice(rs.getFloat("ProductPrice"));
-                    dto.setI
-                    
-                    
-                }
-            }
-        } finally {
-
-        }
     }
 }

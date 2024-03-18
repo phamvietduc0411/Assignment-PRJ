@@ -11,7 +11,10 @@ import Model.Products.ProductsDAO;
 import Model.Products.ProductsDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -59,10 +62,14 @@ public class PageController extends HttpServlet {
             } else if (action.equals("collection")) {
 
                 ProductsDAO productDAO = new ProductsDAO();
-                List<ProductsDTO> collectionSummer = productDAO.collection("Summer", "Men");
-                List<ProductsDTO> collectionAutumn = productDAO.collection("Autumn", "Men");
-                List<ProductsDTO> collectionSpring = productDAO.collection("Spring", "Men");
-                List<ProductsDTO> collectionWinter = productDAO.collection("Winter", "Men");
+                List<ProductsDTO> menCollectionSummer = productDAO.collection("Summer", "Men");
+                List<ProductsDTO> menCollectionAutumn = productDAO.collection("Autumn", "Men");
+                List<ProductsDTO> menCollectionSpring = productDAO.collection("Spring", "Men");
+                List<ProductsDTO> menCollectionWinter = productDAO.collection("Winter", "Men");
+                List<ProductsDTO> womencollectionSummer = productDAO.collection("Summer", "Women");
+                List<ProductsDTO>womencollectionAutumn = productDAO.collection("Autumn", "Women");
+                List<ProductsDTO> womencollectionSpring = productDAO.collection("Spring", "Women");
+                List<ProductsDTO> womencollectionWinter = productDAO.collection("Winter", "Women");
 
                 request.getRequestDispatcher("collection.jsp").forward(request, response);
             }
