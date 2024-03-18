@@ -70,7 +70,6 @@
                                 </div>
                                 <h3>${error}</h3>
                                 <div class="form-group form-button">
-                                    <input name="action" value="signup" type="hidden">
                                     <input type="submit" id="signup" class="form-submit" value="Sign up"/>
                                 </div>
                             </form>
