@@ -33,8 +33,8 @@
         
         <header id="header">
             <div class="search-container" action="">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button type="button" id="searchButton">Search</button>
+                <input type="text"  name="Search" id="searchInput" placeholder="Search...">
+                <input type="submit" name="action" value="SEARCH">
             </div>
             <div id="header-wrap">
                 
