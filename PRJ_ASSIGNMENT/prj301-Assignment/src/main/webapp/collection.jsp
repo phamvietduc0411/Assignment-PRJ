@@ -1,3 +1,8 @@
+<%@page import="java.util.Map"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.List"%>
+<%@page import="Model.Products.ProductsDTO"%>
+<%@page import="java.lang.String"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -77,6 +82,9 @@ and open the template in the editor.
           </div>
         </div><!-- end of .container-->
       </section>
+      
+
+
 
       
       <section id="categoryWomen">
@@ -113,6 +121,8 @@ and open the template in the editor.
                                     </div><a class="stretched-link" href="#"></a>
                                   </div>
                                 </div>
+                                  
+
                                 <div class="col-sm-6 col-md-3 mb-3 mb-md-0 h-100">
                                   <div class="card card-span h-100 text-white"><img class="img-fluid h-100" src="assets/img/gallery/shirt-2.png" alt="..." />
                                     <div class="card-img-overlay ps-0"> </div>
@@ -2136,7 +2146,7 @@ and open the template in the editor.
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-0" id="collection">
+<!--      <section class="py-0" id="collection">
         <div class="container">
           <div class="row h-100 gx-2">
             <div class="col-md-6">
@@ -2160,8 +2170,8 @@ and open the template in the editor.
               </div>
             </div>
           </div>
-        </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
+        </div>
+      </section> <section> close ============================-->
       <!-- ============================================-->
 
       <section>
@@ -2341,71 +2351,27 @@ and open the template in the editor.
         </div>
       </section>
 
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="py-0" id="outlet">
-        <div class="container">
-          <div class="row h-100 g-0">
-            <div class="col-md-6">
-              <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/summer.png" alt="..." />
-                <div class="card-img-overlay bg-dark-gradient rounded-0">
-                  <div class="p-5 p-md-2 p-xl-5 d-flex flex-column flex-end-center align-items-baseline h-100">
-                    <h1 class="fs-md-4 fs-lg-7 text-light">Summer of '21 </h1>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
-            </div>
-            <div class="col-md-6 h-100">
-              <div class="row h-100 g-0">
-                <div class="col-md-6 h-100">
-                  <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/sunglasses.png" alt="..." />
-                    <div class="card-img-overlay bg-dark-gradient rounded-0">
-                      <div class="p-5 p-xl-5 p-md-0">
-                        <h3 class="text-light">Sunglasses</h3>
-                      </div>
-                    </div><a class="stretched-link" href="#!"></a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/footwear.png" alt="..." />
-                    <div class="card-img-overlay bg-dark-gradient rounded-0">
-                      <div class="p-5 p-xl-5 p-md-0">
-                        <h3 class="text-light">Footwear</h3>
-                      </div>
-                    </div><a class="stretched-link" href="#!"></a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/hat-black-border.png" alt="..." />
-                    <div class="card-img-overlay bg-dark-gradient rounded-0">
-                      <div class="p-5 p-xl-5 p-md-0">
-                        <h3 class="text-light">Hat</h3>
-                      </div>
-                    </div><a class="stretched-link" href="#!"></a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card card-span h-100 text-white"><img class="card-img h-100" src="assets/img/gallery/watches.png" alt="..." />
-                    <div class="card-img-overlay bg-dark-gradient rounded-0">
-                      <div class="p-5 p-xl-5 p-md-0">
-                        <h3 class="text-light">Watches</h3>
-                      </div>
-                    </div><a class="stretched-link" href="#!"> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
-      <!-- ============================================-->
+
+
+<%
+        List<ProductsDTO> menCollectionSummer = (List<ProductsDTO>)request.getAttribute("menCollectionSummer");
+                
+               for (ProductsDTO products : menCollectionSummer) {
+                                                 System.out.println("eeee" + products.getProductsID());
+                                                %>
+
+                                                <tr>
+                                                    <td><%= products.getProductsID()%></td>
+                                                    <td><%= products.getProductsName()%></td>
+                                                    <td><%= products.getGender()%></td>
+                                                    <td><%= products.getSize()%></td>
+                                                    <td><%= products.getProductPrice()%></td>
 
 
 
-
-
-
-    </main>
+                                                </tr>
+                                                <% }%> 
+  
 
 
 

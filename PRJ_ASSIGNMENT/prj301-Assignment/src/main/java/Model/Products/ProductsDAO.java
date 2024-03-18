@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import prj301demo.utils.DBUtils;
 import Model.Products.ProductsDTO;
+
 /**
  *
  * @author HP
@@ -57,48 +58,81 @@ public class ProductsDAO {
         return list;
     }
 
-    public List<ProductsDTO> collection(String nameCollection) {
-        List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
-        ProductsDTO collection = null;
-        try {
+    public List<ProductsDTO> collection(String nameCollection, String gender) {
+        
+            List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
+            ProductsDTO collection = null;
+            try {
+                Connection con = DBUtils.getConnection();
+
+                String sql = " SELECT ProductsID , ProductsName , Gender , Size ,Color ,ProductPrice , Img "
+                        + "FROM Products "
+                        + "INNER JOIN Category ON Products.CategoryId = Category.CategoryID "
+                        + "WHERE Collections = ? AND Gender = ? ";
+
+                PreparedStatement stm = con.prepareStatement(sql);
+
+                stm.setString(1, nameCollection);
+                stm.setString(2, gender);
+
+                ResultSet rs = stm.executeQuery();
+
+                if (rs != null) {
+                    while (rs.next()) {
+                        collection = new ProductsDTO();
+                        collection.setProductsID(rs.getInt("ProductsID"));
+                        collection.setProductsName(rs.getString("ProductsName"));
+                        collection.setGender(rs.getString("Gender"));
+                        collection.setSize(rs.getString("Size"));
+                        collection.setColor(rs.getString("Color"));
+                        collection.setProductPrice(rs.getFloat("ProductPrice"));
+                        collection.setImg(rs.getString("Img"));
+
+                        listCollection.add(collection);
+                    }
+                }
+                con.close();
+
+                
             
         } catch (Exception e) {
+            System.out.println("ERROR  SQL WHEN QUERY COLLECTION" +  e.getMessage());
+            e.printStackTrace();
         }
         return listCollection;
-    }
-    public List<ProductsDTO> SearchProByName(String ProductsName) throws SQLException {
-        Connection con = null;
-        PreparedStatement stm = null;
-        ResultSet rs = null;
-        List<ProductsDTO> result = null;
+        }
+    
+
+    public List<ProductsDTO> SearchProByName(String ProductsName) {
 
         try {
+            Connection con = null;
+            PreparedStatement stm = null;
+            ResultSet rs = null;
+            List<ProductsDTO> result = null;
             con = DBUtils.getConnection();
-            if (con != null) {
-                String sql = "SELECT ProductsID, ProductsName, Gender, Size, Color, ProductPrice, Img "
-                        + "FROM Products "
-                        + "WHERE ProductsName LIKE ?";
-                stm = con.prepareStatement(sql);
-                stm.setString(1, "%" + ProductsName + "%");
-                rs = stm.executeQuery();
-                while(rs.next()){
-                    if(result == null){
-                        result = new ArrayList<ProductsDTO>();
-                    }
-                    ProductsDTO dto = new ProductsDTO();
-                    dto.setProductsID(rs.getInt("ProductsID"));
-                    dto.setProductsName("ProductsName");
-                    dto.setGender("Gender");
-                    dto.setSize("Size");
-                    dto.setColor("Color");
-                    dto.setProductPrice(rs.getFloat("ProductPrice"));
-                    dto.setI
-                    
-                    
+            String sql = "SELECT ProductsID, ProductsName, Gender, Size, Color, ProductPrice, Img "
+                    + "FROM Products "
+                    + "WHERE ProductsName LIKE ?";
+            stm = con.prepareStatement(sql);
+            stm.setString(1, "%" + ProductsName + "%");
+            rs = stm.executeQuery();
+            while (rs.next()) {
+                if (result == null) {
+                    result = new ArrayList<ProductsDTO>();
                 }
-            }
-        } finally {
+                ProductsDTO dto = new ProductsDTO();
+                dto.setProductsID(rs.getInt("ProductsID"));
+                dto.setProductsName("ProductsName");
+                dto.setGender("Gender");
+                dto.setSize("Size");
+                dto.setColor("Color");
+                dto.setProductPrice(rs.getFloat("ProductPrice"));
 
+            }
+        } catch (Exception e) {
         }
+        return null;
+
     }
 }
