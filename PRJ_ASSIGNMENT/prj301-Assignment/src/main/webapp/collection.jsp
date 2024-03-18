@@ -2146,7 +2146,7 @@ and open the template in the editor.
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="py-0" id="collection">
+<!--      <section class="py-0" id="collection">
         <div class="container">
           <div class="row h-100 gx-2">
             <div class="col-md-6">
@@ -2170,8 +2170,8 @@ and open the template in the editor.
               </div>
             </div>
           </div>
-        </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
+        </div>
+      </section> <section> close ============================-->
       <!-- ============================================-->
 
       <section>
@@ -2353,7 +2353,24 @@ and open the template in the editor.
 
 
 
+<%
+        List<ProductsDTO> menCollectionSummer = (List<ProductsDTO>)request.getAttribute("menCollectionSummer");
+                
+               for (ProductsDTO products : menCollectionSummer) {
+                                                 System.out.println("eeee" + products.getProductsID());
+                                                %>
 
+                                                <tr>
+                                                    <td><%= products.getProductsID()%></td>
+                                                    <td><%= products.getProductsName()%></td>
+                                                    <td><%= products.getGender()%></td>
+                                                    <td><%= products.getSize()%></td>
+                                                    <td><%= products.getProductPrice()%></td>
+
+
+
+                                                </tr>
+                                                <% }%> 
   
 
 

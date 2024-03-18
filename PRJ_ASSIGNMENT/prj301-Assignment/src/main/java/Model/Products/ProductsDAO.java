@@ -59,7 +59,7 @@ public class ProductsDAO {
     }
 
     public List<ProductsDTO> collection(String nameCollection, String gender) {
-        {
+        
             List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
             ProductsDTO collection = null;
             try {
@@ -80,17 +80,27 @@ public class ProductsDAO {
                 if (rs != null) {
                     while (rs.next()) {
                         collection = new ProductsDTO();
+                        collection.setProductsID(rs.getInt("ProductsID"));
+                        collection.setProductsName(rs.getString("ProductsName"));
+                        collection.setGender(rs.getString("Gender"));
+                        collection.setSize(rs.getString("Size"));
+                        collection.setColor(rs.getString("Color"));
+                        collection.setProductPrice(rs.getFloat("ProductPrice"));
+                        collection.setImg(rs.getString("Img"));
+
+                        listCollection.add(collection);
                     }
                 }
+                con.close();
 
-                    return listCollection;
-                }                    catch (Exception e) {
+                
+            
+        } catch (Exception e) {
+            System.out.println("ERROR  SQL WHEN QUERY COLLECTION" +  e.getMessage());
+            e.printStackTrace();
         }
-            }
-        return null;
+        return listCollection;
         }
-    
-
     
 
     public List<ProductsDTO> SearchProByName(String ProductsName) {
