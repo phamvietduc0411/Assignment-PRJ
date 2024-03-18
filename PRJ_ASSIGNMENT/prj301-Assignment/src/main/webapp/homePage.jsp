@@ -26,11 +26,18 @@
 
         <div class="preloader-wrapper">
             <div class="preloader">
-            </div>
+            </div>            
         </div>
+        
+        
+        
         <header id="header">
+            <div class="search-container" action="">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button type="button" id="searchButton">Search</button>
+            </div>
             <div id="header-wrap">
-
+                
                 <nav class="primary-nav padding-small">
                     <div class="container">
                         <div class="row d-flex align-items-center">
@@ -65,7 +72,7 @@
                                             </li>
 
                                             <li class="menu-item has-sub">
-                                                <a href="#" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
+                                                <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
                                                         class="icon icon-chevron-down"></i></a>
                                                 
                                             </li>

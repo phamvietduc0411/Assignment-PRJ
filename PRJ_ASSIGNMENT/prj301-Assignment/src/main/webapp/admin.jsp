@@ -243,9 +243,9 @@
                                                 </tr>
                                                 <%
                                                     List<ProductsDTO> list = (List<ProductsDTO>) request.getAttribute("productlist");
-                                                    System.out.println("listsize" + list.size());
+    
                                                     for (ProductsDTO products : list) {
-                                                        System.out.println("eeee" + products.getProductsID());
+//                                                        System.out.println("eeee" + products.getProductsID());
                                                 %>
 
                                                 <tr>

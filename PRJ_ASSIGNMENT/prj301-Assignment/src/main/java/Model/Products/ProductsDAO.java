@@ -17,22 +17,23 @@ import prj301demo.utils.DBUtils;
  * @author HP
  */
 public class ProductsDAO {
-    public List<ProductsDTO> viewAllProduct(){
-        List<ProductsDTO>  list = new ArrayList<ProductsDTO>();
-        ProductsDTO product = null ;
-        
+
+    public List<ProductsDTO> viewAllProduct() {
+        List<ProductsDTO> list = new ArrayList<ProductsDTO>();
+        ProductsDTO product = null;
+
         try {
-                
+
             Connection con = DBUtils.getConnection();
-            
+
             String sql = " SELECT ProductsID , ProductsName , Gender , Size , Color , ProductPrice FROM Products ";
-            
+
             PreparedStatement stm = con.prepareStatement(sql);
-            
+
             ResultSet rs = stm.executeQuery();
-            
-            if (rs!= null) {
-               
+
+            if (rs != null) {
+
                 while (rs.next()) {
                     product = new ProductsDTO();
                     product.setProductsID(rs.getInt("ProductsID"));
@@ -42,19 +43,26 @@ public class ProductsDAO {
                     product.setColor(rs.getString("Color"));
                     product.setProductPrice(rs.getFloat("ProductPrice"));
 
-                   list.add(product);
+                    list.add(product);
                 }
             }
             con.close();
-                    
-            
+
         } catch (Exception e) {
-            System.out.println("ERROR IN SQL PRODUCTDAO"+e.getMessage());
+            System.out.println("ERROR IN SQL PRODUCTDAO" + e.getMessage());
             e.printStackTrace();
         }
-                
-                
-    
+
         return list;
+    }
+
+    public List<ProductsDTO> collection(String nameCollection) {
+        List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
+        ProductsDTO collection = null;
+        try {
+            
+        } catch (Exception e) {
+        }
+        return listCollection;
     }
 }

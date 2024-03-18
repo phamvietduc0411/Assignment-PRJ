@@ -57,6 +57,10 @@ public class PageController extends HttpServlet {
                  request.setAttribute("category", category);
                  request.getRequestDispatcher("productDetails.jsp").forward(request, response);
             }
+            
+            else if(action.equals("collection")){
+            request.getRequestDispatcher("collection.jsp").forward(request, response);
+            }
         }
     }
 
