@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="images/logo.png" alt="sing in image"></figure>
+                        <figure><img src="images/logo.png" alt="sign in image"></figure>
 
                                              
 
