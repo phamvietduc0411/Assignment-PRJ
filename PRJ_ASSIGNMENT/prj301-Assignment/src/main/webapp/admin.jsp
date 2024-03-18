@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="Model.Products.ProductsDTO"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -230,20 +232,42 @@
                                     <div class="col-md-12">
                                         <div class="card">
                                             <div class="card-header">
-                                                
-                                                <a href="PageController?action=view"><h5>View All Product</h5></a>
+                                                <h5>View All Product</h5>
 
                                             </div>
+                                            <table>
+
+                                                <tr>
+                                                    <td>ProductId</td>
+
+                                                </tr>
+                                                <%
+                                                    List<ProductsDTO> list = (List<ProductsDTO>) request.getAttribute("productlist");
+                                                    System.out.println("listsize" + list.size());
+                                                    for (ProductsDTO products : list) {
+                                                        System.out.println("eeee" + products.getProductsID());
+                                                %>
+
+                                                <tr>
+                                                    <td><%= products.getProductsID()%></td>
+                                                    <td><%= products.getProductsName()%></td>
+                                                    <td><%= products.getGender()%></td>
+                                                    <td><%= products.getSize()%></td>
+                                                    <td><%= products.getProductPrice()%></td>
+
+
+
+                                                </tr>
+                                                <% }%> 
+
+                                            </table>       
 
                                         </div>
-
                                     </div>
+                                    <!-- Page body end -->
                                 </div>
-                            </div>
-                            <!-- Page body end -->
-                        </div>
-                      
 
-                        </body>
 
-                        </html>
+                                </body>
+
+                                </html>

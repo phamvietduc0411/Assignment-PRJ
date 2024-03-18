@@ -33,7 +33,8 @@ public class ProductsDAO {
             
             if (rs!= null) {
                 product = new ProductsDTO();
-                if (rs.next()) {
+                while (rs.next()) {
+                   
                     product.setProductsID(rs.getInt("ProductsID"));
                     product.setProductsName(rs.getString("ProductsName"));
                     product.setGender(rs.getString("Gender"));

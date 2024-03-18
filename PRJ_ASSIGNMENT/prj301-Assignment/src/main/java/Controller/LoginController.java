@@ -9,8 +9,11 @@ import Model.Admin.ManagerDAO;
 import Model.Admin.ManagerDTO;
 import Model.Customters.CustomersDAO;
 import Model.Customters.CustomersDTO;
+import Model.Products.ProductsDAO;
+import Model.Products.ProductsDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -38,21 +41,27 @@ public class LoginController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 //         get parameter
-            String action = request.getParameter("action");
+            String action = request.getParameter("option");
             String username = request.getParameter("userName");
             String password = request.getParameter("password");
-
-            if (action == null || action.equals("login")) {
-//                ManagerDAO managerDAO = new ManagerDAO();
-//                ManagerDTO manager = managerDAO.login(username, password);
+            if (action.equals("login")) {
+                ManagerDAO managerDAO = new ManagerDAO();
+                ManagerDTO manager = managerDAO.login(username, password);
 
                 CustomersDAO customerDAO = new CustomersDAO();
                 CustomersDTO customer = customerDAO.login(username, password);
-//                if (manager != null) {
-//                    HttpSession session = request.getSession(true);
-//                    session.setAttribute("manager", manager);
+                if (manager != null) {
+                         ProductsDAO productDAO = new ProductsDAO();
+               List<ProductsDTO> list = productDAO.viewAllProduct();
+               
+                    
+                request.setAttribute("productlist", list);
+                    HttpSession session = request.getSession(true);
+                    session.setAttribute("manager", manager);
 //                    response.sendRedirect("./admin.jsp");
-//                } else 
+                      RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
+                    rd.forward(request, response);
+                } else 
                     if (customer != null) {
                         HttpSession session = request.getSession(true);
                         session.setAttribute("customerSession", customer);
@@ -61,6 +70,7 @@ public class LoginController extends HttpServlet {
                     }
                 else{
                  request.setAttribute("error", "Username or password is incorrect");
+                        System.out.println("eeeeeeeeeeeeeeee"+request.getAttribute("error"));
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
                 }

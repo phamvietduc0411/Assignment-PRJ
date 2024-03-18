@@ -38,7 +38,7 @@ public class PageController extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
            
-          
+        
             CategoryDAO categoryDAO = new CategoryDAO();
 
             if (action.equals("productDetails")) {
@@ -56,14 +56,6 @@ public class PageController extends HttpServlet {
                 }
                  request.setAttribute("category", category);
                  request.getRequestDispatcher("productDetails.jsp").forward(request, response);
-            }
-             if (action.equals("view")) {
-                ProductsDAO productDAO = new ProductsDAO();
-               List<ProductsDTO> list = productDAO.viewAllProduct();
-                 System.out.println(""+list.size());
-                request.setAttribute("productlist", list);
-//                request.getRequestDispatcher("./adminDisplayProducts.jsp").forward(request, response);
-response.sendRedirect("adminDisplayProducts.jsp");
             }
         }
     }
