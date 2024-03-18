@@ -50,30 +50,22 @@ public class CustomersDAO {
         return customers;
     }
     
-    public Integer insert(CustomersDTO customner) {
-        String sql = "INSERT INTO Customers (CustomerID, username, password, CustomerName, PhoneNumber, Address, Gender, Email) "
-                + " VALUES (?, ?, ?, ?, ?, ?, ?, ?) ";
-        try {
+    public static void addUser(CustomersDTO customer) throws SQLException {
+        String sql = "INSERT INTO Customers (username, password, CustomerName, PhoneNumber, Address, Gender, Email) " +
+                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
+        
+        try (Connection conn = DBUtils.getConnection();
+             PreparedStatement statement = conn.prepareStatement(sql)) {
+            statement.setString(1, customer.getUsername());
+            statement.setString(2, customer.getPassword());
+            statement.setString(3, customer.getCustomerName());
+            statement.setString(4, customer.getPhoneNumber());
+            statement.setString(5, customer.getAddress());
+            statement.setString(6, customer.getGender());
+            statement.setString(7, customer.getEmail());
 
-            Connection con = DBUtils.getConnection();
-            PreparedStatement ps = con.prepareStatement(sql);
-
-            ps.setInt(1, customner.getCustomerID());
-            ps.setString(2, customner.getUsername());
-            ps.setString(3, customner.getPassword());
-            ps.setString(4, customner.getCustomerName());
-            ps.setString(5, customner.getPhoneNumber());
-            ps.setString(6, customner.getAddress());
-            ps.setString(7, customner.getGender());
-            ps.setString(8, customner.getEmail());
-
-            ps.executeUpdate();
-            con.close();
-            return customner.getCustomerID();
-        } catch (SQLException ex) {
-            System.out.println("Insert Customner error!" + ex.getMessage());
-            ex.printStackTrace();
+            statement.executeUpdate();
         }
-        return null;
     }
+
 }

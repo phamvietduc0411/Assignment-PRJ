@@ -8,12 +8,12 @@ D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\prj301demo\util
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Discount\DiscountDTO.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Orders\OrdersDTO.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Payment\PaymentDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\RegisterController.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDTO.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Storage\StrongeDTO.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\LoginController.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\OrderDetail\OrderDetailDTO.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\PageController.java
+D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\SignupController.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CheckOrder\CheckOrderDTO.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDAO.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDAO.java

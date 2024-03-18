@@ -10,21 +10,23 @@ package Model.Customters;
  * @author Acer
  */
 public class CustomersDTO {
-    private int CustomerID;
+    private int customerID;
     private String username;
     private String password;
-    private String CustomerName;
-    private String PhoneNumber;
-    private String Address;
-    private String Gender;
-    private String Email;
+    private String customerName;
+    private String phoneNumber;
+    private String address;
+    private String gender;
+    private String email;
+
+    // Getters and setters
 
     public int getCustomerID() {
-        return CustomerID++;
+        return customerID;
     }
 
-    public void setCustomerID(int CustomerID) {
-        this.CustomerID = CustomerID;
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 
     public String getUsername() {
@@ -44,44 +46,43 @@ public class CustomersDTO {
     }
 
     public String getCustomerName() {
-        return CustomerName;
+        return customerName;
     }
 
-    public void setCustomerName(String CustomerName) {
-        this.CustomerName = CustomerName;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
-    public void setPhoneNumber(String PhoneNumber) {
-        this.PhoneNumber = PhoneNumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
-    public void setAddress(String Address) {
-        this.Address = Address;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getGender() {
-        return Gender;
+        return gender;
     }
 
-    public void setGender(String Gender) {
-        this.Gender = Gender;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
-
     
 }

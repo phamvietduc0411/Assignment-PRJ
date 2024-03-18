@@ -9,18 +9,19 @@ import Model.Customters.CustomersDAO;
 import Model.Customters.CustomersDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Acer
+ * @author ADMIN
  */
-public class RegisterController extends HttpServlet {
+public class SignupController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,14 +34,40 @@ public class RegisterController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        
-        
-        boolean error = false;
-        try (PrintWriter out = response.getWriter()) {
-            String action = request.getParameter("action");
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            String customerName = request.getParameter("CustomerName");
+            String phoneNumber = request.getParameter("PhoneNumber");
+            String address = request.getParameter("Address");
+            String gender = request.getParameter("Gender");
+            String email = request.getParameter("Email");
+            String agreeTerm = request.getParameter("agree-term");
             
-        }
+            if(agreeTerm != null && agreeTerm.equals("on")){
+                CustomersDTO customer = new CustomersDTO();
+
+                customer.setUsername(username);
+                customer.setPassword(password);
+                customer.setCustomerName(customerName);
+                customer.setPhoneNumber(phoneNumber);
+                customer.setAddress(address);
+                customer.setGender(gender);
+                customer.setEmail(email);
+
+                try {
+                    CustomersDAO.addUser(customer);
+                    response.sendRedirect("homePage.jsp");
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                    request.setAttribute("error", "An error occurred. Please try again later.");
+                    request.getRequestDispatcher("signUp.jsp").forward(request, response);
+                }
+                response.sendRedirect("homePage.jsp");
+            } else {
+                request.setAttribute("error", "You must agree to the terms of service.");
+                RequestDispatcher rd = request.getRequestDispatcher("signUp.jsp");
+                rd.forward(request, response);
+            }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
