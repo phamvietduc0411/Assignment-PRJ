@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="images/logo.png" alt="sing up image"></figure>
+                        <figure><img src="images/logo.png" alt="sing in image"></figure>
 
                                              
 
@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title">Sign In</h2>
                         
                      <%String error = (String)request.getAttribute("error");%>
                      
