@@ -23,16 +23,16 @@
                         <div class="signup-form">
                             
                             <h2 class="form-title">Sign up</h2>
-                            <form method="Get" class="register-form" id="register-form" action="SignupController">
-                                <!--UserName-->
+                            <form method="POST" class="register-form" id="register-form" action="SignupController">
+                                <!--UserName--> 
                                 <div class="form-group">
                                     <label for="newuser"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                     <input type="text" name="newuser" id="username" placeholder="User Name" required>
                                 </div>
                                 <!--Password-->
                                 <div class="form-group">
-                                    <label for="newpassword"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="newpassword" id="pass" placeholder="Password" required>
+                                    <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="password" id="pass" placeholder="Password" required>
                                 </div>    
                                 <!--Fullname-->
                                 <div class="form-group">

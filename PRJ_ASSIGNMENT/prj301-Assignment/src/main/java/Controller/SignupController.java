@@ -33,19 +33,18 @@ public class SignupController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         
-        boolean agreedToTerms = Boolean.parseBoolean(request.getParameter("agree-term"));
-        if (agreedToTerms){
+        String agreeTerm = request.getParameter("agree-term");
+        if (agreeTerm != null && agreeTerm.equals("on")) {
             CustomersDTO customer = new CustomersDTO();
-            
             customer.setUsername(request.getParameter("newuser"));
-            customer.setPassword(request.getParameter("newpassword"));
-            customer.setCustomerName(request.getParameter("customerName"));
-            customer.setPhoneNumber(request.getParameter("phoneNumber"));
-            customer.setAddress(request.getParameter("address"));
-            customer.setGender(request.getParameter("gender"));
-            customer.setEmail(request.getParameter("email"));
+            customer.setPassword(request.getParameter("password"));
+            customer.setCustomerName(request.getParameter("CustomerName"));
+            customer.setPhoneNumber(request.getParameter("PhoneNumber"));
+            customer.setAddress(request.getParameter("Address"));
+            customer.setGender(request.getParameter("Gender"));
+            customer.setEmail(request.getParameter("Email"));
 
             CustomersDAO customersDAO = new CustomersDAO();
             boolean created = customersDAO.createCustomer(customer);
@@ -56,8 +55,9 @@ public class SignupController extends HttpServlet {
                 request.getRequestDispatcher("signUp.jsp").forward(request, response);
             }
         } else {
-            request.setAttribute("error", "You must agree to the terms and conditions.");
-            request.getRequestDispatcher("signUp.jsp").forward(request, response);
+            request.setAttribute("error", "You must agree to the terms of service.");
+            RequestDispatcher rd = request.getRequestDispatcher("signUp.jsp");
+            rd.forward(request, response);
         }
     }
 
