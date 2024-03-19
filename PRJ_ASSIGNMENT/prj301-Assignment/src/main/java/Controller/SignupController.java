@@ -34,40 +34,31 @@ public class SignupController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            String customerName = request.getParameter("CustomerName");
-            String phoneNumber = request.getParameter("PhoneNumber");
-            String address = request.getParameter("Address");
-            String gender = request.getParameter("Gender");
-            String email = request.getParameter("Email");
-            String agreeTerm = request.getParameter("agree-term");
+        
+        boolean agreedToTerms = Boolean.parseBoolean(request.getParameter("agree-term"));
+        if (agreedToTerms){
+            CustomersDTO customer = new CustomersDTO();
             
-            if(agreeTerm != null && agreeTerm.equals("on")){
-                CustomersDTO customer = new CustomersDTO();
+            customer.setUsername(request.getParameter("newuser"));
+            customer.setPassword(request.getParameter("newpassword"));
+            customer.setCustomerName(request.getParameter("customerName"));
+            customer.setPhoneNumber(request.getParameter("phoneNumber"));
+            customer.setAddress(request.getParameter("address"));
+            customer.setGender(request.getParameter("gender"));
+            customer.setEmail(request.getParameter("email"));
 
-                customer.setUsername(username);
-                customer.setPassword(password);
-                customer.setCustomerName(customerName);
-                customer.setPhoneNumber(phoneNumber);
-                customer.setAddress(address);
-                customer.setGender(gender);
-                customer.setEmail(email);
-
-                try {
-                    CustomersDAO.addUser(customer);
-                    response.sendRedirect("homePage.jsp");
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                    request.setAttribute("error", "An error occurred. Please try again later.");
-                    request.getRequestDispatcher("signUp.jsp").forward(request, response);
-                }
-                response.sendRedirect("homePage.jsp");
+            CustomersDAO customersDAO = new CustomersDAO();
+            boolean created = customersDAO.createCustomer(customer);
+            if (created) {
+                response.sendRedirect("login.jsp");
             } else {
-                request.setAttribute("error", "You must agree to the terms of service.");
-                RequestDispatcher rd = request.getRequestDispatcher("signUp.jsp");
-                rd.forward(request, response);
+                request.setAttribute("error", "Failed to create user. Please try again.");
+                request.getRequestDispatcher("signUp.jsp").forward(request, response);
             }
+        } else {
+            request.setAttribute("error", "You must agree to the terms and conditions.");
+            request.getRequestDispatcher("signUp.jsp").forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

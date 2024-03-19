@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
                 <!-- Font Icon -->
+        <link rel="zstalk icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
         <!-- Main css -->

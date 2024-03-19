@@ -26,13 +26,13 @@
                             <form method="Get" class="register-form" id="register-form" action="SignupController">
                                 <!--UserName-->
                                 <div class="form-group">
-                                    <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="username" id="username" placeholder="User Name" required>
+                                    <label for="newuser"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input type="text" name="newuser" id="username" placeholder="User Name" required>
                                 </div>
                                 <!--Password-->
                                 <div class="form-group">
-                                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="password" id="pass" placeholder="Password" required>
+                                    <label for="newpassword"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="newpassword" id="pass" placeholder="Password" required>
                                 </div>    
                                 <!--Fullname-->
                                 <div class="form-group">

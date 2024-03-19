@@ -50,22 +50,27 @@ public class CustomersDAO {
         return customers;
     }
     
-    public static void addUser(CustomersDTO customer) throws SQLException {
-        String sql = "INSERT INTO Customers (username, password, CustomerName, PhoneNumber, Address, Gender, Email) " +
-                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
+    public boolean createCustomer(CustomersDTO customer) {
         
-        try (Connection conn = DBUtils.getConnection();
-             PreparedStatement statement = conn.prepareStatement(sql)) {
-            statement.setString(1, customer.getUsername());
-            statement.setString(2, customer.getPassword());
-            statement.setString(3, customer.getCustomerName());
-            statement.setString(4, customer.getPhoneNumber());
-            statement.setString(5, customer.getAddress());
-            statement.setString(6, customer.getGender());
-            statement.setString(7, customer.getEmail());
+        try {
+            Connection con = DBUtils.getConnection();
+            String sql = "INSERT INTO Customers (username, password, CustomerName, PhoneNumber, Address, Gender, Email) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            
+            stmt.setString(1, customer.getUsername());
+            stmt.setString(2, customer.getPassword());
+            stmt.setString(3, customer.getCustomerName());
+            stmt.setString(4, customer.getPhoneNumber());
+            stmt.setString(5, customer.getAddress());
+            stmt.setString(6, customer.getGender());
+            stmt.setString(7, customer.getEmail());
 
-            statement.executeUpdate();
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
-
 }
