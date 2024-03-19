@@ -13,13 +13,12 @@
         <servlet-class>Controller.SignupController</servlet-class>
     </servlet>
     <servlet>
-<<<<<<< HEAD
+
         <servlet-name>CartController</servlet-name>
         <servlet-class>Controller.CartController</servlet-class>
-=======
+
         <servlet-name>AdminController</servlet-name>
         <servlet-class>Controller.AdminController</servlet-class>
->>>>>>> 61d2b5b618e2e028b156e0130f42e84d3f946fa4
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
@@ -34,13 +33,11 @@
         <url-pattern>/SignupController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-<<<<<<< HEAD
+
         <servlet-name>CartController</servlet-name>
         <url-pattern>/CartController</url-pattern>
-=======
         <servlet-name>AdminController</servlet-name>
         <url-pattern>/AdminController</url-pattern>
->>>>>>> 61d2b5b618e2e028b156e0130f42e84d3f946fa4
     </servlet-mapping>
     <session-config>
         <session-timeout>
