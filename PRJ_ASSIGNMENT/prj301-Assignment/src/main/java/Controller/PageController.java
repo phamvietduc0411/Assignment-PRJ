@@ -104,21 +104,17 @@ public class PageController extends HttpServlet {
                     rd.forward(request, response);
                 }
                 
-            } else if (action.equals("profile")) {
-                HttpSession session = request.getSession(false);
-                if (session != null && session.getAttribute("customerId") != null) {
-                    int customerId = (int) session.getAttribute("customerId");
-                    CustomersDAO customersDAO = new CustomersDAO();
-                    CustomersDTO customer = customersDAO.getCustomerProfile(customerId);
-
-                    if (customer != null) {
-                        request.setAttribute("customer", customer);
-                        request.getRequestDispatcher("profile.jsp").forward(request, response);
-                    } else {
-                        // Xử lý trường hợp không tìm thấy thông tin khách hàng
-                        response.sendRedirect("error.jsp");
-                    }
-                }
+            } else if (action.equals("profile")){
+               int customerId = (int) request.getSession().getAttribute("customerId");
+               CustomersDAO customersDAO = new CustomersDAO();
+               CustomersDTO customers = customersDAO.getCustomerProfile(customerId);               
+               request.setAttribute("customers", customers);
+               
+               request.getRequestDispatcher("profile.jsp").forward(request, response);
+                
+                
+                
+                
             }else if(action.equals("addToCart")){
                 
             }
