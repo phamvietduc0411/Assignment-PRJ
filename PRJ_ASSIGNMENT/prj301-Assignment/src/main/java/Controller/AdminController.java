@@ -11,6 +11,7 @@ import Model.Products.ProductsDTO;
 import Model.Storage.StorageDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,18 +36,8 @@ public class AdminController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-//        ProductName=&
-//Gender=Men&
-//        Size=Men&
-//        Color=&
-//        Img=&
-//        ProductPrice
-//        =&Collections
-//        =&CategoryName=
-//        &AvailableQuantity=
-//        &Descriptions=
             String action = request.getParameter("action");
-
+            
             String productName = request.getParameter("ProductName");
             String gender = request.getParameter("Gender");
             String size = request.getParameter("Size");
@@ -57,14 +48,14 @@ public class AdminController extends HttpServlet {
             String categoryName = request.getParameter("CategoryName");
             String availableQuantity = request.getParameter("AvailableQuantity");
             String descriptions = request.getParameter("Descriptions");
-
+            
             System.out.println("action" + action);
             if (action.equals("insert")) {
                 
                 StorageDTO storage = new StorageDTO();
                 int number = 0;
                 try {
-                   number = Integer.parseInt(availableQuantity);
+                    number = Integer.parseInt(availableQuantity);
                 } catch (Exception e) {
                     System.out.println("");
                 }
@@ -82,7 +73,7 @@ public class AdminController extends HttpServlet {
                 product.setSize(size);
                 product.setColor(color);
                 product.setImg(img);
-
+                
                 float price = 0;
                 try {
                     price = Float.parseFloat(Price);
@@ -91,12 +82,18 @@ public class AdminController extends HttpServlet {
                 }
                 product.setProductPrice(price);
                 
-                productsDAO.Insert(product,storage,category);
+                productsDAO.Insert(product, storage, category);
+                List<ProductsDTO> list = productsDAO.viewAllProduct();
                 
+                request.setAttribute("productlist", list);
                 
-
+                request.setAttribute("success", "Add New Product Successfully");
+                request.getRequestDispatcher("admin.jsp").forward(request, response);
+            } else if (action.equals("delete")) {
+                String keyword = request.getParameter("nameProduct");
+                
             }
-
+            
         }
     }
 

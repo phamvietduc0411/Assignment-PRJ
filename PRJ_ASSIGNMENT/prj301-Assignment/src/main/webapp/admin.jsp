@@ -19,6 +19,7 @@
                 text-decoration: none;
                 border-radius: 20px;
                 text-decoration: none;
+
             }
 
             a[href='login?action=logout']:hover {
@@ -77,6 +78,12 @@
                                             <div class="card">
                                                 <div class="card-header">
                                                     <h5>Add product</h5>
+                                                    <%String success = (String) request.getAttribute("success");%>
+
+                                                    <% if (success != null) {%>
+                                                    <h4 style="color: red"><%= success%></h4>
+
+                                                    <%}%>
                                                 </div>
                                                 <div class="card-block">
                                                     <form method="Get" action="./AdminController" class="form-material">
@@ -84,7 +91,7 @@
                                                         <div class="form-group form-default">
                                                             <input type="text" name="ProductName" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">ProductName</label>
+                                                            <label >ProductName</label>
                                                         </div>
                                                         <div class="form-group form-default">
                                                             <select name="Gender"   >
@@ -106,38 +113,38 @@
                                                         <div class="form-group form-default">
                                                             <input type="text" name="Color" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">Color</label>
+                                                            <label >Color</label>
                                                         </div>
                                                         <div class="form-group form-default">
                                                             <input type="text" name="Img" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">Img</label>
+                                                            <label >Img</label>
                                                         </div>
 
                                                         <div class="form-group form-default">
                                                             <input type="text" name="ProductPrice" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">ProductPrice</label>
+                                                            <label >ProductPrice</label>
                                                         </div> 
                                                         <div class="form-group form-default">
                                                             <input type="text" name="Collections" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">Collections</label>
+                                                            <label>Collections</label>
                                                         </div>
                                                         <div class="form-group form-default">
                                                             <input type="text" name="CategoryName" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">CategoryName</label>
+                                                            <label>CategoryName</label>
                                                         </div>
                                                         <div class="form-group form-default">
                                                             <input type="text" name="AvailableQuantity" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">AvailableQuantity</label>
+                                                            <label>AvailableQuantity</label>
                                                         </div>
                                                         <div class="form-group form-default">
                                                             <input type="text" name="Descriptions" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">Descriptions</label>
+                                                            <label >Descriptions</label>
                                                         </div>
 
                                                         <input  class="form-submit" type="submit" value="save">
@@ -243,22 +250,33 @@
                                         <table>
 
                                             <tr>
-                                                <td>ProductId</td>
+                                                <td class="card-header">ProductId</td>
+                                                <td class="card-header">Product Name</td>
+                                                <td class="card-header">Gender</td>
+                                                <td class="card-header">Price</td>
 
                                             </tr>
                                             <%
                                                 List<ProductsDTO> list = (List<ProductsDTO>) request.getAttribute("productlist");
 
                                                 for (ProductsDTO products : list) {
-//                                                      
                                             %>
 
                                             <tr>
-                                                <td><%= products.getProductsID()%></td>
-                                                <td><%= products.getProductsName()%></td>
-                                                <td><%= products.getGender()%></td>
-                                                <td><%= products.getSize()%></td>
-                                                <td><%= products.getProductPrice()%></td>
+                                                <td class="card-header" style="width: 200px;"><%= products.getProductsID()%></td>
+                                                <td class="card-header"  style="width: 400px;"><%= products.getProductsName()%></td>
+                                                <td class="card-header" style="width: 200px;"> <%= products.getGender()%></td>                                            
+                                                <td class="card-header"><%= products.getProductPrice()%></td>
+
+
+
+                                                <td> <form action ="./AdminController" method="GET">
+                                                        <input name="action" value="delete" type="hidden">
+                                                        <input name="nameProduct" value="<%= products.getProductsName()%>" type="hidden">
+                                                        <input name="categoryID" value="<%= products.getCategoryId()%>" type="hidden">
+                                                        <input name="storageID" value="<%= products.getStorageId()%>" type="hidden">
+                                                        <input type="submit" value="delete">
+                                                    </form></td>  
 
 
 
