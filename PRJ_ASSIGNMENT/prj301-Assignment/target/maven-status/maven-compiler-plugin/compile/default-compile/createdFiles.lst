@@ -16,8 +16,11 @@ Model\CartItem\CartItemDAO.class
 Model\CartItem\CartItemDTO.class
 Model\Customters\CustomersDAO.class
 Model\Feedback\FeedbackDTO.class
+<<<<<<< Updated upstream
 Controller\CartController.class
 Model\Cart\CartDAO.class
+=======
+>>>>>>> Stashed changes
 Model\Products\ProductsDTO.class
 Model\Category\CategoryDTO.class
 Model\Storage\StorageDTO.class
