@@ -79,65 +79,67 @@
                                                     <h5>Add product</h5>
                                                 </div>
                                                 <div class="card-block">
-                                                    <form class="form-material">
+                                                    <form method="Get" action="./AdminController" class="form-material">
+                                                        <input type="hidden" name="action" value="insert"  />
                                                         <div class="form-group form-default">
-                                                            <input type="text" name="footer-email" class="form-control">
-                                                            <span class="form-bar"></span>
-                                                            <label class="float-label">ProductID</label>
-                                                        </div>
-                                                        <div class="form-group form-default">
-                                                            <input type="text" name="footer-email" class="form-control">
+                                                            <input type="text" name="ProductName" class="form-control">
                                                             <span class="form-bar"></span>
                                                             <label class="float-label">ProductName</label>
                                                         </div>
                                                         <div class="form-group form-default">
-                                                            <input type="text" name="footer-email" class="form-control">
+                                                            <select name="Gender"   >
+                                                                <option value="Men">Men</option>
+                                                                <option value="Women">Women</option>
+                                                            </select>
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">Gender</label>
+
                                                         </div>
                                                         <div class="form-group form-default">
-                                                            <input type="text" name="footer-email" class="form-control">
+                                                            <select  name="Size" >
+                                                                <option value="S">S</option>
+                                                                <option value="M">M</option>
+                                                                <option value="L">L</option>
+                                                                <option value="XL">XL</option>
+                                                            </select>
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">Collections</label>
+                                                        </div>
+                                                        <div class="form-group form-default">
+                                                            <input type="text" name="Color" class="form-control">
+                                                            <span class="form-bar"></span>
+                                                            <label class="float-label">Color</label>
+                                                        </div>
+                                                        <div class="form-group form-default">
+                                                            <input type="text" name="Img" class="form-control">
+                                                            <span class="form-bar"></span>
+                                                            <label class="float-label">Img</label>
                                                         </div>
 
                                                         <div class="form-group form-default">
-                                                            <input type="password" name="footer-email" class="form-control">
-                                                            <span class="form-bar"></span>
-                                                            <label class="float-label">Size</label>
-                                                        </div>
-                                                        <div class="form-group form-default">
-                                                            <input type="text" name="footer-email" class="form-control">
+                                                            <input type="text" name="ProductPrice" class="form-control">
                                                             <span class="form-bar"></span>
                                                             <label class="float-label">ProductPrice</label>
                                                         </div> 
                                                         <div class="form-group form-default">
-                                                            <input type="text" name="footer-email" class="form-control"
-                                                                   disabled>
+                                                            <input type="text" name="Collections" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">AvailableQuantity</label>
+                                                            <label class="float-label">Collections</label>
                                                         </div>
                                                         <div class="form-group form-default">
-                                                            <input type="text" name="footer-email" class="form-control"
-                                                                   maxlength="6">
-                                                            <span class="form-bar"></span>
-                                                            <label class="float-label">StorageID</label>
-                                                        </div>
-                                                        <div class="form-group form-default">
-                                                            <textarea class="form-control"></textarea>
+                                                            <input type="text" name="CategoryName" class="form-control">
                                                             <span class="form-bar"></span>
                                                             <label class="float-label">CategoryName</label>
                                                         </div>
                                                         <div class="form-group form-default">
-                                                            <textarea class="form-control"></textarea>
+                                                            <input type="text" name="AvailableQuantity" class="form-control">
                                                             <span class="form-bar"></span>
-                                                            <label class="float-label">Img</label>
+                                                            <label class="float-label">AvailableQuantity</label>
                                                         </div>
                                                         <div class="form-group form-default">
-                                                            <textarea class="form-control"></textarea>
+                                                            <input type="text" name="Descriptions" class="form-control">
                                                             <span class="form-bar"></span>
                                                             <label class="float-label">Descriptions</label>
                                                         </div>
+
                                                         <input  class="form-submit" type="submit" value="save">
                                                     </form>
                                                 </div>
@@ -249,7 +251,7 @@
 
                                                 for (ProductsDTO products : list) {
 //                                                      
-%>
+                                            %>
 
                                             <tr>
                                                 <td><%= products.getProductsID()%></td>
