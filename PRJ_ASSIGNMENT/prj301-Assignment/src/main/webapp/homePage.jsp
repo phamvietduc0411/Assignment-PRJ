@@ -20,6 +20,7 @@
         <!-- script
           ================================================== -->
         <script src="js/modernizr.js"></script>
+
     </head>
 
     <body>
@@ -32,11 +33,11 @@
         
         
         <header id="header">
-            <form action="./PageController" method="GET">
-                <input name="action" value="search" hidden>
-                <input type="text" name="keyword" >
-                <button type="submit" value="Search">Search</button>
-            </form>
+            <form action="./PageController" method="GET" >
+    <input name="action" value="search" hidden>
+    <input type="text" name="keyword">
+    <button type="submit" value="Search">Search</button>
+</form>
             <div id="header-wrap">
                 
                 <nav class="primary-nav padding-small">
@@ -85,7 +86,7 @@
                                                     class="item-anchor" data-effect="Contact" target="_blank"> <b>GET PRO</b> </a></li>
                                             <!--logout customer-->     
                                             <li><a
-                                                    href="./PageController?action=loguot"
+                                                    href="./PageController?action=logout"
                                                     class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b> </a></li>        
 
 
@@ -99,6 +100,7 @@
                 </nav>
             </div>
         </header>
+
 
         <section id="billboard" class="overflow-hidden">
 
