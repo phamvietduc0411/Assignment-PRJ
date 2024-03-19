@@ -59,80 +59,81 @@ public class ProductsDAO {
     }
 
     public List<ProductsDTO> collection(String nameCollection, String gender) {
-        
-            List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
-            ProductsDTO collection = null;
-            try {
-                Connection con = DBUtils.getConnection();
 
-                String sql = " SELECT ProductsID , ProductsName , Gender , Size ,Color ,ProductPrice , Img "
-                        + "FROM Products "
-                        + "INNER JOIN Category ON Products.CategoryId = Category.CategoryID "
-                        + "WHERE Collections = ? AND Gender = ?  AND Size = 'M' ";
+        List<ProductsDTO> listCollection = new ArrayList<ProductsDTO>();
+        ProductsDTO collection = null;
+        try {
+            Connection con = DBUtils.getConnection();
 
-                PreparedStatement stm = con.prepareStatement(sql);
+            String sql = " SELECT ProductsID , ProductsName , Gender , Size ,Color ,ProductPrice , Img "
+                    + "FROM Products "
+                    + "INNER JOIN Category ON Products.CategoryId = Category.CategoryID "
+                    + "WHERE Collections = ? AND Gender = ?  AND Size = 'M' ";
 
-                stm.setString(1, nameCollection);
-                stm.setString(2, gender);
+            PreparedStatement stm = con.prepareStatement(sql);
 
-                ResultSet rs = stm.executeQuery();
+            stm.setString(1, nameCollection);
+            stm.setString(2, gender);
 
-                if (rs != null) {
-                    while (rs.next()) {
-                        collection = new ProductsDTO();
-                        collection.setProductsID(rs.getInt("ProductsID"));
-                        collection.setProductsName(rs.getString("ProductsName"));
-                        collection.setGender(rs.getString("Gender"));
-                        collection.setSize(rs.getString("Size"));
-                        collection.setColor(rs.getString("Color"));
-                        collection.setProductPrice(rs.getFloat("ProductPrice"));
-                        collection.setImg(rs.getString("Img"));
+            ResultSet rs = stm.executeQuery();
 
-                        listCollection.add(collection);
-                    }
+            if (rs != null) {
+                while (rs.next()) {
+                    collection = new ProductsDTO();
+                    collection.setProductsID(rs.getInt("ProductsID"));
+                    collection.setProductsName(rs.getString("ProductsName"));
+                    collection.setGender(rs.getString("Gender"));
+                    collection.setSize(rs.getString("Size"));
+                    collection.setColor(rs.getString("Color"));
+                    collection.setProductPrice(rs.getFloat("ProductPrice"));
+                    collection.setImg(rs.getString("Img"));
+
+                    listCollection.add(collection);
                 }
-                con.close();
+            }
+            con.close();
 
-                
-            
         } catch (Exception e) {
-            System.out.println("ERROR  SQL WHEN QUERY COLLECTION" +  e.getMessage());
+            System.out.println("ERROR  SQL WHEN QUERY COLLECTION" + e.getMessage());
             e.printStackTrace();
         }
         return listCollection;
-        }
-    
+    }
 
-    public List<ProductsDTO> SearchProByName(String ProductsName) {
-
+    public List<ProductsDTO> SearchProByName(String keyword) {
+        List<ProductsDTO> list = new ArrayList<ProductsDTO>();
+        ProductsDTO product = null;
         try {
-            Connection con = null;
-            PreparedStatement stm = null;
-            ResultSet rs = null;
-            List<ProductsDTO> result = null;
-            con = DBUtils.getConnection();
+            Connection con = con = DBUtils.getConnection();
+
             String sql = "SELECT ProductsID, ProductsName, Gender, Size, Color, ProductPrice, Img "
                     + "FROM Products "
-                    + "WHERE ProductsName LIKE ?";
-            stm = con.prepareStatement(sql);
-            stm.setString(1, "%" + ProductsName + "%");
-            rs = stm.executeQuery();
+                    + "WHERE ProductsName LIKE  ?  AND Size = 'M'  ";
+
+            PreparedStatement stm = con.prepareStatement(sql);
+
+            stm.setString(1, "%" + keyword + "%");
+            
+            ResultSet rs = stm.executeQuery();
             while (rs.next()) {
-                if (result == null) {
-                    result = new ArrayList<ProductsDTO>();
-                }
+               
                 ProductsDTO dto = new ProductsDTO();
                 dto.setProductsID(rs.getInt("ProductsID"));
-                dto.setProductsName("ProductsName");
-                dto.setGender("Gender");
-                dto.setSize("Size");
-                dto.setColor("Color");
+                dto.setProductsName(rs.getString("ProductsName"));
+                dto.setGender(rs.getString("Gender"));
+                dto.setSize(rs.getString("Size"));
+                dto.setColor(rs.getString("Color"));
                 dto.setProductPrice(rs.getFloat("ProductPrice"));
+                dto.setImg(rs.getString("Img"));
+                
+                list.add(dto);
 
             }
         } catch (Exception e) {
+            System.out.println("ERROR IN SQL WHEN SEARCH" +  e.getMessage());
+            e.printStackTrace();
         }
-        return null;
+        return list;
 
     }
 }

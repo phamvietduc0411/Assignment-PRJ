@@ -32,9 +32,9 @@
         
         
         <header id="header">
-            <form action="PageController" method="GET">
+            <form action="./PageController" method="GET">
                 <input name="action" value="search" hidden>
-                <input type="text" name="searching" value="${resultSearching}">
+                <input type="text" name="keyword" >
                 <button type="submit" value="Search">Search</button>
             </form>
             <div id="header-wrap">
@@ -115,7 +115,7 @@
                                         <h2 class="banner-title" style="color: wheat">Summer Collection</h2>
                                         <p>Welcome to Z-stalk! Discover style, comfort, and endless fashion possibilities. Step in, explore, and let your fashion journey begin. Happy shopping!</p>
                                         <div class="btn-wrap">
-                                            <a href="shop.html" class="btn btn-light btn-medium d-flex align-items-center" tabindex="0">Shop it
+                                            <a href="./PageController?action=collection" class="btn btn-light btn-medium d-flex align-items-center" tabindex="0">Shop it
                                                 now <i class="icon icon-arrow-io"></i>
                                             </a>
                                         </div>
@@ -133,7 +133,7 @@
                                         <h2 class="banner-title" style="color: cadetblue">Autumn Collection</h2>
                                         <p>Welcome to Z-stalk's Autumn Collection! Explore cozy sweaters, chic outerwear, and more. Embrace the essence of fall in style with us!</p>
                                         <div class="btn-wrap">
-                                            <a href="shop.html" class="btn btn-light btn-light-arrow btn-medium d-flex align-items-center"
+                                            <a href="./PageController?action=collection" class="btn btn-light btn-light-arrow btn-medium d-flex align-items-center"
                                                tabindex="0">Shop it now <i class="icon icon-arrow-io"></i>
                                             </a>
                                         </div>
