@@ -50,11 +50,7 @@
                                     <div class="col-md-6">
                                         <h2 class="banner-title" style="color: wheat">Summer Collection</h2>
                                         <p>Welcome to Z-stalk! Discover style, comfort, and endless fashion possibilities. Step in, explore, and let your fashion journey begin. Happy shopping!</p>
-                                        <div class="btn-wrap">
-                                            <a href="shop.html" class="btn btn-light btn-medium d-flex align-items-center" tabindex="0">Shop it
-                                                now <i class="icon icon-arrow-io"></i>
-                                            </a>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -68,11 +64,6 @@
                                     <div class="col-md-6">
                                         <h2 class="banner-title" style="color: cadetblue">Autumn Collection</h2>
                                         <p>Welcome to Z-stalk's Autumn Collection! Explore cozy sweaters, chic outerwear, and more. Embrace the essence of fall in style with us!</p>
-                                        <div class="btn-wrap">
-                                            <a href="shop.html" class="btn btn-light btn-light-arrow btn-medium d-flex align-items-center"
-                                               tabindex="0">Shop it now <i class="icon icon-arrow-io"></i>
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -384,7 +375,7 @@
             <li data-tab-target="#Spring" class="active tab">Spring</li>
             <li data-tab-target="#Summer" class="tab">Summer</li>
             <li data-tab-target="#Winter" class="tab">Winter</li>
-            <li data-tab-target="#Autmn" class="tab">Autumn</li>
+            <li data-tab-target="#Autumn" class="tab">Autumn</li>
         </ul>
         <div class="tab-content">
             <div id="Spring" data-tab-content class="active">
@@ -490,7 +481,7 @@
         </div>
     </div>
 
-    <div id="Autunm" data-tab-content>
+    <div id="Autumn" data-tab-content>
 
         <div class="container">
             <%
@@ -730,7 +721,6 @@
     </div>
 </section>
 
-<hr>
 
 
 <section id="shipping-information">

@@ -68,10 +68,10 @@ public class PageController extends HttpServlet {
                 List<ProductsDTO> menCollectionWinter = productDAO.collection("Winter", "Men");
 
                 List<ProductsDTO> womenCollectionSummer = productDAO.collection("Summer", "Women");
-                List<ProductsDTO>womenCollectionAutumn = productDAO.collection("Autumn", "Women");
+                List<ProductsDTO> womenCollectionAutumn = productDAO.collection("Autumn", "Women");
                 List<ProductsDTO> womenCollectionSpring = productDAO.collection("Spring", "Women");
                 List<ProductsDTO> womenCollectionWinter = productDAO.collection("Winter", "Women");
-                
+
                 request.setAttribute("menCollectionSummer", menCollectionSummer);
                 request.setAttribute("menCollectionAutumn", menCollectionAutumn);
                 request.setAttribute("menCollectionSpring", menCollectionSpring);
@@ -83,16 +83,16 @@ public class PageController extends HttpServlet {
                 request.setAttribute("womenCollectionWinter", womenCollectionWinter);
 
                 request.getRequestDispatcher("collection.jsp").forward(request, response);
-            } else if (action != null && action.equals("search")) {
-                String searching = request.getParameter("searching");
+            } else if (action.equals("search")) {
+                String keyword = request.getParameter("keyword");
 
                 ProductsDAO productsDAO = new ProductsDAO();
-                List<ProductsDTO> productsList = productsDAO.SearchProByName(searching);
-                request.setAttribute("productsList", productsList);
-                request.setAttribute("resultSearching", searching);
+                List<ProductsDTO> result = productsDAO.SearchProByName(keyword);
+                request.setAttribute("result", result);
+
                 request.getRequestDispatcher("searchingproducts.jsp").forward(request, response);
             }
-                
+
         }
     }
 

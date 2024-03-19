@@ -37,12 +37,13 @@
                 <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
                     <h2 class="section-title">Product You looking for</h2>
                 </div>
-                    <div class="product-item col-lg-3 col-md-4 col-sm-4">
-                        
+                                        <% List<ProductsDTO> result = (List<ProductsDTO>)request.getAttribute("result");
+                        for (ProductsDTO product: result) {                     
+%>
+                 <div class="product-item col-lg-3 col-md-4 col-sm-1 ">
+
                         <div class="image-holder">
-
-
-                            <img src="" alt="Books" class="product-image" style="height: 400px; width: 500px; ">
+                            <img src="<%= product.getImg() %>" alt="Books" class="product-image" style="height: 400px; width: 500px;  ">
 
                         </div>
                         <div class="cart-concern">
@@ -50,25 +51,19 @@
                                 <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
                                         class="icon icon-arrow-io"></i>
                                 </button>
-                                <button type="button" class="view-btn tooltip
-                                        d-flex">
-                                    <i class="icon icon-screen-full"></i>
-                                    <span class="tooltip-text">Quick view</span>
-                                </button>
-                                <button type="button" class="wishlist-btn">
-                                    <i class="icon icon-heart"></i>
-                                </button>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <h3 class="product-title">
-                                <a href="single-product.html">Boxy-fit short sleeve print T-shirt</a>
+                            <h3 class="product-title" style=" height: 100px; width: 100%; ">
+                                <a href="single-product.html"><%= product.getProductsName() %></a>
                             </h3>
-                            <div class="item-price text-primary">$25.00</div>
+                            <div class="item-price text-primary">$<%= product.getProductPrice() %></div>
                         </div>
+                           
                     </div>
-                            
+                     <%}%>     
             </div>
+                       
                     
                     </section>
 
