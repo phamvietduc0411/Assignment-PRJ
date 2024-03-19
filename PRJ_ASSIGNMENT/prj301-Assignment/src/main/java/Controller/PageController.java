@@ -15,10 +15,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -91,6 +93,14 @@ public class PageController extends HttpServlet {
                 request.setAttribute("result", result);
 
                 request.getRequestDispatcher("searchingproducts.jsp").forward(request, response);
+//            } if (action.equals("logout")) {
+//                HttpSession session = request.getSession(false);
+//                if (session != null) {
+//                    session.invalidate();
+//                    request.setAttribute("error", "Logout successfully!");
+//                    RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+//                    rd.forward(request, response);
+//                }
             }
 
         }

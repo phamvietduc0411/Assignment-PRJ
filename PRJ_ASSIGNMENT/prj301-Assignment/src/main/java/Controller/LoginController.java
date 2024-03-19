@@ -76,7 +76,7 @@ public class LoginController extends HttpServlet {
                 HttpSession session = request.getSession(false);
                 if (session != null) {
                     session.invalidate();
-                    request.setAttribute("error", "Logout successfully");
+                    request.setAttribute("error", "Logout successfully!");
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
                 }
