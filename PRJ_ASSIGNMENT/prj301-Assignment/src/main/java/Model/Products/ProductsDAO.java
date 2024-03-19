@@ -21,6 +21,7 @@ import Model.Storage.StorageDTO;
  * @author HP
  */
 public class ProductsDAO {
+    
 
     public List<ProductsDTO> viewAllProduct() {
         List<ProductsDTO> list = new ArrayList<ProductsDTO>();
@@ -30,7 +31,7 @@ public class ProductsDAO {
 
             Connection con = DBUtils.getConnection();
 
-            String sql = " SELECT ProductsID , ProductsName , Gender , Size , Color , ProductPrice FROM Products ";
+            String sql = " SELECT ProductsID , ProductsName , Gender , Size , Color , ProductPrice ,StorageId,CategoryId FROM Products WHERE Size = 'M' ";
 
             PreparedStatement stm = con.prepareStatement(sql);
 
@@ -46,7 +47,8 @@ public class ProductsDAO {
                     product.setSize(rs.getString("Size"));
                     product.setColor(rs.getString("Color"));
                     product.setProductPrice(rs.getFloat("ProductPrice"));
-
+                    product.setStorageId(rs.getInt("StorageId"));
+                    product.setCategoryId(rs.getInt("CategoryId"));
                     list.add(product);
                 }
             }
@@ -215,5 +217,17 @@ public class ProductsDAO {
             ex.printStackTrace();
         }
 
+    }
+    
+    public void delete(String productName){
+    
+        try {
+            Connection con = DBUtils.getConnection();
+            
+            String sql = "";
+            
+        } catch (Exception e) {
+        }
+        
     }
 }
