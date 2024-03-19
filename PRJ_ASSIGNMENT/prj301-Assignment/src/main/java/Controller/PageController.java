@@ -7,6 +7,8 @@ package Controller;
 
 import Model.Category.CategoryDAO;
 import Model.Category.CategoryDTO;
+import Model.Customters.CustomersDAO;
+import Model.Customters.CustomersDTO;
 import Model.Products.ProductsDAO;
 import Model.Products.ProductsDTO;
 import java.io.IOException;
@@ -101,7 +103,23 @@ public class PageController extends HttpServlet {
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
                 }
-            } else if(action.equals("addToCart")){
+                
+            } else if (action.equals("profile")) {
+                HttpSession session = request.getSession(false);
+                if (session != null && session.getAttribute("customerId") != null) {
+                    int customerId = (int) session.getAttribute("customerId");
+                    CustomersDAO customersDAO = new CustomersDAO();
+                    CustomersDTO customer = customersDAO.getCustomerProfile(customerId);
+
+                    if (customer != null) {
+                        request.setAttribute("customer", customer);
+                        request.getRequestDispatcher("profile.jsp").forward(request, response);
+                    } else {
+                        // Xử lý trường hợp không tìm thấy thông tin khách hàng
+                        response.sendRedirect("error.jsp");
+                    }
+                }
+            }else if(action.equals("addToCart")){
                 
             }
 

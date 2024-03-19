@@ -80,7 +80,7 @@
                                             </li>
                                             
                                             <li class="menu-item has-sub">
-                                                <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
+                                                <a href="./PageController?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>

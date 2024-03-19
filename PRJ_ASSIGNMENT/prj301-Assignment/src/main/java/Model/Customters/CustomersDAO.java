@@ -74,4 +74,41 @@ public class CustomersDAO {
         }
     }
     
+    public CustomersDTO getCustomerProfile(int customerID) {
+
+        CustomersDTO customer = null;
+
+        try {
+            Connection con = DBUtils.getConnection();
+
+            String sql = "SELECT * FROM Customers WHERE customerID = ?";
+
+            PreparedStatement stm = con.prepareStatement(sql);
+
+            stm.setInt(1, customerID);
+
+            ResultSet rs = stm.executeQuery();
+            if (rs != null) {
+                if (rs.next()) {
+                    customer = new CustomersDTO();
+                 
+                    customer.setCustomerID(rs.getInt("customerID"));
+                    customer.setUsername(rs.getString("username"));
+                    customer.setPassword(rs.getString("password"));
+                    customer.setCustomerName(rs.getString("CustomerName"));
+                    customer.setPhoneNumber(rs.getString("PhoneNumber"));
+                    customer.setAddress(rs.getString("Address"));
+                    customer.setGender(rs.getString("Gender"));
+                    customer.setEmail(rs.getString("Email"));
+                }
+            }
+            con.close();
+        } catch (Exception e) {
+            System.out.println("Error in SQL query WHEN fetching customer profile. Details:" + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return customer;
+    }
+    
 }
