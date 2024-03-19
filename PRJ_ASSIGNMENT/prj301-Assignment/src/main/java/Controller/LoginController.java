@@ -45,6 +45,7 @@ public class LoginController extends HttpServlet {
             String username = request.getParameter("userName");
             String password = request.getParameter("password");
             
+            
             if (action.equals("login")) {
                 ManagerDAO managerDAO = new ManagerDAO();
                 ManagerDTO manager = managerDAO.login(username, password);
@@ -69,14 +70,20 @@ public class LoginController extends HttpServlet {
                     request.setAttribute("error", "Username or password is incorrect");
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
-                }
-                
-                
-                
-
+                }  
             }
+            else if (action.equals("logout")) {
+                HttpSession session = request.getSession(false);
+                if (session != null) {
+                    session.invalidate();
+                    request.setAttribute("error", "Logout successfully");
+                    RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                    rd.forward(request, response);
+                }
+        }
         }
     }
+ 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
