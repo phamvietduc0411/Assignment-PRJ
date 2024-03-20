@@ -33,11 +33,6 @@
     </head>
     <body>
         <header id="header">
-            <form action="./PageController" method="GET">
-                <input name="action" value="search" hidden>
-                <input type="text" name="keyword" >
-                <button type="submit" value="Search">Search</button>
-            </form>
             <div id="header-wrap">
                 
                 <nav class="primary-nav padding-small">
@@ -95,9 +90,14 @@
                                             </li>        
                                         </ul>
                                     </div>
-
+                                    <form class="search-bar" action="./PageController" method="POST" style="text-align: end;">
+                                        <input name="action" value="search" hidden>
+                                        <input type="text" name="keyword" >
+                                        <button type="submit" value="Search">Search</button>
+                                    </form>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </nav>
