@@ -1,29 +1,23 @@
 Model\Payment\PaymentDTO.class
-<<<<<<< Updated upstream
-=======
-Model\Cart\itemDTO.class
 Model\Customters\CustomersDAO.class
 Model\Feedback\FeedbackDTO.class
->>>>>>> Stashed changes
 Model\OrderDetail\OrderDetailDTO.class
+Model\Cart\CartDAO.class
+Model\Orders\OrdersDAO.class
 Model\Category\CategoryDAO.class
 Model\Products\ProductsDAO.class
 Controller\SignupController.class
+Model\Products\ProductsDTO.class
 Model\Cart\CartDTO.class
+Model\Category\CategoryDTO.class
 Model\Orders\OrdersDTO.class
 Model\Discount\DiscountDTO.class
 Model\CheckOrder\CheckOrderDTO.class
 Controller\PageController.class
+Model\Storage\StorageDTO.class
 prj301demo\utils\DBUtils.class
 Model\Admin\ManagerDTO.class
 Controller\AdminController.class
-Model\Admin\ManagerDAO.class
-Model\Customters\CustomersDAO.class
-Model\Feedback\FeedbackDTO.class
-Model\Cart\CartDAO.class
-Model\Orders\OrdersDAO.class
-Model\Products\ProductsDTO.class
-Model\Category\CategoryDTO.class
-Model\Storage\StorageDTO.class
 Controller\LoginController.class
+Model\Admin\ManagerDAO.class
 Model\Customters\CustomersDTO.class

@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDAO.java
 C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Orders\OrdersDTO.java
 C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDTO.java
@@ -25,6 +26,8 @@ C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment
 C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDAO.java
 C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Orders\OrdersDAO.java
 =======
+=======
+>>>>>>> Stashed changes
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\LoginController.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\CartDTO.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\SignupController.java
@@ -35,7 +38,6 @@ D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\CartDAO.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDTO.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\prj301demo\utils\DBUtils.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\itemDTO.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDAO.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Payment\PaymentDTO.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Category\CategoryDTO.java
@@ -49,6 +51,7 @@ D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDAO.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CheckOrder\CheckOrderDTO.java
 D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Storage\StorageDTO.java
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Feedback\FeedbackDTO.java
@@ -75,4 +78,6 @@ D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customter
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Storage\StorageDTO.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\AdminController.java
 D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDAO.java
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

@@ -100,9 +100,8 @@
                     </div>
                     <div class="cart-concern">
                         <div class="cart-button d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                    class="icon icon-arrow-io"></i>
-                            </button>
+                            <a href="./PageController?action=add&productid=711700&customerid=${customer.customerID}">add to cart <i
+                                                class="icon icon-arrow-io"></i></a>
 
                         </div>
                     </div>

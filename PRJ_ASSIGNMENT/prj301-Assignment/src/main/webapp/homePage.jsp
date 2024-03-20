@@ -1,4 +1,4 @@
-
+<%@page import="Model.Products.ProductsDTO"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,9 +84,14 @@
                                             <!--logout customer-->     
                                             <li>
                                                 <a
+<<<<<<< Updated upstream
                                                     href="./PageController?action=logout"  class="item-anchor" data-effect="Contact" > <b>Logout</b>
 
 
+=======
+                                                    href="./PageController?action=logout"
+                                                    class="item-anchor" data-effect="Contact" target="_self"> <b>Logout</b>
+>>>>>>> Stashed changes
                                                 </a>
                                             </li>        
                                         </ul>
@@ -192,9 +197,8 @@
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                        <a href="./PageController?action=add&productid=&customerid=${customer.customerID}">add to cart <i
+                                                class="icon icon-arrow-io"></i></a>
                                     </div>
                                 </div>
                                 <div class="product-detail">
@@ -212,9 +216,8 @@
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                        <a href="./PageController?action=add&productid=711700&customerid=${customer.customerID}">add to cart <i
+                                                class="icon icon-arrow-io"></i></a>
                                         </button>
                                     </div>
                                 </div>
@@ -233,9 +236,8 @@
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                        <a href="./PageController?action=add&productid=711700&customerid=${customer.customerID}">add to cart <i
+                                                class="icon icon-arrow-io"></i></a>
                                     </div>
                                 </div>
                                 <div class="product-detail">

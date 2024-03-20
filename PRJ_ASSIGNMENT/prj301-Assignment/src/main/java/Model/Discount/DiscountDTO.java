@@ -12,32 +12,32 @@ import java.math.BigDecimal;
  * @author Acer
  */
 public class DiscountDTO {
-    private String DiscountID;
-    private String DiscountName;
-    private BigDecimal productPrice;
+    private String discountID;
+    private String discountName;
+    private double discountPercent;
 
     public String getDiscountID() {
-        return DiscountID;
+        return discountID;
     }
 
-    public void setDiscountID(String DiscountID) {
-        this.DiscountID = DiscountID;
+    public void setDiscountID(String discountID) {
+        this.discountID = discountID;
     }
 
     public String getDiscountName() {
-        return DiscountName;
+        return discountName;
     }
 
-    public void setDiscountName(String DiscountName) {
-        this.DiscountName = DiscountName;
+    public void setDiscountName(String discountName) {
+        this.discountName = discountName;
     }
 
-    public BigDecimal getProductPrice() {
-        return productPrice;
+    public double getDiscountPercent() {
+        return discountPercent;
     }
 
-    public void setProductPrice(BigDecimal productPrice) {
-        this.productPrice = productPrice;
+    public void setDiscountPercent(double discountPercent) {
+        this.discountPercent = discountPercent;
     }
 
 }

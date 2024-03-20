@@ -103,12 +103,6 @@
                                             }
                                         }
                                     %>
-                                    <tr>
-                                        <td colspan="3"></td>
-                                        <td class="shoping__cart__total">
-                                            <h5>Total: $<%= totalPrice%></h5>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -118,7 +112,7 @@
                     <div class="col-lg-12">
                         <div class="shoping__cart__btns">
                             <a href="homePage.jsp" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
-                            <a href="./CartController?action=update" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
+                            <a href="./PageController?action=update" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
                                 Upadate Cart</a>
                         </div>
                     </div>
@@ -126,7 +120,7 @@
                         <div class="shoping__continue">
                             <div class="shoping__discount">
                                 <h5>Discount Codes</h5>
-                                <form action="./CartController?action=discount">
+                                <form action="./CartController?action=discount" method="GET">
                                     <input type="text" placeholder="Enter your coupon code">
                                     <button type="submit" class="site-btn">APPLY COUPON</button>
                                 </form>
@@ -137,8 +131,8 @@
                         <div class="shoping__checkout">
                             <h5>Cart Total</h5>
                             <ul>
-                                <li>Subtotal <span>$454.98</span></li>
-                                <li>Total <span>$454.98</span></li>
+                                <li>Subtotal <span>$<%= totalPrice%></span></li>
+                                <li>Total <span>$<%= totalPrice%></span></li>
                             </ul>
                             <a href="./CartController?action=setBill" class="primary-btn">PROCEED TO CHECKOUT</a>
                         </div>
