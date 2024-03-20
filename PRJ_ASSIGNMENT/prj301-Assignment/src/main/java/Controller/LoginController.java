@@ -50,6 +50,8 @@ public class LoginController extends HttpServlet {
             if (action.equals("login")) {
                 ProductsDAO productDAO = new ProductsDAO();
                 List<ProductsDTO> list = productDAO.viewAllProduct();
+                List<ProductsDTO> tShirtList = productDAO.findProductsByKeyword("T-Shirt");
+                 List<ProductsDTO> sweaterList = productDAO.findProductsByKeyword("sweater");
                 
                 OrdersDAO orderDAO = new OrdersDAO();
                 List<OrdersDTO> orderList = orderDAO.checkOrderAdmin();
@@ -59,13 +61,13 @@ public class LoginController extends HttpServlet {
 
                 CustomersDAO customerDAO = new CustomersDAO();
                 CustomersDTO customer = customerDAO.login(username, password);
+                
+                
                 if (manager != null) {
                     HttpSession session = request.getSession(true);
                     
                     request.setAttribute("orderList", orderList );
-
                     request.setAttribute("productlist", list);
-                    
                     
                     session.setAttribute("manager", manager);
                     RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
@@ -73,7 +75,12 @@ public class LoginController extends HttpServlet {
                 } else if (customer != null) {
                     HttpSession session = request.getSession(true);
                     session.setAttribute("customer", customer);
-                    response.sendRedirect("./homePage.jsp");
+//                     request.setAttribute("productlist", list);
+                     request.setAttribute("tShirtList", tShirtList);
+                      request.setAttribute("sweaterList", sweaterList)    ;   
+                     
+                    RequestDispatcher rd = request.getRequestDispatcher("homePage.jsp");
+                    rd.forward(request, response);
 
                 } else {
                     request.setAttribute("error", "Username or password is incorrect");
