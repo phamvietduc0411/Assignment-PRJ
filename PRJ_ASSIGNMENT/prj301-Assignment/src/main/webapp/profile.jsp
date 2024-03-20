@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Model.Customters.CustomersDTO"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -155,13 +156,13 @@
             <h1>Customer Profile</h1>
         </div>
         <div>
-            <p>Customer ID: ${customerID}</p>
+            <p>Customer ID: ${customers.customerID}</p>
         </div>
         <div>
-            <p>Username: ${username}</p>
+            <p>Username: ${customer.username}</p>
         </div>
         <div>
-            <p>Name: ${CustomerName}</p>
+            <p>Name: ${customer.CustomerName}</p>
         </div>
         <div>
             <p>Phone Number: ${customer.phoneNumber}</p>

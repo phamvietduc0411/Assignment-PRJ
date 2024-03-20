@@ -104,17 +104,17 @@ public class PageController extends HttpServlet {
                     rd.forward(request, response);
                 }
                 
-            } else if (action.equals("profile")){
-               int customerId = (int) request.getSession().getAttribute("customerId");
-               CustomersDAO customersDAO = new CustomersDAO();
-               CustomersDTO customers = customersDAO.getCustomerProfile(customerId);               
-               request.setAttribute("customers", customers);
-               
-               request.getRequestDispatcher("profile.jsp").forward(request, response);
-                
-                
-                
-                
+//             else if (action.equals("profile")){
+//               int customerId = (int) request.getSession().getAttribute("customerId");
+//               CustomersDAO customersDAO = new CustomersDAO();
+//               CustomersDTO customers = customersDAO.getCustomerProfile(customerId);               
+//               request.setAttribute("customers", customers);
+//               
+//               request.getRequestDispatcher("profile.jsp").forward(request, response);
+//                
+//                
+//                
+//                
             }else if(action.equals("addToCart")){
                 
             }
