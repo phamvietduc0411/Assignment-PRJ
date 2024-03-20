@@ -1,3 +1,4 @@
+<%@page import="Model.Products.ProductsDTO"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,36 +19,32 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-5 ftco-animate">
-                        <img src="${requestScope.category.img}" class="img-fluid" alt="Colorlib Template"></a>
+                        <% ProductsDTO products = (ProductsDTO) request.getAttribute("productDetail"); %>
+                        <img src="<%=products.getImg() %>" class="img-fluid" alt="Colorlib Template"></a>
                     </div>
                     <div class="col-lg-6 product-details pl-md-5 ftco-animate">
-                        <h3 style="color: #000;">${requestScope.category.categoryName}</h3>
-                        <p class="price"><span>$120.00</span></p>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It
-                            is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                        <p>On her way she met a copy. The copy warned the Little Blind t, that where it came from it
-                            would have been rewritten a thousand times and everything that was left from its origin would be
-            .
-                        </p>
+                        <h3 style="color: #000;"><%=products.getProductsName() %></h3>
+                        <p class="price"><span>$<%=products.getProductPrice() %></span></p>
+      
                         <div class="row mt-4">
                             <div class="col-md-6">
                                 <div class="form-group d-flex">
                                     <div class="select-rap">
 
                                         <select name="" id="" class="form-control">
-                                            <option value="">${requestScope.p.size}</option>
-                                            <option value="">Medium</option>
-                                            <option value="">Large</option>
-                                            <option value="">Extra Large</option>
+                                            <option value="">S</option>
+                                            <option value="">M</option>
+                                            <option value="">L</option>
+                                            <option value="">XL</option>
                                         </select>
                                     </div>
                                     <div class="select-wrap">
 
                                         <select name="" id="" class="form-control">
-                                            <option value="">Small</option>
-                                            <option value="">Medium</option>
-                                            <option value="">Large</option>
-                                            <option value="">Extra Large</option>
+                                            <option value="">Red</option>
+                                            <option value="">Black</option>
+                                            <option value="">White</option>
+                                            <option value="">Yellow</option>
                                         </select>
                                     </div>
                                 </div>
@@ -63,11 +60,10 @@
                             </div>
                             <div class="w-100"></div>
                             <div class="col-md-12">
-                                <p style="color: #000;">80 piece available</p>
+<!--                                <p style="color: #000;">80 piece available</p>-->
                             </div>
                         </div>
-                        <p><a href="cart.html" class="btn btn-black py-3 px-5 mr-2">Add to Cart</a><a href="cart.html"
-                                                                                                      class="btn btn-primary py-3 px-5">Buy now</a></p>
+                        <p><a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}  x" class="btn btn-black py-3 px-5 mr-2">Add to Cart</a></p>
                     </div>
                 </div>
                 <div class="row mt-5">
@@ -84,7 +80,7 @@
                                            <div class="section-header d-flex flex-wrap align-items-center justify-content-between">
                                                <h2 class="section-title">Recommended Product</h2>
                                                <div class="btn-wrap">
-                                                   <a href="shop.html" class="d-flex align-items-center">View all products <i
+                                                   <a href="./PageController?action=view" class="d-flex align-items-center">View all products <i
                                                            class="icon icon icon-arrow-io"></i></a>
                                                </div>
                                            </div>
@@ -217,6 +213,9 @@
             </div>
         </div>
     </section>
+                    
+                    
+                    <jsp:include page="/footer.jsp" flush="true" />
 
 
     <script src="js/jquery.min.js"></script>

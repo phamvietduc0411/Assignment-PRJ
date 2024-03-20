@@ -108,7 +108,7 @@
                     </div>
                     <div class="product-detail">
                         <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                            <a href="single-product.html"><%= products.getProductsName()%></a>
+                            <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                         </h3>
                         <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                     </div>
@@ -140,26 +140,26 @@
                     <div class="col-lg-5 col-md-12 right-content flex-wrap">
                         <div class="collection-item top-item">
                             <div class="products-thumb">
-                                <img src="images/homepage/collection-item2.jpg" alt="collection item" class="small-image image-rounded">
+                                <img src="images/homepage/main-banner.jpg" alt="collection item" class="small-image image-rounded">
                             </div>
                             <div class="col-md-6 product-entry">
                                 <div class="categories">Basic Collection</div>
-                                <h3 class="item-title">Basic shoes.</h3>
+                                <h3 class="item-title">Basic </h3>
                                 <div class="btn-wrap">
-                                    <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                                    <a href="#" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="collection-item bottom-item">
                             <div class="products-thumb">
-                                <img src="images/homepage/collection-item3.jpg" alt="collection item" class="small-image image-rounded">
+                                <img src="images/homepage/post-img6.jpg" alt="collection item" class="small-image image-rounded">
                             </div>
                             <div class="col-md-6 product-entry">
                                 <div class="categories">Best Selling Product</div>
-                                <h3 class="item-title">woolen hat.</h3>
+                                <h3 class="item-title" style="color: white;">woolen hat.</h3>
                                 <div class="btn-wrap">
-                                    <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                                    <a href="#" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
                                     </a>
                                 </div>
                             </div>
@@ -181,10 +181,7 @@
                     <li data-tab-target="#shoes" class="tab">Summer</li>
                     <li data-tab-target="#tshirts" class="tab">Winter</li>
                     <li data-tab-target="#Autunm" class="tab">Autunm</li>
-                    <!--                    <li data-tab-target="#hoodie" class="tab">Hoodie</li>
-                                        <li data-tab-target="#outer" class="tab">Sweater</li>
-                                        <li data-tab-target="#jackets" class="tab">Pants</li>
-                                        <li data-tab-target="#accessories" class="tab">Short</li>-->
+             
                 </ul>
                 <div class="tab-content">
                     <div id="all" data-tab-content class="active">
@@ -202,15 +199,14 @@
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                        <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
+                                    class="icon icon-arrow-io"></i></a>
 
                                     </div>
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                                        <a href="single-product.html"><%= products.getProductsName()%></a>
+                                        <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                                     </h3>
                                     <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                                 </div>
@@ -235,15 +231,14 @@
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                        <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
+                                    class="icon icon-arrow-io"></i></a>
 
                                     </div>
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                                        <a href="single-product.html"><%= products.getProductsName()%></a>
+                                        <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                                     </h3>
                                     <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                                 </div>
@@ -269,15 +264,14 @@
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                        <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
+                                    class="icon icon-arrow-io"></i></a>
 
                                     </div>
                                 </div>
                                 <div class="product-detail">
                                     <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                                        <a href="single-product.html"><%= products.getProductsName()%></a>
+                                        <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                                     </h3>
                                     <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                                 </div>
@@ -306,15 +300,14 @@
                         </div>
                         <div class="cart-concern">
                             <div class="cart-button d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                        class="icon icon-arrow-io"></i>
-                                </button>
+                                <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
+                                    class="icon icon-arrow-io"></i></a>
 
                             </div>
                         </div>
                         <div class="product-detail">
                             <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                                <a href="single-product.html"><%= products.getProductsName()%></a>
+                                <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                             </h3>
                             <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                         </div>
@@ -393,15 +386,14 @@
                         </div>
                         <div class="cart-concern">
                             <div class="cart-button d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                        class="icon icon-arrow-io"></i>
-                                </button>
+                                <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
+                                    class="icon icon-arrow-io"></i></a>
 
                             </div>
                         </div>
                         <div class="product-detail">
                             <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                                <a href="single-product.html"><%= products.getProductsName()%></a>
+                                <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                             </h3>
                             <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                         </div>
@@ -426,15 +418,14 @@
                         </div>
                         <div class="cart-concern">
                             <div class="cart-button d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                        class="icon icon-arrow-io"></i>
-                                </button>
+                                <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
+                                    class="icon icon-arrow-io"></i></a>
 
                             </div>
                         </div>
                         <div class="product-detail">
                             <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                                <a href="single-product.html"><%= products.getProductsName()%></a>
+                                <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                             </h3>
                             <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                         </div>
@@ -460,15 +451,14 @@
                         </div>
                         <div class="cart-concern">
                             <div class="cart-button d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                        class="icon icon-arrow-io"></i>
-                                </button>
+                              <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
+                                    class="icon icon-arrow-io"></i></a>
 
                             </div>
                         </div>
                         <div class="product-detail">
                             <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                                <a href="single-product.html"><%= products.getProductsName()%></a>
+                                <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                             </h3>
                             <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                         </div>
@@ -497,15 +487,14 @@
                 </div>
                 <div class="cart-concern">
                     <div class="cart-button d-flex justify-content-between align-items-center">
-                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                class="icon icon-arrow-io"></i>
-                        </button>
+                        <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
+                                    class="icon icon-arrow-io"></i></a>
 
                     </div>
                 </div>
                 <div class="product-detail">
                     <h3 class="product-title" style=" height: 100px; width: 100%; ">
-                        <a href="single-product.html"><%= products.getProductsName()%></a>
+                        <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                     </h3>
                     <div class="item-price text-primary">$ <%= products.getProductPrice()%></div>
                 </div>
@@ -546,18 +535,13 @@
                                 </button>
                                 <button type="button" class="view-btn tooltip
                                         d-flex">
-                                    <i class="icon icon-screen-full"></i>
-                                    <span class="tooltip-text">Quick view</span>
-                                </button>
-                                <button type="button" class="wishlist-btn">
-                                    <i class="icon icon-heart"></i>
-                                </button>
+                                   
                             </div>
                         </div>
                         <div class="discount">10% Off</div>
                         <div class="product-detail">
                             <h3 class="product-title">
-                                <a href="single-product.html">Full sleeve cover shirt</a>
+                                <a href="">Full sleeve cover shirt</a>
                             </h3>
                             <div class="item-price text-primary">
                                 <del class="prev-price">$50.00</del>$40.00

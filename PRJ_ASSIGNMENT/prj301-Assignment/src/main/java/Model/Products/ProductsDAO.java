@@ -61,6 +61,50 @@ public class ProductsDAO {
         return list;
     }
     
+    
+    public ProductsDTO productDetails(String productid) {
+        
+        ProductsDTO product = null;
+
+        try {
+
+            Connection con = DBUtils.getConnection();
+
+            String sql = " SELECT ProductsID , ProductsName , Gender , Size,Img , Color , ProductPrice ,StorageId,CategoryId FROM Products WHERE ProductsID = ?  ";
+
+            PreparedStatement stm = con.prepareStatement(sql);
+
+            stm.setString(1, productid);
+            ResultSet rs = stm.executeQuery();
+            
+            
+
+            if (rs != null) {
+
+                while (rs.next()) {
+                    product = new ProductsDTO();
+                    product.setProductsID(rs.getInt("ProductsID"));
+                    product.setProductsName(rs.getString("ProductsName"));
+                    product.setGender(rs.getString("Gender"));
+                    product.setSize(rs.getString("Size"));
+                    product.setColor(rs.getString("Color"));
+                    product.setProductPrice(rs.getFloat("ProductPrice"));
+                    product.setStorageId(rs.getInt("StorageId"));
+                    product.setCategoryId(rs.getInt("CategoryId"));
+                    product.setImg(rs.getString("Img"));
+                   
+                }
+            }
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println("ERROR IN SQL PRODUCTDAO" + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return product;
+    }
+    
 public List<ProductsDTO> findProductsByKeyword(String keyword) {
     List<ProductsDTO> productList = new ArrayList<>();
 

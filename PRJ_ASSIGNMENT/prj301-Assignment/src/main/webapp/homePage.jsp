@@ -66,12 +66,6 @@
 
                                             <li>
                                                 <a 
-                                                    href="about.jsp" class="item-anchor" data-effect="About">About
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a 
                                                     href="./PageController?action=load&customerid=${customer.customerID}" class="item-anchor" data-effect="Contact">Cart
                                                 </a>
                                             </li>
@@ -185,7 +179,7 @@
                     </div>
                     <div class="product-detail">
                         <h3 class="product-title">
-                            <a href="PageController?action=productDetails&CategoryID=<%= products.getCategoryId()%>"><%= products.getProductsName()%></a>
+                            <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                         </h3>
                         <div class="item-price text-primary">$50.00</div>
                     </div>
@@ -224,13 +218,13 @@
             <div class="col-lg-5 col-md-12 right-content flex-wrap">
                 <div class="collection-item top-item">
                     <div class="products-thumb">
-                        <img src="images/homepage/collection-item2.jpg" alt="collection item" class="small-image image-rounded">
+                        <img src="images/homepage/banner-image3.jpg" alt="collection item" class="small-image image-rounded">
                     </div>
                     <div class="col-md-6 product-entry">
                         <div class="categories">Basic Collection</div>
                         <h3 class="item-title">Basic shoes.</h3>
                         <div class="btn-wrap">
-                            <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                            <a href="shop.html" class="d-flex align-items-center"> Coming soon<i class="icon icon-arrow-io"></i>
                             </a>
                         </div>
                     </div>
@@ -243,7 +237,7 @@
                         <div class="categories">Best Selling Product</div>
                         <h3 class="item-title">woolen hat.</h3>
                         <div class="btn-wrap">
-                            <a href="shop.html" class="d-flex align-items-center">shop collection <i class="icon icon-arrow-io"></i>
+                            <a href="#" class="d-flex align-items-center">Coming soon <i class="icon icon-arrow-io"></i>
                             </a>
                         </div>
                     </div>
@@ -285,7 +279,7 @@
             </div>
             <div class="product-detail">
                 <h3 class="product-title">
-                    <a href="PageController?action=productDetails&CategoryID=<%= products.getCategoryId()%>"><%= products.getProductsName()%></a>
+                    <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                 </h3>
                 <div class="item-price text-primary">$50.00</div>
             </div>

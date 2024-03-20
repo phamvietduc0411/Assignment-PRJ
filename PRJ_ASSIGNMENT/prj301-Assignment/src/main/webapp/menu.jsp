@@ -9,7 +9,7 @@
                         <div class="row d-flex align-items-center">
                             <div class="col-lg-2 col-md-2">
                                 <div class="main-logo">
-                                    <a href="homePage.jsp">
+                                    <a href="./PageController?action=home">
                                         <img src="images/logo.png" alt="logo">
                                     </a>
                                 </div>
@@ -32,11 +32,7 @@
                                                 </a>
                                             </li>
                                             
-                                            <li>
-                                                <a 
-                                                    href="about.jsp" class="item-anchor" data-effect="About">About
-                                                </a>
-                                            </li>
+                                           
 
                                             <li>
                                                 <a 

@@ -19,7 +19,7 @@ and open the template in the editor.
         <!-- ===============================================-->
         <!--    Document Title-->
         <!-- ===============================================-->
-        <title>Display Product</title>
+        <title>All Product</title>
 
         <!-- ===============================================-->
         <!--    Favicons-->
@@ -85,9 +85,83 @@ and open the template in the editor.
                                     <div class="col-sm-6 col-md-3 mb-4 mb-md-0 h-100">
 
                                         <img class="img-fluid h-100 w-100 product-image" style="width: 350px !important; height: 400px !important;" src="<%= products.getImg()%>" alt="." />
-                                        <div class="card-img-overlay ps-0"> </div>
+                                    
                                         <div class="card-body ps-0 bg-200">
-                                            <h3 class="fw-bold text-1000 text-truncate"><%= products.getProductsName()%></h3>
+                                               <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
+                                            <div class="fw-bold">
+
+                                                <span class="text-primary">$<%= products.getProductPrice()%></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <% }%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-0">
+            <div class="container">
+                <div class="row h-100">
+                    <div class="col-lg-7 mx-auto text-center mt-7 mb-5">
+                        <h5 class="fw-bold fs-3 fs-lg-5 lh-sm">Jean</h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="carousel slide" id="carouselFlashSales" data-bs-touch="false" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <div class="row h-100 align-items-center g-2">
+                                    <%
+                                        List<ProductsDTO> jean = (List<ProductsDTO>) request.getAttribute("jean");
+                                        for (ProductsDTO products : jean) {
+                                    %>
+                                    <div class="col-sm-6 col-md-3 mb-4 mb-md-0 h-100">
+
+                                        <img class="img-fluid h-100 w-100 product-image" style="width: 350px !important; height: 400px !important;" src="<%= products.getImg()%>" alt="." />
+                                        
+                                        <div class="card-body ps-0 bg-200">
+                                           <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
+                                            <div class="fw-bold">
+
+                                                <span class="text-primary">$<%= products.getProductPrice()%></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <% }%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                                
+                                
+                                   <section class="py-0">
+            <div class="container">
+                <div class="row h-100">
+                    <div class="col-lg-7 mx-auto text-center mt-7 mb-5">
+                        <h5 class="fw-bold fs-3 fs-lg-5 lh-sm">BaggyPull</h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="carousel slide" id="carouselFlashSales" data-bs-touch="false" data-bs-interval="false">
+                            <div class="carousel-inner">
+                                <div class="row h-100 align-items-center g-2">
+                                    <%
+                                        List<ProductsDTO> baggyPull = (List<ProductsDTO>) request.getAttribute("baggyPull");
+                                        for (ProductsDTO products : baggyPull) {
+                                    %>
+                                    <div class="col-sm-6 col-md-3 mb-4 mb-md-0 h-100">
+
+                                        <img class="img-fluid h-100 w-100 product-image" style="width: 350px !important; height: 400px !important;" src="<%= products.getImg()%>" alt="." />
+                                        
+                                        <div class="card-body ps-0 bg-200">
+                                           <a href="PageController?action=productDetails&productID=<%= products.getProductsID()%>"><%= products.getProductsName()%></a>
                                             <div class="fw-bold">
 
                                                 <span class="text-primary">$<%= products.getProductPrice()%></span>
@@ -116,8 +190,13 @@ and open the template in the editor.
 
 
 
-    </main>
 
+
+
+
+
+    </main>
+<jsp:include page="/footer.jsp" flush="true" />
 
 
 

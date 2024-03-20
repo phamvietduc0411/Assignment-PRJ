@@ -114,7 +114,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="shoping__cart__btns">
-                            <a href="homePage.jsp" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
+                            <a href="./PageController?action=home" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
 <!--                            <a href="./PageController?action=update" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
                                 Upadate Cart</a>-->
                         </div>

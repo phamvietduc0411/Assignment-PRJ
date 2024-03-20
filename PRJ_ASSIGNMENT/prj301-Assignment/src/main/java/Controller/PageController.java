@@ -59,24 +59,18 @@ public class PageController extends HttpServlet {
                 RequestDispatcher rd = request.getRequestDispatcher("homePage.jsp");
                 rd.forward(request, response);
             } else if (action.equals("productDetails")) {
-                CategoryDAO categoryDAO = new CategoryDAO();
-                Integer CategoryID = null;
-                try {
-                    CategoryID = Integer.parseInt(request.getParameter("CategoryID"));
-                } catch (NumberFormatException ex) {
-                    log("Parameter id has wrong format.");
-                }
-
-                CategoryDTO category = null;
-                if (CategoryID != null) {
-                    category = categoryDAO.load(CategoryID);
-
-                }
-                request.setAttribute("category", category);
+                String proid = request.getParameter("productID");
+                ProductsDTO product = productDAO.productDetails(proid);
+                 request.setAttribute("productDetail", product);
+                
                 request.getRequestDispatcher("productDetails.jsp").forward(request, response);
-            } else if (action.equals("view")) {
+            } else if (action.equals("view")) 
+            {List<ProductsDTO> jean = productDAO.findProductsByKeyword("jean");
+            List<ProductsDTO> baggyPull = productDAO.findProductsByKeyword("baggyPull");
 
                 List<ProductsDTO> bestSellList = productDAO.bestseller();
+                request.setAttribute("baggyPull", baggyPull);
+                request.setAttribute("jean", jean);
                 request.setAttribute("bestSeller", bestSellList);
                 request.getRequestDispatcher("displayProduct.jsp").forward(request, response);
 
