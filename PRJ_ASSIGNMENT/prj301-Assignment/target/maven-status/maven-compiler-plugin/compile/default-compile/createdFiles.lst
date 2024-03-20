@@ -12,7 +12,6 @@ Model\Products\ProductsDTO.class
 Model\Cart\CartDTO.class
 Model\Category\CategoryDTO.class
 Model\Orders\OrdersDTO.class
-Model\Discount\DiscountDTO.class
 Model\CheckOrder\CheckOrderDTO.class
 Controller\PageController.class
 Model\Storage\StorageDTO.class

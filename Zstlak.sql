@@ -33,13 +33,6 @@ CREATE TABLE Customers (
 	Email VARCHAR(255),
 );
 
--- T?o b?ng Discount
-CREATE TABLE Discount (
-    DiscountID VARCHAR(20) NOT NULL PRIMARY KEY,
-	DiscountName NVARCHAR(100),
-	DiscountPersent DECIMAL(5,2)
-);
-
 -- T?o b?ng Storage
 CREATE TABLE Storage (
     StorageID INT NOT NULL PRIMARY KEY,
@@ -77,7 +70,6 @@ CREATE TABLE Orders (
 	Freight VARCHAR(255),
 	--FOREIGN KEY
 	CustomerId INT FOREIGN KEY REFERENCES Customers(CustomerID),
-	DiscountId VARCHAR(20) FOREIGN KEY REFERENCES Discount(DiscountID),
 );
 
 
@@ -176,15 +168,6 @@ VALUES
 (31039, 'T-Shirt9', 'Spring', 'Stylish outfits for nights out on the town'),
 (31040, 'T-Shirt10', 'Winter', 'Sophisticated yet relaxed formal casual attire');
 --F
--- Thêm d? li?u vào b?ng Discount OK
-INSERT INTO Discount (DiscountID, DiscountName, DiscountPersent)
-VALUES 
-('DISC0010', '10% off', 10.00),
-('DISC0020', '20% off', 20.00),
-('DISC0015', '15% off', 15.00),
-('DISC0005', '5% off', 5.00),
-('DISC0025', '25% off', 25.00),
-('DISC0030', '30% off', 30.00);
 
 -- Thêm d? li?u vào b?ng Storage OK
 INSERT INTO Storage (StorageID, AvailableQuantity)
@@ -478,19 +461,235 @@ VALUES
 (711899, 'T-shirt-Bershika9', 'Women' , 'XL', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0309, 31040),
 (711900, 'T-shirt-Bershika9', 'Women' , 'XXL', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0310, 31040);
 --40 Product
+(711901, 'shortPull&Bear1',	  'Men' ,   'S', 'Blue', 20.00, 'images\paint\Short\short1', 0311, 31041);
+(711902, 'shortPull&Bear1',	  'Men' ,   'M', 'Blue', 20.00, 'images\paint\Short\short1', 0312, 31041);
+(711903, 'shortPull&Bear1',	  'Men' ,   'L', 'Blue', 20.00, 'images\paint\Short\short1', 0313, 31041);
+(711904, 'shortPull&Bear1',	  'Men' ,   'XL', 'Blue', 20.00, 'images\paint\Short\short1', 0314, 31041);
+(711905, 'shortPull&Bear1',	  'Men' ,   'XXL', 'Blue', 20.00, 'images\paint\Short\short1', 0315, 31041);
+--41
+(711906, 'shortPull&Bear2',	  'Men' ,   'S',  'Gray', 20.00, 'images\paint\Short\short2', 0316, 31042);
+(711907, 'shortPull&Bear2',	  'Men' ,   'M',  'Gray', 20.00, 'images\paint\Short\short2', 0317, 31042);
+(711908, 'shortPull&Bear2',	  'Men' ,   'L',  'Gray', 20.00, 'images\paint\Short\short2', 0318, 31042);
+(711909, 'shortPull&Bear2',	  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\Short\short2', 0319, 31042);
+(711910, 'shortPull&Bear2',	  'Men' ,   'XXL','Gray', 20.00, 'images\paint\Short\short2', 0320, 31042);
+--42--
+(711911, 'shortPull&Bear3',	  'Men' ,   'S',  'Red', 22.00, 'images\paint\Short\short3', 0321, 31043);
+(711912, 'shortPull&Bear3',	  'Men' ,   'M',  'Red', 22.00, 'images\paint\Short\short3', 0322, 31043);
+(711913, 'shortPull&Bear3',	  'Men' ,   'L',  'Red', 22.00, 'images\paint\Short\short3', 0323, 31043);
+(711914, 'shortPull&Bear3',	  'Men' ,   'XL', 'Red', 22.00, 'images\paint\Short\short3', 0324, 31043);
+(711915, 'shortPull&Bear3',	  'Men' ,   'XXL','Red', 22.00, 'images\paint\Short\short3', 0325, 31043);
+--43--
+(711916, 'shortPull&Bear4',	  'Men' ,   'S',  'Green', 22.00, 'images\paint\Short\short4', 0326, 31044);
+(711917, 'shortPull&Bear4',	  'Men' ,   'M',  'Green', 22.00, 'images\paint\Short\short4', 0327, 31044);
+(711918, 'shortPull&Bear4',	  'Men' ,   'L',  'Green', 22.00, 'images\paint\Short\short4', 0328, 31044);
+(711919, 'shortPull&Bear4',	  'Men' ,   'XL', 'Green', 22.00, 'images\paint\Short\short4', 0329, 31044);
+(711920, 'shortPull&Bear4',	  'Men' ,   'XXL','Green', 22.00, 'images\paint\Short\short4', 0330, 31044);
+--44-
+(711921, 'shortPull&Bear5',	  'Men' ,   'S',  'Yellow', 22.00, 'images\paint\Short\short5', 0331, 31045);
+(711922, 'shortPull&Bear5',	  'Men' ,   'M',  'Yellow', 22.00, 'images\paint\Short\short5', 0332, 31045);
+(711923, 'shortPull&Bear5',	  'Men' ,   'L',  'Yellow', 22.00, 'images\paint\Short\short5', 0333, 31045);
+(711924, 'shortPull&Bear5',	  'Men' ,   'XL', 'Yellow', 22.00, 'images\paint\Short\short5', 0334, 31045);
+(711925, 'shortPull&Bear5',	  'Men' ,   'XXL','Yellow', 22.00, 'images\paint\Short\short5', 0345, 31045);
+--45--
+(711926, 'shortPull&Bear6',	  'Men' ,   'S',  'Black', 21.00, 'images\paint\Short\short6', 0346, 31046);
+(711927, 'shortPull&Bear6',	  'Men' ,   'M',  'Black', 21.00, 'images\paint\Short\short6', 0347, 31046);
+(711928, 'shortPull&Bear6',	  'Men' ,   'L',  'Black', 21.00, 'images\paint\Short\short6', 0348, 31046);
+(711929, 'shortPull&Bear6',	  'Men' ,   'XL', 'Black', 21.00, 'images\paint\Short\short6', 0349, 31046);
+(711930, 'shortPull&Bear6',	  'Men' ,   'XXL','Black', 21.00, 'images\paint\Short\short6', 0350, 31046);
+--46-
+(711931, 'shortPull&Bear7',	  'Women' ,   'S',  'Purple', 20.00, 'images\paint\Short\short7', 0351, 31047);
+(711932, 'shortPull&Bear7',	  'Women' ,   'M',  'Purple', 20.00, 'images\paint\Short\short7', 0352, 31047);
+(711933, 'shortPull&Bear7',	  'Women' ,   'L',  'Purple', 20.00, 'images\paint\Short\short7', 0353, 31047);
+(711934, 'shortPull&Bear7',	  'Women' ,   'XL', 'Purple', 20.00, 'images\paint\Short\short7', 0354, 31047);
+(711935, 'shortPull&Bear7',	  'Women' ,   'XXL','Purple', 20.00, 'images\paint\Short\short7', 0355, 31047);
+--47
+(711936, 'shortPull&Bear8',	  'Women' ,   'S',  'Purple', 20.00, 'images\paint\Short\short8', 0356, 31048);
+(711937, 'shortPull&Bear8',	  'Women' ,   'M',  'Purple', 20.00, 'images\paint\Short\short8', 0357, 31048);
+(711938, 'shortPull&Bear8',	  'Women' ,   'L',  'Purple', 20.00, 'images\paint\Short\short8', 0358, 31048);
+(711939, 'shortPull&Bear8',	  'Women' ,   'XL', 'Purple', 20.00, 'images\paint\Short\short8', 0359, 31048);
+(711940, 'shortPull&Bear8',	  'Women' ,   'XXL','Purple', 20.00, 'images\paint\Short\short8', 0360, 31048);
+--48--
+(711941, 'shortPull&Bear9',	  'Women' ,   'S',  'Green', 20.00, 'images\paint\Short\short9', 0361, 31049);
+(711942, 'shortPull&Bear9',	  'Women' ,   'M',  'Green', 20.00, 'images\paint\Short\short9', 0362, 31049);
+(711943, 'shortPull&Bear9',	  'Women' ,   'L',  'Green', 20.00, 'images\paint\Short\short9', 0363, 31049);
+(711944, 'shortPull&Bear9',	  'Women' ,   'XL', 'Green', 20.00, 'images\paint\Short\short9', 0363, 31049);
+(711945, 'shortPull&Bear9',	  'Women' ,   'XXL','Green', 20.00, 'images\paint\Short\short9', 0365, 31049);
+--49--
+(711946, 'shortPull&Bear10',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short10', 0366, 31050);
+(711947, 'shortPull&Bear10',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short10', 0367, 31050);
+(711948, 'shortPull&Bear10',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short10', 0368, 31050);
+(711949, 'shortPull&Bear10',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short10', 0369, 31050);
+(711950, 'shortPull&Bear10',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short10', 0370, 31050);
+--50--
+(711951, 'shortPull&Bear11',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short11', 0371, 31051);
+(711952, 'shortPull&Bear11',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short11', 0372, 31051);
+(711953, 'shortPull&Bear11',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short11', 0373, 31051);
+(711954, 'shortPull&Bear11',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short11', 0374, 31051);
+(711955, 'shortPull&Bear11',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short11', 0375, 31051);
+--51--
+(711956, 'shortPull&Bear12',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short12', 0376, 31052);
+(711957, 'shortPull&Bear12',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short12', 0377, 31052);
+(711958, 'shortPull&Bear12',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short12', 0378, 31052);
+(711959, 'shortPull&Bear12',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short12', 0379, 31052);
+(711960, 'shortPull&Bear12',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short12', 0380, 31052);
+--52--
+(711961, 'shortPull&Bear13',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short13', 0381, 31053);
+(711962, 'shortPull&Bear13',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short13', 0382, 31053);
+(711963, 'shortPull&Bear13',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short13', 0383, 31053);
+(711964, 'shortPull&Bear13',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short13', 0384, 31053);
+(711965, 'shortPull&Bear13',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short13', 0385, 31053);
+--53--
+(711966, 'baggyPull&Bear1',  'Women' ,   'S',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0386, 31054);
+(711967, 'baggyPull&Bear1',  'Women' ,   'M',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0387, 31054);
+(711968, 'baggyPull&Bear1',  'Women' ,   'L',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0388, 31054);
+(711969, 'baggyPull&Bear1',  'Women' ,   'XL', 'Blue', 20.00, 'images\paint\baggy\baggy1', 0389, 31054);
+(711970, 'baggyPull&Bear1',  'Women' ,   'XXL','Blue', 20.00, 'images\paint\baggy\baggy1', 0390, 31054);
+--54--
+(711971, 'baggyPull&Bear2',  'Women' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy2', 0391, 31055);
+(711972, 'baggyPull&Bear2',  'Women' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy2', 0392, 31055);
+(711973, 'baggyPull&Bear2',  'Women' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy2', 0393, 31055);
+(711974, 'baggyPull&Bear2',  'Women' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy2', 0394, 31055);
+(711975, 'baggyPull&Bear2',  'Women' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy2', 0395, 31055);
+--55
+(711976, 'baggyPull&Bear3',  'Women' ,   'S',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0396, 31056);
+(711977, 'baggyPull&Bear3',  'Women' ,   'M',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0397, 31056);
+(711978, 'baggyPull&Bear3',  'Women' ,   'L',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0398, 31056);
+(711979, 'baggyPull&Bear3',  'Women' ,   'XL', 'dark blue', 20.00, 'images\paint\baggy\baggy3', 0399, 31056);
+(711980, 'baggyPull&Bear3',  'Women' ,   'XXL','dark blue', 20.00, 'images\paint\baggy\baggy3', 0400, 31056);
+--56
+(711981, 'baggyPull&Bear4',  'Men' ,   'S',  'Green', 20.00, 'images\paint\baggy\baggy4', 0401, 31057);
+(711982, 'baggyPull&Bear4',  'Men' ,   'M',  'Green', 20.00, 'images\paint\baggy\baggy4', 0402, 31057);
+(711983, 'baggyPull&Bear4',  'Men' ,   'L',  'Green', 20.00, 'images\paint\baggy\baggy4', 0403, 31057);
+(711984, 'baggyPull&Bear4',  'Men' ,   'XL', 'Green', 20.00, 'images\paint\baggy\baggy4', 0404, 31057);
+(711985, 'baggyPull&Bear4',  'Men' ,   'XXL','Green', 20.00, 'images\paint\baggy\baggy4', 0405, 31057);
+--57--
+(711986, 'baggyPull&Bear5',  'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0406, 31058);
+(711987, 'baggyPull&Bear5',  'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0407, 31058);
+(711988, 'baggyPull&Bear5',  'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0408, 31058);
+(711989, 'baggyPull&Bear5',  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy5', 0409, 31058);
+(711990, 'baggyPull&Bear5',  'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy5', 0410, 31058);
+--58
+(711991, 'baggyPull&Bear6',  'Men' ,   'S',  'White', 20.00, 'images\paint\baggy\baggy6', 0411, 31059);
+(711992, 'baggyPull&Bear6',  'Men' ,   'M',  'White', 20.00, 'images\paint\baggy\baggy6', 0412, 31059);
+(711993, 'baggyPull&Bear6',  'Men' ,   'L',  'White', 20.00, 'images\paint\baggy\baggy6', 0413, 31059);
+(711994, 'baggyPull&Bear6',  'Men' ,   'XL', 'White', 20.00, 'images\paint\baggy\baggy6', 0414, 31059);
+(711995, 'baggyPull&Bear6',  'Men' ,   'XXL','White', 20.00, 'images\paint\baggy\baggy6', 0415, 31059);
+--59
+(711996, 'baggyPull&Bear7',  'Men' ,   'S',  'brown', 20.00, 'images\paint\baggy\baggy7', 0416, 31060);
+(711997, 'baggyPull&Bear7',  'Men' ,   'M',  'brown', 20.00, 'images\paint\baggy\baggy7', 0417, 31060);
+(711998, 'baggyPull&Bear7',  'Men' ,   'L',  'brown', 20.00, 'images\paint\baggy\baggy7', 0418, 31060);
+(711999, 'baggyPull&Bear7',  'Men' ,   'XL', 'brown', 20.00, 'images\paint\baggy\baggy7', 0419, 31060);
+(712000, 'baggyPull&Bear7',  'Men' ,   'XXL','brown', 20.00, 'images\paint\baggy\baggy7', 0420, 31060);
+--60
+(712001, 'baggyPull&Bear8',  'Men' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy8', 0421, 31061);
+(712002, 'baggyPull&Bear8',  'Men' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy8', 0422, 31061);
+(712003, 'baggyPull&Bear8',  'Men' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy8', 0423, 31061);
+(712004, 'baggyPull&Bear8',  'Men' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy8', 0424, 31061);
+(712005, 'baggyPull&Bear8',  'Men' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy8', 0425, 31061);
+--61
+(712006, 'baggyPull&Bear9',  'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0426, 31062));
+(712007, 'baggyPull&Bear9',  'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0427, 31062));
+(712008, 'baggyPull&Bear9',  'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0428, 31062));
+(712009, 'baggyPull&Bear9',  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy9', 0429, 31062));
+(712010, 'baggyPull&Bear9',  'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy9', 0430, 31062));
+--62
+(712011, 'baggyPull&Bear10', 'Women' ,   'S',  'White', 20.00, 'images\paint\baggy\baggy10', 0431, 31063);
+(712012, 'baggyPull&Bear10', 'Women' ,   'M',  'White', 20.00, 'images\paint\baggy\baggy10', 0432, 31063);
+(712013, 'baggyPull&Bear10', 'Women' ,   'L',  'White', 20.00, 'images\paint\baggy\baggy10', 0433, 31063);
+(712014, 'baggyPull&Bear10', 'Women' ,   'XL', 'White', 20.00, 'images\paint\baggy\baggy10', 0434, 31063);
+(712015, 'baggyPull&Bear10', 'Women' ,   'XXL','White', 20.00, 'images\paint\baggy\baggy10', 0435, 31063);
+--63
+(712016, 'baggyPull&Bear11', 'Women' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy11', 0436, 31064);
+(712017, 'baggyPull&Bear11', 'Women' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy11', 0437, 31064);
+(712018, 'baggyPull&Bear11', 'Women' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy11', 0438, 31064);
+(712019, 'baggyPull&Bear11', 'Women' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy11', 0439, 31064);
+(712020, 'baggyPull&Bear11', 'Women' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy11', 0440, 31064);
+--64
+(712021, 'baggyPull&Bear12', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0441, 31065);
+(712022, 'baggyPull&Bear12', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0442, 31065);
+(712023, 'baggyPull&Bear12', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0443, 31065);
+(712024, 'baggyPull&Bear12', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy12', 0444, 31065);
+(712025, 'baggyPull&Bear12', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy12', 0445, 31065);
+--65
+(712021, 'JeanPull&Bear1', 'Men' ,   'S',  'brown', 20.00, 'images\paint\jean\Jean1', 0441, 31066);
+(712022, 'JeanPull&Bear1', 'Men' ,   'M',  'brown', 20.00, 'images\paint\jean\Jean1', 0442, 31066);
+(712023, 'JeanPull&Bear1', 'Men' ,   'L',  'brown', 20.00, 'images\paint\jean\Jean1', 0443, 31066);
+(712024, 'JeanPull&Bear1', 'Men' ,   'XL', 'brown', 20.00, 'images\paint\jean\Jean1', 0444, 31066);
+(712025, 'JeanPull&Bear1', 'Men' ,   'XXL','brown', 20.00, 'images\paint\jean\Jean1', 0445, 31066);
+--66
+(712026, 'JeanPull&Bear2', 'Women' ,   'S',  'Blue', 20.00, 'images\paint\jean\Jean2', 0446, 31067);
+(712027, 'JeanPull&Bear2', 'Women' ,   'M',  'Blue', 20.00, 'images\paint\jean\Jean2', 0447, 31067);
+(712028, 'JeanPull&Bear2', 'Women' ,   'L',  'Blue', 20.00, 'images\paint\jean\Jean2', 0448, 31067);
+(712029, 'JeanPull&Bear2', 'Women' ,   'XL', 'Blue', 20.00, 'images\paint\jean\Jean2', 0449, 31067);
+(712030, 'JeanPull&Bear2', 'Women' ,   'XXL','Blue', 20.00, 'images\paint\jean\Jean2', 0450, 31067);
+--67
+(712031, 'JeanPull&Bear3', 'Women' ,   'S',  'White', 20.00, 'images\paint\jean\Jean3', 0451, 31068);
+(712032, 'JeanPull&Bear3', 'Women' ,   'M',  'White', 20.00, 'images\paint\jean\Jean3', 0452, 31068);
+(712033, 'JeanPull&Bear3', 'Women' ,   'L',  'White', 20.00, 'images\paint\jean\Jean3', 0453, 31068);
+(712034, 'JeanPull&Bear3', 'Women' ,   'XL', 'White', 20.00, 'images\paint\jean\Jean3', 0454, 31068);
+(712035, 'JeanPull&Bear3', 'Women' ,   'XXL','White', 20.00, 'images\paint\jean\Jean3', 0455, 31068);
+--68
+(712036, 'JeanPull&Bear4', 'Women' ,   'S',  'Blue', 20.00, 'images\paint\jean\Jean4', 0456, 31069);
+(712037, 'JeanPull&Bear4', 'Women' ,   'M',  'Blue', 20.00, 'images\paint\jean\Jean4', 0457, 31069);
+(712038, 'JeanPull&Bear4', 'Women' ,   'L',  'Blue', 20.00, 'images\paint\jean\Jean4', 0458, 31069);
+(712039, 'JeanPull&Bear4', 'Women' ,   'XL', 'Blue', 20.00, 'images\paint\jean\Jean4', 0459, 31069);
+(712040, 'JeanPull&Bear4', 'Women' ,   'XXL','Blue', 20.00, 'images\paint\jean\Jean4', 0460, 31069);
+--69
+(712041, 'JeanPull&Bear5', 'Women' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean5', 0461, 31070);
+(712042, 'JeanPull&Bear5', 'Women' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean5', 0462, 31070);
+(712043, 'JeanPull&Bear5', 'Women' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean5', 0463, 31070);
+(712044, 'JeanPull&Bear5', 'Women' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean5', 0464, 31070);
+(712045, 'JeanPull&Bear5', 'Women' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean5', 0465, 31070);
+--70
+(712046, 'JeanPull&Bear6', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean6', 0466, 31071);
+(712047, 'JeanPull&Bear6', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean6', 0467, 31071);
+(712048, 'JeanPull&Bear6', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean6', 0468, 31071);
+(712049, 'JeanPull&Bear6', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean6', 0469, 31071);
+(712050, 'JeanPull&Bear6', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean6', 0470, 31071);
+--71
+(712051, 'JeanPull&Bear7', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean7', 0471, 31072);
+(712052, 'JeanPull&Bear7', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean7', 0472, 31072);
+(712053, 'JeanPull&Bear7', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean7', 0473, 31072);
+(712054, 'JeanPull&Bear7', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean7', 0474, 31072);
+(712055, 'JeanPull&Bear7', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean7', 0475, 31072);
+--72
+(712056, 'JeanPull&Bear8', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean8', 0476, 31073);
+(712057, 'JeanPull&Bear8', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean8', 0477, 31073);
+(712058, 'JeanPull&Bear8', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean8', 0478, 31073);
+(712059, 'JeanPull&Bear8', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean8', 0479, 31073);
+(712060, 'JeanPull&Bear8', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean8', 0480, 31073);
+--73
+(712061, 'JeanPull&Bear9', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean9', 0481, 31074);
+(712062, 'JeanPull&Bear9', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean9', 0482, 31074);
+(712063, 'JeanPull&Bear9', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean9', 0483, 31074);
+(712064, 'JeanPull&Bear9', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean9', 0484, 31074);
+(712065, 'JeanPull&Bear9', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean9', 0485, 31074);
+--75
+(712066, 'JeanPull&Bear10', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean10', 0486, 31075);
+(712067, 'JeanPull&Bear10', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean10', 0487, 31075);
+(712068, 'JeanPull&Bear10', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean10', 0488, 31075);
+(712069, 'JeanPull&Bear10', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean10', 0489, 31075);
+(712070, 'JeanPull&Bear10', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean10', 0490, 31075);
+
+
+
+
+
+
+
 -- Thêm d? li?u vào b?ng Orders OK
-INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId, DiscountId)
+INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId)
 VALUES 
-(4000301, '2024-03-14', 20.00, 2, '75, 265 Street, 9 District, HCM', 'Pending', 'Shopee Express', 001, 'DISC0010'),
-(4000302, '2024-03-15', 35.00, 1, '273, Man Thien Street, 9 District, HCM', 'Completed', 'J&T Express', 008, 'DISC0025'),
-(4000303, '2024-03-14', 11.98, 2, '31, Tran Quy Cap Street, Binh Thanh District, HCM', 'Pending', 'Shopee Express', 003, 'DISC0005'),
-(4000307, '2024-03-15', 35.00, 1, '75, 265 Street, 9 District, HCM', 'Failed', 'J&T Express', 004, 'DISC0010'),
-(4000309, '2024-03-15', 5.99, 1, '72, Pham Hung Streer, 8 District, HCM', 'Completed', 'J&T Express', 005, 'DISC0030'),
-(4000310, '2024-03-10', 75.00, 3, '273, Man Thien Street, 9 District, HCM', 'Pending', 'Shopee Express', 008, 'DISC0015'),
-(4000311, '2024-03-11', 9.58, 2, '10, Ong Ren ward, Can Duoc District, Long An City', 'Pending', 'Shopee Express', 006, 'DISC0025'),
-(4000313, '2024-03-14', 8.00, 4, '12, Nguyen Thoi Street, Nguyen An Ninh ward, Vung Tau City', 'Pending', 'Shopee Express', 007, 'DISC0020'),
-(4000322, '2024-03-15', 10.00, 1, '10, Ong Ren ward, Can Duoc District, Long An City', 'Failed', 'J&T Express', 006, 'DISC0020'),
-(4000328, '2024-03-15', 1.90, 1, '75, 265 Street, 9 District, HCM', 'Completed', 'J&T Express', 004, 'DISC0005');
+(4000301, '2024-03-14', 20.00, 2, '75, 265 Street, 9 District, HCM', 'Pending', 'Shopee Express', 001),
+(4000302, '2024-03-15', 35.00, 1, '273, Man Thien Street, 9 District, HCM', 'Completed', 'J&T Express', 008),
+(4000303, '2024-03-14', 11.98, 2, '31, Tran Quy Cap Street, Binh Thanh District, HCM', 'Pending', 'Shopee Express', 003),
+(4000307, '2024-03-15', 35.00, 1, '75, 265 Street, 9 District, HCM', 'Failed', 'J&T Express', 004),
+(4000309, '2024-03-15', 5.99, 1, '72, Pham Hung Streer, 8 District, HCM', 'Completed', 'J&T Express', 005),
+(4000310, '2024-03-10', 75.00, 3, '273, Man Thien Street, 9 District, HCM', 'Pending', 'Shopee Express', 008),
+(4000311, '2024-03-11', 9.58, 2, '10, Ong Ren ward, Can Duoc District, Long An City', 'Pending', 'Shopee Express', 006),
+(4000313, '2024-03-14', 8.00, 4, '12, Nguyen Thoi Street, Nguyen An Ninh ward, Vung Tau City', 'Pending', 'Shopee Express', 007),
+(4000322, '2024-03-15', 10.00, 1, '10, Ong Ren ward, Can Duoc District, Long An City', 'Failed', 'J&T Express', 006),
+(4000328, '2024-03-15', 1.90, 1, '75, 265 Street, 9 District, HCM', 'Completed', 'J&T Express', 004);
 
 -- Thêm d? li?u vào b?ng OrderDetail OK
 INSERT INTO OrderDetail (Amount, TotalQuantity, OrdersId, PaysId, ProId)
@@ -520,3 +719,4 @@ SELECT *
 FROM Products p INNER JOIN Category c ON p.CategoryId = c.CategoryID
 				INNER JOIN Storage s ON p.StorageId = s.StorageID
 WHERE c.CategoryID = 31001
+

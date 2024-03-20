@@ -74,21 +74,15 @@ public class CartDAO {
         PreparedStatement statement = null;
 
         try {
-            // Khởi tạo kết nối đến cơ sở dữ liệu (database connection)
             connection = DBUtils.getConnection();
-
-            // Câu lệnh SQL cập nhật số lượng sản phẩm trong giỏ hàng
             String sql = "UPDATE Cart SET Quantity = ? WHERE ProId = ?";
 
-            // Tạo PreparedStatement
             statement = connection.prepareStatement(sql);
             statement.setInt(1, quantity);
             statement.setInt(2, productId);
 
-            // Thực thi câu lệnh SQL
             statement.executeUpdate();
         } finally {
-            // Đóng kết nối và các tài nguyên
             if (statement != null) {
                 statement.close();
             }
@@ -97,17 +91,5 @@ public class CartDAO {
             }
         }
     }
-
-//    public void removeCartItem(int customerId, int productId) {
-//        String query = "DELETE FROM cart WHERE CustomerId = ? AND ProId = ?";
-//        try (PreparedStatement statement = con.prepareStatement(query)) {
-//            statement.setInt(1, customerId);
-//            statement.setInt(2, productId);
-//            statement.executeUpdate();
-//        } catch (Exception e) {
-//            System.out.println("ERROR IN REMOVE CART ITEM: " + e.getMessage());
-//            e.printStackTrace();
-//        }
-//    }
     
 }

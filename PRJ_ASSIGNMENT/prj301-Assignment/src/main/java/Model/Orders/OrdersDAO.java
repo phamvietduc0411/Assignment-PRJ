@@ -28,8 +28,8 @@ public class OrdersDAO {
         
         try {
             conn = DBUtils.getConnection();
-            String sql = "INSERT INTO Orders (OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId, DiscountId) " +
-                         "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Orders (OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId) " +
+                         "VALUES (?, ?, ?, ?, ?, ?, ?)";
             stmt = conn.prepareStatement(sql);
             stmt.setDate(1, new Date(order.getOrdersDate().getTime()));
             stmt.setFloat(2, order.getPrice());
@@ -38,7 +38,6 @@ public class OrdersDAO {
             stmt.setString(5, order.getStatus());
             stmt.setString(6, order.getFreight());
             stmt.setInt(7, order.getCustomerId());
-            stmt.setString(8, order.getDiscountId());
             
             int rowsAffected = stmt.executeUpdate();
             success = (rowsAffected > 0);
