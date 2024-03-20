@@ -89,6 +89,7 @@
                     List<ProductsDTO> menCollectionSummer = (List<ProductsDTO>) request.getAttribute("menCollectionSummer");
 
                     for (ProductsDTO products : menCollectionSummer) {
+                        System.out.println("iiiiii");
                       
 
                 %>
@@ -100,7 +101,7 @@
                     </div>
                     <div class="cart-concern">
                         <div class="cart-button d-flex justify-content-between align-items-center">
-                            <a href="./PageController?action=add&productid=711700&customerid=${customer.customerID}">add to cart <i
+                            <a href="./PageController?action=add&productid=<%= products.getProductsID()%>&customerid=${customer.customerID}">add to cart <i
                                                 class="icon icon-arrow-io"></i></a>
 
                         </div>

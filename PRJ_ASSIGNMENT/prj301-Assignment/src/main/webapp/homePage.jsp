@@ -184,64 +184,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="product-item">
-                                <div class="image-holder">
-                                    <img src="images/homepage/product-item2.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <a href="./PageController?action=add&productid=&customerid=${customer.customerID}">add to cart <i
-                                                class="icon icon-arrow-io"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Volunteer Half blu</a>
-                                    </h3>
-                                    <span class="item-price text-primary">$38.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-item">
-                                <div class="image-holder">
-                                    <img src="images/homepage/product-item3.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <a href="./PageController?action=add&productid=711700&customerid=${customer.customerID}">add to cart <i
-                                                class="icon icon-arrow-io"></i></a>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Double yellow shirt</a>
-                                    </h3>
-                                    <span class="item-price text-primary">$44.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-item">
-                                <div class="image-holder">
-                                    <img src="images/homepage/product-item4.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <a href="./PageController?action=add&productid=711700&customerid=${customer.customerID}">add to cart <i
-                                                class="icon icon-arrow-io"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Long belly grey pant</a>
-                                    </h3>
-                                    <span class="item-price text-primary">$33.00</span>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>

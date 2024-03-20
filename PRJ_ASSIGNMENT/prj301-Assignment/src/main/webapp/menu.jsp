@@ -40,12 +40,12 @@
 
                                             <li>
                                                 <a 
-                                                    href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
+                                                    href="./PageController?action=load&customerid=${customer.customerID}" class="item-anchor" data-effect="Contact">Cart
                                                 </a>
                                             </li>
                                             
                                             <li class="menu-item has-sub">
-                                                <a href="./PageController?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
+                                                <a href="./PageController?action=profile&cusId=${sessionScope.customer.customerID}" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>

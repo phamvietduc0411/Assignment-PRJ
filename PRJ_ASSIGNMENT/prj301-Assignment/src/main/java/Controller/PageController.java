@@ -49,6 +49,8 @@ public class PageController extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
             
+        
+            
             ProductsDAO productDAO = new ProductsDAO();
             
             if (action.equals("productDetails")) {
@@ -111,7 +113,7 @@ public class PageController extends HttpServlet {
                     rd.forward(request, response);
                 }
                 
-            } else if (action != null && action.equals("profile")) {
+            } else if (action.equals("profile")) {
 
                 int customerID = 0;
                 
@@ -127,22 +129,8 @@ public class PageController extends HttpServlet {
                 request.setAttribute("orderList", orderList);
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
 
-            } else if(action.equals("add")) {
-
-                String cusId = request.getParameter("cusId");                
-                System.out.println("" + cusId);
-                
-                int customerid = 0;
-                try {
-                   customerid  = Integer.parseInt(request.getParameter("cusId"));
-                } catch (NumberFormatException ex) {
-                    log("Parameter id has wrong format.");
-                }
-                OrdersDAO orderDAO = new OrdersDAO();
-                List<OrdersDTO> orderList = orderDAO.getOrderHistory(customerid);
-                request.setAttribute("orderList", orderList);            
-                request.getRequestDispatcher("profile.jsp").forward(request, response);       
-            } else if (action.equals("add")) {
+            } 
+            else if (action.equals("add")) {
                 
                 int customerid = 0;
                 int productid = 0;
@@ -156,7 +144,8 @@ public class PageController extends HttpServlet {
                 CartDAO cartDAO = new CartDAO();
                 cartDAO.addToCart(customerid, productid);
                 request.getRequestDispatcher("homePage.jsp").forward(request, response);
-            } else if(action.equals("load")){
+            } 
+            else if(action.equals("load")){
                 int customerid = 0;
                 try {
                     customerid = Integer.parseInt(request.getParameter("customerid"));
@@ -168,7 +157,21 @@ public class PageController extends HttpServlet {
                 List<ProductsDTO> itemInCart = cartDAO.viewCart(customerid);
                 request.setAttribute("itemList", itemInCart);
                 request.getRequestDispatcher("cart.jsp").forward(request, response);
-            }
+            }else if ( action.equals("edit")){
+                Integer customerID = null;
+                try{
+                    customerID = Integer.parseInt(request.getParameter("customerID"));      
+                }catch (NumberFormatException ex){
+                    log("Parameter PlaylistID has wrong format.");
+                }
+                CustomersDAO customerDAO = new CustomersDAO();
+                CustomersDTO customers = null;
+                if(customerID != null){
+                    customerDAO.load(customerID);
+                }
+                request.setAttribute("customers", customers);
+                request.getRequestDispatcher("editprofile.jsp").forward(request, response);     
+            } 
         }
     }
 
