@@ -59,7 +59,7 @@
                                             </li>        
                                         </ul>
                                     </div>
-                                    <form class="search-bar" action="./PageController" method="POST" style="text-align: end;">
+                                    <form class="search-bar" action="./PageController" method="POST" style="text-align: end; padding-left: 55%;">
                                         <input name="action" value="search" hidden>
                                         <input type="text" name="keyword" >
                                         <button type="submit" value="Search">Search</button>

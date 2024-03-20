@@ -19,6 +19,7 @@
 
         <servlet-name>AdminController</servlet-name>
         <servlet-class>Controller.AdminController</servlet-class>
+
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
