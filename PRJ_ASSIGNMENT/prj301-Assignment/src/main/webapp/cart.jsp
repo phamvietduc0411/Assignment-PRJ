@@ -115,18 +115,12 @@
                     <div class="col-lg-12">
                         <div class="shoping__cart__btns">
                             <a href="./PageController?action=home" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
-<!--                            <a href="./PageController?action=update" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
-                                Upadate Cart</a>-->
+
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="shoping__continue">
                             <div class="shoping__discount">
-<!--                                <h5>Discount Codes</h5>
-                                <form action="./CartController?action=discount" method="GET">
-                                    <input type="text" placeholder="Enter your coupon code">
-                                    <button type="submit" class="site-btn">APPLY COUPON</button>
-                                </form>-->
                             </div>
                         </div>
                     </div>
