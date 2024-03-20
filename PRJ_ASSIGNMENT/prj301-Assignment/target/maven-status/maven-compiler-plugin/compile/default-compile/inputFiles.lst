@@ -1,53 +1,23 @@
-<<<<<<< Updated upstream
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\SignupController.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\PageController.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDAO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CartItem\CartItemDAO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\prj301demo\utils\DBUtils.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CartItem\CartItemDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Category\CategoryDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDAO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\LoginController.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\CartDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\CartController.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\OrderDetail\OrderDetailDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\CartDAO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDAO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Payment\PaymentDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\AdminController.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Discount\DiscountDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Category\CategoryDAO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Feedback\FeedbackDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Orders\OrdersDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CheckOrder\CheckOrderDTO.java
-D:\Duy\SE1849 - PRJ301\ASM\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Storage\StorageDTO.java
-=======
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Category\CategoryDAO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Category\CategoryDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CartItem\CartItemDAO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\CartDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\OrderDetail\OrderDetailDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CheckOrder\CheckOrderDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDAO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Feedback\FeedbackDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDAO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\CartDAO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\prj301demo\utils\DBUtils.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Discount\DiscountDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Orders\OrdersDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Payment\PaymentDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CartItem\CartItemDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\LoginController.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\PageController.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\SignupController.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\CartController.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDAO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Storage\StorageDTO.java
-D:\Assignment-prj\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\AdminController.java
->>>>>>> Stashed changes
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDAO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Orders\OrdersDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\CheckOrder\CheckOrderDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\OrderDetail\OrderDetailDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Admin\ManagerDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\prj301demo\utils\DBUtils.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Category\CategoryDAO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\SignupController.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\AdminController.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Feedback\FeedbackDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\CartController.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\PageController.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Storage\StorageDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Category\CategoryDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Payment\PaymentDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDAO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\CartDAO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Discount\DiscountDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Customters\CustomersDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Controller\LoginController.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Cart\CartDTO.java
+C:\FPT\SorfwarePRJ301\Assignment\Assignment-PRJ\PRJ_ASSIGNMENT\prj301-Assignment\src\main\java\Model\Products\ProductsDAO.java

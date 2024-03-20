@@ -104,14 +104,14 @@ public class PageController extends HttpServlet {
                     rd.forward(request, response);
                 }
 
-            } else if (action.equals("profile")) {
-                int customerId = Integer.parseInt(request.getParameter("customerId"));
+            } else if (action != null && action.equals("profile")) {
+                String profile = request.getParameter("profile");
+                
                 CustomersDAO customersDAO = new CustomersDAO();
-                CustomersDTO customers = customersDAO.getCustomerProfile(customerId);
+                CustomersDTO customers = customersDAO.getCustomerProfile(profile);
                 request.setAttribute("customers", customers);
-
+                
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
-
             }
         }
     }

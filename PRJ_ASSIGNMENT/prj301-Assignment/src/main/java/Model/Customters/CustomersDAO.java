@@ -74,24 +74,17 @@ public class CustomersDAO {
         }
     }
     
-    public CustomersDTO getCustomerProfile(int customerID) {
-
+    public CustomersDTO getCustomerProfile(String profile) {
         CustomersDTO customer = null;
-
         try {
             Connection con = DBUtils.getConnection();
-
-            String sql = " SELECT * FROM Customers WHERE customerID = ? ";
-
+            String sql = "SELECT * FROM Customers WHERE customerID = ?";
             PreparedStatement stm = con.prepareStatement(sql);
-
-            stm.setInt(1, customerID);
-
+            stm.setString(1, profile);
             ResultSet rs = stm.executeQuery();
             if (rs != null) {
                 if (rs.next()) {
                     customer = new CustomersDTO();
-                 
                     customer.setCustomerID(rs.getInt("customerID"));
                     customer.setUsername(rs.getString("username"));
                     customer.setPassword(rs.getString("password"));
@@ -104,11 +97,11 @@ public class CustomersDAO {
             }
             con.close();
         } catch (Exception e) {
-            System.out.println("Error in SQL query WHEN fetching customer profile. Details:" + e.getMessage());
             e.printStackTrace();
         }
-
         return customer;
     }
+
+
     
 }

@@ -84,17 +84,12 @@
                                             <!--logout customer-->     
                                             <li>
                                                 <a
-                                                    href="./PageController?action=loguot"
+                                                    href="./PageController?action=logout"
                                                     class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b>
                                                 </a>
                                             </li>        
                                         </ul>
                                     </div>
-                                    <form class="search-bar" action="./PageController" method="POST" style="text-align: end;">
-                                        <input name="action" value="search" hidden>
-                                        <input type="text" name="keyword" >
-                                        <button type="submit" value="Search">Search</button>
-                                    </form>
                                 </div>
                             </div>
                             
@@ -152,32 +147,31 @@
                 </div>
             </div>
         </section>-->
-        <div>
-            <h1>Customer Profile</h1>
-        </div>
-        <div>
-            <p>Customer ID: ${customers.customerID}</p>
-        </div>
-        <div>
-            <p>Username: ${customers.username}</p>
-        </div>
-        <div>
-            <p>Name: ${customers.CustomerName}</p>
-        </div>
-        <div>
-            <p>Phone Number: ${customers.phoneNumber}</p>
-        </div>
-        <div>
-            <p>Address: ${customers.address}</p>
-        </div>
-        
-        <div>
-            <p>Gender: ${customers.gender}</p>
-        </div>
-        
-        <div>
-            <p>Email: ${customers.email}</p>
-        </div>
+<div>
+    <h1>Customer Profile</h1>
+</div>
+<div>
+    <p>Customer ID: ${customers.CustomerID}</p>
+</div>
+<div>
+    <p>Username: ${customers.Username}</p>
+</div>
+<div>
+    <p>Name: ${customers.CustomerName}</p>
+</div>
+<div>
+    <p>Phone Number: ${customers.PhoneNumber}</p>
+</div>
+<div>
+    <p>Address: ${customers.Address}</p>
+</div>
+<div>
+    <p>Gender: ${customers.Gender}</p>
+</div>
+<div>
+    <p>Email: ${customers.Email}</p>
+</div>
+
         
         
         
