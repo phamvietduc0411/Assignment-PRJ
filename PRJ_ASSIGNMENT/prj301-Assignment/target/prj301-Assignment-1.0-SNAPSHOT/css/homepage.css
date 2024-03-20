@@ -1525,7 +1525,6 @@ blockquote cite {
 
 /* Search Bar
 ------------------------------------------------------------- */
-
 /** Search Form
 --------------------------------------------------------------*/
 .search-form input[type="search"].search-field {
@@ -1550,6 +1549,7 @@ blockquote cite {
 
 /** Search Popup
 --------------------------------------------------------------*/
+
 
 .search-popup.is-visible {
   opacity: 1;
