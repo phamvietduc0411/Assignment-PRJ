@@ -74,22 +74,13 @@
                                                 <a 
                                                     href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
                                                 </a>
-<<<<<<< Updated upstream
                                             </li>
 
                                             
-<!--                                            <li class="menu-item has-sub">
-                                                <a href="./PageController?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
-                                                        class="icon icon-chevron-down"></i>
-                                                </a>
-                                            </li>-->
-                                           
 
-                                       
-                                            <!--logout customer-->     
-=======
+
                                             </li> 
->>>>>>> Stashed changes
+
                                             <li>
                                                 <a
                                                     href="./PageController?action=logout"
@@ -110,30 +101,6 @@
         <div>
             <h1>Customer Profile</h1>
         </div>
-        <div>
-            <h4>Customer ID:  ${sessionScope.customer.customerID} </h4>
-        </div>
-        <div>
-<<<<<<< Updated upstream
-            <h4>Username: ${requestScope.customers.username}</h4>
-        </div>
-        <div>
-            <h4>Name: ${requestScope.customers.CustomerName}</h4>
-        </div>
-        <div>
-            <h4>Phone Number: ${requestScope.customers.phoneNumber}</h4>
-        </div>
-        <div>
-            <h4>Address: ${requestScope.customers.address}</h4>
-        </div>
-        
-        <div>
-            <h4>Gender: ${requestScope.customers.gender}</h4>
-        </div>
-        
-        <div>
-            <h4>Email: ${requestScope.customers.email}</h4>
-=======
             <h4>Username: ${sessionScope.customer.username}</h4>
         </div>
         <div>
@@ -152,7 +119,7 @@
         
         <div>
             <h4>Email: ${sessionScope.customer.email}</h4>
->>>>>>> Stashed changes
+
         </div>
         
         <h1>Order History</h1>
