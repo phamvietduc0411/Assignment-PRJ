@@ -461,6 +461,86 @@ VALUES
 (711899, 'T-shirt-Bershika9', 'Women' , 'XL', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0309, 31040),
 (711900, 'T-shirt-Bershika9', 'Women' , 'XXL', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0310, 31040);
 --40 Product
+(711901, 'shortPull&Bear1',	  'Men' ,   'S', 'Blue', 20.00, 'images\paint\Short\short1', 0311, 31041);
+(711902, 'shortPull&Bear1',	  'Men' ,   'M', 'Blue', 20.00, 'images\paint\Short\short1', 0312, 31041);
+(711903, 'shortPull&Bear1',	  'Men' ,   'L', 'Blue', 20.00, 'images\paint\Short\short1', 0313, 31041);
+(711904, 'shortPull&Bear1',	  'Men' ,   'XL', 'Blue', 20.00, 'images\paint\Short\short1', 0314, 31041);
+(711905, 'shortPull&Bear1',	  'Men' ,   'XXL', 'Blue', 20.00, 'images\paint\Short\short1', 0315, 31041);
+--41
+(711906, 'shortPull&Bear2',	  'Men' ,   'S',  'Gray', 20.00, 'images\paint\Short\short2', 0316, 31042);
+(711907, 'shortPull&Bear2',	  'Men' ,   'M',  'Gray', 20.00, 'images\paint\Short\short2', 0317, 31042);
+(711908, 'shortPull&Bear2',	  'Men' ,   'L',  'Gray', 20.00, 'images\paint\Short\short2', 0318, 31042);
+(711909, 'shortPull&Bear2',	  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\Short\short2', 0319, 31042);
+(711910, 'shortPull&Bear2',	  'Men' ,   'XXL','Gray', 20.00, 'images\paint\Short\short2', 0320, 31042);
+--42--
+(711911, 'shortPull&Bear3',	  'Men' ,   'S',  'Red', 22.00, 'images\paint\Short\short3', 0321, 31043);
+(711912, 'shortPull&Bear3',	  'Men' ,   'M',  'Red', 22.00, 'images\paint\Short\short3', 0322, 31043);
+(711913, 'shortPull&Bear3',	  'Men' ,   'L',  'Red', 22.00, 'images\paint\Short\short3', 0323, 31043);
+(711914, 'shortPull&Bear3',	  'Men' ,   'XL', 'Red', 22.00, 'images\paint\Short\short3', 0324, 31043);
+(711915, 'shortPull&Bear3',	  'Men' ,   'XXL','Red', 22.00, 'images\paint\Short\short3', 0325, 31043);
+--43--
+(711916, 'shortPull&Bear4',	  'Men' ,   'S',  'Green', 22.00, 'images\paint\Short\short4', 0326, 31044);
+(711917, 'shortPull&Bear4',	  'Men' ,   'M',  'Green', 22.00, 'images\paint\Short\short4', 0327, 31044);
+(711918, 'shortPull&Bear4',	  'Men' ,   'L',  'Green', 22.00, 'images\paint\Short\short4', 0328, 31044);
+(711919, 'shortPull&Bear4',	  'Men' ,   'XL', 'Green', 22.00, 'images\paint\Short\short4', 0329, 31044);
+(711920, 'shortPull&Bear4',	  'Men' ,   'XXL','Green', 22.00, 'images\paint\Short\short4', 0330, 31044);
+--44-
+(711921, 'shortPull&Bear5',	  'Men' ,   'S',  'Yellow', 22.00, 'images\paint\Short\short5', 0331, 31045);
+(711922, 'shortPull&Bear5',	  'Men' ,   'M',  'Yellow', 22.00, 'images\paint\Short\short5', 0332, 31045);
+(711923, 'shortPull&Bear5',	  'Men' ,   'L',  'Yellow', 22.00, 'images\paint\Short\short5', 0333, 31045);
+(711924, 'shortPull&Bear5',	  'Men' ,   'XL', 'Yellow', 22.00, 'images\paint\Short\short5', 0334, 31045);
+(711925, 'shortPull&Bear5',	  'Men' ,   'XXL','Yellow', 22.00, 'images\paint\Short\short5', 0345, 31045);
+--45--
+(711926, 'shortPull&Bear6',	  'Men' ,   'S',  'Black', 21.00, 'images\paint\Short\short6', 0346, 31046);
+(711927, 'shortPull&Bear6',	  'Men' ,   'M',  'Black', 21.00, 'images\paint\Short\short6', 0347, 31046);
+(711928, 'shortPull&Bear6',	  'Men' ,   'L',  'Black', 21.00, 'images\paint\Short\short6', 0348, 31046);
+(711929, 'shortPull&Bear6',	  'Men' ,   'XL', 'Black', 21.00, 'images\paint\Short\short6', 0349, 31046);
+(711930, 'shortPull&Bear6',	  'Men' ,   'XXL','Black', 21.00, 'images\paint\Short\short6', 0350, 31046);
+--46-
+(711931, 'shortPull&Bear7',	  'Women' ,   'S',  'Purple', 20.00, 'images\paint\Short\short7', 0351, 31047);
+(711932, 'shortPull&Bear7',	  'Women' ,   'M',  'Purple', 20.00, 'images\paint\Short\short7', 0352, 31047);
+(711933, 'shortPull&Bear7',	  'Women' ,   'L',  'Purple', 20.00, 'images\paint\Short\short7', 0353, 31047);
+(711934, 'shortPull&Bear7',	  'Women' ,   'XL', 'Purple', 20.00, 'images\paint\Short\short7', 0354, 31047);
+(711935, 'shortPull&Bear7',	  'Women' ,   'XXL','Purple', 20.00, 'images\paint\Short\short7', 0355, 31047);
+--47
+(711936, 'shortPull&Bear8',	  'Women' ,   'S',  'Purple', 20.00, 'images\paint\Short\short8', 0356, 31048);
+(711937, 'shortPull&Bear8',	  'Women' ,   'M',  'Purple', 20.00, 'images\paint\Short\short8', 0357, 31048);
+(711938, 'shortPull&Bear8',	  'Women' ,   'L',  'Purple', 20.00, 'images\paint\Short\short8', 0358, 31048);
+(711939, 'shortPull&Bear8',	  'Women' ,   'XL', 'Purple', 20.00, 'images\paint\Short\short8', 0359, 31048);
+(711940, 'shortPull&Bear8',	  'Women' ,   'XXL','Purple', 20.00, 'images\paint\Short\short8', 0360, 31048);
+--48--
+(711941, 'shortPull&Bear9',	  'Women' ,   'S',  'Green', 20.00, 'images\paint\Short\short9', 0361, 31049);
+(711942, 'shortPull&Bear9',	  'Women' ,   'M',  'Green', 20.00, 'images\paint\Short\short9', 0362, 31049);
+(711943, 'shortPull&Bear9',	  'Women' ,   'L',  'Green', 20.00, 'images\paint\Short\short9', 0363, 31049);
+(711944, 'shortPull&Bear9',	  'Women' ,   'XL', 'Green', 20.00, 'images\paint\Short\short9', 0363, 31049);
+(711945, 'shortPull&Bear9',	  'Women' ,   'XXL','Green', 20.00, 'images\paint\Short\short9', 0365, 31049);
+--49--
+(711946, 'shortPull&Bear10',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short10', 0366, 31050);
+(711947, 'shortPull&Bear10',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short10', 0367, 31050);
+(711948, 'shortPull&Bear10',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short10', 0368, 31050);
+(711949, 'shortPull&Bear10',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short10', 0369, 31050);
+(711950, 'shortPull&Bear10',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short10', 0370, 31050);
+--50--
+(711951, 'shortPull&Bear11',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short11', 0371, 31051);
+(711952, 'shortPull&Bear11',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short11', 0372, 31051);
+(711953, 'shortPull&Bear11',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short11', 0373, 31051);
+(711954, 'shortPull&Bear11',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short11', 0374, 31051);
+(711955, 'shortPull&Bear11',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short11', 0375, 31051);
+--51--
+(711956, 'shortPull&Bear12',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short12', 0376, 31052);
+(711957, 'shortPull&Bear12',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short12', 0377, 31052);
+(711958, 'shortPull&Bear12',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short12', 0378, 31052);
+(711959, 'shortPull&Bear12',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short12', 0379, 31052);
+(711960, 'shortPull&Bear12',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short12', 0380, 31052);
+--52--
+(711961, 'shortPull&Bear13',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short13', 0381, 31053);
+(711962, 'shortPull&Bear13',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short13', 0382, 31053);
+(711963, 'shortPull&Bear13',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short13', 0383, 31053);
+(711964, 'shortPull&Bear13',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short13', 0384, 31053);
+(711965, 'shortPull&Bear13',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short13', 0385, 31053);
+-53
+
+
 -- Thêm d? li?u vào b?ng Orders OK
 INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId)
 VALUES 
