@@ -14,6 +14,7 @@ import Model.Products.ProductsDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -44,21 +45,30 @@ public class CartController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getParameter("action");
-        if (action != null && action.equals("setBill")) {
-            OrdersDAO orderDAO = new OrdersDAO();
-            
-            try {
-                List<OrdersDTO> shippedOrders = orderDAO.getShippedOrders();
-                request.setAttribute("successMessage", "Bills have been set successfully!");
 
+        if (action != null && action.equals("setBill")) {
+            // Lấy danh sách các đơn hàng từ giỏ hàng
+            List<OrdersDTO> orderList = (List<OrdersDTO>) request.getSession().getAttribute("cart");
+            
+            // Lưu danh sách các đơn hàng vào cơ sở dữ liệu
+            OrdersDAO orderDAO = new OrdersDAO();
+            boolean success = orderDAO.saveOrders(orderList);
+
+            if (success) {
+                // Xóa giỏ hàng sau khi đã lưu đơn hàng thành công
+                request.getSession().removeAttribute("cart");
+                // Chuyển hướng về trang chủ hoặc trang thành công
                 response.sendRedirect("homePage.jsp");
-            } catch (Exception e) {
-                e.printStackTrace();
-                // Handle error, for example redirect to error page
-                request.setAttribute("errorMessage", "Error occurred while setting bills!");
-                response.sendRedirect("homePage.jsp");
+            } else {
+                // Nếu có lỗi xảy ra, hiển thị thông báo lỗi
+                request.setAttribute("errorMessage", "Failed to save orders!");
+                request.getRequestDispatcher("error.jsp").forward(request, response);
             }
+        } else {
+            // Nếu không có hành động nào được xác định, chuyển hướng về trang cart.jsp
+            request.getRequestDispatcher("cart.jsp").forward(request, response);
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

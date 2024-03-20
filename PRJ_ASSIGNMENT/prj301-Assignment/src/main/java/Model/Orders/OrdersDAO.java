@@ -143,38 +143,42 @@ public class OrdersDAO {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      
-    public List<OrdersDTO> getShippedOrders() {
-        List<OrdersDTO> orders = new ArrayList<>();
+    public boolean saveOrders(List<OrdersDTO> orderList) {
+        boolean success = false;
+        Connection conn = null;
+        PreparedStatement stmt = null;
 
-        try (
-            Connection conn = DBUtils.getConnection();
-            PreparedStatement stmt = conn.prepareStatement(
-                "SELECT o.OrdersID, o.OrdersDate, o.Price, o.Quantity, o.Address AS OrderAddress, o.Status, o.Freight, " +
-                "c.CustomerName, c.PhoneNumber, c.Address AS CustomerAddress, c.Gender, c.Email " +
-                "FROM Orders o " +
-                "JOIN Customers c ON o.CustomerId = c.CustomerID " +
-                "JOIN Cart ct ON o.CustomerId = ct.CustomerId " +
-                "WHERE o.Status = 'Shipped'"
-            );
-            ResultSet rs = stmt.executeQuery()
-        ) {
-            while (rs.next()) {
-                OrdersDTO order = new OrdersDTO();
-                order.setOrdersID(rs.getInt("OrdersID"));
-                order.setOrdersDate(rs.getDate("OrdersDate"));
-                order.setPrice(rs.getFloat("Price"));
-                order.setQuantity(rs.getInt("Quantity"));
-                order.setAddress(rs.getString("OrderAddress"));
-                order.setStatus(rs.getString("Status"));
-                order.setFreight(rs.getString("Freight"));
-                order.setCustomerId(rs.getInt("CustomerId"));
-                
-                orders.add(order);
+        try {
+            conn = DBUtils.getConnection();
+
+            for (OrdersDTO order : orderList) {
+                String sql = "INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId) " +
+                             "VALUES (?, ?, ?, ?, ?, ?, ?)";
+                stmt = conn.prepareStatement(sql);
+                stmt.setInt(1, order.getOrdersID());
+                stmt.setDate(2, order.getOrdersDate());
+                stmt.setFloat(3, order.getPrice());
+                stmt.setInt(4, order.getQuantity());
+                stmt.setString(5, order.getAddress());
+                stmt.setString(6, order.getStatus());
+                stmt.setString(7, order.getFreight());
+                stmt.setInt(8, order.getCustomerId());
+                stmt.executeUpdate();
             }
+
+            success = true;
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                if (stmt != null) stmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
-        return orders;
-    }    
+        return success;
+    }   
+    
 }
