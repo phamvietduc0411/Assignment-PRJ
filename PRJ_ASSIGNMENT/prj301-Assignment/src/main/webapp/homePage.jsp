@@ -80,7 +80,7 @@
                                             </li>
                                             
                                             <li class="menu-item has-sub">
-                                                <a href="./PageController?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
+                                                <a href="profile.jsp?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>
@@ -88,7 +88,7 @@
                                             <!--logout customer-->     
                                             <li>
                                                 <a
-                                                    href="./PageController?action=loguot"
+                                                    href="./PageController?action=logout"
                                                     class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b>
                                                 </a>
                                             </li>        

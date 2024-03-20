@@ -102,7 +102,7 @@
                 </nav>
             </div>
         </header>
-        <section id="billboard" class="overflow-hidden">
+<!--        <section id="billboard" class="overflow-hidden">
 
             <button class="button-prev">
                 <i class="icon icon-chevron-left"></i>
@@ -150,18 +150,18 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <div>
             <h1>Customer Profile</h1>
         </div>
         <div>
-            <p>Customer ID: ${customer.customerID}</p>
+            <p>Customer ID: ${customerID}</p>
         </div>
         <div>
-            <p>Username: ${customer.username}</p>
+            <p>Username: ${username}</p>
         </div>
         <div>
-            <p>Name: ${customer.customerName}</p>
+            <p>Name: ${CustomerName}</p>
         </div>
         <div>
             <p>Phone Number: ${customer.phoneNumber}</p>

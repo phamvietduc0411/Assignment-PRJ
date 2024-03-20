@@ -81,7 +81,7 @@ public class CustomersDAO {
         try {
             Connection con = DBUtils.getConnection();
 
-            String sql = "SELECT * FROM Customers WHERE customerID = ?";
+            String sql = " SELECT * FROM Customers WHERE customerID = ? ";
 
             PreparedStatement stm = con.prepareStatement(sql);
 
