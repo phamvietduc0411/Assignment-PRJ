@@ -83,6 +83,10 @@
                                             <li><a
                                                     href=""
                                                     class="item-anchor" data-effect="Contact" target="_blank"> <b>GET PRO</b> </a></li>
+                                            <!--logout customer-->     
+                                            <li><a
+                                                    href="./PageController?action=loguot"
+                                                    class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b> </a></li>        
 
 
                                         </ul>
