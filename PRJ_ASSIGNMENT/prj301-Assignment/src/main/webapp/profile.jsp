@@ -117,6 +117,10 @@
         <h4>Email: ${sessionScope.customer.email}</h4>
 
     </div>
+    <form action="PageController">
+             <input type=hidden name="id" value="${requestScope.playlist.playlistID}">
+             <input type=hidden name="action" value="edit">
+             <input type=submit value="Edit"></form>    
 
     <h1>Order History</h1>
     <table border="3">

@@ -105,5 +105,75 @@ public class CustomersDAO {
         }
         return customer;
     }
+    
+    public CustomersDTO load (int customerID){
+        String sql = " SELECT * FROM Customers WHERE customerID = ? ";
+        try{
+           Connection conn = DBUtils.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, customerID);
+            ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+                String username = rs.getString("Username");
+                String password = rs.getString("Password");
+                String customerName = rs.getString("CustomerName");
+                String phoneNumber = rs.getString("PhoneNumber");
+                String address = rs.getString("Address");
+                String gender = rs.getString("Gender");
+                String email = rs.getString("Email");
+                
+                CustomersDTO customers = new CustomersDTO();
+                customers.setCustomerID(customerID);
+                customers.setUsername(username);
+                customers.setPassword(password);
+                customers.setCustomerName(customerName);
+                customers.setPhoneNumber(phoneNumber);
+                customers.setAddress(address);
+                customers.setGender(gender);
+                customers.setEmail(email);
+                return customers;
+                
+            }
+        }
+        catch(SQLException ex){
+            System.out.println("Query playlist error!" + ex.getMessage());
+            ex.printStackTrace();
+        }
+        return null;
+    }
+    
+    public boolean update(CustomersDTO customers){
+        String sql = " UPDATE Customers SET username = ?, customerName = ?, phoneNumber = ?, address = ?, gender = ?, email = ?  WHERE customerID = ? ";
+        
+        
+        try {
+            
+            Connection conn = DBUtils.getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);                      
+            
+            
+            ps.setString(1, customers.getUsername());
+            ps.setString(2, customers.getCustomerName());
+            ps.setString(3, customers.getPhoneNumber());
+            ps.setString(4, customers.getAddress());
+            ps.setString(5, customers.getGender());
+            ps.setString(6, customers.getEmail());
+            ps.setInt(7, customers.getCustomerID());
+            
+            
+            
+          
+            ps.executeUpdate();
+            conn.close();
+
+           
+	}
+        catch (SQLException ex) {
+            System.out.println("Update PlayList error!" + ex.getMessage());
+            ex.printStackTrace();
+        }
+        
+        return false;
+    }
 
 }
