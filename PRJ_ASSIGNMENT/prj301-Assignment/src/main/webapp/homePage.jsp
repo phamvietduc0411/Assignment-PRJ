@@ -83,16 +83,10 @@
 
                                             <!--logout customer-->     
                                             <li>
-                                                <a
-<<<<<<< Updated upstream
-                                                    href="./PageController?action=logout"  class="item-anchor" data-effect="Contact" > <b>Logout</b>
+                                                <a  href="./PageController?action=logout"  class="item-anchor" data-effect="Contact" > <b>Logout</b>
 
 
-=======
-                                                    href="./PageController?action=logout"
-                                                    class="item-anchor" data-effect="Contact" target="_self"> <b>Logout</b>
->>>>>>> Stashed changes
-                                                </a>
+                     </a>
                                             </li>        
                                         </ul>
                                     </div>

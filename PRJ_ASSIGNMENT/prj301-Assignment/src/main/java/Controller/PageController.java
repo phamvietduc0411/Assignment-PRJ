@@ -140,7 +140,6 @@ public class PageController extends HttpServlet {
                 }
                 OrdersDAO orderDAO = new OrdersDAO();
                 List<OrdersDTO> orderList = orderDAO.getOrderHistory(customerid);
-                System.out.println("-=-------"+orderList.size());
                 request.setAttribute("orderList", orderList);            
                 request.getRequestDispatcher("profile.jsp").forward(request, response);       
             } else if (action.equals("add")) {
