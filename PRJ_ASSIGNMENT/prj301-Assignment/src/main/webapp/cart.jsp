@@ -90,12 +90,9 @@
                                         </td>
                                         <td class="shoping__cart__quantity">
                                             <div class="quantity">
-                                                <form action="./CartController?change" method="post">
-                                                    <input type="hidden" name="productId" value="<%= products.getProductsID()%>">
-                                                    <button type="submit" name="action" value="minus">-</button>
-                                                    <input type="text" name="quantity" value="<%= quantity%>" min="1">
-                                                    <button type="submit" name="action" value="plus">+</button>
-                                                </form>
+                                                <div class="pro-qty">
+                                                    <h4><%= quantity%></h4>
+                                                </div>
                                             </div>
                                         </td>
                                         <td class="shoping__cart__total">
@@ -116,18 +113,18 @@
                     <div class="col-lg-12">
                         <div class="shoping__cart__btns">
                             <a href="homePage.jsp" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
-                            <a href="./PageController?action=update" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
-                                Upadate Cart</a>
+<!--                            <a href="./PageController?action=update" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
+                                Upadate Cart</a>-->
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="shoping__continue">
                             <div class="shoping__discount">
-                                <h5>Discount Codes</h5>
+<!--                                <h5>Discount Codes</h5>
                                 <form action="./CartController?action=discount" method="GET">
                                     <input type="text" placeholder="Enter your coupon code">
                                     <button type="submit" class="site-btn">APPLY COUPON</button>
-                                </form>
+                                </form>-->
                             </div>
                         </div>
                     </div>
@@ -138,7 +135,9 @@
                                 <li>Subtotal <span>$<%= totalPrice%></span></li>
                                 <li>Total <span>$<%= totalPrice%></span></li>
                             </ul>
-                            <a href="./CartController?action=setBill" class="primary-btn">PROCEED TO CHECKOUT</a>
+                            <form action="CartController" method="post">
+                                <button type="submit">Proceed to Checkout</button>
+                            </form>
                         </div>
                     </div>
                 </div>

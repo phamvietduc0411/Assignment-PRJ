@@ -503,3 +503,4 @@ SELECT *
 FROM Products p INNER JOIN Category c ON p.CategoryId = c.CategoryID
 				INNER JOIN Storage s ON p.StorageId = s.StorageID
 WHERE c.CategoryID = 31001
+

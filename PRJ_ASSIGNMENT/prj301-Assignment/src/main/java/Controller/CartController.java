@@ -7,14 +7,21 @@ package Controller;
 
 import Model.Cart.CartDAO;
 import Model.Cart.CartDTO;
+import Model.OrderDetail.OrderDetailDTO;
+import Model.Products.ProductsDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import prj301demo.utils.DBUtils;
 
 /**
  *
@@ -32,25 +39,8 @@ public class CartController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
-        int productId = Integer.parseInt(request.getParameter("productId"));
-        int quantity = Integer.parseInt(request.getParameter("quantity"));
-        String action = request.getParameter("action");
-
-        if (action.equals("change")) {
-            CartDAO cartDAO = new CartDAO();
-
-            try {
-                // Gọi phương thức updateQuantity của DAO để cập nhật số lượng sản phẩm
-                cartDAO.updateQuantity(productId, quantity);
-            } catch (SQLException e) {
-                // Xử lý ngoại lệ
-                e.printStackTrace(); // Hoặc có thể xử lý ngoại lệ theo cách khác
-            }
-
-            // Chuyển hướng trở lại trang giỏ hàng (hoặc trang cần thiết)
-            response.sendRedirect("cart.jsp");
-        }
+            throws ServletException, IOException {
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
