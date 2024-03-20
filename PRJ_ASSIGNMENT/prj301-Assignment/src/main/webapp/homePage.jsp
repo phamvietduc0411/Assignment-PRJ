@@ -172,7 +172,7 @@
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
                                         <!--ADD TO CART-->
-                                        <a href="CartController?action=add&size=M">add to cart <i
+                                        <a href="CartController?action=add">add to cart <i
                                                 class="icon icon-arrow-io"></i></a>
                                     </div>
                                 </div>
