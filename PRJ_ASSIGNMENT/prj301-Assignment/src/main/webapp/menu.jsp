@@ -15,42 +15,47 @@
               <div class="navbar">
 
                 <div id="main-nav" class="stellarnav d-flex justify-content-end right">
-                  <ul class="menu-list">
+                                        <ul class="menu-list">
 
-                    <li class="menu-item has-sub">
-                      <a href="homePage.jsp" class="item-anchor active d-flex align-item-center" data-effect="Home">Home<i
-                          class="icon icon-chevron-down"></i></a>
-                    </li>
+                                            <li class="menu-item has-sub">
+                                                <a href="homePage.jsp" class="item-anchor active d-flex align-item-center" data-effect="Home">Home<i
+                                                        class="icon icon-chevron-down"></i>
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="menu-item has-sub">
+                                                <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
+                                                        class="icon icon-chevron-down"></i>
+                                                </a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a 
+                                                    href="about.jsp" class="item-anchor" data-effect="About">About
+                                                </a>
+                                            </li>
 
-                    <li><a href="about.html" class="item-anchor" data-effect="About">About</a></li>
-
-                    <li class="menu-item has-sub">
-                      <a href="#" class="item-anchor d-flex align-item-center" data-effect="Shop">Shop<i
-                          class="icon icon-chevron-down"></i></a>
-
-                    </li>
-
-                    <li class="menu-item has-sub">
-                      <a href="#" class="item-anchor d-flex align-item-center" data-effect="Pages">Pages<i
-                          class="icon icon-chevron-down"></i></a>
-                      
-                    </li>
-
-                    <li class="menu-item has-sub">
-                      <a href="#" class="item-anchor d-flex align-item-center" data-effect="Blog">Blog<i
-                          class="icon icon-chevron-down"></i></a>
-                      
-                    </li>
-
-                    <li><a href="cart.jsp" class="item-anchor" data-effect="Contact">Cart</a></li>
-
-                    <li><a
-                        href="https://templatesjungle.gumroad.com/l/ultras-free-ecommerce-clothing-store-website-template/"
-                        class="item-anchor" data-effect="Contact" target="_blank"> <b>GET PRO</b> </a></li>
-
-
-                  </ul>
-                </div>
+                                            <li>
+                                                <a 
+                                                    href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="menu-item has-sub">
+                                                <a href="profile.jsp?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
+                                                        class="icon icon-chevron-down"></i>
+                                                </a>
+                                            </li>
+                                       
+                                            <!--logout customer-->     
+                                            <li>
+                                                <a
+                                                    href="./PageController?action=logout"
+                                                    class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b>
+                                                </a>
+                                            </li>        
+                                        </ul>
+                                    </div>
                   <form class="search-bar" action="./PageController" method="GET" style="text-align: end;">
                       <input name="action" value="search" hidden>
                       <input type="text" name="keyword" >
