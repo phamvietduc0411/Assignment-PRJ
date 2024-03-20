@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,23 +36,18 @@ public class CartController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        int productId = Integer.parseInt(request.getParameter("productId"));
-        int quantity = Integer.parseInt(request.getParameter("quantity"));
-        int customerId = Integer.parseInt(request.getParameter("customerID"));
-
-        CartDAO cartDAO = new CartDAO();
-        int cartId = cartDAO.addToCart(customerId);
-
-        CartItemDTO cartItem = new CartItemDTO();
-        cartItem.setProId(productId);
-        cartItem.setQuantity(quantity);
-        cartItem.setCartID(cartId);
-
-        CartItemDAO cartItemDAO = new CartItemDAO(connection);
-        cartItemDAO.getCartItems(cartItem);
-
-        response.sendRedirect("cart.jsp");
+        int cartId = Integer.parseInt(request.getParameter("cartId"));
+        
+        try {
+            CartItemDAO cartItemDAO = new CartItemDAO();
+            List<CartItemDTO> cartItems = cartItemDAO.getCartItems(cartId);
+            
+            request.setAttribute("cartItems", cartItems);
+            request.getRequestDispatcher("cart.jsp").forward(request, response);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            response.getWriter().println("Error: " + ex.getMessage());
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -283,7 +283,6 @@ VALUES
 (711720, 'Plain bomber jacket Basic', 'Men', 'S', 'Dark-Brown', 50.00, 'images\shirt\Bomber\Bomber5.jpg', 0131, 31005),
 (711721, 'Plain bomber jacket Basic', 'Men', 'M', 'Dark-Brown', 50.00, 'images\shirt\Bomber\Bomber5.jpg', 0132, 31005),
 (711722, 'Plain bomber jacket Basic', 'Men', 'L', 'Dark-Brown', 50.00, 'images\shirt\Bomber\Bomber5.jpg', 0133, 31005),
-(711723, 'Plain bomber jacket Basic', 'Men', 'XL', 'Dark-Brown', 50.00, 'images\shirt\Bomber\Bomber5.jpg', 0134, 31005),
 (711724, 'Plain bomber jacket Basic', 'Men', 'XXL', 'Dark-Brown', 50.00, 'images\shirt\Bomber\Bomber5.jpg', 0135, 31005),
 --5
 (711725, 'Black plain bomber jacket with waves', 'Women', 'S', 'Black', 12.99, 'images\shirt\Bomber\Bomber6.jpg', 0136, 31006),

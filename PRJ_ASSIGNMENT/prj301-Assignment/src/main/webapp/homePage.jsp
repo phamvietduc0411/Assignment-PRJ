@@ -57,38 +57,41 @@
 
                                             <li class="menu-item has-sub">
                                                 <a href="homePage.jsp" class="item-anchor active d-flex align-item-center" data-effect="Home">Home<i
-                                                        class="icon icon-chevron-down"></i></a>
+                                                        class="icon icon-chevron-down"></i>
+                                                </a>
                                             </li>
-
-                                            <li><a href="about.html" class="item-anchor" data-effect="About">About</a></li>
-
-                                            <li class="menu-item has-sub">
-                                                <a href="#" class="item-anchor d-flex align-item-center" data-effect="Shop">Shop<i
-                                                        class="icon icon-chevron-down"></i></a>
-                                            </li>
-
-                                            <li class="menu-item has-sub">
-                                                <a href="#" class="item-anchor d-flex align-item-center" data-effect="Pages">Pages<i
-                                                        class="icon icon-chevron-down"></i></a>
-                                            </li>
-
+                                            
                                             <li class="menu-item has-sub">
                                                 <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
-                                                        class="icon icon-chevron-down"></i></a>
-                                                
+                                                        class="icon icon-chevron-down"></i>
+                                                </a>
+                                            </li>
+                                            
+                                            <li>
+                                                <a 
+                                                    href="about.jsp" class="item-anchor" data-effect="About">About
+                                                </a>
                                             </li>
 
-                                            <li><a href="cart.jsp" class="item-anchor" data-effect="Contact">Cart</a></li>
-
-                                            <li><a
-                                                    href=""
-                                                    class="item-anchor" data-effect="Contact" target="_blank"> <b>GET PRO</b> </a></li>
+                                            <li>
+                                                <a 
+                                                    href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="menu-item has-sub">
+                                                <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
+                                                        class="icon icon-chevron-down"></i>
+                                                </a>
+                                            </li>
+                                       
                                             <!--logout customer-->     
-                                            <li><a
+                                            <li>
+                                                <a
                                                     href="./PageController?action=loguot"
-                                                    class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b> </a></li>        
-
-
+                                                    class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b>
+                                                </a>
+                                            </li>        
                                         </ul>
                                     </div>
 
