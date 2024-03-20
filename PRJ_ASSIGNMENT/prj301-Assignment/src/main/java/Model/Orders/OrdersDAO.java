@@ -57,7 +57,7 @@ public class OrdersDAO {
     }
     
 
-     public List<OrdersDTO> getOrderHistory(int customerID) throws SQLException {
+     public List<OrdersDTO> getOrderHistory(int customerID)  {
         List<OrdersDTO> orderHistory = new ArrayList<>();
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -77,26 +77,16 @@ public class OrdersDAO {
                 order.setOrdersDate(rs.getDate("OrdersDate"));
                 order.setPrice(rs.getFloat("Price"));
                 order.setQuantity(rs.getInt("Quantity"));
-                order.setAddress(rs.getString("Address"));
                 order.setStatus(rs.getString("Status"));
                 order.setFreight(rs.getString("Freight"));
                 order.setCustomerId(rs.getInt("CustomerId"));
-                order.setDiscountId(rs.getString("DiscountId"));
+                order.setAddress(rs.getString("Address"));
                 
                 orderHistory.add(order);
             }
         } catch (SQLException e) {
+            System.out.println("ERRON IN  getOrderHistory" +e.getMessage());
             e.printStackTrace();
-        } finally {
-            if(rs != null){
-                rs.close();
-            }
-            if(stmt != null){
-                stmt.close();
-            }
-            if(conn != null){
-                conn.close();
-            }
         }
         
         return orderHistory;
@@ -135,12 +125,13 @@ public class OrdersDAO {
         return list;
     }
      
-     public void confirmOrder(String orderId) {
+     public void confirmOrder(String orderId , String status) {
         try {
             Connection con = DBUtils.getConnection();
-            String sql = "UPDATE Orders SET Status = 'Failed' WHERE OrdersID = ? ";
+            String sql = "UPDATE Orders SET Status = ? WHERE OrdersID = ? ";
             PreparedStatement statement = con.prepareStatement(sql);
-            statement.setString(1, orderId);
+            statement.setString(1, status);
+            statement.setString(2, orderId);
             statement.executeUpdate();
             statement.close();
             con.close();
@@ -148,6 +139,10 @@ public class OrdersDAO {
             System.out.println("ERROR  WHEN COMFIRM ORDER" + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    public List<OrdersDTO> getOrderHistory(String customerID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      
 }

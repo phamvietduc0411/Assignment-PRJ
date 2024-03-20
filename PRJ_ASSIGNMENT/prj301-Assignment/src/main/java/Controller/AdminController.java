@@ -114,9 +114,10 @@ public class AdminController extends HttpServlet {
                 request.setAttribute("delete", "DELETE Successfully");
                 request.getRequestDispatcher("admin.jsp").forward(request, response);
 
-            } else if (action.equals("reject")) {
+            } else if (action.equals("reject")||action.equals("accept"))  {
+                
                 String orderID = request.getParameter("orderID");
-                orderDAO.confirmOrder(orderID);
+                orderDAO.confirmOrder(orderID,action);
 
                 orderList = orderDAO.checkOrderAdmin();
                 request.setAttribute("productlist", list);

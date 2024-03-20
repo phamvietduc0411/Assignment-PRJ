@@ -11,6 +11,8 @@ import Model.Category.CategoryDAO;
 import Model.Category.CategoryDTO;
 import Model.Customters.CustomersDAO;
 import Model.Customters.CustomersDTO;
+import Model.Orders.OrdersDAO;
+import Model.Orders.OrdersDTO;
 import Model.Products.ProductsDAO;
 import Model.Products.ProductsDTO;
 import java.io.IOException;
@@ -46,9 +48,9 @@ public class PageController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
-
+            
             ProductsDAO productDAO = new ProductsDAO();
-
+            
             if (action.equals("productDetails")) {
                 CategoryDAO categoryDAO = new CategoryDAO();
                 Integer CategoryID = null;
@@ -57,32 +59,32 @@ public class PageController extends HttpServlet {
                 } catch (NumberFormatException ex) {
                     log("Parameter id has wrong format.");
                 }
-
+                
                 CategoryDTO category = null;
                 if (CategoryID != null) {
                     category = categoryDAO.load(CategoryID);
-
+                    
                 }
                 request.setAttribute("category", category);
                 request.getRequestDispatcher("productDetails.jsp").forward(request, response);
             } else if (action.equals("view")) {
-
+                
                 List<ProductsDTO> bestSellList = productDAO.bestseller();
                 request.setAttribute("bestSeller", bestSellList);
                 request.getRequestDispatcher("displayProduct.jsp").forward(request, response);
-
+                
             } else if (action.equals("collection")) {
-
+                
                 List<ProductsDTO> menCollectionSummer = productDAO.collection("Summer", "Men");
                 List<ProductsDTO> menCollectionAutumn = productDAO.collection("Autumn", "Men");
                 List<ProductsDTO> menCollectionSpring = productDAO.collection("Spring", "Men");
                 List<ProductsDTO> menCollectionWinter = productDAO.collection("Winter", "Men");
-
+                
                 List<ProductsDTO> womenCollectionSummer = productDAO.collection("Summer", "Women");
                 List<ProductsDTO> womenCollectionAutumn = productDAO.collection("Autumn", "Women");
                 List<ProductsDTO> womenCollectionSpring = productDAO.collection("Spring", "Women");
                 List<ProductsDTO> womenCollectionWinter = productDAO.collection("Winter", "Women");
-
+                
                 request.setAttribute("menCollectionSummer", menCollectionSummer);
                 request.setAttribute("menCollectionAutumn", menCollectionAutumn);
                 request.setAttribute("menCollectionSpring", menCollectionSpring);
@@ -92,13 +94,13 @@ public class PageController extends HttpServlet {
                 request.setAttribute("womenCollectionAutumn", womenCollectionAutumn);
                 request.setAttribute("womenCollectionSpring", womenCollectionSpring);
                 request.setAttribute("womenCollectionWinter", womenCollectionWinter);
-
+                
                 request.getRequestDispatcher("collection.jsp").forward(request, response);
             } else if (action.equals("search")) {
                 String keyword = request.getParameter("keyword");
                 List<ProductsDTO> result = productDAO.SearchProByName(keyword);
                 request.setAttribute("result", result);
-
+                
                 request.getRequestDispatcher("searchingproducts.jsp").forward(request, response);
             } else if (action.equals("logout")) {
                 HttpSession session = request.getSession(false);
@@ -108,18 +110,41 @@ public class PageController extends HttpServlet {
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
                 }
-
+                
             } else if (action != null && action.equals("profile")) {
-                String profile = request.getParameter("profile");
 
-                CustomersDAO customersDAO = new CustomersDAO();
-                CustomersDTO customers = customersDAO.getCustomerProfile(profile);
-                request.setAttribute("customers", customers);
-
+                int customerID = 0;
+                
+                 try {
+                    customerID = Integer.parseInt(request.getParameter("cusId"));
+                } catch (NumberFormatException ex) {
+                    log("Parameter id has wrong format.");
+                }
+                
+                OrdersDAO orderDAO = new OrdersDAO();
+                
+                List<OrdersDTO> orderList =  orderDAO.getOrderHistory(customerID);
+                request.setAttribute("orderList", orderList);
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
 
             } else if(action.equals("add")) {
 
+                String cusId = request.getParameter("cusId");                
+                System.out.println("" + cusId);
+                
+                int customerid = 0;
+                try {
+                   customerid  = Integer.parseInt(request.getParameter("cusId"));
+                } catch (NumberFormatException ex) {
+                    log("Parameter id has wrong format.");
+                }
+                OrdersDAO orderDAO = new OrdersDAO();
+                List<OrdersDTO> orderList = orderDAO.getOrderHistory(customerid);
+                System.out.println("-=-------"+orderList.size());
+                request.setAttribute("orderList", orderList);            
+                request.getRequestDispatcher("profile.jsp").forward(request, response);       
+            } else if (action.equals("add")) {
+                
                 int customerid = 0;
                 int productid = 0;
                 try {
@@ -128,7 +153,7 @@ public class PageController extends HttpServlet {
                 } catch (NumberFormatException ex) {
                     log("Parameter id has wrong format.");
                 }
-
+                
                 CartDAO cartDAO = new CartDAO();
                 cartDAO.addToCart(customerid, productid);
                 request.getRequestDispatcher("homePage.jsp").forward(request, response);

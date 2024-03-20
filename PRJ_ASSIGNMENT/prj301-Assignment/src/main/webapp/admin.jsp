@@ -87,12 +87,14 @@
                                                 <td> <form action ="./AdminController" method="GET">
                                                         <input name="action" value="reject" type="hidden">
                                                         <input name="orderID" value="<%= products.getOrdersID()%>" type="hidden">
+                                                        
                                                         <input type="submit" value="REJECT">
                                                     </form></td> 
 
 
                                                 <td> <form action ="./AdminController" method="GET">
                                                         <input name="action" value="accept" type="hidden">
+                                                         <input name="orderID" value="<%= products.getOrdersID()%>" type="hidden">
                                                         <input type="submit" value="ACCEPT ORDERS">
                                                     </form></td> 
 

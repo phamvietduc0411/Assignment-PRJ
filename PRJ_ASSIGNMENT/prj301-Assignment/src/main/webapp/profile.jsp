@@ -35,7 +35,7 @@
     <body>
         <header id="header">
             <div id="header-wrap">
-                
+
                 <nav class="primary-nav padding-small">
                     <div class="container">
                         <div class="row d-flex align-items-center">
@@ -57,13 +57,13 @@
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>
-                                            
+
                                             <li class="menu-item has-sub">
                                                 <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>
-                                            
+
                                             <li>
                                                 <a 
                                                     href="about.jsp" class="item-anchor" data-effect="About">About
@@ -75,10 +75,6 @@
                                                     href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
                                                 </a>
                                             </li>
-
-                                            
-
-
                                             </li> 
 
                                             <li>
@@ -91,7 +87,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </nav>
@@ -101,28 +97,28 @@
         <div>
             <h1>Customer Profile</h1>
         </div>
-            <h4>Username: ${sessionScope.customer.username}</h4>
-        </div>
-        <div>
-            <h4>Name: ${sessionScope.customer.customerName}</h4>
-        </div>
-        <div>
-            <h4>Phone Number: ${sessionScope.customer.phoneNumber}</h4>
-        </div>
-        <div>
-            <h4>Address: ${sessionScope.customer.address}</h4>
-        </div>
-        
-        <div>
-            <h4>Gender: ${sessionScope.customer.gender}</h4>
-        </div>
-        
-        <div>
-            <h4>Email: ${sessionScope.customer.email}</h4>
+        <h4>Username: ${sessionScope.customer.username}</h4>
+    </div>
+    <div>
+        <h4>Name: ${sessionScope.customer.customerName}</h4>
+    </div>
+    <div>
+        <h4>Phone Number: ${sessionScope.customer.phoneNumber}</h4>
+    </div>
+    <div>
+        <h4>Address: ${sessionScope.customer.address}</h4>
+    </div>
 
-        </div>
-        
-        <h1>Order History</h1>
+    <div>
+        <h4>Gender: ${sessionScope.customer.gender}</h4>
+    </div>
+
+    <div>
+        <h4>Email: ${sessionScope.customer.email}</h4>
+
+    </div>
+
+    <h1>Order History</h1>
     <table border="3">
         <tr>
             <th>Order ID</th>
@@ -134,40 +130,35 @@
             <th>Freight</th>
             <!-- Add more columns if needed -->
         </tr>
-        <% 
-            List<OrdersDTO> orderHistory = (List<OrdersDTO>) request.getAttribute("orderHistory");
-            if (orderHistory != null && !orderHistory.isEmpty()) {
+        <%
+            List<OrdersDTO> orderHistory = (List<OrdersDTO>) request.getAttribute("orderList");
+
                 for (OrdersDTO order : orderHistory) {
         %>
         <tr>
-            <td><%= order.getOrdersID() %></td>
-            <td><%= order.getOrdersDate() %></td>
-            <td><%= order.getPrice() %></td>
-            <td><%= order.getQuantity() %></td>
-            <td><%= order.getAddress() %></td>
-            <td><%= order.getStatus() %></td>
-            <td><%= order.getFreight() %></td>
-            <!-- Add more columns if needed -->
+            <td><%= order.getOrdersID()%></td>
+            <td><%= order.getOrdersDate()%></td>
+            <td><%= order.getPrice()%></td>
+            <td><%= order.getQuantity()%></td>
+            <td><%= order.getAddress()%></td>
+            <td><%= order.getStatus()%></td>
+            <td><%= order.getFreight()%></td>
+           
         </tr>
-        <% 
-                }
-            } else {
-        %>
-        <tr>
-            <td colspan="7">No orders found.</td>
-        </tr>
-        <% } %>
+        
+ 
+        <% }%>
     </table>
-        
-        
-        
-        
-        
-        
-        
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/script.js"></script>
-        
-    </body>
+
+
+
+
+
+
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
 </html>

@@ -30,7 +30,7 @@
         </div>
 
 
-  <h3> Hello  ${sessionScope.customer.username}</h3>
+        <h3> Hello  ${sessionScope.customer.username}</h3>
         <header id="header">
 
             <div id="header-wrap">
@@ -76,7 +76,7 @@
                                             </li>
 
                                             <li class="menu-item has-sub">
-                                                <a href="./PageController?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
+                                                <a href="./PageController?action=profile&cusId=${sessionScope.customer.customerID}" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>
@@ -84,12 +84,9 @@
                                             <!--logout customer-->     
                                             <li>
                                                 <a
-                                                    href="./PageController?action=logout"
-<<<<<<< Updated upstream
-                                                    class="item-anchor" data-effect="Contact" > <b>Logout</b>
-=======
-                                                    class="item-anchor" data-effect="Contact" target="_self"> <b>Logout</b>
->>>>>>> Stashed changes
+                                                    href="./PageController?action=logout"  class="item-anchor" data-effect="Contact" > <b>Logout</b>
+
+
                                                 </a>
                                             </li>        
                                         </ul>
@@ -335,7 +332,7 @@
                                                 class="icon icon-arrow-io"></i>
                                         </button>
 
-                                        
+
                                     </div>
                                 </div>
                                 <div class="product-detail">
@@ -612,441 +609,441 @@
                                                 class="icon icon-arrow-io"></i>
                                         </button>
 
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">San Francisco Seal Rocks Sweatshirt</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$80.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Sweaters/Sweatear5.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">San Francisco Seal Rocks Sweatshirt</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$80.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Striped sweatshirt</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$65.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tshirts" data-tab-content>
-                        <div class="row d-flex flex-wrap">
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Sweaters/Sweatear5.jpg" alt="Books" class="product-image">
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Short Sleeve T-Shirt With Print</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$35.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt9.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Short Sleeve Oversize T-Shirt With Metallic Print</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$30.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Sweaters/Sweatear10.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Striped sweatshirt</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$65.00</div>
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Round neck sweater</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$40.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/T-Shirt/T-Shirt6.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Short sleeve T-shirt with a round neck</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$40.00</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="pants" data-tab-content>
-                        <div class="row d-flex flex-wrap">
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Bomber/Bomber3.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                        <div id="tshirts" data-tab-content>
+                            <div class="row d-flex flex-wrap">
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Short Sleeve T-Shirt With Print</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$35.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Patch Bomber Jacket</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$40.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Bomber/Bomber4.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/T-Shirt/T-Shirt9.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Short Sleeve Oversize T-Shirt With Metallic Print</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$30.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Patch Bomber Jacket</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$30.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Bomber/Bomber5.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Sweaters/Sweatear10.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Round neck sweater</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$40.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Washed Effect Bomber Jacket</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$40.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Bomber/Bomber10.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/T-Shirt/T-Shirt6.jpg" alt="Books" class="product-image">
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Soft Bomber Jacket</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$40.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="hoodie" data-tab-content>
-                        <div class="row d-flex flex-wrap">
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Hoodie/Hoodie6.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Reverse Weave Hoodie</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$40.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Hoodie/Hoodie4.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Short sleeve T-shirt with a round neck</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$40.00</div>
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Heavy quality oversize hoodie</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$45.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Hoodie/Hoodie9.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Hoodie with slogan</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$35.00</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="outer" data-tab-content>
-                        <div class="row d-flex flex-wrap">
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Sweaters/Sweatear5.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                        <div id="pants" data-tab-content>
+                            <div class="row d-flex flex-wrap">
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Bomber/Bomber3.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Patch Bomber Jacket</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$40.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">P&B Black Label round neck sweatshirt</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$ 35.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Sweaters/Sweatear6.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Bomber/Bomber4.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Patch Bomber Jacket</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$30.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Blue slogan sweatshirt</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$ 30.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Sweaters/Sweatear3.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Bomber/Bomber5.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Washed Effect Bomber Jacket</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$40.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">New Arizona embroidered textured sweatshirt</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$ 30.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/shirt/Sweaters/Sweatear2.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Bomber/Bomber10.jpg" alt="Books" class="product-image">
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">San Francisco Seal Rocks Sweatshirt</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$ 40.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="jackets" data-tab-content>
-                        <div class="row d-flex flex-wrap">
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/paint/baggy/baggy4.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Wide-leg jogger trousers with pockets</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$40.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/paint/baggy/baggy2.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Soft Bomber Jacket</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$40.00</div>
                                     </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Wide-leg jogger baggy with pockett</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$35.00</div>
-                                </div>
-                            </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/paint/baggy/baggy3.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
-
-                                    </div>
-                                </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Wide-leg jogger baggy with pockett</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$35.00</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="accessories" data-tab-content>
-                        <div class="row d-flex flex-wrap">
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/paint/Short/short3.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                        <div id="hoodie" data-tab-content>
+                            <div class="row d-flex flex-wrap">
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Hoodie/Hoodie6.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Reverse Weave Hoodie</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$40.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Tracksuit jogger Bermuda shorts</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$35.00</div>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Hoodie/Hoodie4.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Heavy quality oversize hoodie</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$45.00</div>
+                                    </div>
+                                </div>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Hoodie/Hoodie9.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Hoodie with slogan</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$35.00</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="product-item col-lg-3 col-md-6 col-sm-6">
-                                <div class="image-holder">
-                                    <img src="images/paint/Short/short4.jpg" alt="Books" class="product-image">
-                                </div>
-                                <div class="cart-concern">
-                                    <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                        </div>
+                        <div id="outer" data-tab-content>
+                            <div class="row d-flex flex-wrap">
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Sweaters/Sweatear5.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
 
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">P&B Black Label round neck sweatshirt</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$ 35.00</div>
                                     </div>
                                 </div>
-                                <div class="product-detail">
-                                    <h3 class="product-title">
-                                        <a href="single-product.html">Tracksuit jogger Bermuda shorts</a>
-                                    </h3>
-                                    <div class="item-price text-primary">$30.00</div>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Sweaters/Sweatear6.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Blue slogan sweatshirt</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$ 30.00</div>
+                                    </div>
+                                </div>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Sweaters/Sweatear3.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">New Arizona embroidered textured sweatshirt</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$ 30.00</div>
+                                    </div>
+                                </div>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/shirt/Sweaters/Sweatear2.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">San Francisco Seal Rocks Sweatshirt</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$ 40.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="jackets" data-tab-content>
+                            <div class="row d-flex flex-wrap">
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/paint/baggy/baggy4.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Wide-leg jogger trousers with pockets</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$40.00</div>
+                                    </div>
+                                </div>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/paint/baggy/baggy2.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Wide-leg jogger baggy with pockett</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$35.00</div>
+                                    </div>
+                                </div>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/paint/baggy/baggy3.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Wide-leg jogger baggy with pockett</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$35.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accessories" data-tab-content>
+                            <div class="row d-flex flex-wrap">
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/paint/Short/short3.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Tracksuit jogger Bermuda shorts</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$35.00</div>
+                                    </div>
+                                </div>
+                                <div class="product-item col-lg-3 col-md-6 col-sm-6">
+                                    <div class="image-holder">
+                                        <img src="images/paint/Short/short4.jpg" alt="Books" class="product-image">
+                                    </div>
+                                    <div class="cart-concern">
+                                        <div class="cart-button d-flex justify-content-between align-items-center">
+                                            <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
+                                                    class="icon icon-arrow-io"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    <div class="product-detail">
+                                        <h3 class="product-title">
+                                            <a href="single-product.html">Tracksuit jogger Bermuda shorts</a>
+                                        </h3>
+                                        <div class="item-price text-primary">$30.00</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section id="testimonials" class="padding-large no-padding-bottom">
@@ -1182,7 +1179,7 @@
                                         <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
                                                 class="icon icon-arrow-io"></i>
                                         </button>
->
+                                        >
                                     </div>
                                 </div>
                                 <div class="discount">10% Off</div>
