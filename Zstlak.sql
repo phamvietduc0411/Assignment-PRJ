@@ -33,13 +33,6 @@ CREATE TABLE Customers (
 	Email VARCHAR(255),
 );
 
--- T?o b?ng Discount
-CREATE TABLE Discount (
-    DiscountID VARCHAR(20) NOT NULL PRIMARY KEY,
-	DiscountName NVARCHAR(100),
-	DiscountPersent DECIMAL(5,2)
-);
-
 -- T?o b?ng Storage
 CREATE TABLE Storage (
     StorageID INT NOT NULL PRIMARY KEY,
@@ -77,7 +70,6 @@ CREATE TABLE Orders (
 	Freight VARCHAR(255),
 	--FOREIGN KEY
 	CustomerId INT FOREIGN KEY REFERENCES Customers(CustomerID),
-	DiscountId VARCHAR(20) FOREIGN KEY REFERENCES Discount(DiscountID),
 );
 
 
@@ -176,15 +168,6 @@ VALUES
 (31039, 'T-Shirt9', 'Spring', 'Stylish outfits for nights out on the town'),
 (31040, 'T-Shirt10', 'Winter', 'Sophisticated yet relaxed formal casual attire');
 --F
--- Thêm d? li?u vào b?ng Discount OK
-INSERT INTO Discount (DiscountID, DiscountName, DiscountPersent)
-VALUES 
-('DISC0010', '10% off', 10.00),
-('DISC0020', '20% off', 20.00),
-('DISC0015', '15% off', 15.00),
-('DISC0005', '5% off', 5.00),
-('DISC0025', '25% off', 25.00),
-('DISC0030', '30% off', 30.00);
 
 -- Thêm d? li?u vào b?ng Storage OK
 INSERT INTO Storage (StorageID, AvailableQuantity)
@@ -479,18 +462,18 @@ VALUES
 (711900, 'T-shirt-Bershika9', 'Women' , 'XXL', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0310, 31040);
 --40 Product
 -- Thêm d? li?u vào b?ng Orders OK
-INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId, DiscountId)
+INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId)
 VALUES 
-(4000301, '2024-03-14', 20.00, 2, '75, 265 Street, 9 District, HCM', 'Pending', 'Shopee Express', 001, 'DISC0010'),
-(4000302, '2024-03-15', 35.00, 1, '273, Man Thien Street, 9 District, HCM', 'Completed', 'J&T Express', 008, 'DISC0025'),
-(4000303, '2024-03-14', 11.98, 2, '31, Tran Quy Cap Street, Binh Thanh District, HCM', 'Pending', 'Shopee Express', 003, 'DISC0005'),
-(4000307, '2024-03-15', 35.00, 1, '75, 265 Street, 9 District, HCM', 'Failed', 'J&T Express', 004, 'DISC0010'),
-(4000309, '2024-03-15', 5.99, 1, '72, Pham Hung Streer, 8 District, HCM', 'Completed', 'J&T Express', 005, 'DISC0030'),
-(4000310, '2024-03-10', 75.00, 3, '273, Man Thien Street, 9 District, HCM', 'Pending', 'Shopee Express', 008, 'DISC0015'),
-(4000311, '2024-03-11', 9.58, 2, '10, Ong Ren ward, Can Duoc District, Long An City', 'Pending', 'Shopee Express', 006, 'DISC0025'),
-(4000313, '2024-03-14', 8.00, 4, '12, Nguyen Thoi Street, Nguyen An Ninh ward, Vung Tau City', 'Pending', 'Shopee Express', 007, 'DISC0020'),
-(4000322, '2024-03-15', 10.00, 1, '10, Ong Ren ward, Can Duoc District, Long An City', 'Failed', 'J&T Express', 006, 'DISC0020'),
-(4000328, '2024-03-15', 1.90, 1, '75, 265 Street, 9 District, HCM', 'Completed', 'J&T Express', 004, 'DISC0005');
+(4000301, '2024-03-14', 20.00, 2, '75, 265 Street, 9 District, HCM', 'Pending', 'Shopee Express', 001),
+(4000302, '2024-03-15', 35.00, 1, '273, Man Thien Street, 9 District, HCM', 'Completed', 'J&T Express', 008),
+(4000303, '2024-03-14', 11.98, 2, '31, Tran Quy Cap Street, Binh Thanh District, HCM', 'Pending', 'Shopee Express', 003),
+(4000307, '2024-03-15', 35.00, 1, '75, 265 Street, 9 District, HCM', 'Failed', 'J&T Express', 004),
+(4000309, '2024-03-15', 5.99, 1, '72, Pham Hung Streer, 8 District, HCM', 'Completed', 'J&T Express', 005),
+(4000310, '2024-03-10', 75.00, 3, '273, Man Thien Street, 9 District, HCM', 'Pending', 'Shopee Express', 008),
+(4000311, '2024-03-11', 9.58, 2, '10, Ong Ren ward, Can Duoc District, Long An City', 'Pending', 'Shopee Express', 006),
+(4000313, '2024-03-14', 8.00, 4, '12, Nguyen Thoi Street, Nguyen An Ninh ward, Vung Tau City', 'Pending', 'Shopee Express', 007),
+(4000322, '2024-03-15', 10.00, 1, '10, Ong Ren ward, Can Duoc District, Long An City', 'Failed', 'J&T Express', 006),
+(4000328, '2024-03-15', 1.90, 1, '75, 265 Street, 9 District, HCM', 'Completed', 'J&T Express', 004);
 
 -- Thêm d? li?u vào b?ng OrderDetail OK
 INSERT INTO OrderDetail (Amount, TotalQuantity, OrdersId, PaysId, ProId)
