@@ -89,7 +89,7 @@
                     List<ProductsDTO> menCollectionSummer = (List<ProductsDTO>) request.getAttribute("menCollectionSummer");
 
                     for (ProductsDTO products : menCollectionSummer) {
-                        System.out.println("iiiiii");
+                        
                       
 
                 %>

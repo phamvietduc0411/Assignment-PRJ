@@ -21,7 +21,7 @@
                                         <ul class="menu-list">
 
                                             <li class="menu-item has-sub">
-                                                <a href="homePage.jsp" class="item-anchor active d-flex align-item-center" data-effect="Home">Home<i
+                                                <a href="./PageController?action=home" class="item-anchor active d-flex align-item-center" data-effect="Home">Home<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>

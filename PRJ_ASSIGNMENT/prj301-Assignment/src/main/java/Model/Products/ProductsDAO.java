@@ -60,6 +60,46 @@ public class ProductsDAO {
 
         return list;
     }
+    
+public List<ProductsDTO> findProductsByKeyword(String keyword) {
+    List<ProductsDTO> productList = new ArrayList<>();
+
+    try {
+        Connection con = DBUtils.getConnection();
+        String sql = "SELECT ProductsID, ProductsName,Img ,Gender, Size, Color, ProductPrice, StorageId, CategoryId " +
+                     "FROM Products " +
+                     "WHERE ProductsName LIKE ?  AND Size = 'M'";
+
+        PreparedStatement stm = con.prepareStatement(sql);
+        stm.setString(1, "%" + keyword + "%");
+
+        ResultSet rs = stm.executeQuery();
+
+        while (rs.next()) {
+            ProductsDTO product = new ProductsDTO();
+            product.setProductsID(rs.getInt("ProductsID"));
+            product.setProductsName(rs.getString("ProductsName"));
+            product.setGender(rs.getString("Gender"));
+            product.setSize(rs.getString("Size"));
+            product.setColor(rs.getString("Color"));
+            product.setProductPrice(rs.getFloat("ProductPrice"));
+            product.setStorageId(rs.getInt("StorageId"));
+            product.setCategoryId(rs.getInt("CategoryId"));
+            product.setImg(rs.getString("Img"));
+            productList.add(product);
+            System.out.println("-------"+productList.size());
+        }
+
+        con.close();
+    } catch (Exception e) {
+        System.out.println("Error occurred while executing SQL query: " + e.getMessage());
+        e.printStackTrace();
+    }
+
+    return productList;
+}
+
+
 
     public List<ProductsDTO> collection(String nameCollection, String gender) {
 
@@ -276,7 +316,7 @@ public class ProductsDAO {
         stm.close();
     }
 
- public List<ProductsDTO> bestseller() {
+    public List<ProductsDTO> bestseller() {
     List<ProductsDTO> list = new ArrayList<ProductsDTO>();
     ProductsDTO product = null;
 
