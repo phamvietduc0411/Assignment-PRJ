@@ -166,8 +166,49 @@ VALUES
 (31037, 'T-Shirt7', 'Autumn', 'Relaxing loungewear for lazy days at home'),
 (31038, 'T-Shirt8', 'Summer', 'Functional clothing for outdoor adventures'),
 (31039, 'T-Shirt9', 'Spring', 'Stylish outfits for nights out on the town'),
-(31040, 'T-Shirt10', 'Winter', 'Sophisticated yet relaxed formal casual attire');
+(31040, 'T-Shirt10', 'Winter', 'Sophisticated yet relaxed formal casual attire'),
 --F
+(31041, 'shortPull&Bear1', 'Summer', 'Lightweight and breathable denim options'),
+(31042, 'shortPull&Bear2', 'Spring', 'Trendy and fashionable denim styles'),
+(31043, 'shortPull&Bear3', 'Winter', 'Warm and cozy denim choices for cold weather'),
+(31044, 'shortPull&Bear4', 'Autumn', 'Versatile denim pieces for everyday wear'),
+(31045, 'shortPull&Bear5', 'Summer', 'Stylish denim shorts for a casual look'),
+--M
+(31046, 'shortPull&Bear6', 'Spring', 'Classic denim jackets for timeless style'),
+(31047, 'shortPull&Bear7', 'Winter', 'Durable and rugged denim workwear options'),
+(31048, 'shortPull&Bear8', 'Autumn', 'Comfortable and relaxed denim shirts'),
+(31049, 'shortPull&Bear9', 'Summer', 'Chic denim skirts for a feminine touch'),
+(31050, 'shortPull&Bear10', 'Spring', 'Unique and eye-catching denim accessories'),
+--F
+(31051, 'shortPull&Bear11', 'Winter', 'Stylish and functional rain jackets for wet weather'),
+(31052, 'shortPull&Bear12', 'Spring', 'Lightweight and breathable windbreakers for outdoor activities'),
+(31053, 'shortPull&Bear13', 'Summer', 'Trendy bomber jackets for a fashionable look'),
+(31054, 'baggyPull&Bear1', 'Autumn', 'Cozy fleece jackets for chilly evenings'),
+(31055, 'baggyPull&Bear2', 'Winter', 'Warm and insulated down jackets for extreme cold'),
+--M
+(31056, 'baggyPull&Bear3', 'Summer', 'Sleek leather jackets for a rugged yet stylish appearance'),
+(31057, 'baggyPull&Bear4', 'Spring', 'Versatile denim jackets for a casual and cool look'),
+(31058, 'baggyPull&Bear5', 'Winter', 'Heavy-duty parkas for ultimate warmth in cold climates'),
+(31059, 'baggyPull&Bear6', 'Autumn', 'Stylish pea coats for a sophisticated ensemble'),
+(31060, 'baggyPull&Bear7', 'Summer', 'Lightweight and packable travel jackets for on-the-go adventures'),
+--F
+(31061, 'baggyPull&Bear8', 'Spring', 'Stylish and comfortable denim shorts for everyday wear'),
+(31062, 'baggyPull&Bear9', 'Summer', 'Breathable and lightweight shorts for hot weather'),
+(31063, 'baggyPull&Bear10', 'Autumn', 'Versatile chino shorts for a casual yet refined look'),
+(31064, 'baggyPull&Bear11', 'Winter', 'Warm and cozy fleece shorts for lounging at home'),
+(31065, 'baggyPull&Bear12', 'Spring', 'Trendy and fashionable high-waisted shorts for a chic look'),
+--M
+(31066, 'JeanPull&Bear1', 'Summer', 'Durable cargo shorts for outdoor adventures'),
+(31067, 'JeanPull&Bear2', 'Spring', 'Classic board shorts for a day at the beach or pool'),
+(31068, 'JeanPull&Bear3', 'Winter', 'Functional snowboard shorts for winter sports enthusiasts'),
+(31069, 'JeanPull&Bear4', 'Autumn', 'Versatile athletic shorts for workouts and training sessions'),
+(31070, 'JeanPull&Bear5', 'Summer', 'Comfortable and casual lounge shorts for relaxing at home'),
+--F
+(31071, 'JeanPull&Bear6', 'Winter', 'Stylish and flattering one-piece swimsuits for all body types'),
+(31072, 'JeanPull&Bear7', 'Summer', 'Trendy bikini sets for fun days at the beach'),
+(31073, 'JeanPull&Bear8', 'Autumn', 'Chic tankini styles for a mix of coverage and style'),
+(31074, 'JeanPull&Bear9', 'Winter', 'Sporty rash guards for added sun protection while swimming'),
+(31075, 'JeanPull&Bear10', 'Spring', 'Fashionable cover-ups for transitioning from beach to street');
 
 -- Thêm d? li?u vào b?ng Storage OK
 INSERT INTO Storage (StorageID, AvailableQuantity)
@@ -211,7 +252,43 @@ VALUES
 (0291, 10), (0292, 10), (0293, 10), (0294, 10), (0295, 10),
 (0296, 10), (0297, 10), (0298, 10), (0299, 10), (0300, 10),
 (0301, 10), (0302, 10), (0303, 10), (0304, 10), (0305, 10),
-(0306, 10), (0307, 10), (0308, 10), (0309, 10), (0310, 10);
+(0306, 10), (0307, 10), (0308, 10), (0309, 10), (0310, 10),
+(0311, 10), (0312, 10), (0313, 10), (0314, 10), (0315, 10),
+(0316, 10), (0317, 10), (0318, 10), (0319, 10), (0320, 10),
+(0321, 10), (0322, 10), (0323, 10), (0324, 10), (0325, 10),
+(0326, 10), (0327, 10), (0328, 10), (0329, 10), (0330, 10),
+(0331, 10), (0332, 10), (0333, 10), (0334, 10), (0335, 10),
+(0336, 10), (0337, 10), (0338, 10), (0339, 10), (0340, 10),
+(0341, 10), (0342, 10), (0343, 10), (0344, 10), (0345, 10),
+(0346, 10), (0347, 10), (0348, 10), (0349, 10), (0350, 10),
+(0351, 10), (0352, 10), (0353, 10), (0354, 10), (0355, 10),
+(0356, 10), (0357, 10), (0358, 10), (0359, 10), (0360, 10),
+(0361, 10), (0362, 10), (0363, 10), (0364, 10), (0365, 10),
+(0366, 10), (0367, 10), (0368, 10), (0369, 10), (0370, 10),
+(0371, 10), (0372, 10), (0373, 10), (0374, 10), (0375, 10),
+(0376, 10), (0377, 10), (0378, 10), (0379, 10), (0380, 10),
+(0381, 10), (0382, 10), (0383, 10), (0384, 10), (0385, 10),
+(0386, 10), (0387, 10), (0388, 10), (0389, 10), (0390, 10),
+(0391, 10), (0392, 10), (0393, 10), (0394, 10), (0395, 10),
+(0396, 10), (0397, 10), (0398, 10), (0399, 10), (0400, 10),
+(0401, 10), (0402, 10), (0403, 10), (0404, 10), (0405, 10),
+(0406, 10), (0407, 10), (0408, 10), (0409, 10), (0410, 10),
+(0411, 10), (0412, 10), (0413, 10), (0414, 10), (0415, 10),
+(0416, 10), (0417, 10), (0418, 10), (0419, 10), (0420, 10),
+(0421, 10), (0422, 10), (0423, 10), (0424, 10), (0425, 10),
+(0426, 10), (0427, 10), (0428, 10), (0429, 10), (0430, 10),
+(0431, 10), (0432, 10), (0433, 10), (0434, 10), (0435, 10),
+(0436, 10), (0437, 10), (0438, 10), (0439, 10), (0440, 10),
+(0441, 10), (0442, 10), (0443, 10), (0444, 10), (0445, 10),
+(0446, 10), (0447, 10), (0448, 10), (0449, 10), (0450, 10),
+(0451, 10), (0452, 10), (0453, 10), (0454, 10), (0455, 10),
+(0456, 10), (0457, 10), (0458, 10), (0459, 10), (0460, 10),
+(0461, 10), (0462, 10), (0463, 10), (0464, 10), (0465, 10),
+(0466, 10), (0467, 10), (0468, 10), (0469, 10), (0470, 10),
+(0471, 10), (0472, 10), (0473, 10), (0474, 10), (0475, 10),
+(0476, 10), (0477, 10), (0478, 10), (0479, 10), (0480, 10),
+(0481, 10), (0482, 10), (0483, 10), (0484, 10), (0485, 10),
+(0486, 10), (0487, 10), (0488, 10), (0489, 10), (0490, 10);
 
 -- Thêm d? li?u vào b?ng Payment OK
 INSERT INTO Payment (PaymentID, PaymentName)
@@ -459,223 +536,217 @@ VALUES
 (711897, 'T-shirt-Bershika9', 'Women' , 'M', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0307, 31040),
 (711898, 'T-shirt-Bershika9', 'Women' , 'L', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0308, 31040),
 (711899, 'T-shirt-Bershika9', 'Women' , 'XL', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0309, 31040),
-(711900, 'T-shirt-Bershika9', 'Women' , 'XXL', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0310, 31040);
+(711900, 'T-shirt-Bershika9', 'Women' , 'XXL', 'Black', 25.00, 'images\shirt\T-Shirt\T-Shirt10.jpg', 0310, 31040),
 --40 Product
-(711901, 'shortPull&Bear1',	  'Men' ,   'S', 'Blue', 20.00, 'images\paint\Short\short1', 0311, 31041);
-(711902, 'shortPull&Bear1',	  'Men' ,   'M', 'Blue', 20.00, 'images\paint\Short\short1', 0312, 31041);
-(711903, 'shortPull&Bear1',	  'Men' ,   'L', 'Blue', 20.00, 'images\paint\Short\short1', 0313, 31041);
-(711904, 'shortPull&Bear1',	  'Men' ,   'XL', 'Blue', 20.00, 'images\paint\Short\short1', 0314, 31041);
-(711905, 'shortPull&Bear1',	  'Men' ,   'XXL', 'Blue', 20.00, 'images\paint\Short\short1', 0315, 31041);
+(711901, 'shortPull&Bear1',	  'Men' ,   'S', 'Blue', 20.00, 'images\paint\Short\short1', 0311, 31041),
+(711902, 'shortPull&Bear1',	  'Men' ,   'M', 'Blue', 20.00, 'images\paint\Short\short1', 0312, 31041),
+(711903, 'shortPull&Bear1',	  'Men' ,   'L', 'Blue', 20.00, 'images\paint\Short\short1', 0313, 31041),
+(711904, 'shortPull&Bear1',	  'Men' ,   'XL', 'Blue', 20.00, 'images\paint\Short\short1', 0314, 31041),
+(711905, 'shortPull&Bear1',	  'Men' ,   'XXL', 'Blue', 20.00, 'images\paint\Short\short1', 0315, 31041),
 --41
-(711906, 'shortPull&Bear2',	  'Men' ,   'S',  'Gray', 20.00, 'images\paint\Short\short2', 0316, 31042);
-(711907, 'shortPull&Bear2',	  'Men' ,   'M',  'Gray', 20.00, 'images\paint\Short\short2', 0317, 31042);
-(711908, 'shortPull&Bear2',	  'Men' ,   'L',  'Gray', 20.00, 'images\paint\Short\short2', 0318, 31042);
-(711909, 'shortPull&Bear2',	  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\Short\short2', 0319, 31042);
-(711910, 'shortPull&Bear2',	  'Men' ,   'XXL','Gray', 20.00, 'images\paint\Short\short2', 0320, 31042);
+(711906, 'shortPull&Bear2',	  'Men' ,   'S',  'Gray', 20.00, 'images\paint\Short\short2', 0316, 31042),
+(711907, 'shortPull&Bear2',	  'Men' ,   'M',  'Gray', 20.00, 'images\paint\Short\short2', 0317, 31042),
+(711908, 'shortPull&Bear2',	  'Men' ,   'L',  'Gray', 20.00, 'images\paint\Short\short2', 0318, 31042),
+(711909, 'shortPull&Bear2',	  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\Short\short2', 0319, 31042),
+(711910, 'shortPull&Bear2',	  'Men' ,   'XXL','Gray', 20.00, 'images\paint\Short\short2', 0320, 31042),
 --42--
-(711911, 'shortPull&Bear3',	  'Men' ,   'S',  'Red', 22.00, 'images\paint\Short\short3', 0321, 31043);
-(711912, 'shortPull&Bear3',	  'Men' ,   'M',  'Red', 22.00, 'images\paint\Short\short3', 0322, 31043);
-(711913, 'shortPull&Bear3',	  'Men' ,   'L',  'Red', 22.00, 'images\paint\Short\short3', 0323, 31043);
-(711914, 'shortPull&Bear3',	  'Men' ,   'XL', 'Red', 22.00, 'images\paint\Short\short3', 0324, 31043);
-(711915, 'shortPull&Bear3',	  'Men' ,   'XXL','Red', 22.00, 'images\paint\Short\short3', 0325, 31043);
+(711911, 'shortPull&Bear3',	  'Men' ,   'S',  'Red', 22.00, 'images\paint\Short\short3', 0321, 31043),
+(711912, 'shortPull&Bear3',	  'Men' ,   'M',  'Red', 22.00, 'images\paint\Short\short3', 0322, 31043),
+(711913, 'shortPull&Bear3',	  'Men' ,   'L',  'Red', 22.00, 'images\paint\Short\short3', 0323, 31043),
+(711914, 'shortPull&Bear3',	  'Men' ,   'XL', 'Red', 22.00, 'images\paint\Short\short3', 0324, 31043),
+(711915, 'shortPull&Bear3',	  'Men' ,   'XXL','Red', 22.00, 'images\paint\Short\short3', 0325, 31043),
 --43--
-(711916, 'shortPull&Bear4',	  'Men' ,   'S',  'Green', 22.00, 'images\paint\Short\short4', 0326, 31044);
-(711917, 'shortPull&Bear4',	  'Men' ,   'M',  'Green', 22.00, 'images\paint\Short\short4', 0327, 31044);
-(711918, 'shortPull&Bear4',	  'Men' ,   'L',  'Green', 22.00, 'images\paint\Short\short4', 0328, 31044);
-(711919, 'shortPull&Bear4',	  'Men' ,   'XL', 'Green', 22.00, 'images\paint\Short\short4', 0329, 31044);
-(711920, 'shortPull&Bear4',	  'Men' ,   'XXL','Green', 22.00, 'images\paint\Short\short4', 0330, 31044);
+(711916, 'shortPull&Bear4',	  'Men' ,   'S',  'Green', 22.00, 'images\paint\Short\short4', 0326, 31044),
+(711917, 'shortPull&Bear4',	  'Men' ,   'M',  'Green', 22.00, 'images\paint\Short\short4', 0327, 31044),
+(711918, 'shortPull&Bear4',	  'Men' ,   'L',  'Green', 22.00, 'images\paint\Short\short4', 0328, 31044),
+(711919, 'shortPull&Bear4',	  'Men' ,   'XL', 'Green', 22.00, 'images\paint\Short\short4', 0329, 31044),
+(711920, 'shortPull&Bear4',	  'Men' ,   'XXL','Green', 22.00, 'images\paint\Short\short4', 0330, 31044),
 --44-
-(711921, 'shortPull&Bear5',	  'Men' ,   'S',  'Yellow', 22.00, 'images\paint\Short\short5', 0331, 31045);
-(711922, 'shortPull&Bear5',	  'Men' ,   'M',  'Yellow', 22.00, 'images\paint\Short\short5', 0332, 31045);
-(711923, 'shortPull&Bear5',	  'Men' ,   'L',  'Yellow', 22.00, 'images\paint\Short\short5', 0333, 31045);
-(711924, 'shortPull&Bear5',	  'Men' ,   'XL', 'Yellow', 22.00, 'images\paint\Short\short5', 0334, 31045);
-(711925, 'shortPull&Bear5',	  'Men' ,   'XXL','Yellow', 22.00, 'images\paint\Short\short5', 0345, 31045);
+(711921, 'shortPull&Bear5',	  'Men' ,   'S',  'Yellow', 22.00, 'images\paint\Short\short5', 0331, 31045),
+(711922, 'shortPull&Bear5',	  'Men' ,   'M',  'Yellow', 22.00, 'images\paint\Short\short5', 0332, 31045),
+(711923, 'shortPull&Bear5',	  'Men' ,   'L',  'Yellow', 22.00, 'images\paint\Short\short5', 0333, 31045),
+(711924, 'shortPull&Bear5',	  'Men' ,   'XL', 'Yellow', 22.00, 'images\paint\Short\short5', 0334, 31045),
+(711925, 'shortPull&Bear5',	  'Men' ,   'XXL','Yellow', 22.00, 'images\paint\Short\short5', 0345, 31045),
 --45--
-(711926, 'shortPull&Bear6',	  'Men' ,   'S',  'Black', 21.00, 'images\paint\Short\short6', 0346, 31046);
-(711927, 'shortPull&Bear6',	  'Men' ,   'M',  'Black', 21.00, 'images\paint\Short\short6', 0347, 31046);
-(711928, 'shortPull&Bear6',	  'Men' ,   'L',  'Black', 21.00, 'images\paint\Short\short6', 0348, 31046);
-(711929, 'shortPull&Bear6',	  'Men' ,   'XL', 'Black', 21.00, 'images\paint\Short\short6', 0349, 31046);
-(711930, 'shortPull&Bear6',	  'Men' ,   'XXL','Black', 21.00, 'images\paint\Short\short6', 0350, 31046);
+(711926, 'shortPull&Bear6',	  'Men' ,   'S',  'Black', 21.00, 'images\paint\Short\short6', 0346, 31046),
+(711927, 'shortPull&Bear6',	  'Men' ,   'M',  'Black', 21.00, 'images\paint\Short\short6', 0347, 31046),
+(711928, 'shortPull&Bear6',	  'Men' ,   'L',  'Black', 21.00, 'images\paint\Short\short6', 0348, 31046),
+(711929, 'shortPull&Bear6',	  'Men' ,   'XL', 'Black', 21.00, 'images\paint\Short\short6', 0349, 31046),
+(711930, 'shortPull&Bear6',	  'Men' ,   'XXL','Black', 21.00, 'images\paint\Short\short6', 0350, 31046),
 --46-
-(711931, 'shortPull&Bear7',	  'Women' ,   'S',  'Purple', 20.00, 'images\paint\Short\short7', 0351, 31047);
-(711932, 'shortPull&Bear7',	  'Women' ,   'M',  'Purple', 20.00, 'images\paint\Short\short7', 0352, 31047);
-(711933, 'shortPull&Bear7',	  'Women' ,   'L',  'Purple', 20.00, 'images\paint\Short\short7', 0353, 31047);
-(711934, 'shortPull&Bear7',	  'Women' ,   'XL', 'Purple', 20.00, 'images\paint\Short\short7', 0354, 31047);
-(711935, 'shortPull&Bear7',	  'Women' ,   'XXL','Purple', 20.00, 'images\paint\Short\short7', 0355, 31047);
+(711931, 'shortPull&Bear7',	  'Women' ,   'S',  'Purple', 20.00, 'images\paint\Short\short7', 0351, 31047),
+(711932, 'shortPull&Bear7',	  'Women' ,   'M',  'Purple', 20.00, 'images\paint\Short\short7', 0352, 31047),
+(711933, 'shortPull&Bear7',	  'Women' ,   'L',  'Purple', 20.00, 'images\paint\Short\short7', 0353, 31047),
+(711934, 'shortPull&Bear7',	  'Women' ,   'XL', 'Purple', 20.00, 'images\paint\Short\short7', 0354, 31047),
+(711935, 'shortPull&Bear7',	  'Women' ,   'XXL','Purple', 20.00, 'images\paint\Short\short7', 0355, 31047),
 --47
-(711936, 'shortPull&Bear8',	  'Women' ,   'S',  'Purple', 20.00, 'images\paint\Short\short8', 0356, 31048);
-(711937, 'shortPull&Bear8',	  'Women' ,   'M',  'Purple', 20.00, 'images\paint\Short\short8', 0357, 31048);
-(711938, 'shortPull&Bear8',	  'Women' ,   'L',  'Purple', 20.00, 'images\paint\Short\short8', 0358, 31048);
-(711939, 'shortPull&Bear8',	  'Women' ,   'XL', 'Purple', 20.00, 'images\paint\Short\short8', 0359, 31048);
-(711940, 'shortPull&Bear8',	  'Women' ,   'XXL','Purple', 20.00, 'images\paint\Short\short8', 0360, 31048);
+(711936, 'shortPull&Bear8',	  'Women' ,   'S',  'Purple', 20.00, 'images\paint\Short\short8', 0356, 31048),
+(711937, 'shortPull&Bear8',	  'Women' ,   'M',  'Purple', 20.00, 'images\paint\Short\short8', 0357, 31048),
+(711938, 'shortPull&Bear8',	  'Women' ,   'L',  'Purple', 20.00, 'images\paint\Short\short8', 0358, 31048),
+(711939, 'shortPull&Bear8',	  'Women' ,   'XL', 'Purple', 20.00, 'images\paint\Short\short8', 0359, 31048),
+(711940, 'shortPull&Bear8',	  'Women' ,   'XXL','Purple', 20.00, 'images\paint\Short\short8', 0360, 31048),
 --48--
-(711941, 'shortPull&Bear9',	  'Women' ,   'S',  'Green', 20.00, 'images\paint\Short\short9', 0361, 31049);
-(711942, 'shortPull&Bear9',	  'Women' ,   'M',  'Green', 20.00, 'images\paint\Short\short9', 0362, 31049);
-(711943, 'shortPull&Bear9',	  'Women' ,   'L',  'Green', 20.00, 'images\paint\Short\short9', 0363, 31049);
-(711944, 'shortPull&Bear9',	  'Women' ,   'XL', 'Green', 20.00, 'images\paint\Short\short9', 0363, 31049);
-(711945, 'shortPull&Bear9',	  'Women' ,   'XXL','Green', 20.00, 'images\paint\Short\short9', 0365, 31049);
+(711941, 'shortPull&Bear9',	  'Women' ,   'S',  'Green', 20.00, 'images\paint\Short\short9', 0361, 31049),
+(711942, 'shortPull&Bear9',	  'Women' ,   'M',  'Green', 20.00, 'images\paint\Short\short9', 0362, 31049),
+(711943, 'shortPull&Bear9',	  'Women' ,   'L',  'Green', 20.00, 'images\paint\Short\short9', 0363, 31049),
+(711944, 'shortPull&Bear9',	  'Women' ,   'XL', 'Green', 20.00, 'images\paint\Short\short9', 0363, 31049),
+(711945, 'shortPull&Bear9',	  'Women' ,   'XXL','Green', 20.00, 'images\paint\Short\short9', 0365, 31049),
 --49--
-(711946, 'shortPull&Bear10',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short10', 0366, 31050);
-(711947, 'shortPull&Bear10',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short10', 0367, 31050);
-(711948, 'shortPull&Bear10',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short10', 0368, 31050);
-(711949, 'shortPull&Bear10',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short10', 0369, 31050);
-(711950, 'shortPull&Bear10',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short10', 0370, 31050);
+(711946, 'shortPull&Bear10',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short10', 0366, 31050),
+(711947, 'shortPull&Bear10',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short10', 0367, 31050),
+(711948, 'shortPull&Bear10',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short10', 0368, 31050),
+(711949, 'shortPull&Bear10',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short10', 0369, 31050),
+(711950, 'shortPull&Bear10',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short10', 0370, 31050),
 --50--
-(711951, 'shortPull&Bear11',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short11', 0371, 31051);
-(711952, 'shortPull&Bear11',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short11', 0372, 31051);
-(711953, 'shortPull&Bear11',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short11', 0373, 31051);
-(711954, 'shortPull&Bear11',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short11', 0374, 31051);
-(711955, 'shortPull&Bear11',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short11', 0375, 31051);
+(711951, 'shortPull&Bear11',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short11', 0371, 31051),
+(711952, 'shortPull&Bear11',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short11', 0372, 31051),
+(711953, 'shortPull&Bear11',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short11', 0373, 31051),
+(711954, 'shortPull&Bear11',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short11', 0374, 31051),
+(711955, 'shortPull&Bear11',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short11', 0375, 31051),
 --51--
-(711956, 'shortPull&Bear12',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short12', 0376, 31052);
-(711957, 'shortPull&Bear12',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short12', 0377, 31052);
-(711958, 'shortPull&Bear12',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short12', 0378, 31052);
-(711959, 'shortPull&Bear12',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short12', 0379, 31052);
-(711960, 'shortPull&Bear12',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short12', 0380, 31052);
---52--
-(711961, 'shortPull&Bear13',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short13', 0381, 31053);
-(711962, 'shortPull&Bear13',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short13', 0382, 31053);
-(711963, 'shortPull&Bear13',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short13', 0383, 31053);
-(711964, 'shortPull&Bear13',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short13', 0384, 31053);
-(711965, 'shortPull&Bear13',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short13', 0385, 31053);
+(711956, 'shortPull&Bear12',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short12', 0376, 31052),
+(711957, 'shortPull&Bear12',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short12', 0377, 31052),
+(711958, 'shortPull&Bear12',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short12', 0378, 31052),
+(711959, 'shortPull&Bear12',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short12', 0379, 31052),
+(711960, 'shortPull&Bear12',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short12', 0380, 31052),
+--52
+(711961, 'shortPull&Bear13',  'Women' ,   'S',  'Red', 20.00, 'images\paint\Short\short13', 0381, 31053),
+(711962, 'shortPull&Bear13',  'Women' ,   'M',  'Red', 20.00, 'images\paint\Short\short13', 0382, 31053),
+(711963, 'shortPull&Bear13',  'Women' ,   'L',  'Red', 20.00, 'images\paint\Short\short13', 0383, 31053),
+(711964, 'shortPull&Bear13',  'Women' ,   'XL', 'Red', 20.00, 'images\paint\Short\short13', 0384, 31053),
+(711965, 'shortPull&Bear13',  'Women' ,   'XXL','Red', 20.00, 'images\paint\Short\short13', 0385, 31053),
 --53--
-(711966, 'baggyPull&Bear1',  'Women' ,   'S',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0386, 31054);
-(711967, 'baggyPull&Bear1',  'Women' ,   'M',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0387, 31054);
-(711968, 'baggyPull&Bear1',  'Women' ,   'L',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0388, 31054);
-(711969, 'baggyPull&Bear1',  'Women' ,   'XL', 'Blue', 20.00, 'images\paint\baggy\baggy1', 0389, 31054);
-(711970, 'baggyPull&Bear1',  'Women' ,   'XXL','Blue', 20.00, 'images\paint\baggy\baggy1', 0390, 31054);
+(711966, 'baggyPull&Bear1',  'Women' ,   'S',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0386, 31054),
+(711967, 'baggyPull&Bear1',  'Women' ,   'M',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0387, 31054),
+(711968, 'baggyPull&Bear1',  'Women' ,   'L',  'Blue', 20.00, 'images\paint\baggy\baggy1', 0388, 31054),
+(711969, 'baggyPull&Bear1',  'Women' ,   'XL', 'Blue', 20.00, 'images\paint\baggy\baggy1', 0389, 31054),
+(711970, 'baggyPull&Bear1',  'Women' ,   'XXL','Blue', 20.00, 'images\paint\baggy\baggy1', 0390, 31054),
 --54--
-(711971, 'baggyPull&Bear2',  'Women' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy2', 0391, 31055);
-(711972, 'baggyPull&Bear2',  'Women' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy2', 0392, 31055);
-(711973, 'baggyPull&Bear2',  'Women' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy2', 0393, 31055);
-(711974, 'baggyPull&Bear2',  'Women' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy2', 0394, 31055);
-(711975, 'baggyPull&Bear2',  'Women' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy2', 0395, 31055);
+(711971, 'baggyPull&Bear2',  'Women' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy2', 0391, 31055),
+(711972, 'baggyPull&Bear2',  'Women' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy2', 0392, 31055),
+(711973, 'baggyPull&Bear2',  'Women' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy2', 0393, 31055),
+(711974, 'baggyPull&Bear2',  'Women' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy2', 0394, 31055),
+(711975, 'baggyPull&Bear2',  'Women' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy2', 0395, 31055),
 --55
-(711976, 'baggyPull&Bear3',  'Women' ,   'S',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0396, 31056);
-(711977, 'baggyPull&Bear3',  'Women' ,   'M',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0397, 31056);
-(711978, 'baggyPull&Bear3',  'Women' ,   'L',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0398, 31056);
-(711979, 'baggyPull&Bear3',  'Women' ,   'XL', 'dark blue', 20.00, 'images\paint\baggy\baggy3', 0399, 31056);
-(711980, 'baggyPull&Bear3',  'Women' ,   'XXL','dark blue', 20.00, 'images\paint\baggy\baggy3', 0400, 31056);
+(711976, 'baggyPull&Bear3',  'Women' ,   'S',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0396, 31056),
+(711977, 'baggyPull&Bear3',  'Women' ,   'M',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0397, 31056),
+(711978, 'baggyPull&Bear3',  'Women' ,   'L',  'dark blue', 20.00, 'images\paint\baggy\baggy3', 0398, 31056),
+(711979, 'baggyPull&Bear3',  'Women' ,   'XL', 'dark blue', 20.00, 'images\paint\baggy\baggy3', 0399, 31056),
+(711980, 'baggyPull&Bear3',  'Women' ,   'XXL','dark blue', 20.00, 'images\paint\baggy\baggy3', 0400, 31056),
 --56
-(711981, 'baggyPull&Bear4',  'Men' ,   'S',  'Green', 20.00, 'images\paint\baggy\baggy4', 0401, 31057);
-(711982, 'baggyPull&Bear4',  'Men' ,   'M',  'Green', 20.00, 'images\paint\baggy\baggy4', 0402, 31057);
-(711983, 'baggyPull&Bear4',  'Men' ,   'L',  'Green', 20.00, 'images\paint\baggy\baggy4', 0403, 31057);
-(711984, 'baggyPull&Bear4',  'Men' ,   'XL', 'Green', 20.00, 'images\paint\baggy\baggy4', 0404, 31057);
-(711985, 'baggyPull&Bear4',  'Men' ,   'XXL','Green', 20.00, 'images\paint\baggy\baggy4', 0405, 31057);
+(711981, 'baggyPull&Bear4',  'Men' ,   'S',  'Green', 20.00, 'images\paint\baggy\baggy4', 0401, 31057),
+(711982, 'baggyPull&Bear4',  'Men' ,   'M',  'Green', 20.00, 'images\paint\baggy\baggy4', 0402, 31057),
+(711983, 'baggyPull&Bear4',  'Men' ,   'L',  'Green', 20.00, 'images\paint\baggy\baggy4', 0403, 31057),
+(711984, 'baggyPull&Bear4',  'Men' ,   'XL', 'Green', 20.00, 'images\paint\baggy\baggy4', 0404, 31057),
+(711985, 'baggyPull&Bear4',  'Men' ,   'XXL','Green', 20.00, 'images\paint\baggy\baggy4', 0405, 31057),
 --57--
-(711986, 'baggyPull&Bear5',  'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0406, 31058);
-(711987, 'baggyPull&Bear5',  'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0407, 31058);
-(711988, 'baggyPull&Bear5',  'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0408, 31058);
-(711989, 'baggyPull&Bear5',  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy5', 0409, 31058);
-(711990, 'baggyPull&Bear5',  'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy5', 0410, 31058);
+(711986, 'baggyPull&Bear5',  'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0406, 31058),
+(711987, 'baggyPull&Bear5',  'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0407, 31058),
+(711988, 'baggyPull&Bear5',  'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy5', 0408, 31058),
+(711989, 'baggyPull&Bear5',  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy5', 0409, 31058),
+(711990, 'baggyPull&Bear5',  'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy5', 0410, 31058),
 --58
-(711991, 'baggyPull&Bear6',  'Men' ,   'S',  'White', 20.00, 'images\paint\baggy\baggy6', 0411, 31059);
-(711992, 'baggyPull&Bear6',  'Men' ,   'M',  'White', 20.00, 'images\paint\baggy\baggy6', 0412, 31059);
-(711993, 'baggyPull&Bear6',  'Men' ,   'L',  'White', 20.00, 'images\paint\baggy\baggy6', 0413, 31059);
-(711994, 'baggyPull&Bear6',  'Men' ,   'XL', 'White', 20.00, 'images\paint\baggy\baggy6', 0414, 31059);
-(711995, 'baggyPull&Bear6',  'Men' ,   'XXL','White', 20.00, 'images\paint\baggy\baggy6', 0415, 31059);
+(711991, 'baggyPull&Bear6',  'Men' ,   'S',  'White', 20.00, 'images\paint\baggy\baggy6', 0411, 31059),
+(711992, 'baggyPull&Bear6',  'Men' ,   'M',  'White', 20.00, 'images\paint\baggy\baggy6', 0412, 31059),
+(711993, 'baggyPull&Bear6',  'Men' ,   'L',  'White', 20.00, 'images\paint\baggy\baggy6', 0413, 31059),
+(711994, 'baggyPull&Bear6',  'Men' ,   'XL', 'White', 20.00, 'images\paint\baggy\baggy6', 0414, 31059),
+(711995, 'baggyPull&Bear6',  'Men' ,   'XXL','White', 20.00, 'images\paint\baggy\baggy6', 0415, 31059),
 --59
-(711996, 'baggyPull&Bear7',  'Men' ,   'S',  'brown', 20.00, 'images\paint\baggy\baggy7', 0416, 31060);
-(711997, 'baggyPull&Bear7',  'Men' ,   'M',  'brown', 20.00, 'images\paint\baggy\baggy7', 0417, 31060);
-(711998, 'baggyPull&Bear7',  'Men' ,   'L',  'brown', 20.00, 'images\paint\baggy\baggy7', 0418, 31060);
-(711999, 'baggyPull&Bear7',  'Men' ,   'XL', 'brown', 20.00, 'images\paint\baggy\baggy7', 0419, 31060);
-(712000, 'baggyPull&Bear7',  'Men' ,   'XXL','brown', 20.00, 'images\paint\baggy\baggy7', 0420, 31060);
+(711996, 'baggyPull&Bear7',  'Men' ,   'S',  'brown', 20.00, 'images\paint\baggy\baggy7', 0416, 31060),
+(711997, 'baggyPull&Bear7',  'Men' ,   'M',  'brown', 20.00, 'images\paint\baggy\baggy7', 0417, 31060),
+(711998, 'baggyPull&Bear7',  'Men' ,   'L',  'brown', 20.00, 'images\paint\baggy\baggy7', 0418, 31060),
+(711999, 'baggyPull&Bear7',  'Men' ,   'XL', 'brown', 20.00, 'images\paint\baggy\baggy7', 0419, 31060),
+(712000, 'baggyPull&Bear7',  'Men' ,   'XXL','brown', 20.00, 'images\paint\baggy\baggy7', 0420, 31060),
 --60
-(712001, 'baggyPull&Bear8',  'Men' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy8', 0421, 31061);
-(712002, 'baggyPull&Bear8',  'Men' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy8', 0422, 31061);
-(712003, 'baggyPull&Bear8',  'Men' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy8', 0423, 31061);
-(712004, 'baggyPull&Bear8',  'Men' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy8', 0424, 31061);
-(712005, 'baggyPull&Bear8',  'Men' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy8', 0425, 31061);
+(712001, 'baggyPull&Bear8',  'Men' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy8', 0421, 31061),
+(712002, 'baggyPull&Bear8',  'Men' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy8', 0422, 31061),
+(712003, 'baggyPull&Bear8',  'Men' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy8', 0423, 31061),
+(712004, 'baggyPull&Bear8',  'Men' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy8', 0424, 31061),
+(712005, 'baggyPull&Bear8',  'Men' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy8', 0425, 31061),
 --61
-(712006, 'baggyPull&Bear9',  'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0426, 31062));
-(712007, 'baggyPull&Bear9',  'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0427, 31062));
-(712008, 'baggyPull&Bear9',  'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0428, 31062));
-(712009, 'baggyPull&Bear9',  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy9', 0429, 31062));
-(712010, 'baggyPull&Bear9',  'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy9', 0430, 31062));
+(712006, 'baggyPull&Bear9',  'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0426, 31062),
+(712007, 'baggyPull&Bear9',  'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0427, 31062),
+(712008, 'baggyPull&Bear9',  'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy9', 0428, 31062),
+(712009, 'baggyPull&Bear9',  'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy9', 0429, 31062),
+(712010, 'baggyPull&Bear9',  'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy9', 0430, 31062),
 --62
-(712011, 'baggyPull&Bear10', 'Women' ,   'S',  'White', 20.00, 'images\paint\baggy\baggy10', 0431, 31063);
-(712012, 'baggyPull&Bear10', 'Women' ,   'M',  'White', 20.00, 'images\paint\baggy\baggy10', 0432, 31063);
-(712013, 'baggyPull&Bear10', 'Women' ,   'L',  'White', 20.00, 'images\paint\baggy\baggy10', 0433, 31063);
-(712014, 'baggyPull&Bear10', 'Women' ,   'XL', 'White', 20.00, 'images\paint\baggy\baggy10', 0434, 31063);
-(712015, 'baggyPull&Bear10', 'Women' ,   'XXL','White', 20.00, 'images\paint\baggy\baggy10', 0435, 31063);
+(712011, 'baggyPull&Bear10', 'Women' ,   'S',  'White', 20.00, 'images\paint\baggy\baggy10', 0431, 31063),
+(712012, 'baggyPull&Bear10', 'Women' ,   'M',  'White', 20.00, 'images\paint\baggy\baggy10', 0432, 31063),
+(712013, 'baggyPull&Bear10', 'Women' ,   'L',  'White', 20.00, 'images\paint\baggy\baggy10', 0433, 31063),
+(712014, 'baggyPull&Bear10', 'Women' ,   'XL', 'White', 20.00, 'images\paint\baggy\baggy10', 0434, 31063),
+(712015, 'baggyPull&Bear10', 'Women' ,   'XXL','White', 20.00, 'images\paint\baggy\baggy10', 0435, 31063),
 --63
-(712016, 'baggyPull&Bear11', 'Women' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy11', 0436, 31064);
-(712017, 'baggyPull&Bear11', 'Women' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy11', 0437, 31064);
-(712018, 'baggyPull&Bear11', 'Women' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy11', 0438, 31064);
-(712019, 'baggyPull&Bear11', 'Women' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy11', 0439, 31064);
-(712020, 'baggyPull&Bear11', 'Women' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy11', 0440, 31064);
+(712016, 'baggyPull&Bear11', 'Women' ,   'S',  'Black', 20.00, 'images\paint\baggy\baggy11', 0436, 31064),
+(712017, 'baggyPull&Bear11', 'Women' ,   'M',  'Black', 20.00, 'images\paint\baggy\baggy11', 0437, 31064),
+(712018, 'baggyPull&Bear11', 'Women' ,   'L',  'Black', 20.00, 'images\paint\baggy\baggy11', 0438, 31064),
+(712019, 'baggyPull&Bear11', 'Women' ,   'XL', 'Black', 20.00, 'images\paint\baggy\baggy11', 0439, 31064),
+(712020, 'baggyPull&Bear11', 'Women' ,   'XXL','Black', 20.00, 'images\paint\baggy\baggy11', 0440, 31064),
 --64
-(712021, 'baggyPull&Bear12', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0441, 31065);
-(712022, 'baggyPull&Bear12', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0442, 31065);
-(712023, 'baggyPull&Bear12', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0443, 31065);
-(712024, 'baggyPull&Bear12', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy12', 0444, 31065);
-(712025, 'baggyPull&Bear12', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy12', 0445, 31065);
+(712021, 'baggyPull&Bear12', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0441, 31065),
+(712022, 'baggyPull&Bear12', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0442, 31065),
+(712023, 'baggyPull&Bear12', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\baggy\baggy12', 0443, 31065),
+(712024, 'baggyPull&Bear12', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\baggy\baggy12', 0444, 31065),
+(712025, 'baggyPull&Bear12', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\baggy\baggy12', 0445, 31065),
 --65
-(712021, 'JeanPull&Bear1', 'Men' ,   'S',  'brown', 20.00, 'images\paint\jean\Jean1', 0441, 31066);
-(712022, 'JeanPull&Bear1', 'Men' ,   'M',  'brown', 20.00, 'images\paint\jean\Jean1', 0442, 31066);
-(712023, 'JeanPull&Bear1', 'Men' ,   'L',  'brown', 20.00, 'images\paint\jean\Jean1', 0443, 31066);
-(712024, 'JeanPull&Bear1', 'Men' ,   'XL', 'brown', 20.00, 'images\paint\jean\Jean1', 0444, 31066);
-(712025, 'JeanPull&Bear1', 'Men' ,   'XXL','brown', 20.00, 'images\paint\jean\Jean1', 0445, 31066);
+(712021, 'JeanPull&Bear1', 'Men' ,   'S',  'brown', 20.00, 'images\paint\jean\Jean1', 0441, 31066),
+(712022, 'JeanPull&Bear1', 'Men' ,   'M',  'brown', 20.00, 'images\paint\jean\Jean1', 0442, 31066),
+(712023, 'JeanPull&Bear1', 'Men' ,   'L',  'brown', 20.00, 'images\paint\jean\Jean1', 0443, 31066),
+(712024, 'JeanPull&Bear1', 'Men' ,   'XL', 'brown', 20.00, 'images\paint\jean\Jean1', 0444, 31066),
+(712025, 'JeanPull&Bear1', 'Men' ,   'XXL','brown', 20.00, 'images\paint\jean\Jean1', 0445, 31066),
 --66
-(712026, 'JeanPull&Bear2', 'Women' ,   'S',  'Blue', 20.00, 'images\paint\jean\Jean2', 0446, 31067);
-(712027, 'JeanPull&Bear2', 'Women' ,   'M',  'Blue', 20.00, 'images\paint\jean\Jean2', 0447, 31067);
-(712028, 'JeanPull&Bear2', 'Women' ,   'L',  'Blue', 20.00, 'images\paint\jean\Jean2', 0448, 31067);
-(712029, 'JeanPull&Bear2', 'Women' ,   'XL', 'Blue', 20.00, 'images\paint\jean\Jean2', 0449, 31067);
-(712030, 'JeanPull&Bear2', 'Women' ,   'XXL','Blue', 20.00, 'images\paint\jean\Jean2', 0450, 31067);
+(712026, 'JeanPull&Bear2', 'Women' ,   'S',  'Blue', 20.00, 'images\paint\jean\Jean2', 0446, 31067),
+(712027, 'JeanPull&Bear2', 'Women' ,   'M',  'Blue', 20.00, 'images\paint\jean\Jean2', 0447, 31067),
+(712028, 'JeanPull&Bear2', 'Women' ,   'L',  'Blue', 20.00, 'images\paint\jean\Jean2', 0448, 31067),
+(712029, 'JeanPull&Bear2', 'Women' ,   'XL', 'Blue', 20.00, 'images\paint\jean\Jean2', 0449, 31067),
+(712030, 'JeanPull&Bear2', 'Women' ,   'XXL','Blue', 20.00, 'images\paint\jean\Jean2', 0450, 31067),
 --67
-(712031, 'JeanPull&Bear3', 'Women' ,   'S',  'White', 20.00, 'images\paint\jean\Jean3', 0451, 31068);
-(712032, 'JeanPull&Bear3', 'Women' ,   'M',  'White', 20.00, 'images\paint\jean\Jean3', 0452, 31068);
-(712033, 'JeanPull&Bear3', 'Women' ,   'L',  'White', 20.00, 'images\paint\jean\Jean3', 0453, 31068);
-(712034, 'JeanPull&Bear3', 'Women' ,   'XL', 'White', 20.00, 'images\paint\jean\Jean3', 0454, 31068);
-(712035, 'JeanPull&Bear3', 'Women' ,   'XXL','White', 20.00, 'images\paint\jean\Jean3', 0455, 31068);
+(712031, 'JeanPull&Bear3', 'Women' ,   'S',  'White', 20.00, 'images\paint\jean\Jean3', 0451, 31068),
+(712032, 'JeanPull&Bear3', 'Women' ,   'M',  'White', 20.00, 'images\paint\jean\Jean3', 0452, 31068),
+(712033, 'JeanPull&Bear3', 'Women' ,   'L',  'White', 20.00, 'images\paint\jean\Jean3', 0453, 31068),
+(712034, 'JeanPull&Bear3', 'Women' ,   'XL', 'White', 20.00, 'images\paint\jean\Jean3', 0454, 31068),
+(712035, 'JeanPull&Bear3', 'Women' ,   'XXL','White', 20.00, 'images\paint\jean\Jean3', 0455, 31068),
 --68
-(712036, 'JeanPull&Bear4', 'Women' ,   'S',  'Blue', 20.00, 'images\paint\jean\Jean4', 0456, 31069);
-(712037, 'JeanPull&Bear4', 'Women' ,   'M',  'Blue', 20.00, 'images\paint\jean\Jean4', 0457, 31069);
-(712038, 'JeanPull&Bear4', 'Women' ,   'L',  'Blue', 20.00, 'images\paint\jean\Jean4', 0458, 31069);
-(712039, 'JeanPull&Bear4', 'Women' ,   'XL', 'Blue', 20.00, 'images\paint\jean\Jean4', 0459, 31069);
-(712040, 'JeanPull&Bear4', 'Women' ,   'XXL','Blue', 20.00, 'images\paint\jean\Jean4', 0460, 31069);
+(712036, 'JeanPull&Bear4', 'Women' ,   'S',  'Blue', 20.00, 'images\paint\jean\Jean4', 0456, 31069),
+(712037, 'JeanPull&Bear4', 'Women' ,   'M',  'Blue', 20.00, 'images\paint\jean\Jean4', 0457, 31069),
+(712038, 'JeanPull&Bear4', 'Women' ,   'L',  'Blue', 20.00, 'images\paint\jean\Jean4', 0458, 31069),
+(712039, 'JeanPull&Bear4', 'Women' ,   'XL', 'Blue', 20.00, 'images\paint\jean\Jean4', 0459, 31069),
+(712040, 'JeanPull&Bear4', 'Women' ,   'XXL','Blue', 20.00, 'images\paint\jean\Jean4', 0460, 31069),
 --69
-(712041, 'JeanPull&Bear5', 'Women' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean5', 0461, 31070);
-(712042, 'JeanPull&Bear5', 'Women' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean5', 0462, 31070);
-(712043, 'JeanPull&Bear5', 'Women' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean5', 0463, 31070);
-(712044, 'JeanPull&Bear5', 'Women' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean5', 0464, 31070);
-(712045, 'JeanPull&Bear5', 'Women' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean5', 0465, 31070);
+(712041, 'JeanPull&Bear5', 'Women' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean5', 0461, 31070),
+(712042, 'JeanPull&Bear5', 'Women' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean5', 0462, 31070),
+(712043, 'JeanPull&Bear5', 'Women' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean5', 0463, 31070),
+(712044, 'JeanPull&Bear5', 'Women' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean5', 0464, 31070),
+(712045, 'JeanPull&Bear5', 'Women' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean5', 0465, 31070),
 --70
-(712046, 'JeanPull&Bear6', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean6', 0466, 31071);
-(712047, 'JeanPull&Bear6', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean6', 0467, 31071);
-(712048, 'JeanPull&Bear6', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean6', 0468, 31071);
-(712049, 'JeanPull&Bear6', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean6', 0469, 31071);
-(712050, 'JeanPull&Bear6', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean6', 0470, 31071);
+(712046, 'JeanPull&Bear6', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean6', 0466, 31071),
+(712047, 'JeanPull&Bear6', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean6', 0467, 31071),
+(712048, 'JeanPull&Bear6', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean6', 0468, 31071),
+(712049, 'JeanPull&Bear6', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean6', 0469, 31071),
+(712050, 'JeanPull&Bear6', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean6', 0470, 31071),
 --71
-(712051, 'JeanPull&Bear7', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean7', 0471, 31072);
-(712052, 'JeanPull&Bear7', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean7', 0472, 31072);
-(712053, 'JeanPull&Bear7', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean7', 0473, 31072);
-(712054, 'JeanPull&Bear7', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean7', 0474, 31072);
-(712055, 'JeanPull&Bear7', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean7', 0475, 31072);
+(712051, 'JeanPull&Bear7', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean7', 0471, 31072),
+(712052, 'JeanPull&Bear7', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean7', 0472, 31072),
+(712053, 'JeanPull&Bear7', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean7', 0473, 31072),
+(712054, 'JeanPull&Bear7', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean7', 0474, 31072),
+(712055, 'JeanPull&Bear7', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean7', 0475, 31072),
 --72
-(712056, 'JeanPull&Bear8', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean8', 0476, 31073);
-(712057, 'JeanPull&Bear8', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean8', 0477, 31073);
-(712058, 'JeanPull&Bear8', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean8', 0478, 31073);
-(712059, 'JeanPull&Bear8', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean8', 0479, 31073);
-(712060, 'JeanPull&Bear8', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean8', 0480, 31073);
+(712056, 'JeanPull&Bear8', 'Men' ,   'S',  'Black', 20.00, 'images\paint\jean\Jean8', 0476, 31073),
+(712057, 'JeanPull&Bear8', 'Men' ,   'M',  'Black', 20.00, 'images\paint\jean\Jean8', 0477, 31073),
+(712058, 'JeanPull&Bear8', 'Men' ,   'L',  'Black', 20.00, 'images\paint\jean\Jean8', 0478, 31073),
+(712059, 'JeanPull&Bear8', 'Men' ,   'XL', 'Black', 20.00, 'images\paint\jean\Jean8', 0479, 31073),
+(712060, 'JeanPull&Bear8', 'Men' ,   'XXL','Black', 20.00, 'images\paint\jean\Jean8', 0480, 31073),
 --73
-(712061, 'JeanPull&Bear9', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean9', 0481, 31074);
-(712062, 'JeanPull&Bear9', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean9', 0482, 31074);
-(712063, 'JeanPull&Bear9', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean9', 0483, 31074);
-(712064, 'JeanPull&Bear9', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean9', 0484, 31074);
-(712065, 'JeanPull&Bear9', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean9', 0485, 31074);
+(712061, 'JeanPull&Bear9', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean9', 0481, 31074),
+(712062, 'JeanPull&Bear9', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean9', 0482, 31074),
+(712063, 'JeanPull&Bear9', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean9', 0483, 31074),
+(712064, 'JeanPull&Bear9', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean9', 0484, 31074),
+(712065, 'JeanPull&Bear9', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean9', 0485, 31074),
 --75
-(712066, 'JeanPull&Bear10', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean10', 0486, 31075);
-(712067, 'JeanPull&Bear10', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean10', 0487, 31075);
-(712068, 'JeanPull&Bear10', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean10', 0488, 31075);
-(712069, 'JeanPull&Bear10', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean10', 0489, 31075);
-(712070, 'JeanPull&Bear10', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean10', 0490, 31075);
-
-
-
-
-
-
+(712066, 'JeanPull&Bear10', 'Men' ,   'S',  'Gray', 20.00, 'images\paint\jean\Jean10', 0486, 31075),
+(712067, 'JeanPull&Bear10', 'Men' ,   'M',  'Gray', 20.00, 'images\paint\jean\Jean10', 0487, 31075),
+(712068, 'JeanPull&Bear10', 'Men' ,   'L',  'Gray', 20.00, 'images\paint\jean\Jean10', 0488, 31075),
+(712069, 'JeanPull&Bear10', 'Men' ,   'XL', 'Gray', 20.00, 'images\paint\jean\Jean10', 0489, 31075),
+(712070, 'JeanPull&Bear10', 'Men' ,   'XXL','Gray', 20.00, 'images\paint\jean\Jean10', 0490, 31075),
 
 -- Thêm d? li?u vào b?ng Orders OK
 INSERT INTO Orders (OrdersID, OrdersDate, Price, Quantity, Address, Status, Freight, CustomerId)
