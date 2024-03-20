@@ -90,7 +90,7 @@
                                             </li>        
                                         </ul>
                                     </div>
-                                    <form class="search-bar" action="./PageController" method="GET" style="text-align: end;">
+                                    <form class="search-bar" action="./PageController" method="POST" style="text-align: end;">
                                         <input name="action" value="search" hidden>
                                         <input type="text" name="keyword" >
                                         <button type="submit" value="Search">Search</button>
