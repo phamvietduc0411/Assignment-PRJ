@@ -12,6 +12,8 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <!-- Style.css -->
         <link rel="stylesheet" type="text/css" href="css/admin.css">
+        <link rel="zstalk icon" type="image/x-icon" href="images/favicon.ico">
+        
         <style>a{
                 background-color: black;
                 color: white;

@@ -76,16 +76,15 @@
                                                     href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
                                                 </a>
                                             </li>
-<<<<<<< Updated upstream
+
                                             
 <!--                                            <li class="menu-item has-sub">
                                                 <a href="./PageController?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>-->
-=======
                                            
->>>>>>> Stashed changes
+
                                        
                                             <!--logout customer-->     
                                             <li>
@@ -160,24 +159,24 @@
             <h4>Customer ID: ${requestScope.customers.customerID}</h4>
         </div>
         <div>
-            <h4>Username: ${customers.username}</h4>
+            <h4>Username: ${requestScope.customers.username}</h4>
         </div>
         <div>
-            <h4>Name: ${customers.CustomerName}</h4>
+            <h4>Name: ${requestScope.customers.CustomerName}</h4>
         </div>
         <div>
-            <h4>Phone Number: ${customers.phoneNumber}</h4>
+            <h4>Phone Number: ${requestScope.customers.phoneNumber}</h4>
         </div>
         <div>
-            <h4>Address: ${customers.address}</h4>
-        </div>
-        
-        <div>
-            <h4>Gender: ${customers.gender}</h4>
+            <h4>Address: ${requestScope.customers.address}</h4>
         </div>
         
         <div>
-            <h4>Email: ${customers.email}</h4>
+            <h4>Gender: ${requestScope.customers.gender}</h4>
+        </div>
+        
+        <div>
+            <h4>Email: ${requestScope.customers.email}</h4>
         </div>
         
         <h1>Order History</h1>

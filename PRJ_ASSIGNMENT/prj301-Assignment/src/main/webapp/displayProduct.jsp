@@ -19,7 +19,7 @@ and open the template in the editor.
         <!-- ===============================================-->
         <!--    Document Title-->
         <!-- ===============================================-->
-        <title>majestic | Landing, Ecommerce &amp; Business Templatee</title>
+        <title>Display Product</title>
 
         <!-- ===============================================-->
         <!--    Favicons-->

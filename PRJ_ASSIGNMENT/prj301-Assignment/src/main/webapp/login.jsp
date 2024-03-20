@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>PRJ301 Demo - Login</title>
+        <title>Login-Information</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
                 <!-- Font Icon -->

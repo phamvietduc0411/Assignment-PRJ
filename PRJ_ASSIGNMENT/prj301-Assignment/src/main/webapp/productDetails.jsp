@@ -2,11 +2,12 @@
 <html lang="en">
 
     <head>
-        <title>Minishop - Free Bootstrap 4 Template by Colorlib</title>
+        <title>Product Detail</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/ionicons.min.css">
         <link rel="stylesheet" href="css/productDetails.css">
+        <link rel="zstalk icon" type="image/x-icon" href="images/favicon.ico">
        <jsp:include page="/menu.jsp" flush="true" />
 
     </head>
