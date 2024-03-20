@@ -28,13 +28,13 @@
             <div class="preloader">
             </div>            
         </div>
-        
-        
-        
+
+
+
         <header id="header">
-            
+
             <div id="header-wrap">
-                
+
                 <nav class="primary-nav padding-small">
                     <div class="container">
                         <div class="row d-flex align-items-center">
@@ -56,13 +56,13 @@
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>
-                                            
+
                                             <li class="menu-item has-sub">
                                                 <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>
-                                            
+
                                             <li>
                                                 <a 
                                                     href="about.jsp" class="item-anchor" data-effect="About">About
@@ -74,13 +74,13 @@
                                                     href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
                                                 </a>
                                             </li>
-                                            
+
                                             <li class="menu-item has-sub">
                                                 <a href="profile.jsp?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
                                             </li>
-                                       
+
                                             <!--logout customer-->     
                                             <li>
                                                 <a
@@ -171,9 +171,9 @@
                                 </div>
                                 <div class="cart-concern">
                                     <div class="cart-button d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-wrap cart-link d-flex align-items-center">add to cart <i
-                                                class="icon icon-arrow-io"></i>
-                                        </button>
+                                        <!--ADD TO CART-->
+                                        <a href="CartController?action=add&size=M">add to cart <i
+                                                class="icon icon-arrow-io"></i></a>
                                     </div>
                                 </div>
                                 <div class="product-detail">
@@ -373,7 +373,7 @@
                             <div class="product-item col-lg-3 col-md-6 col-sm-6">
                                 <div class="image-holder">
 
-                  
+
                                     <img src="images/shirt/T-Shirt/T-Shirt7.jpg" alt="Books" class="product-image">
 
                                 </div>
@@ -1541,7 +1541,7 @@
 
         <hr>
 
-        
+
         <section id="shipping-information">
             <hr>
             <div class="container">
