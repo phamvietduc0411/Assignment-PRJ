@@ -1,5 +1,3 @@
-<%@page import="java.util.List"%>
-<%@page import="Model.Cart.CartDTO"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -9,7 +7,7 @@
         <meta name="keywords" content="Ogani, unica, creative, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Shopping Cart</title>
+        <title>Shopping cart</title>
 
         <!-- Google Font -->
         <link rel="zstalk icon" type="image/x-icon" href="images/favicon.ico">
@@ -36,7 +34,6 @@
     <body>   
 
         <h1 >Shopping Cart</h1>
-        <h3>${error}</h3>
         <!-- Shoping Cart Section Begin -->
         <section class="shoping-cart spad">
             <div class="container">
@@ -56,18 +53,14 @@
                                 </thead>
                                 <tbody>
                                     <!-- Loop through each cart item -->
-                                    <%
-                                        List<ProductsDTO> list = (List<ProductsDTO>) request.getAttribute("cartList");
-                                        for (ProductsDTO cart : list) {
-                                            pageContext.setAttribute("cartList", cart);
-                                    %>
+                                <c:forEach items="${cartItems}" var="item">
                                     <tr>
                                         <td class="shoping__cart__item">
                                             <img style="height: 180px; width: 140px" src="images/paint/baggy/baggy1.jpg" alt="${item.productName}">
 
                                         </td>
                                         <td 
-                                            <h5>${item.productName}  product name</h5></td>
+                                            <h5>${item.productName}  produc name</h5></td>
                                         <td class="shoping__cart__price">
                                             $${item.price}
                                         </td>
@@ -81,14 +74,8 @@
                                         <td class="shoping__cart__total">
                                             $${item.total}
                                         </td>
-                                        <td>
-                                            <form action ="CartController" method="POST">
-                                                <input name="action" value="delete" type="hidden">
-                                                <input type="submit" value="delete">
-                                            </form>
-                                        </td>
                                     </tr>
-                                    <%} %> 
+                                </c:forEach>
                                 </tbody>
                             </table>
                         </div>
