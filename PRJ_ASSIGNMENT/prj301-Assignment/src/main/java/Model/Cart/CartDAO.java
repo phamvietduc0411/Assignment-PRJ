@@ -67,14 +67,31 @@ public class CartDAO {
 
     return list;
     }
+    
+    public void updateCartItemQuantity(int customerId, int productId, int newQuantity) {
+        String sql = "UPDATE Cart SET Quantity = ? WHERE CustomerId = ? AND ProId = ?";
+        try{
+            Connection con = DBUtils.getConnection();
+            PreparedStatement stmt = con.prepareStatement(sql); 
+            stmt.setInt(1, newQuantity);
+            stmt.setInt(2, customerId);
+            stmt.setInt(3, productId);
+            stmt.executeUpdate();
+        } catch (Exception e) {
+            System.out.println("ERROR IN UPDATE CART ITEM QUANTITY: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 
-
-    // Xóa một mục khỏi giỏ hàng
-//    public void removeFromCart(int cartId) throws SQLException {
-//        String query = "DELETE FROM cart WHERE CartId = ?";
-//        try (PreparedStatement statement = connection.prepareStatement(query)) {
-//            statement.setInt(1, cartId);
+//    public void removeCartItem(int customerId, int productId) {
+//        String query = "DELETE FROM cart WHERE CustomerId = ? AND ProId = ?";
+//        try (PreparedStatement statement = con.prepareStatement(query)) {
+//            statement.setInt(1, customerId);
+//            statement.setInt(2, productId);
 //            statement.executeUpdate();
+//        } catch (Exception e) {
+//            System.out.println("ERROR IN REMOVE CART ITEM: " + e.getMessage());
+//            e.printStackTrace();
 //        }
 //    }
     
