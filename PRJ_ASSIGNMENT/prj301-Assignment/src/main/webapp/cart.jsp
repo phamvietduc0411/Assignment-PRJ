@@ -75,7 +75,8 @@
                                             if (!processedIds.contains(id)) {
                                                 double productPrice = products.getProductPrice();
                                                 int quantity = idCount.get(id);
-                                                totalPrice += productPrice * quantity;
+                                                double totalProductPrice = productPrice * quantity;
+                                                totalPrice += totalProductPrice;
                                     %>
                                     <tr>
                                         <td class="shoping__cart__item">
@@ -89,13 +90,16 @@
                                         </td>
                                         <td class="shoping__cart__quantity">
                                             <div class="quantity">
-                                                <div class="pro-qty">
-                                                    <h4><%= quantity%></h4>
-                                                </div>
+                                                <form action="./CartController?change" method="post">
+                                                    <input type="hidden" name="productId" value="<%= products.getProductsID()%>">
+                                                    <button type="submit" name="action" value="minus">-</button>
+                                                    <input type="text" name="quantity" value="<%= quantity%>" min="1">
+                                                    <button type="submit" name="action" value="plus">+</button>
+                                                </form>
                                             </div>
                                         </td>
                                         <td class="shoping__cart__total">
-                                            <h5>Total: $<%= productPrice * quantity%></h5>
+                                            <h5>Total: $<%= totalProductPrice%></h5>
                                         </td>
                                     </tr>
                                     <%

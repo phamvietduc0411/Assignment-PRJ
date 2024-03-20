@@ -9,6 +9,7 @@ import Model.Products.ProductsDTO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import prj301demo.utils.DBUtils;
@@ -68,18 +69,32 @@ public class CartDAO {
     return list;
     }
     
-    public void updateCartItemQuantity(int customerId, int productId, int newQuantity) {
-        String sql = "UPDATE Cart SET Quantity = ? WHERE CustomerId = ? AND ProId = ?";
-        try{
-            Connection con = DBUtils.getConnection();
-            PreparedStatement stmt = con.prepareStatement(sql); 
-            stmt.setInt(1, newQuantity);
-            stmt.setInt(2, customerId);
-            stmt.setInt(3, productId);
-            stmt.executeUpdate();
-        } catch (Exception e) {
-            System.out.println("ERROR IN UPDATE CART ITEM QUANTITY: " + e.getMessage());
-            e.printStackTrace();
+    public void updateQuantity(int productId, int quantity) throws SQLException {
+        Connection connection = null;
+        PreparedStatement statement = null;
+
+        try {
+            // Khởi tạo kết nối đến cơ sở dữ liệu (database connection)
+            connection = DBUtils.getConnection();
+
+            // Câu lệnh SQL cập nhật số lượng sản phẩm trong giỏ hàng
+            String sql = "UPDATE Cart SET Quantity = ? WHERE ProId = ?";
+
+            // Tạo PreparedStatement
+            statement = connection.prepareStatement(sql);
+            statement.setInt(1, quantity);
+            statement.setInt(2, productId);
+
+            // Thực thi câu lệnh SQL
+            statement.executeUpdate();
+        } finally {
+            // Đóng kết nối và các tài nguyên
+            if (statement != null) {
+                statement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
         }
     }
 

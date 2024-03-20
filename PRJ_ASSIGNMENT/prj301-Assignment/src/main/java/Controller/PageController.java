@@ -144,19 +144,19 @@ public class PageController extends HttpServlet {
                 CartDAO cartDAO = new CartDAO();
                 cartDAO.addToCart(customerid, productid);
                 request.getRequestDispatcher("homePage.jsp").forward(request, response);
-            } 
-            else if(action.equals("load")){
+            } else if (action.equals("load")) {
                 int customerid = 0;
                 try {
                     customerid = Integer.parseInt(request.getParameter("customerid"));
                 } catch (NumberFormatException ex) {
                     log("Parameter id has wrong format.");
                 }
-                
+
                 CartDAO cartDAO = new CartDAO();
                 List<ProductsDTO> itemInCart = cartDAO.viewCart(customerid);
                 request.setAttribute("itemList", itemInCart);
                 request.getRequestDispatcher("cart.jsp").forward(request, response);
+
             }else if ( action.equals("edit")){
                 Integer customerID = null;
                 try{

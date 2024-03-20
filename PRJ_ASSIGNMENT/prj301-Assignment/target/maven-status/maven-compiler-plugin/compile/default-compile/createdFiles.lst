@@ -2,6 +2,7 @@ Model\Payment\PaymentDTO.class
 Model\Customters\CustomersDAO.class
 Model\Feedback\FeedbackDTO.class
 Model\OrderDetail\OrderDetailDTO.class
+Controller\CartController.class
 Model\Cart\CartDAO.class
 Model\Orders\OrdersDAO.class
 Model\Category\CategoryDAO.class
