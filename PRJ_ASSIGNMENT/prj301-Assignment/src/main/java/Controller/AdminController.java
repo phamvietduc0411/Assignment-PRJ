@@ -51,12 +51,6 @@ public class AdminController extends HttpServlet {
             String availableQuantity = request.getParameter("AvailableQuantity");
             String descriptions = request.getParameter("Descriptions");
 
-            ProductsDAO productsDAO = new ProductsDAO();
-            List<ProductsDTO> list = productsDAO.viewAllProduct();
-
-            OrdersDAO orderDAO = new OrdersDAO();
-            List<OrdersDTO> orderList = orderDAO.checkOrderAdmin();
-
             if (action.equals("insert")) {
 
                 StorageDTO storage = new StorageDTO();
@@ -86,9 +80,16 @@ public class AdminController extends HttpServlet {
                 } catch (Exception e) {
                     System.out.println("Error when format PRODUCT PRICE");
                 }
-                product.setProductPrice(price);
-
+                 product.setProductPrice(price);
+                ProductsDAO productsDAO = new ProductsDAO();
+               
                 productsDAO.Insert(product, storage, category);
+
+              
+
+                OrdersDAO orderDAO = new OrdersDAO();
+                List<OrdersDTO> orderList = orderDAO.checkOrderAdmin();
+                  List<ProductsDTO> list = productsDAO.viewAllProduct();
 
                 request.setAttribute("productlist", list);
                 request.setAttribute("orderList", orderList);
@@ -99,6 +100,8 @@ public class AdminController extends HttpServlet {
                 String productname = request.getParameter("productName");
                 String categoryID = request.getParameter("categoryID");
                 String storageID = request.getParameter("storageID");
+                
+                
 
                 int cateID = 0;
                 int stoID = 0;
@@ -108,16 +111,24 @@ public class AdminController extends HttpServlet {
                 } catch (Exception e) {
                     System.out.println("Error when format in DELETE");
                 }
-
+                ProductsDAO productsDAO = new ProductsDAO();
                 productsDAO.delete(productname);
+                List<ProductsDTO> list = productsDAO.viewAllProduct();
+                 OrdersDAO orderDAO = new OrdersDAO();
+                List<OrdersDTO> orderList = orderDAO.checkOrderAdmin();
+                     request.setAttribute("orderList", orderList);
                 request.setAttribute("productlist", list);
                 request.setAttribute("delete", "DELETE Successfully");
                 request.getRequestDispatcher("admin.jsp").forward(request, response);
 
-            } else if (action.equals("reject")||action.equals("accept"))  {
-                
+            } else if (action.equals("reject") || action.equals("accept")) {
+                OrdersDAO orderDAO = new OrdersDAO();
+                List<OrdersDTO> orderList = orderDAO.checkOrderAdmin();
+
                 String orderID = request.getParameter("orderID");
-                orderDAO.confirmOrder(orderID,action);
+                orderDAO.confirmOrder(orderID, action);
+                ProductsDAO productsDAO = new ProductsDAO();
+                List<ProductsDTO> list = productsDAO.viewAllProduct();
 
                 orderList = orderDAO.checkOrderAdmin();
                 request.setAttribute("productlist", list);

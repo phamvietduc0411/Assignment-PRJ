@@ -33,66 +33,7 @@
         <script src="js/modernizr.js"></script>
     </head>
     <body>
-        <header id="header">
-            <div id="header-wrap">
-
-                <nav class="primary-nav padding-small">
-                    <div class="container">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-lg-2 col-md-2">
-                                <div class="main-logo">
-                                    <a href="homePage.jsp">
-                                        <img src="images/logo.png" alt="logo">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-10 col-md-10">
-                                <div class="navbar">
-
-                                    <div id="main-nav" class="stellarnav d-flex justify-content-end right">
-                                        <ul class="menu-list">
-
-                                            <li class="menu-item has-sub">
-                                                <a href="homePage.jsp" class="item-anchor active d-flex align-item-center" data-effect="Home">Home<i
-                                                        class="icon icon-chevron-down"></i>
-                                                </a>
-                                            </li>
-
-                                            <li class="menu-item has-sub">
-                                                <a href="./PageController?action=collection" class="item-anchor d-flex align-item-center" data-effect="Blog">Collection<i
-                                                        class="icon icon-chevron-down"></i>
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a 
-                                                    href="about.jsp" class="item-anchor" data-effect="About">About
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a 
-                                                    href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
-                                                </a>
-                                            </li>
-                                            </li> 
-
-                                            <li>
-                                                <a
-                                                    href="./PageController?action=logout"
-                                                    class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b>
-                                                </a>
-                                            </li>        
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
+ <jsp:include page="/menu.jsp" flush="true" />
 
         <div>
             <h1>Customer Profile</h1>
