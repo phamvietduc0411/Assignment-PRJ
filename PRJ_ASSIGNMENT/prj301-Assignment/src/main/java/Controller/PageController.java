@@ -103,25 +103,18 @@ public class PageController extends HttpServlet {
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
                 }
-                
-//             else if (action.equals("profile")){
-//               int customerId = (int) request.getSession().getAttribute("customerId");
-//               CustomersDAO customersDAO = new CustomersDAO();
-//               CustomersDTO customers = customersDAO.getCustomerProfile(customerId);               
-//               request.setAttribute("customers", customers);
-//               
-//               request.getRequestDispatcher("profile.jsp").forward(request, response);
-//                
-//                
-//                
-//                
-            }else if(action.equals("addToCart")){
-                
-            }
 
+            } else if (action.equals("profile")) {
+                int customerId = Integer.parseInt(request.getParameter("customerId"));
+                CustomersDAO customersDAO = new CustomersDAO();
+                CustomersDTO customers = customersDAO.getCustomerProfile(customerId);
+                request.setAttribute("customers", customers);
+
+                request.getRequestDispatcher("profile.jsp").forward(request, response);
+
+            }
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

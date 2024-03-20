@@ -159,24 +159,24 @@
             <p>Customer ID: ${customers.customerID}</p>
         </div>
         <div>
-            <p>Username: ${customer.username}</p>
+            <p>Username: ${customers.username}</p>
         </div>
         <div>
-            <p>Name: ${customer.CustomerName}</p>
+            <p>Name: ${customers.CustomerName}</p>
         </div>
         <div>
-            <p>Phone Number: ${customer.phoneNumber}</p>
+            <p>Phone Number: ${customers.phoneNumber}</p>
         </div>
         <div>
-            <p>Address: ${customer.address}</p>
-        </div>
-        
-        <div>
-            <p>Gender: ${customer.gender}</p>
+            <p>Address: ${customers.address}</p>
         </div>
         
         <div>
-            <p>Email: ${customer.email}</p>
+            <p>Gender: ${customers.gender}</p>
+        </div>
+        
+        <div>
+            <p>Email: ${customers.email}</p>
         </div>
         
         
