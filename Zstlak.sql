@@ -100,8 +100,8 @@ CREATE TABLE Cart(
 -- T?o b?ng CartItem(weak)
 CREATE TABLE cartItem(
 	itemId INT IDENTITY(1,1) PRIMARY KEY,
-	quantity INT NOT NULL,
 	ProId INT FOREIGN KEY REFERENCES Products(ProductsID),
+	quantity INT NOT NULL,
 	cartID INT FOREIGN KEY REFERENCES Cart(cartId),
 );
 

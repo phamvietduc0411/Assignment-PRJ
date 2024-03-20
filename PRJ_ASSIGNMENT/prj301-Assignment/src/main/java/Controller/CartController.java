@@ -5,23 +5,24 @@
  */
 package Controller;
 
-import Model.Customters.CustomersDAO;
-import Model.Customters.CustomersDTO;
+import Model.Cart.CartDAO;
+import Model.CartItem.CartItemDAO;
+import Model.CartItem.CartItemDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.PreparedStatement;
+import java.sql.Connection;
 import java.sql.SQLException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import prj301demo.utils.DBUtils;
 
 /**
  *
- * @author ADMIN
+ * @author DELL
  */
-public class SignupController extends HttpServlet {
+public class CartController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,32 +34,24 @@ public class SignupController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String agreeTerm = request.getParameter("agree-term");
-        if (agreeTerm != null && agreeTerm.equals("on")) {
-            CustomersDTO customer = new CustomersDTO();
-            customer.setUsername(request.getParameter("newuser"));
-            customer.setPassword(request.getParameter("password"));
-            customer.setCustomerName(request.getParameter("CustomerName"));
-            customer.setPhoneNumber(request.getParameter("PhoneNumber"));
-            customer.setAddress(request.getParameter("Address"));
-            customer.setGender(request.getParameter("Gender"));
-            customer.setEmail(request.getParameter("Email"));
+        int productId = Integer.parseInt(request.getParameter("productId"));
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        int customerId = Integer.parseInt(request.getParameter("customerID"));
 
-            CustomersDAO customersDAO = new CustomersDAO();
-            boolean created = customersDAO.createCustomer(customer);
-            if (created) {
-                response.sendRedirect("login.jsp");
-            } else {
-                request.setAttribute("error", "Failed to create user. Please try again.");
-                request.getRequestDispatcher("signUp.jsp").forward(request, response);
-            }
-        } else {
-            request.setAttribute("error", "You must agree to the terms of service.");
-            RequestDispatcher rd = request.getRequestDispatcher("signUp.jsp");
-            rd.forward(request, response);
-        }
+        CartDAO cartDAO = new CartDAO();
+        int cartId = cartDAO.addToCart(customerId);
+
+        CartItemDTO cartItem = new CartItemDTO();
+        cartItem.setProId(productId);
+        cartItem.setQuantity(quantity);
+        cartItem.setCartID(cartId);
+
+        CartItemDAO cartItemDAO = new CartItemDAO(connection);
+        cartItemDAO.getCartItems(cartItem);
+
+        response.sendRedirect("cart.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
