@@ -71,7 +71,7 @@
 
                                             <li>
                                                 <a 
-                                                    href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
+                                                    href="./PageController?action=load&customerid=${customer.customerID}" class="item-anchor" data-effect="Contact">Cart
                                                 </a>
                                             </li>
 
@@ -85,7 +85,11 @@
                                             <li>
                                                 <a
                                                     href="./PageController?action=logout"
+<<<<<<< Updated upstream
                                                     class="item-anchor" data-effect="Contact" > <b>Logout</b>
+=======
+                                                    class="item-anchor" data-effect="Contact" target="_self"> <b>Logout</b>
+>>>>>>> Stashed changes
                                                 </a>
                                             </li>        
                                         </ul>

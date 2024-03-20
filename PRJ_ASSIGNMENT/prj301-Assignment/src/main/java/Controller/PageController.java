@@ -118,7 +118,7 @@ public class PageController extends HttpServlet {
 
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
 
-            } else if (action.equals("add")) {
+            } else if(action.equals("add")) {
 
                 int customerid = 0;
                 int productid = 0;
@@ -132,6 +132,18 @@ public class PageController extends HttpServlet {
                 CartDAO cartDAO = new CartDAO();
                 cartDAO.addToCart(customerid, productid);
                 request.getRequestDispatcher("homePage.jsp").forward(request, response);
+            } else if(action.equals("load")){
+                int customerid = 0;
+                try {
+                    customerid = Integer.parseInt(request.getParameter("customerid"));
+                } catch (NumberFormatException ex) {
+                    log("Parameter id has wrong format.");
+                }
+                
+                CartDAO cartDAO = new CartDAO();
+                List<ProductsDTO> itemInCart = cartDAO.viewCart(customerid);
+                request.setAttribute("itemList", itemInCart);
+                request.getRequestDispatcher("cart.jsp").forward(request, response);
             }
         }
     }

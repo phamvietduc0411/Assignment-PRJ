@@ -1,3 +1,10 @@
+<%@page import="java.util.Set"%>
+<%@page import="java.util.HashSet"%>
+<%@page import="java.util.HashSet"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="Model.Products.ProductsDTO"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -53,29 +60,55 @@
                                 </thead>
                                 <tbody>
                                     <!-- Loop through each cart item -->
-                                <c:forEach items="${sessionScope.cart.values()}" var="item">
+                                    <%
+                                        List<ProductsDTO> list = (List<ProductsDTO>) request.getAttribute("itemList");
+                                        double totalPrice = 0;
+                                        Map<Integer, Integer> idCount = new HashMap<>();
+                                        for (ProductsDTO products : list) {
+                                            int id = products.getProductsID();
+                                            idCount.put(id, idCount.getOrDefault(id, 0) + 1);
+                                        }
+
+                                        Set<Integer> processedIds = new HashSet<>();
+                                        for (ProductsDTO products : list) {
+                                            int id = products.getProductsID();
+                                            if (!processedIds.contains(id)) {
+                                                double productPrice = products.getProductPrice();
+                                                int quantity = idCount.get(id);
+                                                totalPrice += productPrice * quantity;
+                                    %>
                                     <tr>
                                         <td class="shoping__cart__item">
-                                    <img style="height: 180px; width: 140px" src="<c:out value="${item.img}"/> " alt="<c:out value="${item.productName}"/>">
-                                    </td>
-                                    <td>
-                                        <h5><c:out value="${item.productName}"/>  product name</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $<c:out value="${item.price}"/>
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <h4><c:out value="${item.quantity}"/></h4>
+                                            <img style="height: 180px; width: 140px" src="<%= products.getImg()%>" alt="<%= products.getProductsName()%>">
+                                        </td>
+                                        <td>
+                                            <h5><%= products.getProductsName()%></h5>
+                                        </td>
+                                        <td class="shoping__cart__price">
+                                            <h5>$<%= products.getProductPrice()%></h5>
+                                        </td>
+                                        <td class="shoping__cart__quantity">
+                                            <div class="quantity">
+                                                <div class="pro-qty">
+                                                    <h4><%= quantity%></h4>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $<c:out value="${item.total}"/>
-                                    </td>
+                                        </td>
+                                        <td class="shoping__cart__total">
+                                            <h5>Total: $<%= productPrice * quantity%></h5>
+                                        </td>
                                     </tr>
-                                </c:forEach>
+                                    <%
+                                                processedIds.add(id);
+                                            }
+                                        }
+                                    %>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                        <td class="shoping__cart__total">
+                                            <h5>Total: $<%= totalPrice%></h5>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

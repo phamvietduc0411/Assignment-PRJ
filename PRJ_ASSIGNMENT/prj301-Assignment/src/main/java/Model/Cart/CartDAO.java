@@ -5,6 +5,7 @@
  */
 package Model.Cart;
 
+import Model.Products.ProductsDTO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,29 +33,41 @@ public class CartDAO {
             e.printStackTrace();
         }
     }
+    
+    public List<ProductsDTO> viewCart(int customerId) {
+    List<ProductsDTO> list = new ArrayList<>();
+    ProductsDTO product = null;
+    Connection con = null;
+    PreparedStatement stm = null;
+    ResultSet rs = null;
 
-//     Lấy tất cả các mục trong giỏ hàng cho một khách hàng cụ thể
-    public List<CartDTO> getCartItemsByCustomerId(int customerId){
-        List<CartDTO> cartItems = new ArrayList<>();
-        String query = "SELECT * FROM cart WHERE CustomerId = ?";
-        try (PreparedStatement statement = con.prepareStatement(query)) {
-            statement.setInt(1, customerId);
-            try (ResultSet resultSet = statement.executeQuery()) {
-                while (resultSet.next()) {
-                    CartDTO cartItem = new CartDTO();
-                    cartItem.setCartId(resultSet.getInt("CartId"));
-                    cartItem.setCustomerId(resultSet.getInt("CustomerId"));
-                    cartItem.setProId(resultSet.getInt("ProId"));
-                    cartItem.setQuantity(resultSet.getInt("Quantity"));
-                    cartItems.add(cartItem);
-                }
-            }
-        } catch(Exception e){
-            System.out.println("ERROR: " + e.getMessage());
-            e.printStackTrace();
+    try {
+        con = DBUtils.getConnection();
+
+        String sql = "SELECT p.Img, p.ProductsName, p.ProductPrice "
+            + "FROM Products p INNER JOIN Cart c ON p.ProductsID = c.ProId "
+            + "WHERE c.CustomerId = ?";
+        
+        stm = con.prepareStatement(sql);
+        stm.setInt(1, customerId);
+
+        rs = stm.executeQuery();
+
+        while (rs.next()) {
+            product = new ProductsDTO();
+            product.setImg(rs.getString("Img"));
+            product.setProductsName(rs.getString("ProductsName"));
+            product.setProductPrice(rs.getFloat("ProductPrice"));
+            list.add(product);
         }
-        return cartItems;
+    } catch (Exception e) {
+        System.out.println("ERROR IN SQL PRODUCTDAO: " + e.getMessage());
+        e.printStackTrace();
     }
+
+    return list;
+    }
+
 
     // Xóa một mục khỏi giỏ hàng
 //    public void removeFromCart(int cartId) throws SQLException {

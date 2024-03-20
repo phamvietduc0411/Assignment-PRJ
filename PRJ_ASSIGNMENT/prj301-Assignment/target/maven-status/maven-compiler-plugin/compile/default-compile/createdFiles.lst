@@ -1,4 +1,10 @@
 Model\Payment\PaymentDTO.class
+<<<<<<< Updated upstream
+=======
+Model\Cart\itemDTO.class
+Model\Customters\CustomersDAO.class
+Model\Feedback\FeedbackDTO.class
+>>>>>>> Stashed changes
 Model\OrderDetail\OrderDetailDTO.class
 Model\Category\CategoryDAO.class
 Model\Products\ProductsDAO.class
