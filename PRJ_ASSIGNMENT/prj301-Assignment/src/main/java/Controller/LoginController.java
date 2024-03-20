@@ -9,6 +9,8 @@ import Model.Admin.ManagerDAO;
 import Model.Admin.ManagerDTO;
 import Model.Customters.CustomersDAO;
 import Model.Customters.CustomersDTO;
+import Model.Orders.OrdersDAO;
+import Model.Orders.OrdersDTO;
 import Model.Products.ProductsDAO;
 import Model.Products.ProductsDTO;
 import java.io.IOException;
@@ -44,20 +46,27 @@ public class LoginController extends HttpServlet {
             String action = request.getParameter("option");
             String username = request.getParameter("userName");
             String password = request.getParameter("password");
-            
-            
+
             if (action.equals("login")) {
+                ProductsDAO productDAO = new ProductsDAO();
+                List<ProductsDTO> list = productDAO.viewAllProduct();
+                
+                OrdersDAO orderDAO = new OrdersDAO();
+                List<OrdersDTO> orderList = orderDAO.checkOrderAdmin();
+                
                 ManagerDAO managerDAO = new ManagerDAO();
                 ManagerDTO manager = managerDAO.login(username, password);
 
                 CustomersDAO customerDAO = new CustomersDAO();
                 CustomersDTO customer = customerDAO.login(username, password);
                 if (manager != null) {
-                    ProductsDAO productDAO = new ProductsDAO();
-                    List<ProductsDTO> list = productDAO.viewAllProduct();
+                    HttpSession session = request.getSession(true);
+                    
+                    request.setAttribute("orderList", orderList );
 
                     request.setAttribute("productlist", list);
-                    HttpSession session = request.getSession(true);
+                    
+                    
                     session.setAttribute("manager", manager);
                     RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
                     rd.forward(request, response);
@@ -70,9 +79,8 @@ public class LoginController extends HttpServlet {
                     request.setAttribute("error", "Username or password is incorrect");
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
-                }  
-            }
-            else if (action.equals("logout")) {
+                }
+            } else if (action.equals("logout")) {
                 HttpSession session = request.getSession(false);
                 if (session != null) {
                     session.invalidate();
@@ -80,10 +88,9 @@ public class LoginController extends HttpServlet {
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
                 }
-        }
+            }
         }
     }
- 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -19,11 +19,6 @@ import prj301demo.utils.DBUtils;
  * @author Acer
  */
 
-
-
-
-
-
 public class OrdersDAO {
     
     public boolean createOrder(OrdersDTO order) throws SQLException {
@@ -76,6 +71,7 @@ public class OrdersDAO {
             rs = stmt.executeQuery();
             
            while (rs.next()) {
+               
                 OrdersDTO order = new OrdersDTO();
                 order.setOrdersID(rs.getInt("OrdersID"));
                 order.setOrdersDate(rs.getDate("OrdersDate"));
@@ -105,4 +101,53 @@ public class OrdersDAO {
         
         return orderHistory;
     }
+ 
+     public List<OrdersDTO> checkOrderAdmin() {
+        List<OrdersDTO> list = new ArrayList<>();
+        
+        try {
+            Connection con = DBUtils.getConnection();
+            String sql = "SELECT * FROM Orders WHERE  Status = 'Pending' ";
+            PreparedStatement statement = con.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                OrdersDTO order = new OrdersDTO();
+                order.setOrdersID(resultSet.getInt("OrdersID"));
+                order.setOrdersDate(resultSet.getDate("OrdersDate"));
+                order.setPrice(resultSet.getFloat("Price"));
+                order.setQuantity(resultSet.getInt("Quantity"));
+                order.setAddress(resultSet.getString("Address"));
+                order.setStatus(resultSet.getString("Status"));
+                order.setFreight(resultSet.getString("Freight"));
+                order.setCustomerId(resultSet.getInt("CustomerId"));
+                order.setDiscountId(resultSet.getString("DiscountId"));
+                list.add(order);
+            }
+
+            statement.close();
+            con.close();
+        } catch (Exception e) {
+            System.out.println("ERROR  SQL IN CHECK ORDERS ADMIN "+ e.getMessage());
+            e.printStackTrace();
+        }
+
+        return list;
+    }
+     
+     public void confirmOrder(String orderId) {
+        try {
+            Connection con = DBUtils.getConnection();
+            String sql = "UPDATE Orders SET Status = 'Failed' WHERE OrdersID = ? ";
+            PreparedStatement statement = con.prepareStatement(sql);
+            statement.setString(1, orderId);
+            statement.executeUpdate();
+            statement.close();
+            con.close();
+        } catch (Exception e) {
+            System.out.println("ERROR  WHEN COMFIRM ORDER" + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+     
 }

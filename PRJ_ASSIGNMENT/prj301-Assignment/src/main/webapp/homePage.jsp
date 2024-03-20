@@ -30,7 +30,7 @@
         </div>
 
 
-
+  <h3> Hello  ${sessionScope.customer.username}</h3>
         <header id="header">
 
             <div id="header-wrap">
@@ -85,7 +85,7 @@
                                             <li>
                                                 <a
                                                     href="./PageController?action=logout"
-                                                    class="item-anchor" data-effect="Contact" target="_blank"> <b>Logout</b>
+                                                    class="item-anchor" data-effect="Contact" > <b>Logout</b>
                                                 </a>
                                             </li>        
                                         </ul>

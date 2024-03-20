@@ -6,6 +6,8 @@
 package Controller;
 
 import Model.Category.CategoryDTO;
+import Model.Orders.OrdersDAO;
+import Model.Orders.OrdersDTO;
 import Model.Products.ProductsDAO;
 import Model.Products.ProductsDTO;
 import Model.Storage.StorageDTO;
@@ -52,6 +54,9 @@ public class AdminController extends HttpServlet {
             ProductsDAO productsDAO = new ProductsDAO();
             List<ProductsDTO> list = productsDAO.viewAllProduct();
 
+            OrdersDAO orderDAO = new OrdersDAO();
+            List<OrdersDTO> orderList = orderDAO.checkOrderAdmin();
+
             if (action.equals("insert")) {
 
                 StorageDTO storage = new StorageDTO();
@@ -86,6 +91,7 @@ public class AdminController extends HttpServlet {
                 productsDAO.Insert(product, storage, category);
 
                 request.setAttribute("productlist", list);
+                request.setAttribute("orderList", orderList);
 
                 request.setAttribute("success", "Add New Product Successfully");
                 request.getRequestDispatcher("admin.jsp").forward(request, response);
@@ -93,8 +99,6 @@ public class AdminController extends HttpServlet {
                 String productname = request.getParameter("productName");
                 String categoryID = request.getParameter("categoryID");
                 String storageID = request.getParameter("storageID");
-
-                System.out.println("" + productname + categoryID + storageID);
 
                 int cateID = 0;
                 int stoID = 0;
@@ -104,13 +108,22 @@ public class AdminController extends HttpServlet {
                 } catch (Exception e) {
                     System.out.println("Error when format in DELETE");
                 }
-                System.out.println("  cate ID stoID   " + cateID + stoID);
 
                 productsDAO.delete(productname);
                 request.setAttribute("productlist", list);
                 request.setAttribute("delete", "DELETE Successfully");
                 request.getRequestDispatcher("admin.jsp").forward(request, response);
 
+            } else if (action.equals("reject")) {
+                String orderID = request.getParameter("orderID");
+                orderDAO.confirmOrder(orderID);
+
+                orderList = orderDAO.checkOrderAdmin();
+                request.setAttribute("productlist", list);
+
+                request.setAttribute("orderList", orderList);
+
+                request.getRequestDispatcher("admin.jsp").forward(request, response);
             }
 
         }

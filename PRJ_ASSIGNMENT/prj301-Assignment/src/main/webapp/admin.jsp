@@ -1,3 +1,4 @@
+<%@page import="Model.Orders.OrdersDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="Model.Products.ProductsDTO"%>
 <!DOCTYPE html>
@@ -54,24 +55,56 @@
                                             <h5>Check Order</h5>
 
                                         </div>
+
+
                                         <table>
-                                            <thead>
-                                                <tr>
-                                                    <th>orderID</th>
-                                                    <th>orderdate</th>
-                                                    <th>price</th>
-                                                    <th>quantity</th>
-                                                    <th>address</th>
-                                                    <th>status</th>
-                                                    <th>freight</th>
+
+                                            <tr>
+                                                <td class="card-header">OrderID</td>
+                                                <td class="card-header">Orderdate</td>
+                                                <td class="card-header">Price</td>
+                                                <td class="card-header">Quantity</td>
+                                                <td class="card-header">Address</td>
+                                                <td class="card-header">Freight</td>
+                                                <td class="card-header"> Status</td>
+
+                                            </tr>
+                                            <%
+                                                List<OrdersDTO> orderList = (List<OrdersDTO>) request.getAttribute("orderList");
+
+                                                for (OrdersDTO products : orderList) {
+                                            %>
+
+                                            <tr>
+                                                <td class="card-header" style="width: 100px;"><%= products.getOrdersID()%></td>
+                                                <td class="card-header"  style="width: 150px;"><%= products.getOrdersDate()%></td>
+                                                <td class="card-header" style="width: 100px;"> <%= products.getPrice()%></td>                                            
+                                                <td class="card-header" style="width: 200px;" ><%= products.getQuantity()%></td>
+                                                <td class="card-header"><%= products.getAddress()%></td>
+                                                <td class="card-header"><%= products.getFreight()%></td>
+                                                <td class="card-header"><%= products.getStatus()%></td>
+
+                                                <td> <form action ="./AdminController" method="GET">
+                                                        <input name="action" value="reject" type="hidden">
+                                                        <input name="orderID" value="<%= products.getOrdersID()%>" type="hidden">
+                                                        <input type="submit" value="REJECT">
+                                                    </form></td> 
 
 
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <!-- Rows for data will go here -->
-                                            </tbody>
-                                        </table>
+                                                <td> <form action ="./AdminController" method="GET">
+                                                        <input name="action" value="accept" type="hidden">
+                                                        <input type="submit" value="ACCEPT ORDERS">
+                                                    </form></td> 
+
+
+
+                                            </tr>
+                                            <% }%> 
+
+                                        </table>       
+
+
+
                                     </div> 
                                     <div class="row">
 
@@ -156,19 +189,18 @@
                                         </div>
 
                                     </div>
-
                                     <!-- Basic Form Inputs card end -->
                                 </div>
                                 <div class="col-md-12">
                                     <div class="card">
                                         <div class="card-header">
                                             <h5>View All Product</h5>
-                                             <%String delete = (String) request.getAttribute("delete");%>
+                                            <%String delete = (String) request.getAttribute("delete");%>
 
-                                                    <% if (delete != null) {%>
-                                                    <h4 style="color: red"><%= delete %></h4>
+                                            <% if (delete != null) {%>
+                                            <h4 style="color: red"><%= delete%></h4>
 
-                                                    <%}%>
+                                            <%}%>
 
                                         </div>
                                         <table>
@@ -196,7 +228,7 @@
 
                                                 <td> <form action ="./AdminController" method="GET">
                                                         <input name="action" value="delete" type="hidden">
-                                                        <input name="productName" value="<%= products.getProductsName() %>" type="hidden">
+                                                        <input name="productName" value="<%= products.getProductsName()%>" type="hidden">
                                                         <input name="categoryID" value="<%= products.getCategoryId()%>" type="hidden">
                                                         <input name="storageID" value="<%= products.getStorageId()%>" type="hidden">
                                                         <input type="submit" value="delete">

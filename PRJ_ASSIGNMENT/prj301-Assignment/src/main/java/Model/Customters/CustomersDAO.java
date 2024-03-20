@@ -25,7 +25,7 @@ public class CustomersDAO {
         try {
             Connection con = DBUtils.getConnection();
 
-            String sql = " SELECT  CustomerName ,CustomerID , username FROM Customers WHERE username = ? AND password = ?  ";
+            String sql = " SELECT  *  FROM Customers WHERE username = ? AND password = ?  ";
 
             PreparedStatement stm = con.prepareStatement(sql);
 
@@ -39,6 +39,10 @@ public class CustomersDAO {
                     customers.setCustomerID(rs.getInt("CustomerID"));
                     customers.setUsername(rs.getString("username"));
                     customers.setCustomerName(rs.getString("CustomerName"));
+                    customers.setPhoneNumber(rs.getString("PhoneNumber"));
+                    customers.setAddress(rs.getString("Address"));
+                    customers.setGender(rs.getString("Gender"));
+                    customers.setEmail(rs.getString("Email"));
                 }
             }
             con.close();
@@ -49,15 +53,15 @@ public class CustomersDAO {
 
         return customers;
     }
-    
+
     public boolean createCustomer(CustomersDTO customer) {
-        
+
         try {
             Connection con = DBUtils.getConnection();
-            String sql = "INSERT INTO Customers (username, password, CustomerName, PhoneNumber, Address, Gender, Email) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Customers (username, password, CustomerName, PhoneNumber, Address, Gender, Email) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement stmt = con.prepareStatement(sql);
-            
+
             stmt.setString(1, customer.getUsername());
             stmt.setString(2, customer.getPassword());
             stmt.setString(3, customer.getCustomerName());
@@ -73,7 +77,7 @@ public class CustomersDAO {
             return false;
         }
     }
-    
+
     public CustomersDTO getCustomerProfile(String profile) {
         CustomersDTO customer = null;
         try {
@@ -102,6 +106,4 @@ public class CustomersDAO {
         return customer;
     }
 
-
-    
 }

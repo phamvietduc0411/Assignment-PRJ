@@ -3,7 +3,6 @@
     Created on : 20-03-2024, 00:03:53
     Author     : Acer
 --%>
-
 <%@page import="Model.Orders.OrdersDTO"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -75,6 +74,7 @@
                                                 <a 
                                                     href="cart.jsp" class="item-anchor" data-effect="Contact">Cart
                                                 </a>
+<<<<<<< Updated upstream
                                             </li>
 
                                             
@@ -87,6 +87,9 @@
 
                                        
                                             <!--logout customer-->     
+=======
+                                            </li> 
+>>>>>>> Stashed changes
                                             <li>
                                                 <a
                                                     href="./PageController?action=logout"
@@ -103,62 +106,15 @@
                 </nav>
             </div>
         </header>
-<!--        <section id="billboard" class="overflow-hidden">
 
-            <button class="button-prev">
-                <i class="icon icon-chevron-left"></i>
-            </button>
-            <button class="button-next">
-                <i class="icon icon-chevron-right"></i>
-            </button>
-            <div class="swiper main-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"
-                         style="background-image: url('images/Summerbg.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
-                        <div class="banner-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h2 class="banner-title" style="color: wheat">Summer Collection</h2>
-                                        <p>Welcome to Z-stalk! Discover style, comfort, and endless fashion possibilities. Step in, explore, and let your fashion journey begin. Happy shopping!</p>
-                                        <div class="btn-wrap">
-                                            <a href="./PageController?action=collection" class="btn btn-light btn-medium d-flex align-items-center" tabindex="0">Shop it
-                                                now <i class="icon icon-arrow-io"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide"
-                         style="background-image: url('images/Fallbg.png');background-repeat: no-repeat;background-size: cover;background-position: center;">
-                        <div class="banner-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h2 class="banner-title" style="color: cadetblue">Autumn Collection</h2>
-                                        <p>Welcome to Z-stalk's Autumn Collection! Explore cozy sweaters, chic outerwear, and more. Embrace the essence of fall in style with us!</p>
-                                        <div class="btn-wrap">
-                                            <a href="./PageController?action=collection" class="btn btn-light btn-light-arrow btn-medium d-flex align-items-center"
-                                               tabindex="0">Shop it now <i class="icon icon-arrow-io"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
         <div>
             <h1>Customer Profile</h1>
         </div>
         <div>
-            <h4>Customer ID: ${requestScope.customers.customerID}</h4>
+            <h4>Customer ID:  ${sessionScope.customer.customerID} </h4>
         </div>
         <div>
+<<<<<<< Updated upstream
             <h4>Username: ${requestScope.customers.username}</h4>
         </div>
         <div>
@@ -177,6 +133,26 @@
         
         <div>
             <h4>Email: ${requestScope.customers.email}</h4>
+=======
+            <h4>Username: ${sessionScope.customer.username}</h4>
+        </div>
+        <div>
+            <h4>Name: ${sessionScope.customer.customerName}</h4>
+        </div>
+        <div>
+            <h4>Phone Number: ${sessionScope.customer.phoneNumber}</h4>
+        </div>
+        <div>
+            <h4>Address: ${sessionScope.customer.address}</h4>
+        </div>
+        
+        <div>
+            <h4>Gender: ${sessionScope.customer.gender}</h4>
+        </div>
+        
+        <div>
+            <h4>Email: ${sessionScope.customer.email}</h4>
+>>>>>>> Stashed changes
         </div>
         
         <h1>Order History</h1>
