@@ -5,7 +5,7 @@
  */
 package Model.Cart;
 
-import Model.CartItem.CartItemDTO;
+import Model.Cart.CartDTO;
 import java.util.List;
 
 /**
@@ -13,22 +13,27 @@ import java.util.List;
  * @author DELL
  */
 public class CartDTO {
-    private int cartId;
+    
+    private int CartId;
+    private int CartDetailId;
     private int CustomerId;
-    private List<CartItemDTO> cartItems;
-
-    public CartDTO(int cartId, int CustomerId, List<CartItemDTO> cartItems) {
-        this.cartId = cartId;
-        this.CustomerId = CustomerId;
-        this.cartItems = cartItems;
-    }
+    private int ProId;
+    private int Quantity;
 
     public int getCartId() {
-        return cartId;
+        return CartId;
     }
 
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
+    public void setCartId(int CartId) {
+        this.CartId = CartId;
+    }
+
+    public int getCartDetailId() {
+        return CartDetailId;
+    }
+
+    public void setCartDetailId(int CartDetailId) {
+        this.CartDetailId = CartDetailId;
     }
 
     public int getCustomerId() {
@@ -39,12 +44,21 @@ public class CartDTO {
         this.CustomerId = CustomerId;
     }
 
-
-    public List<CartItemDTO> getCartItems() {
-        return cartItems;
+    public int getProId() {
+        return ProId;
     }
 
-    public void setCartItems(List<CartItemDTO> cartItems) {
-        this.cartItems = cartItems;
+    public void setProId(int ProId) {
+        this.ProId = ProId;
     }
+
+    public int getQuantity() {
+        return Quantity;
+    }
+
+    public void setQuantity(int Quantity) {
+        this.Quantity = Quantity;
+    }
+
+    
 }

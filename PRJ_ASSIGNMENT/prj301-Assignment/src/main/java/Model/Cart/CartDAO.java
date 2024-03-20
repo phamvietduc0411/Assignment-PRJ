@@ -5,10 +5,11 @@
  */
 package Model.Cart;
 
-import Model.CartItem.CartItemDTO;
+import Model.Cart.CartDTO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 import prj301demo.utils.DBUtils;
 
 /**
@@ -16,23 +17,22 @@ import prj301demo.utils.DBUtils;
  * @author DELL
  */
 public class CartDAO {
-
-    public void addToCart(CartItemDTO cartItem) throws SQLException {
-        
-        try{
-            Connection con = DBUtils.getConnection();
-            String sql = " INSERT INTO cartItem(ProId, quantity, cartID) VALUES (?, ?, ?) ";
-            PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setInt(1, cartItem.getProId());
-            stmt.setInt(2, cartItem.getQuantity());
-            stmt.setInt(3, cartItem.getCartID());
-            stmt.executeUpdate();
-            con.close();
-        } catch(Exception ex){
-            System.out.println("Error: " + ex.getMessage());
-            ex.printStackTrace();
-        }
-        
+    public List<CartDTO> getCartItemsByCustomerId(int customerId) {
+        return null;
+        // Implementation to get cart items by customer ID from database
     }
-    
+
+    public void addToCart(CartDTO cartItem) {
+        // Implementation to add an item to cart in the database
+    }
+
+    public void removeFromCart(int cartItemId) {
+        // Implementation to remove an item from cart in the database
+    }
+
+    public void updateCartItem(CartDTO cartItem) {
+        // Implementation to update a cart item in the database
+    }
+
+    // Other methods
 }
