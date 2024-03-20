@@ -110,7 +110,6 @@ public class OrdersDAO {
                 order.setStatus(resultSet.getString("Status"));
                 order.setFreight(resultSet.getString("Freight"));
                 order.setCustomerId(resultSet.getInt("CustomerId"));
-                order.setDiscountId(resultSet.getString("DiscountId"));
                 list.add(order);
             }
 

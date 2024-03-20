@@ -62,22 +62,26 @@
                                     <!-- Loop through each cart item -->
                                     <%
                                         List<ProductsDTO> list = (List<ProductsDTO>) request.getAttribute("itemList");
-                                        double totalPrice = 0;
+                                        float totalPrice = 0;
+                                        int quantity = 1;
                                         Map<Integer, Integer> idCount = new HashMap<>();
                                         for (ProductsDTO products : list) {
                                             int id = products.getProductsID();
-                                            idCount.put(id, idCount.getOrDefault(id, 0) + 1);
+                                            if(id != 0){
+                                                idCount.put(id, idCount.getOrDefault(id, 0) + 1);
+                                                quantity = idCount.get(id); 
+                                            } else {
+                                                quantity = 1;
+                                            }
                                         }
 
-                                        Set<Integer> processedIds = new HashSet<>();
                                         for (ProductsDTO products : list) {
                                             int id = products.getProductsID();
-                                            if (!processedIds.contains(id)) {
-                                                double productPrice = products.getProductPrice();
-                                                int quantity = idCount.get(id);
-                                                double totalProductPrice = productPrice * quantity;
-                                                totalPrice += totalProductPrice;
-                                    %>
+                                            float productPrice = products.getProductPrice();
+
+                                            float totalProductPrice = productPrice * quantity;
+                                            totalPrice += totalProductPrice;
+                                    %>  
                                     <tr>
                                         <td class="shoping__cart__item">
                                             <img style="height: 180px; width: 140px" src="<%= products.getImg()%>" alt="<%= products.getProductsName()%>">
@@ -100,8 +104,6 @@
                                         </td>
                                     </tr>
                                     <%
-                                                processedIds.add(id);
-                                            }
                                         }
                                     %>
                                 </tbody>

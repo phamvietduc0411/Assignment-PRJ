@@ -117,6 +117,8 @@ public class PageController extends HttpServlet {
                     RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                     rd.forward(request, response);
                 }
+                
+                
 
             } else if (action.equals("profile")) {
 
@@ -133,6 +135,8 @@ public class PageController extends HttpServlet {
                 List<OrdersDTO> orderList = orderDAO.getOrderHistory(customerID);
                 request.setAttribute("orderList", orderList);
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
+                
+                
 
             } else if (action.equals("add")) {
 
@@ -147,7 +151,13 @@ public class PageController extends HttpServlet {
 
                 CartDAO cartDAO = new CartDAO();
                 cartDAO.addToCart(customerid, productid);
+                List<ProductsDTO> tShirtList = productDAO.findProductsByKeyword("T-Shirt");
+                List<ProductsDTO> sweaterList = productDAO.findProductsByKeyword("sweater");
+                request.setAttribute("tShirtList", tShirtList);
+                request.setAttribute("sweaterList", sweaterList);
                 request.getRequestDispatcher("homePage.jsp").forward(request, response);
+                
+                
             } else if (action.equals("load")) {
                 int customerid = 0;
                 try {
@@ -160,6 +170,8 @@ public class PageController extends HttpServlet {
                 List<ProductsDTO> itemInCart = cartDAO.viewCart(customerid);
                 request.setAttribute("itemList", itemInCart);
                 request.getRequestDispatcher("cart.jsp").forward(request, response);
+                
+                
 
             } else if (action.equals("edit")) {
                 Integer customerID = null;
