@@ -19,7 +19,6 @@ public class OrdersDTO {
     private String Status;
     private String Freight;
     private int CustomerId;
-    private String DiscountId;
 
     public int getOrdersID() {
         return OrdersID;
@@ -84,15 +83,6 @@ public class OrdersDTO {
     public void setCustomerId(int CustomerId) {
         this.CustomerId = CustomerId;
     }
-
-    public String getDiscountId() {
-        return DiscountId;
-    }
-
-    public void setDiscountId(String DiscountId) {
-        this.DiscountId = DiscountId;
-    }
-
 
     
 }

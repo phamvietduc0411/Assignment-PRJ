@@ -8,6 +8,8 @@ package Controller;
 import Model.Cart.CartDAO;
 import Model.Cart.CartDTO;
 import Model.OrderDetail.OrderDetailDTO;
+import Model.Orders.OrdersDAO;
+import Model.Orders.OrdersDTO;
 import Model.Products.ProductsDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,6 +18,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,7 +43,22 @@ public class CartController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        String action = request.getParameter("action");
+        if (action != null && action.equals("setBill")) {
+            OrdersDAO orderDAO = new OrdersDAO();
+            
+            try {
+                List<OrdersDTO> shippedOrders = orderDAO.getShippedOrders();
+                request.setAttribute("successMessage", "Bills have been set successfully!");
+
+                response.sendRedirect("homePage.jsp");
+            } catch (Exception e) {
+                e.printStackTrace();
+                // Handle error, for example redirect to error page
+                request.setAttribute("errorMessage", "Error occurred while setting bills!");
+                response.sendRedirect("homePage.jsp");
+            }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

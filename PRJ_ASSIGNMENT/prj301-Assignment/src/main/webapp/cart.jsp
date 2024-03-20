@@ -137,7 +137,8 @@
                                 <li>Subtotal <span>$<%= totalPrice%></span></li>
                                 <li>Total <span>$<%= totalPrice%></span></li>
                             </ul>
-                            <form action="CartController" method="post">
+                            <form action="CartController" method="get">
+                                <input type="hidden" name="action" value="setBill">
                                 <button type="submit">Proceed to Checkout</button>
                             </form>
                         </div>

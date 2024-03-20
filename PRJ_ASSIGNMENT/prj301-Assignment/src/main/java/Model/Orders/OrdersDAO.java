@@ -143,4 +143,38 @@ public class OrdersDAO {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      
+    public List<OrdersDTO> getShippedOrders() {
+        List<OrdersDTO> orders = new ArrayList<>();
+
+        try (
+            Connection conn = DBUtils.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(
+                "SELECT o.OrdersID, o.OrdersDate, o.Price, o.Quantity, o.Address AS OrderAddress, o.Status, o.Freight, " +
+                "c.CustomerName, c.PhoneNumber, c.Address AS CustomerAddress, c.Gender, c.Email " +
+                "FROM Orders o " +
+                "JOIN Customers c ON o.CustomerId = c.CustomerID " +
+                "JOIN Cart ct ON o.CustomerId = ct.CustomerId " +
+                "WHERE o.Status = 'Shipped'"
+            );
+            ResultSet rs = stmt.executeQuery()
+        ) {
+            while (rs.next()) {
+                OrdersDTO order = new OrdersDTO();
+                order.setOrdersID(rs.getInt("OrdersID"));
+                order.setOrdersDate(rs.getDate("OrdersDate"));
+                order.setPrice(rs.getFloat("Price"));
+                order.setQuantity(rs.getInt("Quantity"));
+                order.setAddress(rs.getString("OrderAddress"));
+                order.setStatus(rs.getString("Status"));
+                order.setFreight(rs.getString("Freight"));
+                order.setCustomerId(rs.getInt("CustomerId"));
+                
+                orders.add(order);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return orders;
+    }    
 }
