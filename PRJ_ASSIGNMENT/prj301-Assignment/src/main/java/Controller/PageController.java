@@ -168,7 +168,21 @@ public class PageController extends HttpServlet {
                 List<ProductsDTO> itemInCart = cartDAO.viewCart(customerid);
                 request.setAttribute("itemList", itemInCart);
                 request.getRequestDispatcher("cart.jsp").forward(request, response);
-            }
+            }else if ( action.equals("edit")){
+                Integer customerID = null;
+                try{
+                    customerID = Integer.parseInt(request.getParameter("customerID"));      
+                }catch (NumberFormatException ex){
+                    log("Parameter PlaylistID has wrong format.");
+                }
+                CustomersDAO customerDAO = new CustomersDAO();
+                CustomersDTO customers = null;
+                if(customerID != null){
+                    customerDAO.load(customerID);
+                }
+                request.setAttribute("customers", customers);
+                request.getRequestDispatcher("editprofile.jsp").forward(request, response);     
+            } 
         }
     }
 
