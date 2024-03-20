@@ -20,52 +20,6 @@ import prj301demo.utils.DBUtils;
  */
 public class CartDAO {
     
-    Connection con = DBUtils.getConnection();
     
-    public List<CartDTO> getCartItemsByCustomerId(int customerId) throws SQLException {
-        List<CartDTO> cartItems = new ArrayList<>();
-        String query = "SELECT * FROM Cart WHERE CustomerId = ?";
-        try (PreparedStatement statement = con.prepareStatement(query)) {
-            statement.setInt(1, customerId);
-            try (ResultSet resultSet = statement.executeQuery()) {
-                while (resultSet.next()) {
-                    CartDTO cartItem = new CartDTO();
-                    cartItem.setCartId(resultSet.getInt("CartId"));
-                    cartItem.setCustomerId(resultSet.getInt("CustomerId"));
-                    cartItem.setProId(resultSet.getInt("ProId"));
-                    cartItem.setQuantity(resultSet.getInt("Quantity"));
-                    cartItems.add(cartItem);
-                }
-            }
-        }
-        return cartItems;
-    }
-
-    public void addToCart(CartDTO cartItem) throws SQLException {
-        String query = "INSERT INTO Cart (CustomerId, ProId, Quantity) VALUES (?, ?, ?)";
-        try (PreparedStatement statement = con.prepareStatement(query)) {
-            statement.setInt(1, cartItem.getCustomerId());
-            statement.setInt(2, cartItem.getProId());
-            statement.setInt(3, cartItem.getQuantity());
-            statement.executeUpdate();
-        }
-    }
-
-    public void removeFromCart(int cartItemId) throws SQLException {
-        String query = "DELETE FROM Cart WHERE CartId = ?";
-        try (PreparedStatement statement = con.prepareStatement(query)) {
-            statement.setInt(1, cartItemId);
-            statement.executeUpdate();
-        }
-    }
-
-    public void updateCartItem(CartDTO cartItem) throws SQLException {
-        String query = "UPDATE Cart SET Quantity = ? WHERE CartId = ?";
-        try (PreparedStatement statement = con.prepareStatement(query)) {
-            statement.setInt(1, cartItem.getQuantity());
-            statement.setInt(2, cartItem.getCartId());
-            statement.executeUpdate();
-        }
-    }
-    
+   
 }
