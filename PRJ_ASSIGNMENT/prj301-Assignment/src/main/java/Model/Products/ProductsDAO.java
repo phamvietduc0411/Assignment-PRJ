@@ -21,7 +21,6 @@ import Model.Storage.StorageDTO;
  * @author HP
  */
 public class ProductsDAO {
-    
 
     public List<ProductsDTO> viewAllProduct() {
         List<ProductsDTO> list = new ArrayList<ProductsDTO>();
@@ -147,7 +146,7 @@ public class ProductsDAO {
         insertCategory(category);
     }
 
-    public void insertProduct(ProductsDTO product) {
+    private void insertProduct(ProductsDTO product) {
 
         String sql = "INSERT INTO Products (ProductsID, ProductsName, Gender, Size, Color, ProductPrice, Img, StorageId, CategoryId)\n"
                 + "VALUES ((SELECT ISNULL(MAX(ProductsID), 0) FROM Products) + 1, ?, ? , ? ,? , ? , ? ,"
@@ -175,7 +174,7 @@ public class ProductsDAO {
 
     }
 
-    public void insertStorage(StorageDTO storage) {
+    private void insertStorage(StorageDTO storage) {
 
         String sql = "INSERT INTO Storage (StorageID, AvailableQuantity)"
                 + "VALUES ((SELECT ISNULL(MAX(StorageID), 0) FROM Storage) + 1, ? );";
@@ -196,7 +195,7 @@ public class ProductsDAO {
 
     }
 
-    public void insertCategory(CategoryDTO category) {
+    private void insertCategory(CategoryDTO category) {
 
         String sql = "INSERT INTO Category (CategoryID, CategoryName, Collections, Descriptions)\n"
                 + "VALUES ((SELECT ISNULL(MAX(CategoryID), 0) FROM Category) + 1, ? , ? , ? );";
@@ -218,16 +217,103 @@ public class ProductsDAO {
         }
 
     }
-    
-    public void delete(String productName){
-    
+
+    public void delete(String productName) {
         try {
             Connection con = DBUtils.getConnection();
-            
-            String sql = "";
-            
+
+            String sqlSelect = "SELECT CategoryID, StorageID FROM Products WHERE ProductsName = ?";
+            PreparedStatement selectStm = con.prepareStatement(sqlSelect);
+            selectStm.setString(1, productName);
+            ResultSet rs = selectStm.executeQuery();
+
+            int categoryId = 0;
+            int storageId = 0;
+            if (rs.next()) {
+                categoryId = rs.getInt("CategoryID");
+                storageId = rs.getInt("StorageID");
+            }
+            rs.close();
+            selectStm.close();
+
+            deleteProduct(productName, con);
+
+            if (categoryId != 0) {
+                deleteCategory(categoryId, con);
+            }
+            if (storageId != 0) {
+                deleteStorage(storageId, con);
+            }
+
+            con.close();
         } catch (Exception e) {
+            System.out.println("ERROR WHEN DELETE PRODUCT: " + e.getMessage());
+            e.printStackTrace();
         }
-        
     }
+
+    private void deleteProduct(String productName, Connection con) throws SQLException {
+        String sql = "DELETE FROM Products WHERE ProductsName = ?";
+        PreparedStatement stm = con.prepareStatement(sql);
+        stm.setString(1, productName);
+        stm.executeUpdate();
+        stm.close();
+    }
+
+    private void deleteCategory(int categoryID, Connection con) throws SQLException {
+        String sql = "DELETE FROM Category WHERE CategoryID = ?";
+        PreparedStatement stm = con.prepareStatement(sql);
+        stm.setInt(1, categoryID);
+        stm.executeUpdate();
+        stm.close();
+    }
+
+    private void deleteStorage(int storageID, Connection con) throws SQLException {
+        String sql = "DELETE FROM Storage WHERE StorageID = ?";
+        PreparedStatement stm = con.prepareStatement(sql);
+        stm.setInt(1, storageID);
+        stm.executeUpdate();
+        stm.close();
+    }
+
+ public List<ProductsDTO> bestseller() {
+    List<ProductsDTO> list = new ArrayList<ProductsDTO>();
+    ProductsDTO product = null;
+
+    try {
+        Connection con = DBUtils.getConnection();
+
+        String sql = "SELECT TOP 8 p.ProductsID, p.ProductsName, p.Gender, p.Size, p.Color,p.Img, p.ProductPrice, p.StorageId, p.CategoryId " +
+                     "FROM Products p " +
+                     "INNER JOIN OrderDetail od ON p.ProductsID = od.ProId " +
+                     "GROUP BY p.ProductsID, p.ProductsName, p.Gender, p.Size, p.Color, p.ProductPrice, p.StorageId, p.CategoryId,p.Img " +
+                     "ORDER BY SUM(od.TotalQuantity) DESC";
+
+        PreparedStatement stm = con.prepareStatement(sql);
+        ResultSet rs = stm.executeQuery();
+
+        while (rs.next()) {
+            product = new ProductsDTO();
+            product.setProductsID(rs.getInt("ProductsID"));
+            product.setProductsName(rs.getString("ProductsName"));
+            product.setGender(rs.getString("Gender"));
+            product.setSize(rs.getString("Size"));
+            product.setColor(rs.getString("Color"));
+            product.setProductPrice(rs.getFloat("ProductPrice"));
+            product.setStorageId(rs.getInt("StorageId"));
+            product.setCategoryId(rs.getInt("CategoryId"));
+            product.setImg(rs.getString("Img"));
+            list.add(product);
+        }
+
+        con.close();
+
+    } catch (Exception e) {
+        System.out.println("ERROR IN SQL PRODUCTDAO: " + e.getMessage());
+        e.printStackTrace();
+    }
+
+    return list;
+}
+
 }

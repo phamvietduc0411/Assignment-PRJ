@@ -44,11 +44,11 @@ public class PageController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
+            
+            ProductsDAO productDAO = new ProductsDAO();
 
-//            CategoryDAO categoryDAO = new CategoryDAO();
             if (action.equals("productDetails")) {
                 CategoryDAO categoryDAO = new CategoryDAO();
-// can sua lai
                 Integer CategoryID = null;
                 try {
                     CategoryID = Integer.parseInt(request.getParameter("CategoryID"));
@@ -63,9 +63,18 @@ public class PageController extends HttpServlet {
                 }
                 request.setAttribute("category", category);
                 request.getRequestDispatcher("productDetails.jsp").forward(request, response);
-            } else if (action.equals("collection")) {
+            } 
+            else if (action.equals("view")) {
+                
+                List<ProductsDTO> bestSellList = productDAO.bestseller();
+                request.setAttribute("bestSeller", bestSellList);
+                request.getRequestDispatcher("displayProduct.jsp").forward(request, response);
+                
+            }
+            
+            else if (action.equals("collection")) {
 
-                ProductsDAO productDAO = new ProductsDAO();
+                
                 List<ProductsDTO> menCollectionSummer = productDAO.collection("Summer", "Men");
                 List<ProductsDTO> menCollectionAutumn = productDAO.collection("Autumn", "Men");
                 List<ProductsDTO> menCollectionSpring = productDAO.collection("Spring", "Men");
@@ -89,9 +98,7 @@ public class PageController extends HttpServlet {
                 request.getRequestDispatcher("collection.jsp").forward(request, response);
             } else if (action.equals("search")) {
                 String keyword = request.getParameter("keyword");
-
-                ProductsDAO productsDAO = new ProductsDAO();
-                List<ProductsDTO> result = productsDAO.SearchProByName(keyword);
+                List<ProductsDTO> result = productDAO.SearchProByName(keyword);
                 request.setAttribute("result", result);
 
                 request.getRequestDispatcher("searchingproducts.jsp").forward(request, response);
@@ -115,6 +122,7 @@ public class PageController extends HttpServlet {
             }
         }
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

@@ -89,7 +89,7 @@
                     List<ProductsDTO> menCollectionSummer = (List<ProductsDTO>) request.getAttribute("menCollectionSummer");
 
                     for (ProductsDTO products : menCollectionSummer) {
-                        System.out.println("" + products.getImg());
+                      
 
                 %>
                 <div class="product-item col-lg-3 col-md-4 col-sm-4">

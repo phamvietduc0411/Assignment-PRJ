@@ -80,16 +80,6 @@ CREATE TABLE Orders (
 	DiscountId VARCHAR(20) FOREIGN KEY REFERENCES Discount(DiscountID),
 );
 
--- T?o b?ng Feedback
-CREATE TABLE Feedback (
-	FeedbackID INT IDENTITY(1,1) PRIMARY KEY,
-	detail NVARCHAR(255),
-	Rating INT,
-	feedbackDate DATETIME,
-	--FOREIGN KEY
-	ProId INT FOREIGN KEY REFERENCES Products(ProductsID),
-	CustomerId INT FOREIGN KEY REFERENCES Customers(CustomerID)
-);
 
 CREATE TABLE Cart (
     CartId INT IDENTITY(1,1) PRIMARY KEY,
