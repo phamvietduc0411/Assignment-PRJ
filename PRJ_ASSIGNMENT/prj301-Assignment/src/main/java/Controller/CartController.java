@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import Model.Cart.CartDAO;
+import Model.Cart.CartDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -32,8 +34,30 @@ public class CartController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
+            throws ServletException, IOException, SQLException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            // Đọc tham số từ request
+            String action = request.getParameter("action");
+            String CartId = request.getParameter("cartId");
+            String CustomerId = request.getParameter("cusId");
+            String ProId = request.getParameter("proId");
+            String Quantity = request.getParameter("quantity");
+
+            CartDAO dao = new CartDAO();
+            CartDTO cart = new CartDTO();
+            if (action != null && action.equals("addToCart")) {
+                dao.addToCart(cart);
+            } else if (action != null && action.equals("removeFromCart")) {
+//                dao.removeFromCart("cartId");
+            } else if (action != null && action.equals("updateCartItem")) {
+                dao.updateCartItem(cart);
+            } else if (action != null && action.equals("getCartItemsByCustomerId")) {
+//                dao.getCartItemsByCustomerId(CustomerId);
+            } else {
+                out.println("Invalid action");
+            }
+        }
         
     }
 

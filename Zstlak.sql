@@ -92,7 +92,7 @@ CREATE TABLE Feedback (
 );
 
 CREATE TABLE Cart (
-    CartI INT IDENTITY(1,1) PRIMARY KEY,
+    CartId INT IDENTITY(1,1) PRIMARY KEY,
     CustomerId INT FOREIGN KEY REFERENCES Customers(CustomerID),
     ProId INT FOREIGN KEY REFERENCES Products(ProductsID),
     Quantity INT

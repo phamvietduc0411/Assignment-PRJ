@@ -15,7 +15,6 @@ import java.util.List;
 public class CartDTO {
     
     private int CartId;
-    private int CartDetailId;
     private int CustomerId;
     private int ProId;
     private int Quantity;
@@ -26,14 +25,6 @@ public class CartDTO {
 
     public void setCartId(int CartId) {
         this.CartId = CartId;
-    }
-
-    public int getCartDetailId() {
-        return CartDetailId;
-    }
-
-    public void setCartDetailId(int CartDetailId) {
-        this.CartDetailId = CartDetailId;
     }
 
     public int getCustomerId() {
@@ -60,5 +51,4 @@ public class CartDTO {
         this.Quantity = Quantity;
     }
 
-    
 }
