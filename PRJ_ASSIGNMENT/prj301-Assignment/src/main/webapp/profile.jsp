@@ -4,6 +4,8 @@
     Author     : Acer
 --%>
 
+<%@page import="Model.Orders.OrdersDTO"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Model.Customters.CustomersDTO"%>
 <!DOCTYPE html>
@@ -75,11 +77,11 @@
                                                 </a>
                                             </li>
                                             
-                                            <li class="menu-item has-sub">
+<!--                                            <li class="menu-item has-sub">
                                                 <a href="./PageController?action=profile" class="item-anchor d-flex align-item-center" data-effect="Blog">Profile<i
                                                         class="icon icon-chevron-down"></i>
                                                 </a>
-                                            </li>
+                                            </li>-->
                                        
                                             <!--logout customer-->     
                                             <li>
@@ -147,31 +149,69 @@
                 </div>
             </div>
         </section>-->
-<div>
-    <h1>Customer Profile</h1>
-</div>
-<div>
-    <p>Customer ID: ${customers.CustomerID}</p>
-</div>
-<div>
-    <p>Username: ${customers.Username}</p>
-</div>
-<div>
-    <p>Name: ${customers.CustomerName}</p>
-</div>
-<div>
-    <p>Phone Number: ${customers.PhoneNumber}</p>
-</div>
-<div>
-    <p>Address: ${customers.Address}</p>
-</div>
-<div>
-    <p>Gender: ${customers.Gender}</p>
-</div>
-<div>
-    <p>Email: ${customers.Email}</p>
-</div>
-
+        <div>
+            <h1>Customer Profile</h1>
+        </div>
+        <div>
+            <h4>Customer ID: ${requestScope.customers.customerID}</h4>
+        </div>
+        <div>
+            <h4>Username: ${customers.username}</h4>
+        </div>
+        <div>
+            <h4>Name: ${customers.CustomerName}</h4>
+        </div>
+        <div>
+            <h4>Phone Number: ${customers.phoneNumber}</h4>
+        </div>
+        <div>
+            <h4>Address: ${customers.address}</h4>
+        </div>
+        
+        <div>
+            <h4>Gender: ${customers.gender}</h4>
+        </div>
+        
+        <div>
+            <h4>Email: ${customers.email}</h4>
+        </div>
+        
+        <h1>Order History</h1>
+    <table border="3">
+        <tr>
+            <th>Order ID</th>
+            <th>Order Date</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Address</th>
+            <th>Status</th>
+            <th>Freight</th>
+            <!-- Add more columns if needed -->
+        </tr>
+        <% 
+            List<OrdersDTO> orderHistory = (List<OrdersDTO>) request.getAttribute("orderHistory");
+            if (orderHistory != null && !orderHistory.isEmpty()) {
+                for (OrdersDTO order : orderHistory) {
+        %>
+        <tr>
+            <td><%= order.getOrdersID() %></td>
+            <td><%= order.getOrdersDate() %></td>
+            <td><%= order.getPrice() %></td>
+            <td><%= order.getQuantity() %></td>
+            <td><%= order.getAddress() %></td>
+            <td><%= order.getStatus() %></td>
+            <td><%= order.getFreight() %></td>
+            <!-- Add more columns if needed -->
+        </tr>
+        <% 
+                }
+            } else {
+        %>
+        <tr>
+            <td colspan="7">No orders found.</td>
+        </tr>
+        <% } %>
+    </table>
         
         
         
