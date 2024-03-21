@@ -2,12 +2,7 @@ Model\Payment\PaymentDTO.class
 Model\Customters\CustomersDAO.class
 Model\Feedback\FeedbackDTO.class
 Model\OrderDetail\OrderDetailDTO.class
-<<<<<<< Updated upstream
-Model\Cart\CartDAO.class
-=======
-Controller\CartController.class
 Model\Cart\CartItem.class
->>>>>>> Stashed changes
 Model\Category\CategoryDAO.class
 Model\Products\ProductsDAO.class
 Controller\SignupController.class
