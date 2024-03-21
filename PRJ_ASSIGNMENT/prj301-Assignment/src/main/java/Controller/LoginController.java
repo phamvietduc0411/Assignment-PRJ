@@ -63,7 +63,7 @@ public class LoginController extends HttpServlet {
                     rd.forward(request, response);
                 } else if (customer != null) {
                     HttpSession session = request.getSession(true);
-                    session.setAttribute("customerSession", customer);
+                    session.setAttribute("customer", customer);
                     response.sendRedirect("./homePage.jsp");
 
                 } else {

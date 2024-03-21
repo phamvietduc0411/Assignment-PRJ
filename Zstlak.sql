@@ -92,6 +92,13 @@ CREATE TABLE OrderDetail (
 	PRIMARY KEY(OrdersId, PaysId, ProId)
 );
 
+CREATE TABLE Cart(
+	CartId INT IDENTITY(1,1) PRIMARY KEY,
+	CustomerId INT FOREIGN KEY REFERENCES Customers(CustomerID),
+	ProId INT FOREIGN KEY REFERENCES Products(ProductsID),
+	Quantity INT,
+)
+
 CREATE TABLE Check_Order (
     ManagerId INT FOREIGN KEY REFERENCES Manager(ManagerID),
     OrdersId INT FOREIGN KEY REFERENCES Orders(OrdersID),
@@ -498,16 +505,6 @@ VALUES
 (8.00, 4, 4000313, 111, 711733),
 (10.00, 1, 4000322, 111, 711741),
 (1.90, 1, 4000328, 272, 711808);
-
--- Thêm d? li?u vào b?ng Feedback OK
-INSERT INTO Feedback (detail, Rating, feedbackDate, ProId, CustomerId)
-VALUES 
-('Great product!', 5, '2024-02-14', 711808, 001),
-('Excellent service!', 4, '2024-02-15', 711748, 008),
-('Good!', 3, '2024-02-02', 711826, 004),
-('Ok', 2, '2024-01-1', 711777, 005),
-('Not satisfied with product quality!', 1, '2023-12-07', 711826, 005),
-('Great product!', 4, '2024-01-03', 711831, 003);
 
 -- Thêm d? li?u vào b?ng Check_Order OK
 INSERT INTO Check_Order (ManagerId, OrdersId)

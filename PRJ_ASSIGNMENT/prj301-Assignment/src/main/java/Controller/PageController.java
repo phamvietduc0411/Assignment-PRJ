@@ -5,7 +5,8 @@
  */
 package Controller;
 
-import Model.Cart.CartItem;
+import Model.Cart.CartDAO;
+import Model.Cart.CartDTO;
 import Model.Category.CategoryDAO;
 import Model.Category.CategoryDTO;
 import Model.Customters.CustomersDAO;
@@ -45,7 +46,7 @@ public class PageController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String action = request.getParameter("action");
-            
+
             ProductsDAO productDAO = new ProductsDAO();
 
             if (action.equals("productDetails")) {
@@ -64,18 +65,14 @@ public class PageController extends HttpServlet {
                 }
                 request.setAttribute("category", category);
                 request.getRequestDispatcher("productDetails.jsp").forward(request, response);
-            } 
-            else if (action.equals("view")) {
-                
+            } else if (action.equals("view")) {
+
                 List<ProductsDTO> bestSellList = productDAO.bestseller();
                 request.setAttribute("bestSeller", bestSellList);
                 request.getRequestDispatcher("displayProduct.jsp").forward(request, response);
-                
-            }
-            
-            else if (action.equals("collection")) {
 
-                
+            } else if (action.equals("collection")) {
+
                 List<ProductsDTO> menCollectionSummer = productDAO.collection("Summer", "Men");
                 List<ProductsDTO> menCollectionAutumn = productDAO.collection("Autumn", "Men");
                 List<ProductsDTO> menCollectionSpring = productDAO.collection("Spring", "Men");
@@ -114,23 +111,28 @@ public class PageController extends HttpServlet {
 
             } else if (action != null && action.equals("profile")) {
                 String profile = request.getParameter("profile");
-                
+
                 CustomersDAO customersDAO = new CustomersDAO();
                 CustomersDTO customers = customersDAO.getCustomerProfile(profile);
                 request.setAttribute("customers", customers);
-                
+
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
 
-            } else if(action.equals("add")) {
-                int productId = Integer.parseInt(request.getParameter("productId"));
-                String imageUrl = request.getParameter("imageUrl");
-                String productName = request.getParameter("productName");
-                double price = Double.parseDouble(request.getParameter("price"));
-                int quantity = Integer.parseInt(request.getParameter("quantity"));
+            } else if (action.equals("add")) {
 
-                CartItem cart = new CartItem(productId, imageUrl, productName, price, quantity);
+                int customerid = 0;
+                int productid = 0;
+                try {
+                    customerid = Integer.parseInt(request.getParameter("customerid"));
+                    productid = Integer.parseInt(request.getParameter("productid"));
+                } catch (NumberFormatException ex) {
+                    log("Parameter id has wrong format.");
+                }
 
-                response.sendRedirect("cart.jsp");
+                CartDAO cartDAO = new CartDAO();
+                cartDAO.addToCart(customerid,productid);
+                request.getRequestDispatcher("homePage.jsp").forward(request, response);
+                
 
             }
         }
