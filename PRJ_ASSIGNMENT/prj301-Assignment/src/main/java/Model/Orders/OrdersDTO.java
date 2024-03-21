@@ -21,6 +21,21 @@ public class OrdersDTO {
     private int CustomerId;
     private String DiscountId;
 
+    public OrdersDTO() {
+    }
+
+    public OrdersDTO(int OrdersID, Date OrdersDate, float Price, int Quantity, String Address, String Status, String Freight, int CustomerId, String DiscountId) {
+        this.OrdersID = OrdersID;
+        this.OrdersDate = OrdersDate;
+        this.Price = Price;
+        this.Quantity = Quantity;
+        this.Address = Address;
+        this.Status = Status;
+        this.Freight = Freight;
+        this.CustomerId = CustomerId;
+        this.DiscountId = DiscountId;
+    }
+
     public int getOrdersID() {
         return OrdersID;
     }

@@ -53,27 +53,27 @@
                                 </thead>
                                 <tbody>
                                     <!-- Loop through each cart item -->
-                                <c:forEach items="${cartItems}" var="item">
+                                <c:forEach items="${sessionScope.cart.values()}" var="item">
                                     <tr>
                                         <td class="shoping__cart__item">
-                                            <img style="height: 180px; width: 140px" src="images/paint/baggy/baggy1.jpg" alt="${item.productName}">
-
-                                        </td>
-                                        <td 
-                                            <h5>${item.productName}  produc name</h5></td>
-                                        <td class="shoping__cart__price">
-                                            $${item.price}
-                                        </td>
-                                        <td class="shoping__cart__quantity">
-                                            <div class="quantity">
-                                                <div class="pro-qty">
-                                                    <h4>1</h4>
-
-                                                </div>
-                                        </td>
-                                        <td class="shoping__cart__total">
-                                            $${item.total}
-                                        </td>
+                                    <img style="height: 180px; width: 140px" src="<c:out value="${item.img}"/> " alt="<c:out value="${item.productName}"/>">
+                                    </td>
+                                    <td>
+                                        <h5><c:out value="${item.productName}"/>  product name</h5>
+                                    </td>
+                                    <td class="shoping__cart__price">
+                                        $<c:out value="${item.price}"/>
+                                    </td>
+                                    <td class="shoping__cart__quantity">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <h4><c:out value="${item.quantity}"/></h4>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="shoping__cart__total">
+                                        $<c:out value="${item.total}"/>
+                                    </td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>

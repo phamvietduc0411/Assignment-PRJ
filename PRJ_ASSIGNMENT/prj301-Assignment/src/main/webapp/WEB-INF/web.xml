@@ -13,13 +13,8 @@
         <servlet-class>Controller.SignupController</servlet-class>
     </servlet>
     <servlet>
-
-        <servlet-name>CartController</servlet-name>
-        <servlet-class>Controller.CartController</servlet-class>
-
         <servlet-name>AdminController</servlet-name>
         <servlet-class>Controller.AdminController</servlet-class>
-
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
@@ -34,9 +29,6 @@
         <url-pattern>/SignupController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-
-        <servlet-name>CartController</servlet-name>
-        <url-pattern>/CartController</url-pattern>
         <servlet-name>AdminController</servlet-name>
         <url-pattern>/AdminController</url-pattern>
     </servlet-mapping>

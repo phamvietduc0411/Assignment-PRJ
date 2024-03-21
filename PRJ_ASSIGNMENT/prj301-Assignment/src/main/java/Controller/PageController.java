@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.Cart.CartItem;
 import Model.Category.CategoryDAO;
 import Model.Category.CategoryDTO;
 import Model.Customters.CustomersDAO;
@@ -119,6 +120,18 @@ public class PageController extends HttpServlet {
                 request.setAttribute("customers", customers);
                 
                 request.getRequestDispatcher("profile.jsp").forward(request, response);
+
+            } else if(action.equals("add")) {
+                int productId = Integer.parseInt(request.getParameter("productId"));
+                String imageUrl = request.getParameter("imageUrl");
+                String productName = request.getParameter("productName");
+                double price = Double.parseDouble(request.getParameter("price"));
+                int quantity = Integer.parseInt(request.getParameter("quantity"));
+
+                CartItem cart = new CartItem(productId, imageUrl, productName, price, quantity);
+
+                response.sendRedirect("cart.jsp");
+
             }
         }
     }

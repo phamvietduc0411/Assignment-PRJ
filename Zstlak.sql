@@ -81,13 +81,6 @@ CREATE TABLE Orders (
 );
 
 
-CREATE TABLE Cart (
-    CartId INT IDENTITY(1,1) PRIMARY KEY,
-    CustomerId INT FOREIGN KEY REFERENCES Customers(CustomerID),
-    ProId INT FOREIGN KEY REFERENCES Products(ProductsID),
-    Quantity INT
-);
-
 -- T?o b?ng OrderDetail(weak)
 CREATE TABLE OrderDetail (
 	Amount FLOAT,

@@ -16,6 +16,17 @@ public class OrderDetailDTO {
     private int PaysId;
     private int ProId;
 
+    public OrderDetailDTO() {
+    }
+
+    public OrderDetailDTO(float Amount, int TotalQuantity, int OrdersId, int PaysId, int ProId) {
+        this.Amount = Amount;
+        this.TotalQuantity = TotalQuantity;
+        this.OrdersId = OrdersId;
+        this.PaysId = PaysId;
+        this.ProId = ProId;
+    }
+
     public float getAmount() {
         return Amount;
     }
