@@ -7,6 +7,9 @@ package Model.Cart;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import prj301demo.utils.DBUtils;
 
 /**
@@ -30,25 +33,28 @@ public class CartDAO {
         }
     }
 
-    // Lấy tất cả các mục trong giỏ hàng cho một khách hàng cụ thể
-//    public List<CartDTO> getCartItemsByCustomerId(int customerId) throws SQLException {
-//        List<CartDTO> cartItems = new ArrayList<>();
-//        String query = "SELECT * FROM cart WHERE CustomerId = ?";
-//        try (PreparedStatement statement = con.prepareStatement(query)) {
-//            statement.setInt(1, customerId);
-//            try (ResultSet resultSet = statement.executeQuery()) {
-//                while (resultSet.next()) {
-//                    CartDTO cartItem = new CartDTO();
-//                    cartItem.setCartId(resultSet.getInt("CartId"));
-//                    cartItem.setCustomerId(resultSet.getInt("CustomerId"));
-//                    cartItem.setProId(resultSet.getInt("ProId"));
-//                    cartItem.setQuantity(resultSet.getInt("Quantity"));
-//                    cartItems.add(cartItem);
-//                }
-//            }
-//        }
-//        return cartItems;
-//    }
+//     Lấy tất cả các mục trong giỏ hàng cho một khách hàng cụ thể
+    public List<CartDTO> getCartItemsByCustomerId(int customerId){
+        List<CartDTO> cartItems = new ArrayList<>();
+        String query = "SELECT * FROM cart WHERE CustomerId = ?";
+        try (PreparedStatement statement = con.prepareStatement(query)) {
+            statement.setInt(1, customerId);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    CartDTO cartItem = new CartDTO();
+                    cartItem.setCartId(resultSet.getInt("CartId"));
+                    cartItem.setCustomerId(resultSet.getInt("CustomerId"));
+                    cartItem.setProId(resultSet.getInt("ProId"));
+                    cartItem.setQuantity(resultSet.getInt("Quantity"));
+                    cartItems.add(cartItem);
+                }
+            }
+        } catch(Exception e){
+            System.out.println("ERROR: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return cartItems;
+    }
 
     // Xóa một mục khỏi giỏ hàng
 //    public void removeFromCart(int cartId) throws SQLException {

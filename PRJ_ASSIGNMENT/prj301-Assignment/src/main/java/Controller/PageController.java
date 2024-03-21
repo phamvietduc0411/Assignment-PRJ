@@ -130,10 +130,8 @@ public class PageController extends HttpServlet {
                 }
 
                 CartDAO cartDAO = new CartDAO();
-                cartDAO.addToCart(customerid,productid);
+                cartDAO.addToCart(customerid, productid);
                 request.getRequestDispatcher("homePage.jsp").forward(request, response);
-                
-
             }
         }
     }

@@ -2,11 +2,13 @@ Model\Payment\PaymentDTO.class
 Model\Customters\CustomersDAO.class
 Model\Feedback\FeedbackDTO.class
 Model\OrderDetail\OrderDetailDTO.class
-Model\Cart\CartItem.class
+Model\Cart\CartDAO.class
+Model\Orders\OrdersDAO.class
 Model\Category\CategoryDAO.class
 Model\Products\ProductsDAO.class
 Controller\SignupController.class
 Model\Products\ProductsDTO.class
+Model\Cart\CartDTO.class
 Model\Category\CategoryDTO.class
 Model\Orders\OrdersDTO.class
 Model\Discount\DiscountDTO.class
